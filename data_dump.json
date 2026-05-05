@@ -1,0 +1,1635 @@
+{
+  "translations": {
+    "EN": {
+      "common": {
+        "doctorName": "Dr. Ulhas Sonar",
+        "specialty": "Orthopedic Surgeon"
+      },
+      "topBar": {
+        "phone": "Call",
+        "email": "Email",
+        "location": "Location",
+        "locationValue": "DIP, Dubai, UAE"
+      },
+      "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "articles": "Articles",
+        "gallery": "Gallery",
+        "contact": "Contact",
+        "testimonials": "Reviews",
+        "faq": "FAQ",
+        "bookNow": "Book Appointment",
+        "bookAppointment": "Book Consult",
+        "exploreServices": "Explore Services",
+        "selectLanguage": "Select Language",
+        "awards": "Awards",
+        "affiliations": "Memberships & Affiliations"
+      },
+      "hero": {
+        "badge": "Expert Orthopedic Care",
+        "title": "Restore Your",
+        "titleHighlight": "Active Life",
+        "description": "Advanced orthopedic solutions for joint replacement, sports injuries, and complex trauma. World-class care tailored to your recovery.",
+        "bookAppointment": "Book Appointment",
+        "exploreServices": "Explore Services",
+        "highlights": [
+          "15+ Years Global Experience",
+          "Advanced Robotic Surgery",
+          "UK & European Certified",
+          "Complex Trauma Specialist",
+          "Personalized Recovery Plans",
+          "State-of-the-art Facilities"
+        ],
+        "stats": {
+          "exp": "YEARS EXP.",
+          "qualifications": "GLOBAL QUALIFICATIONS (UK, EU, IN)",
+          "research": "RESEARCH & PUBLICATIONS",
+          "audits": "CLINICAL AUDITS",
+          "podium": "PODIUM PRESENTATIONS",
+          "outcomes": "EXCEPTIONAL OUTCOMES & AWARDS"
+        },
+        "slides": [
+          {
+            "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
+            "headline1": "Restore Your",
+            "headline2": "Life",
+            "description": "With more than 15+ years of global experience across UK, India, Jersey Island and Dubai in trauma and orthopedic surgery. Delivering world-class care in knee, hip, shoulder and complex trauma.",
+            "nameplateSub": "Orthopedic Specialist"
+          },
+          {
+            "badge": "MBBS, MS Ortho, M Ch Ortho, FRCS (T&O)",
+            "headline1": "Precision",
+            "headline2": "Ortho",
+            "description": "A fellow of the Royal College of Surgeons with over 15 years of global experience. Specializing in robotic-assisted knee replacement and minimally invasive procedures.",
+            "nameplateSub": "Orthopedic Surgeon"
+          }
+        ]
+      },
+      "about": {
+        "badge": "Your Orthopaedic Surgeon in Dubai",
+        "credentials": "MBBS, MS (Ortho), MRCS (England), MCh Upper Limb Surgeries (Wrightington, UK), FEBOT (Switzerland), FRCS (T&O) UK, PG Dip in Computer & Robotics Assisted TKR (Glasgow, UK)",
+        "title": "About",
+        "titleHighlight": "Dr. Ulhas Sonar",
+        "titleEnd": "",
+        "experienceBadge": "Years of global experience",
+        "description1": "Dr. Ulhas Sonar is a British Indian orthopedic surgeon with extensive global experience across the UK, India, Jersey Island, and Dubai. A graduate of B J Medical College, Pune, he began his career as an Assistant Professor in India before pursuing advanced training in the UK at prestigious institutions like Wrightington Hospital and Golden Jubilee Hospital.",
+        "description2": "He is a Fellow of the Royal College of Surgeons (England) and the European Board of Orthopaedics and Traumatology (Switzerland), and holds an MCh Super Specialisation in Upper Limb Surgery along with a PG Diploma in Computer and Robotic-Assisted Total Knee Replacement. Committed to evidence-based, patient-centred care, Dr. Ulhas is also an accomplished researcher, educator, and passionate advocate for patient safety and rights.",
+        "qualifications": {
+          "global": {
+            "title": "Global Experience",
+            "desc": "UK, INDIA, JERSEY ISLAND, UAE"
+          },
+          "training": {
+            "title": "Advanced Training",
+            "desc": "WRIGHTINGTON & GOLDEN JUBILEE, UK"
+          },
+          "fellowships": {
+            "title": "Expert Fellowships",
+            "desc": "FRCS (ENG) & FEBOT (SWITZERLAND)"
+          },
+          "specialisation": {
+            "title": "Specialisation",
+            "desc": "UPPER LIMB & ROBOTIC TKR"
+          }
+        },
+        "stats": {
+          "experience": {
+            "value": "15+",
+            "label": "YEARS EXP."
+          },
+          "surgeries": {
+            "value": "5000+",
+            "label": "SURGERIES"
+          },
+          "patients": {
+            "value": "10k+",
+            "label": "HAPPY PATIENTS"
+          },
+          "global": {
+            "value": "4",
+            "label": "COUNTRIES"
+          }
+        }
+      },
+      "services": {
+        "badge": "Specialized Care",
+        "title": "Our Orthopedic",
+        "titleHighlight": "Services",
+        "titleEnd": "& Expertise",
+        "description": "Providing a full spectrum of advanced orthopedic treatments designed for optimal recovery.",
+        "viewDetails": "View Details",
+        "showMore": "Show More Services",
+        "showLess": "Show Less",
+        "items": [
+          {
+            "title": "Joint Replacement",
+            "desc": "Advanced total and partial replacement for knee and hip using the latest techniques."
+          },
+          {
+            "title": "Sports Medicine",
+            "desc": "Comprehensive care for athletes, from injury prevention to advanced surgical repair."
+          },
+          {
+            "title": "Robotic Surgery",
+            "desc": "Precision-guided orthopedic procedures for faster recovery and better outcomes."
+          },
+          {
+            "title": "Arthroscopy",
+            "desc": "Minimally invasive keyhole surgery for joint diagnosis and treatment."
+          },
+          {
+            "title": "Deformity Correction",
+            "desc": "Specialized treatment for limb alignment and structural orthopedic issues."
+          },
+          {
+            "title": "Consultation",
+            "desc": "In-depth clinical evaluation and personalized treatment planning."
+          },
+          {
+            "title": "Orthopedic Trauma",
+            "desc": "Expert management of complex fractures and emergency musculoskeletal injuries."
+          },
+          {
+            "title": "Physiotherapy",
+            "desc": "Integrated rehabilitation to ensure complete recovery and long-term joint health."
+          }
+        ]
+      },
+      "personalizedSolutions": {
+        "title": "Personalized Solutions",
+        "description": "Targeted treatments for specific orthopedic conditions to get you back to your best.",
+        "viewAll": "View All Solutions",
+        "items": [
+          {
+            "title": "Hand & Wrist"
+          },
+          {
+            "title": "Back & Neck"
+          },
+          {
+            "title": "Foot & Ankle"
+          },
+          {
+            "title": "Shoulder"
+          },
+          {
+            "title": "Knee"
+          },
+          {
+            "title": "Hip"
+          },
+          {
+            "title": "Sports Injuries"
+          }
+        ]
+      },
+      "ctaBanner": {
+        "title": "Struggling with Joint or Back Pain?",
+        "subtitle": "Get expert orthopedic care today.",
+        "button": "Book Appointment Now"
+      },
+      "sportingInjury": {
+        "badge": "Sports Injury Clinic",
+        "title": "Suffering from a",
+        "titleHighlight": "sporting injury?",
+        "titleEnd": "",
+        "description": "Don't let pain keep you on the sidelines. We offer expert diagnosis and advanced treatments for athletes of all levels.",
+        "learnMore": "LEARN MORE ABOUT SPORTS RECOVERY",
+        "items": [
+          {
+            "title": "ACL Reconstruction",
+            "desc": "Advanced ligament repair to restore knee stability and strength."
+          },
+          {
+            "title": "Meniscus Repair",
+            "desc": "Precision surgery to preserve knee cushioning and prevent future issues."
+          },
+          {
+            "title": "Shoulder Instability",
+            "desc": "Treatment for dislocations and chronic shoulder weakness."
+          },
+          {
+            "title": "Ligament Injuries",
+            "desc": "Comprehensive care for ankle, wrist, and multi-ligament knee injuries."
+          }
+        ]
+      },
+      "publications": {
+        "badge": "Academic Excellence",
+        "title": "Research &",
+        "titleHighlight": "Publications",
+        "description": "Clinical contributions and published research in leading international orthopedic journals.",
+        "firstAuthor": "Lead Author",
+        "secondAuthor": "Collaborative Research",
+        "stats": {
+          "papers": "PEER REVIEWED PAPERS",
+          "impact": "GLOBAL CLINICAL IMPACT",
+          "journals": "TOP-TIER JOURNALS"
+        }
+      },
+      "articles": {
+        "badge": "Medical Insights",
+        "title": "Expert Orthopedic",
+        "titleHighlight": "Articles",
+        "description": "Stay informed with the latest insights on orthopedic health, treatments, and surgical innovations.",
+        "readMore": "Read Full Article",
+        "viewAll": "View All Articles"
+      },
+      "testimonials": {
+        "badge": "Patient Reviews",
+        "title": "What Our Patients Say",
+        "description": "Real stories from patients who restored their mobility and life through our care.",
+        "reviewButton": "Write a Review on Google",
+        "items": [
+          {
+            "name": "James Wilson",
+            "role": "Professional Athlete",
+            "content": "Dr. Sonar's expertise in robotic surgery is unmatched. I was back on the field sooner than expected."
+          },
+          {
+            "name": "Sarah Ahmed",
+            "role": "Grandmother",
+            "content": "My hip replacement has given me a new lease on life. I can finally play with my grandkids again."
+          }
+        ]
+      },
+      "faq": {
+        "badge": "Help Center",
+        "title": "Frequently Asked Questions",
+        "description": "Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.",
+        "items": [
+          {
+            "question": "What is robotic-assisted surgery?",
+            "answer": "It is a precision-guided technique that allows the surgeon to perform joint replacements with higher accuracy, leading to better outcomes."
+          },
+          {
+            "question": "How long is the recovery period?",
+            "answer": "Recovery varies by procedure, but most patients return to normal activities within 6 to 12 weeks with proper physical therapy."
+          },
+          {
+            "question": "Do you treat sports injuries?",
+            "answer": "Yes, we specialize in ACL repairs, meniscus treatments, and all types of athletic musculoskeletal injuries."
+          },
+          {
+            "question": "Where is the clinic located?",
+            "answer": "Our main consultation rooms are located in Dubai, within premium medical facilities."
+          },
+          {
+            "question": "Is second opinion available?",
+            "answer": "Yes, we encourage patients to seek second opinions for complex orthopedic cases to ensure confidence in their treatment."
+          }
+        ]
+      },
+      "contact": {
+        "badge": "Contact Us",
+        "title": "Book Your",
+        "titleHighlight": "Consultation",
+        "description": "Take the first step towards recovery. Connect with our expert team today.",
+        "form": {
+          "title": "Send a message",
+          "name": "Your Name",
+          "namePlaceholder": "Enter your full name",
+          "email": "Email Address",
+          "emailPlaceholder": "yourname@email.com",
+          "phone": "Phone Number",
+          "phonePlaceholder": "+971 -- --- ----",
+          "medicalInquiry": "Inquiry Type",
+          "placeholder": "How can we help you today?",
+          "submit": "Request Appointment"
+        },
+        "cards": {
+          "call": {
+            "title": "Call Us",
+            "sub": "Available for urgent inquiries"
+          },
+          "email": {
+            "title": "Email Support",
+            "sub": "Response within 24 hours"
+          },
+          "visit": {
+            "title": "Visit Clinic",
+            "content": "DIP 1, Dubai, UAE",
+            "sub": "Monday - Saturday: 9am - 7pm"
+          },
+          "social": "Follow Our Updates"
+        },
+        "info": {
+          "call": "Call Us",
+          "email": "Email Support",
+          "visit": "Visit Clinic",
+          "hours": "Mon-Sat: 9am - 7pm"
+        }
+      },
+      "footer": {
+        "nav": "Quick Links",
+        "support": "Support",
+        "clinic": "Clinic Location",
+        "hospitalName": "Canadian Specialist Hospital",
+        "emergency": "Emergency",
+        "visitMeAt": "Visit Me At",
+        "rights": "All Rights Reserved",
+        "patientResources": "Patient Resources",
+        "articles": "Articles",
+        "privacy": "Privacy Policy",
+        "services": "Services",
+        "serviceLinks": {
+          "arthroscopy": "Arthroscopy",
+          "sportsMedicine": "Sports Medicine",
+          "roboticSurgery": "Robotic Surgery",
+          "jointReplacement": "Joint Replacement",
+          "deformityCorrection": "Deformity Correction",
+          "physiotherapy": "Physiotherapy",
+          "consultation": "Consultation",
+          "orthopedicTrauma": "Orthopedic Trauma",
+          "more": "More"
+        }
+      },
+      "faq_services": {
+        "title": "Services FAQ",
+        "description": "Common questions about our orthopedic procedures and specialized care plans.",
+        "items": [
+          {
+            "question": "Do you offer robotic joint replacement?",
+            "answer": "Yes, we specialize in advanced robotic-assisted total and partial knee replacements for superior precision."
+          },
+          {
+            "question": "What is the typical recovery for arthroscopy?",
+            "answer": "Most patients return to light activities within a few days, though full athletic recovery may take 6-12 weeks."
+          },
+          {
+            "question": "Are physiotherapy services available?",
+            "answer": "We provide integrated rehabilitation plans through our partner facilities to ensure complete recovery."
+          }
+        ]
+      },
+      "faq_articles": {
+        "title": "Learning Center FAQ",
+        "description": "Information about our medical insights, blog updates, and research initiatives.",
+        "items": [
+          {
+            "question": "How often are new articles published?",
+            "answer": "We share new medical insights and clinical research updates every few weeks to keep our patients informed."
+          },
+          {
+            "question": "Can I suggest a topic for the blog?",
+            "answer": "Absolutely! We welcome patient inquiries and often address common concerns in our detailed medical articles."
+          }
+        ]
+      },
+      "physioHome": {
+        "seo": {
+          "title": "Physiotherapy Home Services in Dubai | DHA Licensed Experts",
+          "description": "Get expert physiotherapy services in Dubai with home visits by DHA-licensed professionals. Personalized treatment for pain relief, recovery, and mobility. Book now."
+        },
+        "hero": {
+          "title": "Physiotherapy Services in Dubai | Home Physiotherapy & Rehabilitation Care",
+          "description": "Struggling with pain, stiffness, or difficulty moving? Our physiotherapy services in Dubai are designed to help you recover safely and regain confidence in your daily activities. Whether you need treatment at home, in your hotel, or at your workplace, we provide structured and professional care tailored to your condition."
+        },
+        "features": [
+          "DHA-licensed physiotherapists for home visits across Dubai.",
+          "Physiotherapy at home, hotel, or office – flexible and convenient.",
+          "Personalized treatment plans for faster and safe recovery.",
+          "Suitable for post-surgery, injury, elderly care, and chronic pain.",
+          "Affordable and Transparent price with no hidden prices."
+        ],
+        "ctas": {
+          "call": "Call us Now",
+          "whatsapp": "WhatsApp Now"
+        },
+        "conditions": {
+          "badge": "Conditions managed with physiotherapy services",
+          "title": "Professional care for common pain, stiffness, and movement problems",
+          "description": "Physiotherapy plays an important role in managing a wide range of conditions. Early treatment often leads to faster recovery and helps prevent long-term complications.",
+          "items": [
+            {
+              "title": "Back and neck pain",
+              "desc": "Targeted rehabilitation for stiffness, postural pain, muscular spasm, and reduced function."
+            },
+            {
+              "title": "Knee pain and stiffness",
+              "desc": "Structured therapy to improve joint movement, strength, and confidence during walking and activity."
+            },
+            {
+              "title": "Shoulder pain",
+              "desc": "Focused treatment for pain, weakness, and limited shoulder movement during daily activities."
+            },
+            {
+              "title": "Sports injuries",
+              "desc": "Recovery programs for muscle strains, soft tissue injury, overuse problems, and return to activity."
+            },
+            {
+              "title": "Arthritis care",
+              "desc": "Gentle, progressive treatment to reduce pain, improve movement, and support long-term joint health."
+            },
+            {
+              "title": "Post-surgical rehabilitation",
+              "desc": "Planned recovery support after orthopaedic procedures with mobility and strengthening progression."
+            },
+            {
+              "title": "Deformity correction support",
+              "desc": "Rehabilitation care to improve alignment-related movement patterns and functional recovery."
+            },
+            {
+              "title": "Hip joint replacement recovery",
+              "desc": "Stepwise physiotherapy focused on strength, balance, walking confidence, and safe independence."
+            }
+          ],
+          "footer": "Early treatment often leads to faster recovery and prevents long-term complications."
+        },
+        "benefits": {
+          "title": "Benefits of Physiotherapy Treatment With Dr. Ulhas",
+          "description": "Physiotherapy with Dr. Ulhas is focused on restoring movement, reducing pain, and helping you return to your daily activities with confidence.",
+          "items": [
+            "Reduction in pain and inflammation",
+            "Improved movement and flexibility",
+            "Faster recovery after injury or surgery",
+            "Better strength and stability",
+            "Reduced dependence on medications"
+          ],
+          "footer": "With the right treatment plan, most patients notice gradual but steady improvement."
+        },
+        "expertTreatment": {
+          "title": "Expert Home Treatment with Dr. Ulhas Sonar",
+          "description": "Dr. Ulhas provides the physiotherapy services for individuals of all ages from pediatric to geriatric care, with proper care and concerns.",
+          "categories": [
+            "Post-Surgical Patients",
+            "Athletes",
+            "Elder Patients",
+            "Chronic Care Patients",
+            "Neurological Condition Patients",
+            "Musculoskeletal Patients"
+          ]
+        },
+        "ctaBanner": {
+          "title": "Start Your Recovery Today with Expert Physiotherapy in Dubai",
+          "subtitle": "Advanced care focused on faster recovery, strength, and long-term results"
+        },
+        "whyChoose": {
+          "title": "Why Choose Our Physiotherapy Services in Dubai",
+          "description": "Choosing the right physiotherapy service is important for both safety and results. Our approach is based on clinical experience and structured care:",
+          "items": [
+            "Treatment guided by orthopaedic specialist expertise",
+            "Individual attention with one-to-one sessions",
+            "Clear diagnosis and targeted treatment planning",
+            "Focus on long-term recovery, not temporary relief",
+            "Availability of both clinic-based and home physiotherapy services"
+          ],
+          "footer": "Every patient is assessed carefully, and treatment is adapted as recovery progresses."
+        },
+        "expectations": {
+          "title": "What to Expect from Your Physiotherapy Session?",
+          "description": "Your physiotherapy session is structured to ensure safe, effective, and consistent recovery.",
+          "steps": [
+            {
+              "title": "Initial Assessment",
+              "desc": "Your condition, pain areas, and movement are carefully assessed to understand the root cause and plan the right treatment."
+            },
+            {
+              "title": "Treatment Session",
+              "desc": "You will receive hands-on therapy along with guided exercises focused on reducing pain and improving mobility."
+            },
+            {
+              "title": "Progress Monitoring",
+              "desc": "Your improvement is reviewed regularly, and your treatment plan is adjusted to ensure steady recovery."
+            }
+          ]
+        },
+        "faqs": {
+          "title": "Frequently Asked Questions",
+          "items": [
+            {
+              "q": "How much does physiotherapy cost in Dubai?",
+              "a": "The cost depends on the type of treatment and number of sessions required. Flexible packages are available to make treatment more affordable."
+            },
+            {
+              "q": "Is physiotherapy at home effective?",
+              "a": "Yes, home physiotherapy is equally effective when delivered by qualified professionals. It also improves convenience and consistency."
+            },
+            {
+              "q": "How many physiotherapy sessions will I need?",
+              "a": "This depends on your condition. Some patients improve within a few sessions, while others may require a structured rehabilitation program."
+            },
+            {
+              "q": "Do you provide physiotherapy for elderly patients at home?",
+              "a": "Yes, home physiotherapy is commonly used for elderly patients to improve mobility, balance, and strength safely."
+            },
+            {
+              "q": "Can I get same-day physiotherapy service in Dubai?",
+              "a": "Same-day appointments may be available depending on schedule and location."
+            },
+            {
+              "q": "Are the physiotherapists certified for home visits in Dubai?",
+              "a": "Yes, all physiotherapists providing home visits are DHA-licensed and qualified to deliver treatment in Dubai. Each session follows clinical standards with proper assessment, structured treatment, and ongoing monitoring to ensure safe and effective care at home."
+            },
+            {
+              "q": "Is physiotherapy at home cheaper than a clinic visit?",
+              "a": "Home physiotherapy may have slightly higher per-session cost due to travel and convenience, but it often provides better value through personalized care, time savings, and improved treatment consistency. Flexible packages are available to make home physiotherapy accessible and cost-effective."
+            }
+          ]
+        }
+      }
+    },
+    "HI": {
+      "common": {
+        "doctorName": "डॉ. उल्हास सोनार",
+        "specialty": "आर्थोपेडिक सर्जन"
+      },
+      "topBar": {
+        "phone": "कॉल करें",
+        "email": "ईमेल",
+        "location": "स्थान",
+        "locationValue": "DIP, दुबई, यूएई"
+      },
+      "nav": {
+        "home": "होम",
+        "about": "हमारे बारे में",
+        "services": "सेवाएं",
+        "articles": "लेख",
+        "gallery": "गैलरी",
+        "contact": "संपर्क",
+        "testimonials": "समीक्षाएं",
+        "faq": "सामान्य प्रश्न",
+        "bookNow": "अपॉइंटमेंट बुक करें",
+        "bookAppointment": "परामर्श बुक करें",
+        "exploreServices": "सेवाएं देखें",
+        "selectLanguage": "भाषा चुनें",
+        "awards": "पुरस्कार",
+        "affiliations": "सदस्यता और संबद्धता"
+      },
+      "hero": {
+        "badge": "विशेषज्ञ आर्थोपेडिक देखभाल",
+        "title": "अपने",
+        "titleHighlight": "सक्रिय जीवन को",
+        "description": "जोड़ प्रतिस्थापन, खेल की चोटों और जटिल ट्रॉमा के लिए उन्नत आर्थोपेडिक समाधान। आपकी रिकवरी के लिए विश्वस्तरीय देखभाल।",
+        "bookAppointment": "अपॉइंटमेंट बुक करें",
+        "exploreServices": "सेवाएं देखें",
+        "highlights": [
+          "15+ वर्षों का वैश्विक अनुभव",
+          "उन्नत रोबोटिक सर्जरी",
+          "यूके और यूरोपीय प्रमाणित",
+          "जटिल ट्रॉमा विशेषज्ञ",
+          "व्यक्तिगत रिकवरी योजनाएं",
+          "अत्याधुनिक सुविधाएं"
+        ],
+        "stats": {
+          "exp": "वर्षों का अनुभव",
+          "qualifications": "वैश्विक योग्यताएं (UK, EU, IN)",
+          "research": "अनुसंधान और प्रकाशन",
+          "audits": "नैदानिक ऑडिट",
+          "podium": "पोडियम प्रस्तुतियां",
+          "outcomes": "असाधारण परिणाम और पुरस्कार"
+        },
+        "slides": [
+          {
+            "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
+            "headline1": "अपने जीवन को",
+            "headline2": "बहाल करें",
+            "description": "ट्रॉमा और आर्थोपेडिक सर्जरी में यूके, भारत, जर्सी आइलैंड और दुबई में 15+ वर्षों के वैश्विक अनुभव के साथ। घुटने, कूल्हे, कंधे और जटिल ट्रॉमा में विश्व स्तरीय देखभाल प्रदान करना।",
+            "nameplateSub": "आर्थोपेडिक विशेषज्ञ"
+          },
+          {
+            "badge": "MBBS, MS Ortho, M Ch Ortho, FRCS (T&O)",
+            "headline1": "सटीक",
+            "headline2": "आर्थो",
+            "description": "15 वर्षों से अधिक के वैश्विक अनुभव के साथ रॉयल कॉलेज ऑफ सर्जन्स के फेलो। रोबोटिक-सहायता प्राप्त घुटना प्रतिस्थापन और न्यूनतम आक्रामक प्रक्रियाओं में विशेषज्ञता।",
+            "nameplateSub": "आर्थोपेडिक सर्जन"
+          }
+        ]
+      },
+      "about": {
+        "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
+        "title": "आर्थोपेडिक्स में",
+        "titleHighlight": "विश्वस्तरीय",
+        "titleEnd": "विशेषज्ञता",
+        "experienceBadge": "वर्षों का वैश्विक अनुभव",
+        "description1": "डॉ. उल्हास सोनार एक प्रतिष्ठित ब्रिटिश-भारतीय आर्थोपेडिक सर्जन हैं, जिनके पास यूके, यूरोप, भारत और यूएई में 15 वर्षों से अधिक का वैश्विक अनुभव है।",
+        "description2": "रोबोटिक-सहायता प्राप्त जोड़ प्रतिस्थापन और जटिल ट्रॉमा में विशेषज्ञता रखते हुए, वे गतिशीलता को बहाल करने और जीवन को बदलने के लिए शल्य चिकित्सा सटीकता के साथ रोगी-केंद्रित दृष्टिकोण अपनाते हैं।",
+        "qualifications": {
+          "global": {
+            "title": "वैश्विक अनुभव",
+            "desc": "यूके, यूरोप, भारत, यूएई"
+          },
+          "training": {
+            "title": "संरचित प्रशिक्षण",
+            "desc": "यूके (NHS) में 10+ वर्ष"
+          },
+          "fellowships": {
+            "title": "विशेषज्ञ फेलोशिप",
+            "desc": "रोबोटिक्स और जोड़ प्रतिस्थापन"
+          },
+          "specialisation": {
+            "title": "विशेषज्ञता",
+            "desc": "जटिल ट्रॉमा और खेल चिकित्सा"
+          }
+        },
+        "stats": {
+          "experience": {
+            "value": "15+",
+            "label": "वर्षों का अनुभव"
+          },
+          "surgeries": {
+            "value": "5000+",
+            "label": "सर्जरी"
+          },
+          "patients": {
+            "value": "10k+",
+            "label": "संतुष्ट मरीज़"
+          },
+          "global": {
+            "value": "4",
+            "label": "देश"
+          }
+        }
+      },
+      "services": {
+        "badge": "विशेषज्ञ देखभाल",
+        "title": "हमारी आर्थोपेडिक",
+        "titleHighlight": "सेवाएं",
+        "titleEnd": "और विशेषज्ञता",
+        "description": "इष्टतम रिकवरी के लिए डिज़ाइन किए गए उन्नत आर्थोपेडिक उपचारों का एक पूर्ण स्पेक्ट्रम प्रदान करना।",
+        "viewDetails": "विवरण देखें",
+        "showMore": "अधिक सेवाएं दिखाएं",
+        "showLess": "कम दिखाएं",
+        "items": [
+          {
+            "title": "जोड़ प्रतिस्थापन",
+            "desc": "नवीनतम तकनीकों का उपयोग करके घुटने और कूल्हे के लिए उन्नत कुल और आंशिक प्रतिस्थापन।"
+          },
+          {
+            "title": "स्पोर्ट्स मेडिसिन",
+            "desc": "एथलीटों के लिए चोट की रोकथाम से लेकर उन्नत सर्जिकल मरम्मत तक व्यापक देखभाल।"
+          },
+          {
+            "title": "रोबोटिक सर्जरी",
+            "desc": "तेज़ी से रिकवरी और बेहतर परिणामों के लिए सटीकता-निर्देशित आर्थोपेडिक प्रक्रियाएं।"
+          },
+          {
+            "title": "आर्थ्रोस्कोपी",
+            "desc": "जोड़ों के निदान और उपचार के लिए न्यूनतम आक्रामक कीहोल सर्जरी।"
+          },
+          {
+            "title": "विकृति सुधार",
+            "desc": "अंग संरेखण और संरचनात्मक आर्थोपेडिक मुद्दों के लिए विशेष उपचार।"
+          },
+          {
+            "title": "परामर्श",
+            "desc": "गहन नैदानिक मूल्यांकन और व्यक्तिगत उपचार योजना।"
+          },
+          {
+            "title": "आर्थोपेडिक ट्रॉमा",
+            "desc": "जटिल फ्रैक्चर और आपातकालीन मस्कुलोस्केलेटल चोटों का विशेषज्ञ प्रबंधन।"
+          },
+          {
+            "title": "फिजियोथेरेपी",
+            "desc": "पूर्ण रिकवरी और दीर्घकालिक जोड़ स्वास्थ्य सुनिश्चित करने के लिए एकीकृत पुनर्वास।"
+          }
+        ]
+      },
+      "personalizedSolutions": {
+        "title": "व्यक्तिगत समाधान",
+        "description": "आपको आपके सर्वश्रेष्ठ स्तर पर वापस लाने के लिए विशिष्ट आर्थोपेडिक स्थितियों के लिए लक्षित उपचार।",
+        "viewAll": "सभी समाधान देखें",
+        "items": [
+          {
+            "title": "हाथ और कलाई"
+          },
+          {
+            "title": "पीठ और गर्दन"
+          },
+          {
+            "title": "पैर और टखने"
+          },
+          {
+            "title": "कंधा"
+          },
+          {
+            "title": "घुटना"
+          },
+          {
+            "title": "कूल्हा"
+          },
+          {
+            "title": "खेल की चोटें"
+          }
+        ]
+      },
+      "ctaBanner": {
+        "title": "क्या आप जोड़ों या पीठ के दर्द से परेशान हैं?",
+        "subtitle": "आज ही विशेषज्ञ ऑर्थोपेडिक देखभाल प्राप्त करें।",
+        "button": "अभी अपॉइंटमेंट बुक करें"
+      },
+      "sportingInjury": {
+        "badge": "स्पोर्ट्स इंजरी क्लिनिक",
+        "title": "क्या आप",
+        "titleHighlight": "खेल की चोट",
+        "titleEnd": "से परेशान हैं?",
+        "description": "दर्द को आपको साइडलाइन पर न रखने दें। हम सभी स्तरों के एثलीटों के लिए विशेषज्ञ निदान और उन्नत उपचार प्रदान करते हैं।",
+        "learnMore": "स्पोर्ट्स रिकवरी के बारे में और जानें",
+        "items": [
+          {
+            "title": "ACL पुनर्निर्माण",
+            "desc": "घुटने की स्थिरता और मजबूती बहाल करने के लिए उन्नत लिगामेंट मरम्मत।"
+          },
+          {
+            "title": "मेनिस्कस मरम्मत",
+            "desc": "घुटने की कुशनिंग को बनाए रखने और भविष्य की समस्याओं को रोकने के लिए सटीक सर्जरी।"
+          },
+          {
+            "title": "कंधे की अस्थिरता",
+            "desc": "डिस्लोकेशन और पुराने कंधे की कमजोरी का उपचार।"
+          },
+          {
+            "title": "लिगामेंट की चोटें",
+            "desc": "टखने, कलाई और घुटने की लिगामेंट चोटों के लिए व्यापक देखभाल।"
+          }
+        ]
+      },
+      "publications": {
+        "badge": "अकादमिक उत्कृष्टता",
+        "title": "अनुसंधान और",
+        "titleHighlight": "प्रकाशन",
+        "description": "प्रमुख अंतरराष्ट्रीय आर्थोपेडिक पत्रिकाओं में नैदानिक योगदान और प्रकाशित शोध।",
+        "firstAuthor": "मुख्य लेखक",
+        "secondAuthor": "सहयोगात्मक अनुसंधान",
+        "stats": {
+          "papers": "पीयर रिव्यूड पेपर्स",
+          "impact": "वैश्विक नैदानिक प्रभाव",
+          "journals": "शीर्ष स्तरीय पत्रिकाएं"
+        }
+      },
+      "articles": {
+        "badge": "चिकित्सा अंतर्दृष्टि",
+        "title": "विशेषज्ञ आर्थोपेडिक",
+        "titleHighlight": "लेख",
+        "description": "आर्थोपेडिक स्वास्थ्य, उपचार और सर्जिकल नवाचारों पर नवीनतम अंतर्दृष्टि के साथ सूचित रहें।",
+        "readMore": "पूरा लेख पढ़ें",
+        "viewAll": "सभी लेख देखें"
+      },
+      "testimonials": {
+        "badge": "रोगी समीक्षाएं",
+        "title": "हमारे मरीज़ क्या कहते हैं",
+        "description": "उन रोगियों की वास्तविक कहानियाँ जिन्होंने हमारे माध्यम से अपनी गतिशीलता और जीवन को वापस पाया।",
+        "reviewButton": "गूगल पर समीक्षा लिखें",
+        "items": [
+          {
+            "name": "जेम्स विल्सन",
+            "role": "पेशेवर एथलीट",
+            "content": "रोबोटिक सर्जरी में डॉ. सोनार की विशेषज्ञता बेजोड़ है। मैं उम्मीद से जल्दी मैदान पर वापस आ गया।"
+          },
+          {
+            "name": "सारा अहमद",
+            "role": "दादी",
+            "content": "मेरे हिप रिप्लेसमेंट ने मुझे जीवन का एक नया आधार दिया है। मैं आखिरकार अपने पोते-पोतियों के साथ खेल सकती हूँ।"
+          }
+        ]
+      },
+      "faq": {
+        "badge": "सहायता केंद्र",
+        "title": "अक्सर पूछे जाने वाले प्रश्न",
+        "description": "दुबई में हमारी देखभाल, रोबोटिक सर्जरी और आर्थोपेडिक उपचारों के बारे में सामान्य प्रश्न।",
+        "items": [
+          {
+            "question": "रोबोटिक-सहायता प्राप्त सर्जरी क्या है?",
+            "answer": "यह एक सटीकता-निर्देशित तकनीक है जो सर्जन को उच्च सटीकता के साथ जोड़ प्रतिस्थापन करने की अनुमति देती है, जिससे बेहतर परिणाम मिलते हैं।"
+          },
+          {
+            "question": "रिकवरी की अवधि कितनी लंबी है?",
+            "answer": "रिकवरी प्रक्रिया के आधार पर भिन्न होती है, लेकिन अधिकांश रोगी उचित फिजियोथेरेपी के साथ 6 से 12 सप्ताह के भीतर सामान्य गतिविधियों में लौट आते हैं।"
+          },
+          {
+            "question": "क्या आप खेल की चोटों का इलाज करते हैं?",
+            "answer": "हाँ, हम ACL मरम्मत, मेनिस्कस उपचार और सभी प्रकार की एथलेटिक चोटों में विशेषज्ञ हैं।"
+          },
+          {
+            "question": "क्लिनिक कहाँ स्थित है?",
+            "answer": "हमारे मुख्य परामर्श कक्ष दुबई में प्रीमियम चिकित्सा सुविधाओं के भीतर स्थित हैं।"
+          },
+          {
+            "question": "क्या दूसरी राय उपलब्ध है?",
+            "answer": "हाँ, हम मरीजों को उनके उपचार में विश्वास सुनिश्चित करने के लिए जटिल मामलों के लिए दूसरी राय लेने के लिए प्रोत्साहित करते हैं।"
+          }
+        ]
+      },
+      "contact": {
+        "badge": "संपर्क करें",
+        "title": "अपना",
+        "titleHighlight": "परामर्श बुक करें",
+        "description": "रिकवरी की ओर पहला कदम उठाएं। आज ही हमारी विशेषज्ञ टीम से जुड़ें।",
+        "form": {
+          "title": "संदेश भेजें",
+          "name": "आपका नाम",
+          "namePlaceholder": "अपना पूरा नाम दर्ज करें",
+          "email": "ईमेल पता",
+          "emailPlaceholder": "yourname@email.com",
+          "phone": "फोन नंबर",
+          "phonePlaceholder": "+971 -- --- ----",
+          "medicalInquiry": "पूछताछ का प्रकार",
+          "placeholder": "हम आज आपकी कैसे मदद कर सकते हैं?",
+          "submit": "अपॉइंटमेंट का अनुरोध करें"
+        },
+        "cards": {
+          "call": {
+            "title": "हमें कॉल करें",
+            "sub": "तत्काल पूछताछ के लिए उपलब्ध"
+          },
+          "email": {
+            "title": "ईमेल सहायता",
+            "sub": "24 घंटे के भीतर जवाब"
+          },
+          "visit": {
+            "title": "क्लिनिक पर आएं",
+            "content": "डीआईपी 1, दुबई, यूएई",
+            "sub": "सोमवार - शनिवार: सुबह 9 बजे - शाम 7 बजे"
+          },
+          "social": "हमारे अपडेट का पालन करें"
+        },
+        "info": {
+          "call": "हमें कॉल करें",
+          "email": "ईमेल सहायता",
+          "visit": "क्लिनिक पर आएं",
+          "hours": "सोम-शनि: सुबह 9 बजे - शाम 7 बजे"
+        }
+      },
+      "footer": {
+        "nav": "त्वरित संपर्क",
+        "support": "सहायता",
+        "clinic": "क्लिनिक का स्थान",
+        "hospitalName": "कैनेडियन स्पेशलिस्ट अस्पताल",
+        "emergency": "आपातकालीन",
+        "visitMeAt": "मुझसे मिलें",
+        "rights": "सर्वाधिकार सुरक्षित",
+        "patientResources": "रोगी संसाधन",
+        "articles": "लेख",
+        "privacy": "गोपनीयता नीति",
+        "services": "हमारी सेवाएं",
+        "serviceLinks": {
+          "arthroscopy": "आर्थ्रोस्कोपी",
+          "sportsMedicine": "स्पोर्ट्स मेडिसिन",
+          "roboticSurgery": "रोबोटिक सर्जरी",
+          "jointReplacement": "जोड़ प्रतिस्थापन",
+          "deformityCorrection": "विकृति सुधार",
+          "physiotherapy": "फिजियोथेरेपी",
+          "consultation": "परामर्श",
+          "orthopedicTrauma": "आर्थोपेडिक ट्रॉमा",
+          "more": "अधिक"
+        }
+      },
+      "faq_services": {
+        "title": "सेवाएं सामान्य प्रश्न",
+        "description": "हमारी आर्थोपेडिक प्रक्रियाओं और विशिष्ट देखभाल योजनाओं के बारे में सामान्य प्रश्न।",
+        "items": [
+          {
+            "question": "क्या आप रोबोटिक जोड़ प्रतिस्थापन की पेशकश करते हैं?",
+            "answer": "हाँ, हम बेहतर सटीकता के लिए उन्नत रोबोटिक-सहायता प्राप्त कुल और आंशिक घुटने के प्रतिस्थापन में विशेषज्ञ हैं।"
+          },
+          {
+            "question": "आर्थ्रोस्कोपी के लिए सामान्य रिकवरी क्या है?",
+            "answer": "अधिकांश रोगी कुछ ही दिनों में हल्की गतिविधियों में लौट आते हैं, हालांकि पूर्ण रिकवरी में 6-12 सप्ताह लग सकते हैं।"
+          },
+          {
+            "question": "क्या फिजियोथेरेपी सेवाएं उपलब्ध हैं?",
+            "answer": "हम पूर्ण रिकवरी सुनिश्चित करने के लिए अपनी भागीदार सुविधाओं के माध्यम से एकीकृत पुनर्वास योजनाएं प्रदान करते हैं।"
+          }
+        ]
+      },
+      "faq_articles": {
+        "title": "सीखने का केंद्र सामान्य प्रश्न",
+        "description": "हमारी चिकित्सा अंतर्दृष्टि, ब्लॉग अपडेट और अनुसंधान पहलों के बारे में जानकारी.",
+        "items": [
+          {
+            "question": "नए लेख कितनी बार प्रकाशित होते हैं?",
+            "answer": "हम अपने रोगियों को सूचित रखने के लिए हर कुछ हफ्तों में नई चिकित्सा अंतर्दृष्टि और नैदानिक अनुसंधान अपडेट साझा करते हैं।"
+          },
+          {
+            "question": "क्या मैं ब्लॉग के लिए कोई विषय सुझा सकता हूँ?",
+            "answer": "बिल्कुल! हम रोगी पूछताछ का स्वागत करते हैं और अक्सर अपने विस्तृत चिकित्सा लेखों में सामान्य चिंताओं का समाधान करते हैं।"
+          }
+        ]
+      },
+      "physioHome": {
+        "seo": {
+          "title": "फिजियोथेरेपी होम सर्विसेज दुबई | DHA लाइसेंस प्राप्त विशेषज्ञ",
+          "description": "दुबई में विशेषज्ञों द्वारा घर पर फिजियोथेरेपी सेवाएं प्राप्त करें। दर्द से राहत और रिकवरी के लिए व्यक्तिगत उपचार। अभी बुक करें।"
+        },
+        "hero": {
+          "title": "दुबई में फिजियोथेरेपी सेवाएं | होम फिजियोथेरेपी और पुनर्वास देखभाल",
+          "description": "क्या आप दर्द, जकड़न या चलने-फिरने में कठिनाई से जूझ रहे हैं? हमारी सेवाएं आपको सुरक्षित रूप से ठीक होने में मदद करने के लिए डिज़ाइन की गई हैं।"
+        },
+        "features": [
+          "DHA-लाइसेंस प्राप्त फिजियोथेरेपिस्ट",
+          "घर, होटल या कार्यालय में सेवा",
+          "व्यक्तिगत उपचार योजना",
+          "सर्जरी के बाद की देखभाल",
+          "सस्ती और पारदर्शी कीमतें"
+        ],
+        "ctas": {
+          "call": "अभी कॉल करें",
+          "whatsapp": "अभी व्हाट्सएप करें"
+        },
+        "conditions": {
+          "badge": "फिजियोथेरेपी सेवाओं के साथ प्रबंधन की जाने वाली स्थितियां",
+          "title": "सामान्य दर्द, जकड़न और गतिविधि समस्याओं के लिए पेशेवर देखभाल",
+          "description": "फिजियोथेरेपी स्थितियों की एक विस्तृत श्रृंखला के प्रबंधन में महत्वपूर्ण भूमिका निभाती है। शीघ्र उपचार अक्सर तेजी से रिकवरी की ओर ले जाता है।",
+          "items": [
+            {
+              "title": "पीठ और गर्दन का दर्द",
+              "desc": "जकड़न, मस्कुलर स्पैम और कम कार्यक्षमता के लिए लक्षित पुनर्वास।"
+            },
+            {
+              "title": "घुटने का दर्द और जकड़न",
+              "desc": "जोड़ों की गति, ताकत और चलने के दौरान आत्मविश्वास में सुधार के लिए संरचित थेरेपी।"
+            },
+            {
+              "title": "कंधे का दर्द",
+              "desc": "दैनिक गतिविधियों के दौरान दर्द, कमजोरी और सीमित कंधे की गति के लिए केंद्रित उपचार।"
+            },
+            {
+              "title": "खेल की चोटें",
+              "desc": "मांसपेशियों के खिंचाव, कोमल ऊतकों की चोट और गतिविधि पर वापसी के लिए रिकवरी कार्यक्रम।"
+            },
+            {
+              "title": "गठिया देखभाल",
+              "desc": "दर्द कम करने, गति में सुधार और दीर्घकालिक जोड़ स्वास्थ्य के लिए सौम्य उपचार।"
+            },
+            {
+              "title": "सर्जरी के बाद पुनर्वास",
+              "desc": "गतिशीलता और मजबूती के साथ ऑर्थोपेडिक प्रक्रियाओं के बाद योजनाबद्ध रिकवरी सहायता।"
+            },
+            {
+              "title": "विकृति सुधार सहायता",
+              "desc": "संरेखण-संबंधी गतिविधि पैटर्न और कार्यात्मक रिकवरी में सुधार के लिए देखभाल।"
+            },
+            {
+              "title": "हिप जॉइंट रिप्लेसमेंट रिकवरी",
+              "desc": "ताकत, संतुलन और चलने के आत्मविश्वास पर केंद्रित चरणबद्ध फिजियोथेरेपी।"
+            }
+          ],
+          "footer": "शीघ्र उपचार अक्सर तेजी से रिकवरी की ओर ले जाता है और दीर्घकालिक जटिलताओं को रोकता है।"
+        },
+        "benefits": {
+          "title": "डॉ. उल्हास के साथ फिजियोथेरेपी के लाभ",
+          "items": [
+            "दर्द और सूजन में कमी",
+            "बेहतर गतिशीलता",
+            "तेजी से रिकवरी",
+            "बेहतर ताकत",
+            "दवाओं पर कम निर्भरता"
+          ]
+        },
+        "expertTreatment": {
+          "title": "डॉ. उल्हास सोनार के साथ विशेषज्ञ गृह उपचार",
+          "categories": [
+            "सर्जरी के बाद के मरीज",
+            "एथलीट",
+            "बुजुर्ग मरीज",
+            "क्रोनिक केयर",
+            "न्यूरोलॉजिकल स्थितियां"
+          ]
+        },
+        "ctaBanner": {
+          "title": "आज ही अपनी रिकवरी शुरू करें",
+          "subtitle": "शक्ति और दीर्घकालिक परिणामों पर केंद्रित उन्नत देखभाल"
+        },
+        "whyChoose": {
+          "title": "दुबई में हमारी सेवाएं क्यों चुनें",
+          "items": [
+            "विशेषज्ञ मार्गदर्शन",
+            "एक-से-एक सत्र",
+            "स्पष्ट निदान",
+            "दीर्घकालिक रिकवरी",
+            "लचीली सेवाएं"
+          ]
+        },
+        "expectations": {
+          "title": "सत्र से क्या उम्मीद करें?",
+          "steps": [
+            {
+              "title": "प्रारंभिक मूल्यांकन",
+              "desc": "आपकी स्थिति और दर्द के क्षेत्रों का सावधानीपूर्वक मूल्यांकन किया जाता है।"
+            },
+            {
+              "title": "उपचार सत्र",
+              "desc": "हाथों से दी जाने वाली थेरेपी और निर्देशित व्यायाम।"
+            },
+            {
+              "title": "प्रगति की निगरानी",
+              "desc": "नियमित समीक्षा और योजना में सुधार।"
+            }
+          ]
+        },
+        "faqs": {
+          "title": "अक्सर पूछे जाने वाले प्रश्न",
+          "items": [
+            {
+              "q": "दुबई में लागत कितनी है?",
+              "a": "लागत उपचार के प्रकार पर निर्भर करती है। किफायती पैकेज उपलब्ध हैं।"
+            },
+            {
+              "q": "क्या घर पर फिजियोथेरेपी प्रभावी है?",
+              "a": "हाँ, विशेषज्ञों द्वारा दी जाने वाली होम फिजियोथेरेपी समान रूप से प्रभावी है।"
+            }
+          ]
+        }
+      }
+    },
+    "AR": {
+      "common": {
+        "doctorName": "د. أولهاس سونار",
+        "specialty": "جراح العظام والمفاصل"
+      },
+      "topBar": {
+        "phone": "اتصل بنا",
+        "email": "البريد الإلكتروني",
+        "location": "الموقع",
+        "locationValue": "مجمع دبي للاستثمار، دبي، الإمارات"
+      },
+      "nav": {
+        "home": "الرئيسية",
+        "about": "عن الطبيب",
+        "services": "خدماتنا",
+        "articles": "المقالات",
+        "gallery": "المعرض",
+        "contact": "اتصل بنا",
+        "testimonials": "آراء المرضى",
+        "faq": "الأسئلة الشائعة",
+        "bookNow": "احجز موعداً",
+        "bookAppointment": "احجز استشارة",
+        "exploreServices": "استكشف الخدمات",
+        "selectLanguage": "اختر اللغة",
+        "awards": "الجوائز",
+        "affiliations": "العضويات والانتسابات"
+      },
+      "hero": {
+        "badge": "رعاية عظام متخصصة",
+        "title": "استعد",
+        "titleHighlight": "حياتك النشطة",
+        "description": "حلول عظام متقدمة لاستبدال المفاصل، وإصابات الرياضة، والحالات المعقدة. رعاية عالمية المستوى مصممة لتعافيك.",
+        "bookAppointment": "احجز موعداً",
+        "exploreServices": "استكشف الخدمات",
+        "highlights": [
+          "خبرة عالمية تزيد عن 15 عاماً",
+          "جراحة روبوتية متقدمة",
+          "معتمد في المملكة المتحدة وأوروبا",
+          "متخصص في حالات الكسور المعقدة",
+          "خطط تعافٍ مخصصة",
+          "مرافق طبية متطورة"
+        ],
+        "stats": {
+          "exp": "سنوات الخبرة",
+          "qualifications": "مؤهلات عالمية (UK, EU, IN)",
+          "research": "الأبحاث والمنشورات",
+          "audits": "التدقيق السريري",
+          "podium": "عروض تقديمية",
+          "outcomes": "نتائج وجوائز استثنائية"
+        },
+        "slides": [
+          {
+            "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
+            "headline1": "استعد",
+            "headline2": "حياتك",
+            "description": "مع أكثر من 15 عاماً من الخبرة العالمية في المملكة المتحدة والهند وجزيرة جيرسي ودبي في جراحة العظام والصدمات. تقديم رعاية عالمية المستوى للركبة والورك والكتف.",
+            "nameplateSub": "أخصائي جراحة العظام"
+          },
+          {
+            "badge": "MBBS, MS Ortho, M Ch Ortho, FRCS (T&O)",
+            "headline1": "دقة",
+            "headline2": "العظام",
+            "description": "زميل الكلية الملكية للجراحين مع خبرة عالمية تزيد عن 15 عاماً. متخصص في استبدال الركبة بمساعدة الروبوت والإجراءات طفيفة التوغل.",
+            "nameplateSub": "جراح عظام"
+          }
+        ]
+      },
+      "about": {
+        "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
+        "title": "خبرة عالمية",
+        "titleHighlight": "في جراحة",
+        "titleEnd": "العظام والمفاصل",
+        "experienceBadge": "سنوات من الخبرة العالمية",
+        "description1": "الدكتور أولهاس سونار جراح عظام بريطاني هندي متميز يتمتع بخبرة تزيد عن 15 عاماً في بريطانيا وأوروبا والهند والإمارات.",
+        "description2": "متخصص في استبدال المفاصل بمساعدة الروبوت والحالات المعقدة، ويجمع بين الدقة الجراحية والنهج المتمحور حول المريض لاستعادة الحركة وتغيير الحياة.",
+        "qualifications": {
+          "global": {
+            "title": "خبرة عالمية",
+            "desc": "بريطانيا، أوروبا، الهند، الإمارات"
+          },
+          "training": {
+            "title": "تدريب منظم",
+            "desc": "أكثر من 10 سنوات في بريطانيا (NHS)"
+          },
+          "fellowships": {
+            "title": "زمالات تخصصية",
+            "desc": "الروبوت واستبدال المفاصل"
+          },
+          "specialisation": {
+            "title": "التخصص",
+            "desc": "الكسور المعقدة والطب الرياضي"
+          }
+        },
+        "stats": {
+          "experience": {
+            "value": "+15",
+            "label": "سنوات الخبرة"
+          },
+          "surgeries": {
+            "value": "+5000",
+            "label": "عملية جراحية"
+          },
+          "patients": {
+            "value": "+10k",
+            "label": "مريض سعيد"
+          },
+          "global": {
+            "value": "4",
+            "label": "دول"
+          }
+        }
+      },
+      "services": {
+        "badge": "رعاية متخصصة",
+        "title": "خدماتنا و",
+        "titleHighlight": "تخصصاتنا",
+        "titleEnd": "في العظام",
+        "description": "تقديم مجموعة كاملة من علاجات العظام المتقدمة المصممة لتحقيق التعافي الأمثل.",
+        "viewDetails": "عرض التفاصيل",
+        "showMore": "عرض المزيد من الخدمات",
+        "showLess": "عرض أقل",
+        "items": [
+          {
+            "title": "استبدال المفاصل",
+            "desc": "استبدال الركبة والورك الكلي والجزئي المتقدم باستخدام أحدث التقنيات."
+          },
+          {
+            "title": "الطب الرياضي",
+            "desc": "رعاية شاملة للرياضيين، من الوقاية من الإصابات إلى الإصلاح الجراحي المتقدم."
+          },
+          {
+            "title": "الجراحة الروبوتية",
+            "desc": "إجراءات عظام موجهة بدقة لتعافٍ أسرع ونتائج أفضل."
+          },
+          {
+            "title": "جراحة المنظار",
+            "desc": "جراحة ثقب المفتاح طفيفة التوغل لتشخيص وعلاج المفاصل."
+          },
+          {
+            "title": "تصحيح التشوهات",
+            "desc": "علاج متخصص لمحاذاة الأطراف والمشاكل الهيكلية للعظام."
+          },
+          {
+            "title": "الاستشارات",
+            "desc": "تقييم سريري متعمق وتخطيط شخصي للعلاج."
+          },
+          {
+            "title": "صدمات العظام",
+            "desc": "إدارة متخصصة للكسور المعقدة وإصابات الجهاز العضلي الهيكلي الطارئة."
+          },
+          {
+            "title": "العلاج الطبيعي",
+            "desc": "إعادة تأهيل متكاملة لضمان التعافي الكامل وصحة المفاصل على المدى الطويل."
+          }
+        ]
+      },
+      "personalizedSolutions": {
+        "title": "حلول مخصصة",
+        "description": "علاجات مستهدفة لحالات العظام المحددة لإعادتك إلى أفضل حالاتك.",
+        "viewAll": "عرض جميع الحلول",
+        "items": [
+          {
+            "title": "اليد والمعصم"
+          },
+          {
+            "title": "الظهر والرقبة"
+          },
+          {
+            "title": "القدم والكاحل"
+          },
+          {
+            "title": "الكتف"
+          },
+          {
+            "title": "الركبة"
+          },
+          {
+            "title": "الورك"
+          },
+          {
+            "title": "إصابات الرياضة"
+          }
+        ]
+      },
+      "ctaBanner": {
+        "title": "هل تعاني من آلام المفاصل أو الظهر؟",
+        "subtitle": "احصل على رعاية متخصصة في العظام اليوم.",
+        "button": "احجز موعدك الآن"
+      },
+      "sportingInjury": {
+        "badge": "عيادة إصابات الرياضة",
+        "title": "هل تعاني من",
+        "titleHighlight": "إصابة رياضية؟",
+        "titleEnd": "",
+        "description": "لا تدع الألم يمنعك من المشاركة. نقدم تشخيصاً متخصصاً وعلاجات متقدمة للرياضيين من جميع المستويات.",
+        "learnMore": "اعرف المزيد عن التعافي الرياضي",
+        "items": [
+          {
+            "title": "إعادة بناء الرباط الصليبي",
+            "desc": "إصلاح الأربطة المتقدم لاستعادة استقرار وقوة الركبة."
+          },
+          {
+            "title": "إصلاح الغضروف",
+            "desc": "جراحة دقيقة للحفاظ على وسادة الركبة ومنع المشاكل المستقبلية."
+          },
+          {
+            "title": "عدم استقرار الكتف",
+            "desc": "علاج الخلع وضعف الكتف المزمن."
+          },
+          {
+            "title": "إصابات الأربطة",
+            "desc": "رعاية شاملة لإصابات الكاحل والمعصم وأربطة الركبة المتعددة."
+          }
+        ]
+      },
+      "publications": {
+        "badge": "التميز الأكاديمي",
+        "title": "الأبحاث و",
+        "titleHighlight": "المنشورات",
+        "description": "المساهمات السريرية والأبحاث المنشورة في المجلات الدولية الرائدة لجراحة العظام.",
+        "firstAuthor": "مؤلف رئيسي",
+        "secondAuthor": "أبحاث تعاونية",
+        "stats": {
+          "papers": "أوراق بحثية محكمة",
+          "impact": "تأثير سريري عالمي",
+          "journals": "مجلات من الدرجة الأولى"
+        }
+      },
+      "articles": {
+        "badge": "رؤى طبية",
+        "title": "مقالات العظام",
+        "titleHighlight": "المتخصصة",
+        "description": "ابق على اطلاع بأحدث الرؤى حول صحة العظام وعلاجاتها وابتكاراتها الجراحية.",
+        "readMore": "اقرأ المقال كاملاً",
+        "viewAll": "عرض جميع المقالات"
+      },
+      "testimonials": {
+        "badge": "آراء المرضى",
+        "title": "ماذا يقول مرضانا",
+        "description": "قصص حقيقية من مرضى استعادوا حركتهم وحياتهم من خلال رعايتنا.",
+        "reviewButton": "اكتب مراجعة على جوجل",
+        "items": [
+          {
+            "name": "جيمس ويلسون",
+            "role": "رياضي محترف",
+            "content": "خبرة الدكتور سونار في الجراحة الروبوتية لا تُعلى عليها. عدت إلى الملعب في وقت أقصر من المتوقع."
+          },
+          {
+            "name": "سارة أحمد",
+            "role": "جدة",
+            "content": "استبدال الورك منحني حياة جديدة. أستطيع أخيراً اللعب مع أحفادي مرة أخرى."
+          }
+        ]
+      },
+      "faq": {
+        "badge": "مركز المساعدة",
+        "title": "الأسئلة الشائعة",
+        "description": "أسئلة شائعة حول رعايتنا، والجراحة الروبوتية، وعلاجات العظام في دبي.",
+        "items": [
+          {
+            "question": "ما هي الجراحة بمساعدة الروبوت؟",
+            "answer": "هي تقنية موجهة بدقة تتيح للجراح إجراء استبدال المفاصل بدقة أعلى، مما يؤدي لنتائج أفضل."
+          },
+          {
+            "question": "كم تستغرق فترة التعافي؟",
+            "answer": "تختلف الفترة حسب الإجراء، لكن معظم المرضى يعودون لأنشطتهم الطبيعية خلال 6 إلى 12 أسبوعاً."
+          },
+          {
+            "question": "هل تعالجون إصابات الرياضة؟",
+            "answer": "نعم، نحن متخصصون في إصلاح الرباط الصليبي وعلاجات الغضروف وجميع إصابات الرياضة."
+          },
+          {
+            "question": "أين تقع العيادة؟",
+            "answer": "تقع غرف الاستشارة الرئيسية لدينا في دبي، ضمن مرافق طبية متميزة."
+          },
+          {
+            "question": "هل يتوفر رأي طبي ثانٍ؟",
+            "answer": "نعم، نشجع المرضى على طلب رأي ثانٍ للحالات المعقدة لضمان الثقة في علاجهم."
+          }
+        ]
+      },
+      "contact": {
+        "badge": "تواصل معنا",
+        "title": "احجز",
+        "titleHighlight": "استشارتك",
+        "description": "اتخذ الخطوة الأولى نحو التعافي. تواصل مع فريقنا الخبير اليوم.",
+        "form": {
+          "title": "أرسل رسالة",
+          "name": "اسمك",
+          "namePlaceholder": "أدخل اسمك الكامل",
+          "email": "البريد الإلكتروني",
+          "emailPlaceholder": "yourname@email.com",
+          "phone": "رقم الهاتف",
+          "phonePlaceholder": "+971 -- --- ----",
+          "medicalInquiry": "نوع الاستفسار",
+          "placeholder": "كيف يمكننا مساعدتك اليوم؟",
+          "submit": "طلب موعد"
+        },
+        "cards": {
+          "call": {
+            "title": "اتصل بنا",
+            "sub": "متاح للاستفسارات العاجلة"
+          },
+          "email": {
+            "title": "الدعم عبر البريد",
+            "sub": "الرد خلال 24 ساعة"
+          },
+          "visit": {
+            "title": "زيارة العيادة",
+            "content": "مجمع دبي للاستثمار 1، دبي",
+            "sub": "الاثنين - السبت: 9 صباحاً - 7 مساءً"
+          },
+          "social": "تابع تحديثاتنا"
+        },
+        "info": {
+          "call": "اتصل بنا",
+          "email": "الدعم عبر البريد",
+          "visit": "زيارة العيادة",
+          "hours": "الاثنين-السبت: 9 صباحاً - 7 مساءً"
+        }
+      },
+      "footer": {
+        "nav": "روابط سريعة",
+        "support": "الدعم",
+        "clinic": "موقع العيادة",
+        "hospitalName": "المستشفى الكندي التخصصي",
+        "emergency": "الطوارئ",
+        "visitMeAt": "قم بزيارتي في",
+        "rights": "جميع الحقوق محفوظة",
+        "patientResources": "مصادر المريض",
+        "articles": "المقالات",
+        "privacy": "سياسة الخصوصية",
+        "services": "خدماتنا",
+        "serviceLinks": {
+          "arthroscopy": "جراحة المنظار",
+          "sportsMedicine": "الطب الرياضي",
+          "roboticSurgery": "الجراحة الروبوتية",
+          "jointReplacement": "استبدال المفاصل",
+          "deformityCorrection": "تصحيح التشوهات",
+          "physiotherapy": "العلاج الطبيعي",
+          "consultation": "الاستشارات",
+          "orthopedicTrauma": "صدمات العظام",
+          "more": "المزيد"
+        }
+      },
+      "faq_services": {
+        "title": "الأسئلة الشائعة للخدمات",
+        "description": "أسئلة شائعة حول إجراءات العظام وخطط الرعاية المتخصصة لدينا.",
+        "items": [
+          {
+            "question": "هل تقدمون استبدال المفاصل الروبوتي؟",
+            "answer": "نعم، نحن متخصصون في استبدال الركبة الكلي والجزئي المتقدم بمساعدة الروبوت لدقة فائقة."
+          },
+          {
+            "question": "ما هي فترة التعافي بعد جراحة المنظار؟",
+            "answer": "يعود معظم المرضى للأنشطة الخفيفة في غضون أيام قليلة، بينما قد يستغرق التعافي الرياضي الكامل 6-12 أسبوعاً."
+          },
+          {
+            "question": "هل تتوفر خدمات العلاج الطبيعي؟",
+            "answer": "نحن نقدم خطط تأهيل متكاملة لضمان التعافي الكامل."
+          }
+        ]
+      },
+      "faq_articles": {
+        "title": "مركز التعلم - الأسئلة الشائعة",
+        "description": "معلومات حول رؤيتنا الطبية وتحديثات المدونة ومبادرات الأبحاث.",
+        "items": [
+          {
+            "question": "كم مرة يتم نشر مقالات جديدة؟",
+            "answer": "نشارك رؤى طبية وتحديثات أبحاث سريرية جديدة كل بضعة أسابيع لإبقاء مرضانا على اطلاع."
+          },
+          {
+            "question": "هل يمكنني اقتراح موضوع للمدونة؟",
+            "answer": "بالتأكيد! نرحب باستفسارات المرضى وغالباً ما نعالج الاهتمامات الشائعة في مقالاتنا الطبية المفصلة."
+          }
+        ]
+      },
+      "physioHome": {
+        "seo": {
+          "title": "خدمات العلاج الطبيعي المنزلي في دبي | خبراء مرخصون من هيئة الصحة بدبي",
+          "description": "احصل على خدمات علاج طبيعي خبيرة في دبي مع زيارات منزلية من قبل محترفين مرخصين من هيئة الصحة بدبي. علاج مخصص لتخفيف الآلام والتعافي والحركة. احجز الآن."
+        },
+        "hero": {
+          "title": "خدمات العلاج الطبيعي في دبي | العلاج الطبيعي المنزلي ورعاية التأهيل",
+          "description": "هل تعاني من الألم أو التيبس أو صعوبة الحركة؟ تم تصميم خدمات العلاج الطبيعي لدينا في دبي لمساعدتك على التعافي بأمان واستعادة الثقة في أنشطتك اليومية. سواء كنت بحاجة إلى العلاج في المنزل أو في الفندق أو في مكان عملك، فنحن نقدم رعاية منظمة ومهنية مصممة خصيصاً لحالتك."
+        },
+        "features": [
+          "أخصائيو علاج طبيعي مرخصون من هيئة الصحة بدبي للزيارات المنزلية في جميع أنحاء دبي.",
+          "علاج طبيعي في المنزل أو الفندق أو المكتب – مرن ومريح.",
+          "خطط علاج مخصصة لتعافي أسرع وآمن.",
+          "مناسب لما بعد الجراحة والإصابات ورعاية المسنين والآلام المزمنة.",
+          "أسعار شفافة وبأسعار معقولة بدون تكاليف مخفية."
+        ],
+        "ctas": {
+          "call": "اتصل بنا الآن",
+          "whatsapp": "واتساب الآن"
+        },
+        "conditions": {
+          "badge": "الحالات التي يتم علاجها بخدمات العلاج الطبيعي",
+          "title": "رعاية مهنية لآلام الظهر والمفاصل ومشاكل الحركة",
+          "description": "يلعب العلاج الطبيعي دوراً مهماً في إدارة مجموعة واسعة من الحالات. غالباً ما يؤدي العلاج المبكر إلى تعافٍ أسرع ويساعد في منع المضاعفات طويلة المدى.",
+          "items": [
+            {
+              "title": "آلام الظهر والرقبة",
+              "desc": "إعادة تأهيل مستهدفة للتصلب وآلام القوام والتشنج العضلي وضعف الوظيفة."
+            },
+            {
+              "title": "آلام الركبة وتيبسها",
+              "desc": "علاج منظم لتحسين حركة المفاصل وقوتها والثقة أثناء المشي والنشاط."
+            },
+            {
+              "title": "آلام الكتف",
+              "desc": "علاج مركز للألم والضعف وحركة الكتف المحدودة أثناء الأنشطة اليومية."
+            },
+            {
+              "title": "الإصابات الرياضية",
+              "desc": "برامج تعافي لإصابات العضلات وإصابات الأنسجة الرخوة ومشاكل الإجهاد المفرط والعودة للنشاط."
+            },
+            {
+              "title": "رعاية التهاب المفاصل",
+              "desc": "علاج لطيف وتدريجي لتقليل الألم وتحسين الحركة ودعم صحة المفاصل على المدى الطويل."
+            },
+            {
+              "title": "إعادة التأهيل بعد الجراحة",
+              "desc": "دعم تعافٍ مخطط له بعد عمليات العظام مع تعزيز الحركة والمقاومة."
+            },
+            {
+              "title": "دعم تصحيح التشوهات",
+              "desc": "رعاية تأهيلية لتحسين أنماط الحركة المتعلقة بالمحاذاة والتعافي الوظيفي."
+            },
+            {
+              "title": "التعافي من استبدال مفصل الورك",
+              "desc": "علاج طبيعي تدريجي يركز على القوة والتوازن والثقة في المشي والاستقلال الآمن."
+            }
+          ],
+          "footer": "غالباً ما يؤدي العلاج المبكر إلى تعافٍ أسرع ويمنع المضاعفات طويلة المدى."
+        }
+      }
+    }
+  },
+  "articles": {
+    "causes-of-knee-pain": {
+      "id": "causes-of-knee-pain",
+      "title": "Understanding Common Causes of Knee Pain",
+      "metaTitle": "Common Causes of Knee Pain – From Sports Injuries to Arthritis",
+      "metaDescription": "Learn about the most common causes of knee pain, from acute sports injuries to chronic conditions like arthritis, and how to identify them.",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Knee Health",
+      "categoryColor": "bg-blue-100 text-blue-700",
+      "image": "/images/articles/article_causes_knee.png",
+      "readTime": "5 min read",
+      "excerpt": "Knee pain affects people of all ages. Whether it's a sports injury or arthritis, understanding the underlying cause is the first step toward effective treatment.",
+      "content": "\n            <p>Knee pain is a common complaint that affects people of all ages. Understanding the underlying cause is the first step toward effective treatment. Whether it's a sudden injury or a gradual onset of discomfort, identifying the source is crucial.</p>\n            <h3>Common Causes in Young Adults</h3>\n            <p>In younger, active individuals, knee pain is often related to sports or overuse. Conditions like <strong>patellofemoral pain syndrome</strong> or ligament tears are frequent. If you've been active lately, you might notice <a href=\"/blog/knee-pain-gym-sports\">knee pain after gym or sports</a>, which could indicate anything from simple strain to a more serious injury.</p>\n            <h3>Age-Related Wear and Tear</h3>\n            <p>As we age, degenerative changes like <strong>osteoarthritis</strong> become more common. This occurs when the protective cartilage that cushions the ends of your bones wears down over time. It's often helpful to understand the <a href=\"/blog/causes-of-knee-pain\">causes of knee pain in young adults</a> versus older populations to tailor the recovery plan.</p>\n            <h3>When to Seek Help</h3>\n            <p>Persistent pain, swelling, or instability should not be ignored. Many patients ask <a href=\"/blog/when-to-get-mri-knee\">when knee pain needs MRI</a> to rule out internal structural damage. Furthermore, understanding the <a href=\"/blog/continuing-sports-risks\">continuing sports with knee pain risks</a> can prevent long-term joint damage.</p>\n        ",
+      "relatedServiceIds": [
+        0,
+        1,
+        3
+      ]
+    },
+    "knee-pain-gym-sports": {
+      "id": "knee-pain-gym-sports",
+      "title": "Knee Pain After Gym or Sports in Working Professionals: Ligament Injury or Cartilage Damage?",
+      "metaTitle": "Knee Pain After Gym or Sports in Working Professionals – Ligament vs Cartilage Injury",
+      "metaDescription": "Knee pain after gym or sports is common in working professionals. Learn how to distinguish ligament injury from cartilage damage, warning signs, and management options.",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Sports Medicine",
+      "categoryColor": "bg-orange-100 text-orange-700",
+      "image": "/images/articles/article_gym_sports.png",
+      "readTime": "10 min read",
+      "excerpt": "Knee pain after gym or sports is common in working professionals. Learn how to distinguish ligament injury from cartilage damage, warning signs, and management options.",
+      "content": "\n            <p>Knee pain following gym workouts or sports activity is a frequent complaint among active adults and working professionals. This is particularly common in individuals who combine prolonged desk-based work with recreational sports, gym training, or weekend athletic activity. While delayed muscle soreness is expected after exercise, knee pain associated with swelling, instability, or mechanical symptoms may indicate underlying joint injury.</p>\n            <p>In working professionals, knee pain is often underestimated or self-managed due to work commitments, travel, or limited time for rehabilitation. Continuing activity without proper evaluation can lead to worsening symptoms, prolonged recovery, and secondary joint damage. Differentiating between ligament injury, cartilage damage, and overload-related pain is essential for appropriate management.</p>\n\n            <h3>Why knee pain after gym or sports is common in working professionals</h3>\n            <p>Several factors contribute to the high incidence of post-exercise knee pain in this group:</p>\n            <ul>\n                <li>Prolonged sitting leading to reduced flexibility and neuromuscular control</li>\n                <li>Irregular training patterns (weekend sports or sporadic gym sessions)</li>\n                <li>Sudden increases in training intensity or load</li>\n                <li>Inadequate recovery due to work schedules</li>\n                <li>Limited time for structured rehabilitation</li>\n            </ul>\n            <p>This combination places increased stress on the knee joint when physical activity resumes, particularly during high-load or impact exercises.</p>\n\n            <h3>Understanding post-exercise knee pain</h3>\n            <p>Not all knee pain after gym or sports represents structural injury. Broadly, post-exercise knee pain can be divided into:</p>\n            <ul>\n                <li><strong>Overload-related pain:</strong> Occurs when training load exceeds joint capacity. Common when resuming gym after inactivity or increasing weights too quickly.</li>\n                <li><strong>Ligament injury:</strong> Usually sudden pivoting, twisting, or awkward landing. Common in sports like football or badminton.</li>\n                <li><strong>Meniscal or cartilage injury:</strong> Often follows twisting with the knee flexed or deep squatting under load.</li>\n            </ul>\n\n            <h3>Ligament vs Cartilage: How to tell the difference?</h3>\n            <p><strong>Ligament injuries</strong> often present with sudden swelling (within hours) and a feeling of instability or \"giving way.\" <strong>Meniscal/Cartilage injuries</strong> may have delayed swelling and mechanical symptoms like locking or catching.</p>\n            \n            <p>For more details, see our <a href=\"/blog/meniscus-tear-vs-strain\">meniscus vs strain guide</a> or check out <a href=\"/blog/when-to-get-mri-knee\">when you need an MRI</a>.</p>\n\n            <h3>When to seek evaluation</h3>\n            <p>Clinical assessment is advisable if you experience recurrent swelling, instability, locking, or pain persisting beyond 2-3 weeks. Early diagnosis is key to avoiding secondary joint damage.</p>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
+      "relatedServiceIds": [
+        1,
+        3
+      ]
+    },
+    "when-to-get-mri-knee": {
+      "id": "when-to-get-mri-knee",
+      "title": "When Knee Pain Needs a Scan: Understanding MRI, X-rays, and Decision-Making",
+      "metaTitle": "When Knee Pain Needs a Scan – MRI, X-rays and Clinical Decision-Making Explained",
+      "metaDescription": "When should knee pain be investigated with MRI or X-ray? A detailed clinical guide for active adults and working professionals on symptoms, red flags, imaging, and decision-making.",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Diagnostics",
+      "categoryColor": "bg-purple-100 text-purple-700",
+      "image": "/images/articles/article_mri_scan.png",
+      "readTime": "12 min read",
+      "excerpt": "When should knee pain be investigated with MRI or X-ray? A detailed clinical guide for active adults on symptoms, red flags, and imaging decisions.",
+      "content": "\n            <p>Knee pain is one of the most common musculoskeletal complaints in active adults and working professionals. It affects individuals across a broad spectrum, from those who participate in football, padel, badminton, running, gym training, and recreational sport to those whose main strain arises from long working hours, prolonged sitting, frequent commuting, and irregular exercise patterns. In many patients, the central question arises early: <strong>does this knee pain need a scan?</strong></p>\n            \n            <p>Imaging, and MRI in particular, is often seen as the definitive way to identify the exact source of pain. However, the clinical reality is more nuanced. Not every painful knee requires immediate imaging, and not every MRI changes treatment. Understanding when a scan is important, useful, and sometimes time-sensitive is key to effective management.</p>\n\n            <h3>Why the question of imaging comes up so often</h3>\n            <p>One common reason is fear of missing a structural injury, particularly after <a href=\"/blog/knee-pain-gym-sports\">injury types after gym</a> or twisting injuries in sports. Another is the modern expectation of rapid answers. Working professionals often prefer a quick, definitive explanation to structure exercise around their commitments. However, the central clinical question is whether the scan will provide information that meaningfully changes the treatment pathway.</p>\n\n            <h3>Clinical assessment comes before imaging</h3>\n            <p>A careful history and physical examination often provide most of the information needed to decide whether imaging is necessary. The examiner looks at the pattern of onset, the mechanism of injury (e.g., a twist vs. gradual load), and mechanical symptoms like locking or instability. If you're unsure about the <a href=\"/blog/causes-of-knee-pain\">common causes of knee pain</a>, clinical assessment is the first step. Imaging follows the clinical question; it is not a substitute for it.</p>\n\n            <h3>Understanding what X-rays actually show</h3>\n            <p>X-rays remain a highly useful first-line investigation. They are excellent for identifying fractures, malalignment, degenerative changes (arthritis), and loose bodies. In younger active patients, weight-bearing X-rays can reveal patterns of chronic overload that MRI might miss. A normal X-ray also helps narrow the diagnostic field.</p>\n\n            <h3>What MRI adds</h3>\n            <p>MRI is the investigation of choice for soft tissue structures like ligaments, menisci, and cartilage. It is particularly valuable when there is suspicion of an ACL injury, a meniscus tear, or unexplained persistent pain despite appropriate initial treatment. However, it should be used when the clinician has a focused reason for requesting it, rather than as a general \"screening\" tool.</p>\n\n            <h3>Why not every knee pain needs immediate MRI</h3>\n            <p>Many knee presentations, especially gym-related overload issues in young adults, improve with time and structured rehabilitation. Immediate MRI in low-risk situations may identify minor signal changes or incidental findings that are not the true source of pain, leading to unnecessary anxiety or over-medicalisation.</p>\n\n            <h3>When knee pain clearly does need imaging</h3>\n            <p>Imaging is indicated when there has been a significant injury mechanism (like a twist with immediate swelling), recurrent mechanical symptoms (locking or catching), or when instability/giving way is reported. It is also warranted if symptoms fail to improve after an adequate period of appropriate treatment. Understanding <a href=\"/blog/continuing-sports-risks\">why ignoring pain is risky</a> is essential; a timely scan can prevent long-term joint damage.</p>\n\n            <h3>Red flags and urgent scenarios</h3>\n            <p>Certain presentations require prompt investigation: acute inability to bear weight after trauma, marked swelling within hours of an injury (suggesting a hemarthrosis), fever or redness (raising concern for infection), and persistent night pain.</p>\n\n            <h3>Clinical Scenarios: Active Adults & Professionals</h3>\n            <p>For a desk professional with gradual-onset pain and no swelling, rehabilitation is often the first step. Conversely, for a football player with a twisting injury and swelling, MRI is relevant to plan surgical or return-to-sport strategies. Functional demand matters as much as the scan finding itself.</p>\n\n            <h3>Incidental MRI findings & Decision-making</h3>\n            <p>MRI is highly sensitive, often showing minor wear or signal changes even in asymptomatic people. This is why we treat the patient, not the scan. Imaging has its greatest value when it answers a question that changes the treatment plan, such as choosing between surgery and conservative care for a meniscus tear.</p>\n\n            <h3>Summary</h3>\n            <p>Knee pain is common, but scanning decisions should be based on a structured clinical framework. While X-rays assess bone and alignment, MRI clarifies soft tissue structures. Ideally, scans support good clinical decision-making, ensuring we protect long-term joint health while avoiding unnecessary interventions.</p>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
+      "relatedServiceIds": [
+        5,
+        6
+      ]
+    },
+    "continuing-sports-risks": {
+      "id": "continuing-sports-risks",
+      "title": "Continuing Sports with Knee Pain in Working Professionals: Risks and Mistakes",
+      "metaTitle": "Continuing Sports With Knee Pain in Working Professionals – Risks and Mistakes",
+      "metaDescription": "Continuing sports with knee pain is common in active adults and working professionals. Learn risks, common mistakes, warning signs, and safer management strategies.",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Injury Prevention",
+      "categoryColor": "bg-red-100 text-red-700",
+      "image": "/images/articles/article_sports_risk.png",
+      "readTime": "12 min read",
+      "excerpt": "Is it safe to play through knee pain? Learn the common mistakes, long-term risks, and safer management strategies for active adults balancing work and sport.",
+      "content": "\n            <p>Continuing sports or gym activity despite knee pain is a common and often underestimated problem among active adults and working professionals. While some minor symptoms may resolve with rest, ignoring unresolved pain can lead to progression of injury, prolonged recovery, and secondary joint damage. Differentiating between benign <a href=\"/blog/knee-pain-gym-sports\">injury vs overload</a> is critical for long-term health.</p>\n\n            <h3>Why professionals often continue sports despite knee pain</h3>\n            <p>Lifestyle factors like fitness goals, stress management, and limited time windows for exercise often drive individuals to \"push through\" symptoms. A common mistake is attributing joint-related pain—often felt deep within the knee or along the joint line—to routine muscle soreness. In desk-based professionals, the lack of pain during the workday further contributes to underestimating the injury.</p>\n\n            <h3>Understanding knee pain patterns</h3>\n            <p>Pain arising from different mechanisms carries different risks:</p>\n            <ul>\n                <li><strong>Overload-related pain:</strong> Usually gradual onset, linked to training errors or sudden increases in intensity.</li>\n                <li><strong>Mechanical pain (Meniscal/Cartilage):</strong> Suggested by joint locking, catching, or pain during twisting and squatting.</li>\n                <li><strong>Instability-related pain (Ligament):</strong> Characterized by the knee \"giving way\" or a loss of confidence during turning.</li>\n            </ul>\n\n            <h3>Common mistakes and cumulative load</h3>\n            <p>Many professionals ignore swelling or use medication to mask symptoms, allowing them to continue activity while a structural injury worsens. In modern lifestyles, the cumulative load from prolonged sitting, stair climbing, and travel-related strain also contributes significantly to joint stress. Resuming high-impact sport without identifying the <a href=\"/blog/causes-of-knee-pain\">underlying causes of knee pain</a> then becomes the \"tipping point\" for injury.</p>\n\n            <h3>The risks of \"playing through\"</h3>\n            <p>Continuing activity with unresolved pain poses several risks: small meniscal tears may enlarge and become unrepairable; repeated instability episodes from ligament damage lead to rapid joint deterioration; and chronic overload accelerates cartilage wear. This not only impacts your sporting goals but can eventually limit daily function, such as climbing stairs or standing during travel.</p>\n\n            <h3>When to seek evaluation</h3>\n            <p>If you experience recurrent swelling, locking, catching, or a sense of the knee \"giving way,\" activity should be stopped and a clinical assessment performed. Understanding <a href=\"/blog/when-to-get-mri-knee\">when to get an MRI</a> or X-ray is vital to define the pathology and prevent long-term joint health issues.</p>\n\n            <h3>Summary</h3>\n            <p>Ignoring knee pain increases the risk of progression and long-term joint damage. A structured approach involving early evaluation, activity modification, and targeted rehabilitation is essential for active professionals to maintain both their sporting performance and their daily functional capacity.</p>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
+      "relatedServiceIds": [
+        1,
+        7
+      ]
+    },
+    "anterior-knee-pain-office": {
+      "id": "anterior-knee-pain-office",
+      "title": "Anterior Knee Pain in Office Workers",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Ergonomics",
+      "categoryColor": "bg-teal-100 text-teal-700",
+      "image": "/images/articles/article_office_pain.png",
+      "readTime": "5 min read",
+      "excerpt": "Long hours at a desk can lead to 'theater sign' pain. Learn simple ergonomic fixes and lifestyle adjustments for office-based knee pain.",
+      "content": "\n            <p>Many office workers experience a dull ache at the front of the knee, often called \"movie-goer's knee\" or patellofemoral pain. This condition is frequently linked to long periods of sitting with knees bent.</p>\n            <h3>The Impact of Sedentary Work</h3>\n            <p>Sitting for hours increases the pressure on the patella (kneecap) against the femur. This can lead to irritation of the cartilage and subsequent pain when standing up or climbing stairs.</p>\n            <h3>Ergonomic Solutions</h3>\n            <p>Adjusting your chair height and ensuring your feet rest flat on the floor can help. Alternating between sitting and standing is also beneficial to keep the joints mobile and reduce sustained pressure.</p>\n        ",
+      "relatedServiceIds": [
+        3,
+        7
+      ]
+    },
+    "meniscus-tear-vs-strain": {
+      "id": "meniscus-tear-vs-strain",
+      "title": "Meniscus Tear vs. Muscle Strain – How to Tell",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Diagnosis",
+      "categoryColor": "bg-emerald-100 text-emerald-700",
+      "image": "/images/articles/article_meniscus_tear.png",
+      "readTime": "6 min read",
+      "excerpt": "Is it a sharp joint line pain or a soft tissue ache? Compare the symptoms and recovery timelines for these common knee injuries.",
+      "content": "\n            <p>Not all knee pains are the same. Distinguishing between a meniscus tear and a simple muscle strain is crucial for choosing the right treatment and recovery timeline.</p>\n            <h3>Symptom Comparison</h3>\n            <p>A <strong>meniscus tear</strong> often involves clicking, locking, or sharp pain along the joint line. In contrast, a <strong>muscle strain</strong> (like a hamstring or quad pull) usually feels like a dull ache or tightness in the soft tissue surrounding the joint.</p>\n            <h3>Recovery Timelines</h3>\n            <p>Strains typically improve with rest and gentle stretching over 2-3 weeks. A meniscus tear may require more formal physical therapy or even surgical intervention if it causes mechanical symptoms. Consulting a specialist is the only way to get a definitive diagnosis.</p>\n        ",
+      "relatedServiceIds": [
+        1,
+        3
+      ]
+    },
+    "knee-pain-exercises-desk": {
+      "id": "knee-pain-exercises-desk",
+      "title": "Best Exercises for Knee Pain (Desk Professionals)",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Rehabilitation",
+      "categoryColor": "bg-cyan-100 text-cyan-700",
+      "image": "/images/articles/article_desk_exercise.png",
+      "readTime": "4 min read",
+      "excerpt": "Keep your joints moving with these simple stretches and strengthening exercises you can perform right at your workstation.",
+      "content": "\n            <p>If you're stuck at a desk all day, your knees can pay the price. Fortunately, there are several simple exercises you can do without even leaving your chair to keep your knees healthy and pain-free.</p>\n            <h3>Seated Leg Extensions</h3>\n            <p>Simply straighten your leg while sitting and hold for 5 seconds. This strengthens the quadriceps, which are vital for supporting the knee joint.</p>\n            <h3>Ankle Pumps and Glute Squeezes</h3>\n            <p>Keeping blood flowing and engaging the muscles around the hip can take significant pressure off the knees. Aim to perform these movements every hour to combat the stiffness of prolonged sitting.</p>\n        ",
+      "relatedServiceIds": [
+        5,
+        7
+      ]
+    },
+    "knee-pain-travel-flights": {
+      "id": "knee-pain-travel-flights",
+      "title": "Managing Knee Pain During Travel and Flights",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Lifestyle",
+      "categoryColor": "bg-indigo-100 text-indigo-700",
+      "image": "/images/articles/article_travel_flight.png",
+      "readTime": "5 min read",
+      "excerpt": "Long-haul travel can cause joint stiffness and discomfort. Use these expert tips for staying comfortable on your next journey.",
+      "content": "\n            <p>Traveling, especially on long-haul flights, can be a nightmare for those with chronic knee pain or stiffness. The cramped quarters and lack of movement are major contributors to joint distress.</p>\n            <h3>Tips for the Air</h3>\n            <p>Choose an aisle seat if possible to allow for easier stretching. Hydration is also key, as it keeps your joint tissues healthy and reduces the risk of overall stiffness.</p>\n            <h3>Post-Flight Recovery</h3>\n            <p>Once you land, take a brisk walk to \"lubricate\" the joints. Gentle stretching of the quads and hamstrings can help reset your body after hours of being in a fixed position.</p>\n        ",
+      "relatedServiceIds": [
+        5,
+        7
+      ]
+    },
+    "knee-pain-pillar": {
+      "id": "knee-pain-pillar",
+      "title": "Knee Pain in Professionals: The Ultimate Specialist Guide",
+      "metaTitle": "Knee Pain in Young Adults & Working Professionals – Causes, MRI, Treatment Guide",
+      "metaDescription": "A complete clinical guide to knee pain in young adults and working professionals. Understand causes, gym injuries, MRI decisions, and safe return to sports.",
+      "date": "March 21, 2026",
+      "author": "Dr. Ulhas Sonar",
+      "category": "Pillar Page",
+      "categoryColor": "bg-blue-100 text-blue-700",
+      "image": "/images/articles/article_pillar_guide.png",
+      "readTime": "15 min read",
+      "excerpt": "A complete clinical guide to knee pain for active adults. Understand causes, gym injuries, MRI decisions, and safe return to sports.",
+      "content": "\n            <p>Knee pain is one of the most frequently encountered musculoskeletal complaints in young adults and working professionals. It is increasingly seen in individuals who combine prolonged desk-based work with intermittent participation in gym training, running, recreational sports, or weekend athletic activity. This combination of sedentary work patterns and sudden physical loading creates a unique environment where the knee is repeatedly exposed to demands that may exceed its capacity to adapt.</p>\n            \n            <p>This guide provides a structured, clinically grounded approach to understanding knee pain in this population. It explains common causes, patterns of injury, the role of imaging, and practical decision-making relevant to both active individuals and working professionals.</p>\n\n            <h3>Why Knee Pain Is Increasing in Working Professionals</h3>\n            <p>Modern working environments often involve prolonged sitting, reduced baseline conditioning, and limited time for consistent physical activity. Many individuals compensate for this with high-intensity workouts performed within restricted time windows. Key factors include reduced gluteal activation and sudden increases in gym training or running volume. These factors combine to increase joint stress and make the knee more susceptible to both overload and structural injury.</p>\n\n            <h3>Understanding Different Types of Knee Pain</h3>\n            <p>Knee pain is a symptom, not a diagnosis. Recognising the pattern is key:</p>\n            <ul>\n                <li><strong>Overload-Related Pain:</strong> Gradual onset, activity-related, and often linked to sudden training changes or <a href=\"/blog/knee-pain-gym-sports\">gym-related strain</a>.</li>\n                <li><strong>Ligament Injury:</strong> Sudden onset after twisting or pivoting, often with swelling and instability.</li>\n                <li><strong>Meniscal and Cartilage Injury:</strong> Characterised by joint-line pain, deep aching, and mechanical symptoms like catching or locking.</li>\n            </ul>\n\n            <h3>When Knee Pain Needs Imaging</h3>\n            <p>The decision to perform imaging depends on whether it will influence diagnosis or management. While X-rays assess bone structure and alignment, MRI is the gold standard for soft tissue like ligaments and menisci. However, understanding <a href=\"/blog/when-to-get-mri-knee\">when knee pain needs MRI</a> is vital, as early MRI in low-risk cases can identify incidental findings that don't correlate with symptoms.</p>\n\n            <h3>Continuing Sports with Knee Pain: Risks</h3>\n            <p>Continuing activity despite unresolved pain is common among professionals. While mild overload symptoms may improve with modification, ignoring structural pathology increases the risk of secondary injuries. Understanding <a href=\"/blog/continuing-sports-risks\">why ignoring knee pain is risky</a> is essential; repeated cycles of activity without completion of rehabilitation can contribute to chronic symptoms.</p>\n\n            <h3>Common Mistakes in Management</h3>\n            <p>Playing through pain, ignoring recurrent swelling, and using medication to mask symptoms are frequent errors. Returning to sport without completing structured rehabilitation leaves the joint vulnerable to recurrence. A structured approach involving activity modification, load management, and physiotherapy is the foundation of long-term knee health.</p>\n\n            <div class=\"mt-12 bg-gray-50 p-6 rounded-xl border border-gray-100\">\n                <h3 class=\"text-xl font-bold text-gray-900 mb-6\">Expert FAQ: Knee Pain Management</h3>\n                <div class=\"space-y-6\">\n                    <div>\n                        <h4 class=\"font-bold text-gray-900\">When should knee pain be investigated with MRI?</h4>\n                        <p class=\"text-gray-600 mt-1\">MRI is indicated when knee pain is associated with swelling, instability, locking, or when symptoms persist despite appropriate rehabilitation.</p>\n                    </div>\n                    <div>\n                        <h4 class=\"font-bold text-gray-900\">Is knee pain after gym always serious?</h4>\n                        <p class=\"text-gray-600 mt-1\">No. Most cases are due to overload. However, swelling, instability, or mechanical symptoms suggest structural injury.</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
+      "relatedServiceIds": [
+        0,
+        1,
+        3
+      ]
+    }
+  }
+}

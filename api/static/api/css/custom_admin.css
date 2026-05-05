@@ -1,0 +1,58 @@
+/* Brand Colors */
+:root {
+    --primary-brand: #0284c7;
+    --primary-hover: #0369a1;
+}
+
+/* Navbar branding */
+.main-header.navbar-dark.navbar-primary {
+    background-color: var(--primary-brand) !important;
+}
+
+/* Sidebar active items */
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: var(--primary-brand) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-brand) !important;
+    border-color: var(--primary-brand) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+}
+
+/* Accent color for checkboxes and radios */
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--primary-brand) !important;
+    border-color: var(--primary-brand) !important;
+}
+
+/* Links */
+a {
+    color: var(--primary-brand);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* Page titles and headers */
+.content-header h1 {
+    color: var(--primary-brand);
+    font-weight: 700;
+}
+
+/* Brand logo area */
+.brand-link {
+    background-color: #ffffff !important;
+    color: var(--primary-brand) !important;
+}
+
+.brand-link .brand-image {
+    max-height: 40px;
+    width: auto;
+}
