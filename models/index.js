@@ -1,5 +1,6 @@
-const { Sequelize, DataTypes } = require('sequelize');
-require('dotenv').config();
+import { Sequelize, DataTypes } from 'sequelize';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
     host: process.env.DB_HOST,
@@ -7,7 +8,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     logging: false
 });
 
-const Article = sequelize.define('Article', {
+export const Article = sequelize.define('Article', {
     meta_title: { type: DataTypes.STRING },
     meta_description: { type: DataTypes.TEXT },
     canonical_url: { type: DataTypes.STRING },
@@ -35,7 +36,7 @@ const Article = sequelize.define('Article', {
     createdAt: false
 });
 
-const Service = sequelize.define('Service', {
+export const Service = sequelize.define('Service', {
     meta_title: { type: DataTypes.STRING },
     meta_description: { type: DataTypes.TEXT },
     canonical_url: { type: DataTypes.STRING },
@@ -60,7 +61,7 @@ const Service = sequelize.define('Service', {
     createdAt: false
 });
 
-const Translation = sequelize.define('Translation', {
+export const Translation = sequelize.define('Translation', {
     key: { type: DataTypes.STRING, allowNull: false },
     language: { type: DataTypes.STRING, allowNull: false },
     value: { type: DataTypes.JSON, allowNull: false },
@@ -69,7 +70,7 @@ const Translation = sequelize.define('Translation', {
     timestamps: false
 });
 
-const SiteSetting = sequelize.define('SiteSetting', {
+export const SiteSetting = sequelize.define('SiteSetting', {
     robots_txt: { type: DataTypes.TEXT },
     header_scripts: { type: DataTypes.TEXT },
     footer_scripts: { type: DataTypes.TEXT },
@@ -79,10 +80,4 @@ const SiteSetting = sequelize.define('SiteSetting', {
     timestamps: false
 });
 
-module.exports = {
-    sequelize,
-    Article,
-    Service,
-    Translation,
-    SiteSetting
-};
+export { sequelize };

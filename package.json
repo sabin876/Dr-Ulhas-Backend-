@@ -1,6 +1,7 @@
 {
   "name": "dr-ulhas-node-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "Node.js backend for Dr. Ulhas Orthopedic project",
   "main": "server.js",
   "scripts": {

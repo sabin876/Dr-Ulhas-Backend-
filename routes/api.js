@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const apiController = require('../controllers/apiController');
+import * as apiController from '../controllers/apiController.js';
 
 router.get('/articles', apiController.getArticles);
 router.get('/articles/:slug', apiController.getArticleBySlug);
@@ -8,4 +8,4 @@ router.get('/services', apiController.getServices);
 router.get('/translations', apiController.getTranslations);
 router.get('/settings', apiController.getSiteSettings);
 
-module.exports = router;
+export default router;

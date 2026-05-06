@@ -1,15 +1,16 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const morgan = require('morgan');
-require('dotenv').config();
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const apiRoutes = require('./routes/api');
-const AdminJS = require('adminjs');
-const AdminJSExpress = require('@adminjs/express');
-const AdminJSSequelize = require('@adminjs/sequelize');
-const { sequelize, Article, Service, Translation, SiteSetting } = require('./models');
-const session = require('express-session');
+import apiRoutes from './routes/api.js';
+import AdminJS from 'adminjs';
+import AdminJSExpress from '@adminjs/express';
+import * as AdminJSSequelize from '@adminjs/sequelize';
+import { sequelize, Article, Service, Translation, SiteSetting } from './models/index.js';
+import session from 'express-session';
 
 AdminJS.registerAdapter(AdminJSSequelize);
 
@@ -64,4 +65,5 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`👑 Admin panel: http://localhost:${PORT}/admin`);
 });

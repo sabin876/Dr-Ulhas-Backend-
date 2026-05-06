@@ -1,6 +1,6 @@
-const { Article, Service, Translation, SiteSetting } = require('../models');
+import { Article, Service, Translation, SiteSetting } from '../models/index.js';
 
-const getArticles = async (req, res) => {
+export const getArticles = async (req, res) => {
     try {
         const articles = await Article.findAll({ order: [['date', 'DESC']] });
         res.json(articles);
@@ -9,7 +9,7 @@ const getArticles = async (req, res) => {
     }
 };
 
-const getArticleBySlug = async (req, res) => {
+export const getArticleBySlug = async (req, res) => {
     try {
         const article = await Article.findOne({ where: { slug: req.params.slug } });
         if (!article) return res.status(404).json({ error: 'Article not found' });
@@ -19,7 +19,7 @@ const getArticleBySlug = async (req, res) => {
     }
 };
 
-const getServices = async (req, res) => {
+export const getServices = async (req, res) => {
     try {
         const services = await Service.findAll();
         res.json(services);
@@ -28,7 +28,7 @@ const getServices = async (req, res) => {
     }
 };
 
-const getTranslations = async (req, res) => {
+export const getTranslations = async (req, res) => {
     try {
         const language = (req.query.lang || 'EN').toUpperCase();
         const translationsList = await Translation.findAll({ where: { language } });
@@ -44,19 +44,11 @@ const getTranslations = async (req, res) => {
     }
 };
 
-const getSiteSettings = async (req, res) => {
+export const getSiteSettings = async (req, res) => {
     try {
         const settings = await SiteSetting.findOne();
         res.json(settings || {});
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-};
-
-module.exports = {
-    getArticles,
-    getArticleBySlug,
-    getServices,
-    getTranslations,
-    getSiteSettings
 };
