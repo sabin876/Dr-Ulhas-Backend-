@@ -27,7 +27,7 @@ jobs:
             cd /home2/drulhaso/Dr-Ulhas-Backend-
 
             echo "Pulling latest code..."
-            git pull origin main
+            git pull origin master
 
             echo "Activating virtualenv..."
             source source /home2/drulhaso/virtualenv/Dr-Ulhas-Backend-/3.12/bin/activate && cd /home2/drulhaso/Dr-Ulhas-Backend-
