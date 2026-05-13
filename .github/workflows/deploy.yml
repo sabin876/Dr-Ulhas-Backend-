@@ -24,8 +24,7 @@ jobs:
 
             echo "Starting deployment..."
 
-            PROJECT_DIR="/home2/drulhas/myproject"
-            VENV_DIR="/home2/drulhas/virtualenv/myproject/3.12"
+            PROJECT_DIR="/home2/drulhas/dr_backend"
 
             cd $PROJECT_DIR
 
@@ -33,7 +32,7 @@ jobs:
             git pull origin main
 
             echo "Activating virtualenv..."
-            source $VENV_DIR/bin/activate
+            source /home2/drulhaso/virtualenv/dr_backend/3.12/bin/activate && cd /home2/drulhaso/dr_backend
 
             echo "Installing requirements..."
             pip install -r requirements.txt
