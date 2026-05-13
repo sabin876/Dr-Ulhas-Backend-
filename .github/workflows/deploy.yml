@@ -30,7 +30,7 @@ jobs:
             git pull origin main
 
             echo "Activating virtualenv..."
-            source /home2/drulhaso/virtualenv/dr_backend/3.12/bin/activate && cd /home2/drulhaso/dr_backend
+            source source /home2/drulhaso/virtualenv/Dr-Ulhas-Backend-/3.12/bin/activate && cd /home2/drulhaso/Dr-Ulhas-Backend-
 
             echo "Installing requirements..."
             pip install -r requirements.txt
