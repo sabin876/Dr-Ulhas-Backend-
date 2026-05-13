@@ -24,7 +24,7 @@ jobs:
 
             echo "Starting deployment..."
 
-            cd /home2/drulhaso/dr_backend
+            cd /home2/drulhaso/Dr-Ulhas-Backend-
 
             echo "Pulling latest code..."
             git pull origin main
