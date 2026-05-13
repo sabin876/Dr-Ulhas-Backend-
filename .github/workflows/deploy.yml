@@ -24,7 +24,7 @@ jobs:
 
             echo "Starting deployment..."
 
-            PROJECT_DIR="/home2/drulhas/dr_backend"
+            PROJECT_DIR="/home2/drulhaso/dr_backend"
 
             cd $PROJECT_DIR
 
