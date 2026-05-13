@@ -24,9 +24,7 @@ jobs:
 
             echo "Starting deployment..."
 
-            PROJECT_DIR="/home2/drulhaso/dr_backend"
-
-            cd $PROJECT_DIR
+            cd /home2/drulhaso/dr_backend
 
             echo "Pulling latest code..."
             git pull origin main
