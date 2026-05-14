@@ -12,31 +12,36 @@ class ArticleAdmin(admin.ModelAdmin):
         ('Content', {
             'fields': ('title', 'h1_title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color')
         }),
-        ('SEO Configuration', {
+        ('SEO & Metadata', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'index_page', 'follow_links'),
-            'classes': ('collapse',),
+            'description': 'Control how search engines see this page.'
         }),
-        ('Social Media (OG)', {
+        ('Social Media (Open Graph)', {
             'fields': ('og_title', 'og_description', 'og_image'),
             'classes': ('collapse',),
         }),
-        ('Advanced SEO', {
-            'fields': ('schema_markup',),
+        ('Schema Markup', {
+            'fields': ('schema_type', 'schema_markup'),
             'classes': ('collapse',),
+            'description': 'Advanced: Add structured data for rich snippets.'
         }),
     )
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'updated_at')
+    list_display = ('title', 'updated_at', 'index_page')
     prepopulated_fields = {'slug': ('title',)}
     
     fieldsets = (
         ('Basic Information', {
             'fields': ('title', 'h1_title', 'slug', 'description', 'icon', 'image_alt_text', 'items')
         }),
-        ('SEO', {
-            'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'schema_markup', 'index_page', 'follow_links'),
+        ('SEO & Social', {
+            'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),
+            'classes': ('collapse',),
+        }),
+        ('Schema Markup', {
+            'fields': ('schema_type', 'schema_markup'),
             'classes': ('collapse',),
         }),
     )

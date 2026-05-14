@@ -4,11 +4,21 @@ from django.utils.text import slugify
 class SEOBaseModel(models.Model):
     meta_title = models.CharField(max_length=255, blank=True, null=True)
     meta_description = models.TextField(blank=True, null=True)
-    canonical_url = models.URLField(max_length=500, blank=True, null=True)
+    canonical_url = models.URLField(max_length=500, blank=True, null=True, help_text="Leave blank to use the page's absolute URL")
     og_title = models.CharField(max_length=255, blank=True, null=True)
     og_description = models.TextField(blank=True, null=True)
     og_image = models.ImageField(upload_to='og_images/', blank=True, null=True)
+    
+    SCHEMA_CHOICES = [
+        ('Article', 'Article'),
+        ('MedicalBusiness', 'Medical Business / Local Business'),
+        ('FAQPage', 'FAQ Page'),
+        ('BreadcrumbList', 'Breadcrumbs'),
+        ('None', 'Custom / None'),
+    ]
+    schema_type = models.CharField(max_length=50, choices=SCHEMA_CHOICES, default='None')
     schema_markup = models.JSONField(blank=True, null=True, help_text="JSON-LD schema markup")
+    
     index_page = models.BooleanField(default=True, help_text="Should search engines index this page?")
     follow_links = models.BooleanField(default=True, help_text="Should search engines follow links on this page?")
     image_alt_text = models.CharField(max_length=255, blank=True, null=True, help_text="Alt text for the main image")
@@ -16,6 +26,13 @@ class SEOBaseModel(models.Model):
 
     class Meta:
         abstract = True
+
+    def get_canonical_url(self, request=None):
+        if self.canonical_url:
+            return self.canonical_url
+        if request:
+            return request.build_absolute_uri()
+        return None
 
 class Article(SEOBaseModel):
     title = models.CharField(max_length=255)

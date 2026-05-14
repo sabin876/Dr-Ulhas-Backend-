@@ -10,8 +10,6 @@ router.register(r'translations', TranslationViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('settings/', site_settings, name='site-settings'),
-    path('robots.txt', robots_txt, name='robots-txt'),
-    path('sitemap.xml', sitemap_xml, name='sitemap-xml'),
     path('html-sitemap/', html_sitemap, name='html-sitemap'),
     path('login/', api_login, name='api-login'),
 ]
