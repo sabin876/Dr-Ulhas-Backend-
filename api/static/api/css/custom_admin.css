@@ -340,3 +340,79 @@ textarea:focus,
     overflow: hidden !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
 }
+
+/* ==========================================
+   FORM LABELS & REQUIRED INDICATORS
+   ========================================== */
+label, 
+.col-form-label, 
+.control-label, 
+.col-sm-2,
+.vFormField label,
+form .form-row label,
+.form-horizontal .control-label {
+    color: #1e293b !important; /* Highly readable deep slate-800 */
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    text-transform: none !important;
+    margin-bottom: 8px !important;
+}
+
+/* Red required field asterisks */
+.required label::after,
+label.required::after,
+.required::after,
+span.text-red,
+.text-danger {
+    color: #ef4444 !important; /* Vibrant Slate Red */
+    font-weight: bold !important;
+}
+
+/* ==========================================
+   HELP & DESCRIPTION TEXT
+   ========================================== */
+.help, 
+.help-block, 
+.form-text, 
+.text-muted,
+.help_text,
+form .form-row .help {
+    color: #64748b !important; /* Highly readable slate-500 */
+    font-size: 0.8rem !important;
+    margin-top: 6px !important;
+    font-weight: 400 !important;
+    display: block !important;
+}
+
+/* ==========================================
+   FORM TABS STYLING
+   ========================================== */
+.nav-tabs {
+    border-bottom: 2px solid #e2e8f0 !important;
+    margin-bottom: 24px !important;
+    background: transparent !important;
+}
+
+.nav-tabs .nav-link {
+    color: #475569 !important; /* Highly readable slate-600 for inactive tabs */
+    font-weight: 600 !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 12px 24px !important;
+    transition: all 0.2s ease !important;
+    font-size: 0.9rem !important;
+    border-bottom: 3px solid transparent !important;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #0ea5e9 !important;
+    border-bottom: 3px solid #cbd5e1 !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active {
+    color: #0ea5e9 !important; /* Vibrant primary brand accent */
+    border-bottom: 3px solid #0ea5e9 !important; /* Solid blue bottom line */
+    background: transparent !important;
+    font-weight: 700 !important;
+}
