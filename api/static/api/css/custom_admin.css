@@ -1,58 +1,342 @@
-/* Brand Colors */
-:root {
-    --primary-brand: #0284c7;
-    --primary-hover: #0369a1;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   GLOBAL STYLES & TYPOGRAPHY
+   ========================================== */
+body, 
+.wrapper, 
+.main-sidebar, 
+.content-header, 
+.card, 
+.btn, 
+input, 
+select, 
+textarea, 
+table,
+.brand-link,
+.info-box {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
 }
 
-/* Navbar branding */
-.main-header.navbar-dark.navbar-primary {
-    background-color: var(--primary-brand) !important;
+body {
+    background-color: #f8fafc !important; /* Soft premium slate-50 background */
+    color: #334155 !important; /* Elegant slate-700 text */
 }
 
-/* Sidebar active items */
-.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
-    background-color: var(--primary-brand) !important;
+.content-wrapper {
+    background-color: #f8fafc !important;
+    padding-top: 15px;
 }
 
-/* Buttons */
-.btn-primary {
-    background-color: var(--primary-brand) !important;
-    border-color: var(--primary-brand) !important;
+/* ==========================================
+   HEADER / NAVBAR
+   ========================================== */
+.main-header {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02) !important;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: var(--primary-hover) !important;
-    border-color: var(--primary-hover) !important;
+.main-header .nav-link {
+    color: #475569 !important;
+    font-weight: 500 !important;
+    transition: color 0.2s ease;
 }
 
-/* Accent color for checkboxes and radios */
-.custom-control-input:checked ~ .custom-control-label::before {
-    background-color: var(--primary-brand) !important;
-    border-color: var(--primary-brand) !important;
+.main-header .nav-link:hover {
+    color: #0ea5e9 !important; /* Vibrant primary brand blue */
 }
 
-/* Links */
-a {
-    color: var(--primary-brand);
+/* ==========================================
+   SIDEBAR STYLING
+   ========================================== */
+.main-sidebar {
+    background-color: #0f172a !important; /* Sleek navy-slate-900 */
+    border-right: 1px solid #1e293b !important;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.05) !important;
 }
 
-a:hover {
-    color: var(--primary-hover);
-}
-
-/* Page titles and headers */
-.content-header h1 {
-    color: var(--primary-brand);
-    font-weight: 700;
-}
-
-/* Brand logo area */
 .brand-link {
-    background-color: #ffffff !important;
-    color: var(--primary-brand) !important;
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-bottom: 1px solid #1e293b !important;
+    padding: 15px 20px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em;
 }
 
 .brand-link .brand-image {
-    max-height: 40px;
-    width: auto;
+    max-height: 34px !important;
+    width: auto !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.sidebar {
+    padding-top: 15px !important;
+}
+
+/* Sidebar Links */
+.nav-sidebar .nav-item {
+    margin-bottom: 5px;
+}
+
+.nav-sidebar .nav-link {
+    border-radius: 12px !important;
+    padding: 10px 16px !important;
+    color: #94a3b8 !important; /* Muted slate */
+    font-weight: 500 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 3px solid transparent !important;
+}
+
+.nav-sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: #f8fafc !important;
+    transform: translateX(3px);
+}
+
+/* Active Link State */
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7) !important; /* Beautiful rich blue gradient */
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3) !important;
+    border-left: 3px solid #38bdf8 !important;
+    font-weight: 600 !important;
+    transform: none !important;
+}
+
+.nav-sidebar .nav-icon {
+    margin-right: 12px !important;
+    transition: transform 0.3s ease;
+}
+
+.nav-sidebar .nav-link.active .nav-icon {
+    color: #ffffff !important;
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   CARDS & PANELS
+   ========================================== */
+.card {
+    border-radius: 20px !important;
+    border: 1px solid rgba(226, 232, 240, 0.7) !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.03), 0 8px 16px -6px rgba(15, 23, 42, 0.03) !important;
+    background-color: #ffffff !important;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.05), 0 12px 20px -8px rgba(15, 23, 42, 0.05) !important;
+}
+
+.card-header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    padding: 18px 24px !important;
+}
+
+.card-title {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    letter-spacing: -0.02em;
+}
+
+.card-body {
+    padding: 24px !important;
+}
+
+/* ==========================================
+   TABLES & LISTS
+   ========================================== */
+.table {
+    margin-bottom: 0 !important;
+}
+
+.table thead th {
+    background-color: #f8fafc !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+    border-top: none !important;
+    padding: 14px 18px !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table tbody td {
+    padding: 14px 18px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    color: #334155 !important;
+    vertical-align: middle !important;
+    font-size: 0.9rem !important;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fafc !important;
+}
+
+/* Table Checkboxes */
+.action-checkbox-column input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #0ea5e9;
+    cursor: pointer;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn {
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    padding: 8px 16px !important;
+    font-size: 0.875rem !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+}
+
+.btn:active {
+    transform: scale(0.97) !important;
+}
+
+.btn-primary, 
+.button[type="submit"], 
+input[type="submit"] {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15) !important;
+}
+
+.btn-primary:hover, 
+.button[type="submit"]:hover, 
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #0284c7, #0369a1) !important;
+    box-shadow: 0 6px 16px rgba(14, 165, 233, 0.25) !important;
+    transform: translateY(-1px) !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15) !important;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #059669, #047857) !important;
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.25) !important;
+    transform: translateY(-1px) !important;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15) !important;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.25) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ==========================================
+   FORM INPUTS
+   ========================================== */
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+select, 
+textarea,
+.vTextField {
+    border-radius: 12px !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 10px 14px !important;
+    background-color: #ffffff !important;
+    color: #334155 !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.01) !important;
+    transition: all 0.2s ease !important;
+    outline: none !important;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="email"]:focus, 
+select:focus, 
+textarea:focus,
+.vTextField:focus {
+    border-color: #0ea5e9 !important;
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1) !important;
+}
+
+/* ==========================================
+   BADGES & LABELS
+   ========================================== */
+.badge {
+    border-radius: 9999px !important;
+    padding: 6px 12px !important;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.02em;
+}
+
+.badge-info {
+    background-color: #e0f2fe !important;
+    color: #0369a1 !important;
+}
+
+.badge-success {
+    background-color: #d1fae5 !important;
+    color: #065f46 !important;
+}
+
+.badge-danger {
+    background-color: #fee2e2 !important;
+    color: #991b1b !important;
+}
+
+/* ==========================================
+   DASHBOARD EXTRA POLISH
+   ========================================== */
+/* Header titles */
+.content-header h1 {
+    color: #0f172a !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em;
+    font-size: 1.8rem !important;
+    margin-bottom: 5px;
+}
+
+/* Info Boxes */
+.info-box {
+    border-radius: 20px !important;
+    border: 1px solid rgba(226, 232, 240, 0.7) !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.02) !important;
+    overflow: hidden;
+}
+
+.info-box-icon {
+    border-radius: 14px !important;
+    margin: 10px !important;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+    color: #ffffff !important;
+}
+
+/* CKEditor polish inside admin */
+.cke_chrome {
+    border-radius: 16px !important;
+    border: 1px solid #cbd5e1 !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
 }
