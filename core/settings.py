@@ -199,6 +199,7 @@ JAZZMIN_SETTINGS = {
     "welcome_sign": "Welcome to Dr. Ulhas Sonar's Clinical Management System",
     "copyright": "Dr. Ulhas Sonar",
     "custom_css": "api/css/custom_admin.css",
+    "custom_js": "api/js/custom_admin.js",
     "search_model": ["api.Article", "api.Service"],
     "user_avatar": None,
     "topmenu_links": [
