@@ -15,6 +15,14 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+    try:
+        from django.db.backends.base.base import BaseDatabaseWrapper
+        BaseDatabaseWrapper.check_database_version_supported = lambda self: True
+        from django.db.backends.mysql.features import DatabaseFeatures
+        DatabaseFeatures.can_return_columns_from_insert = False
+        DatabaseFeatures.can_return_rows_from_bulk_insert = False
+    except Exception:
+        pass
     execute_from_command_line(sys.argv)
 
 

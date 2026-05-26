@@ -1,0 +1,14 @@
+/* Increase global text size slightly for better readability */
+html, body {
+    font-size: 16px !important;
+}
+
+/* Make table text slightly larger */
+td, th {
+    font-size: 0.95rem !important;
+}
+
+/* Increase form label sizes */
+label {
+    font-size: 0.95rem !important;
+}
