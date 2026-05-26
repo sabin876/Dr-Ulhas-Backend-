@@ -43,7 +43,7 @@ class ArticleAdmin(ModelAdmin):
     
     fieldsets = (
         ('Content', {
-            'fields': ('title', 'h1_title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color')
+            'fields': ('title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color')
         }),
         ('SEO & Metadata', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'index_page', 'follow_links'),
@@ -63,12 +63,23 @@ class ArticleAdmin(ModelAdmin):
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
     form = ServiceAdminForm
-    list_display = ('title', 'updated_at', 'index_page')
+    list_display = ('title', 'edit_button', 'delete_button', 'updated_at', 'index_page')
+    
+    @display(description="Edit")
+    def edit_button(self, obj):
+        url = reverse('admin:api_service_change', args=[obj.id])
+        return format_html('<a href="{}" class="text-primary-600 hover:text-primary-800" title="Edit"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">edit</span></a>', url)
+
+    @display(description="Delete")
+    def delete_button(self, obj):
+        url = reverse('admin:api_service_delete', args=[obj.id])
+        return format_html('<a href="{}" class="text-red-600 hover:text-red-800" title="Delete"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">delete</span></a>', url)
+
     prepopulated_fields = {'slug': ('title',)}
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'h1_title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'items')
+            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'items')
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),
