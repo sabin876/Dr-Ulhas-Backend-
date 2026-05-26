@@ -1,12 +1,31 @@
 from unfold.admin import ModelAdmin
 from unfold.decorators import display
 from django.contrib import admin
+from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
+from ckeditor.widgets import CKEditorWidget
 from .models import Article, Service, Translation, SiteSetting, CustomRedirect
+
+class ArticleAdminForm(forms.ModelForm):
+    class Meta:
+        model = Article
+        fields = "__all__"
+        widgets = {
+            "content": CKEditorWidget(),
+        }
+
+class ServiceAdminForm(forms.ModelForm):
+    class Meta:
+        model = Service
+        fields = "__all__"
+        widgets = {
+            "description": CKEditorWidget(),
+        }
 
 @admin.register(Article)
 class ArticleAdmin(ModelAdmin):
+    form = ArticleAdminForm
     list_display = ('title', 'edit_button', 'delete_button', 'date', 'category', 'index_page')
     
     @display(description="Edit")
@@ -43,6 +62,7 @@ class ArticleAdmin(ModelAdmin):
 
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
+    form = ServiceAdminForm
     list_display = ('title', 'updated_at', 'index_page')
     prepopulated_fields = {'slug': ('title',)}
     
