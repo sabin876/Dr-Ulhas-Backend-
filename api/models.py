@@ -61,6 +61,7 @@ class Service(SEOBaseModel):
     icon = models.CharField(max_length=100, help_text="Lucide icon name")
     image = models.ImageField(upload_to='services/', blank=True, null=True)
     items = models.JSONField(default=list, help_text='Enter a JSON list, e.g., ["Feature 1", "Feature 2"]')
+    faqs = models.JSONField(default=list, blank=True, help_text='Enter a list of FAQs, e.g. [{"question": "...", "answer": "..."}]')
     updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):

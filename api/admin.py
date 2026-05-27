@@ -79,7 +79,7 @@ class ServiceAdmin(ModelAdmin):
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'items')
+            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'items', 'faqs')
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),
