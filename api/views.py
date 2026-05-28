@@ -7,17 +7,17 @@ import json
 from .models import Article, Service, Translation, SiteSetting
 from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer
 
-class ArticleViewSet(viewsets.ReadOnlyModelViewSet):
+class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all().order_by('-date')
     serializer_class = ArticleSerializer
     lookup_field = 'slug'
 
-class ServiceViewSet(viewsets.ReadOnlyModelViewSet):
+class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
     serializer_class = ServiceSerializer
     lookup_field = 'slug'
 
-class TranslationViewSet(viewsets.ReadOnlyModelViewSet):
+class TranslationViewSet(viewsets.ModelViewSet):
     queryset = Translation.objects.all()
     serializer_class = TranslationSerializer
 
