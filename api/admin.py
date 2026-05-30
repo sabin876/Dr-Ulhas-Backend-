@@ -15,13 +15,43 @@ class ArticleAdminForm(forms.ModelForm):
             "content": CKEditorWidget(),
         }
 
+from .widgets import ListStringWidget, ConditionsWidget
+
 class ServiceAdminForm(forms.ModelForm):
     class Meta:
         model = Service
         fields = "__all__"
         widgets = {
             "description": CKEditorWidget(),
+            "items": ListStringWidget(),
+            "conditions": ConditionsWidget(),
+            "checklist_items": ListStringWidget(),
+            "tag_badges": ListStringWidget(),
         }
+
+    def clean_items(self):
+        val = self.cleaned_data.get('items')
+        if val is None or val == "":
+            return []
+        return val
+
+    def clean_conditions(self):
+        val = self.cleaned_data.get('conditions')
+        if val is None or val == "":
+            return []
+        return val
+
+    def clean_checklist_items(self):
+        val = self.cleaned_data.get('checklist_items')
+        if val is None or val == "":
+            return []
+        return val
+
+    def clean_tag_badges(self):
+        val = self.cleaned_data.get('tag_badges')
+        if val is None or val == "":
+            return []
+        return val
 
 @admin.register(Article)
 class ArticleAdmin(ModelAdmin):
@@ -80,6 +110,10 @@ class ServiceAdmin(ModelAdmin):
     fieldsets = (
         ('Basic Information', {
             'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'items', 'faqs')
+        }),
+        ('Treatment & Value Sections', {
+            'fields': ('conditions_title', 'conditions', 'checklist_title', 'checklist_image', 'checklist_items', 'tag_badges'),
+            'description': 'Optional: Customize section headings, upload illustrations, or override conditions, checklist items, and tag badges.'
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),

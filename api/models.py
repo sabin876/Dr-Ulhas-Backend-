@@ -58,10 +58,16 @@ class Service(SEOBaseModel):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, blank=True)
     description = models.TextField()
-    icon = models.CharField(max_length=100, help_text="Lucide icon name")
+    icon = models.CharField(max_length=100, default="activity", blank=True, help_text="Lucide icon name")
     image = models.ImageField(upload_to='services/', blank=True, null=True)
-    items = models.JSONField(default=list, help_text='Enter a JSON list, e.g., ["Feature 1", "Feature 2"]')
+    items = models.JSONField(default=list, blank=True, help_text='Enter a JSON list, e.g., ["Feature 1", "Feature 2"]')
     faqs = models.JSONField(default=list, blank=True, help_text='Enter a list of FAQs, e.g. [{"question": "...", "answer": "..."}]')
+    conditions = models.JSONField(default=list, blank=True, help_text='Enter a list of conditions, e.g., [{"id": 1, "title": "Back and neck pain", "description": "...", "icon": "<svg>..."}]')
+    checklist_items = models.JSONField(default=list, blank=True, help_text='Enter a JSON list of strings, e.g., ["Item 1", "Item 2"]')
+    tag_badges = models.JSONField(default=list, blank=True, help_text='Enter a JSON list of strings, e.g., ["Badge 1", "Badge 2"]')
+    conditions_title = models.CharField(max_length=255, blank=True, null=True, help_text="Optional: Customize the conditions section heading")
+    checklist_title = models.CharField(max_length=255, blank=True, null=True, help_text="Optional: Customize the checklist section heading")
+    checklist_image = models.ImageField(upload_to='services/illustrations/', blank=True, null=True, help_text="Optional: Upload an illustration/image to replace the default therapist SVG")
     updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
