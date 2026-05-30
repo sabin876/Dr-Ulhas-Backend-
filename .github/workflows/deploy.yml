@@ -1,0 +1,48 @@
+name: Django Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to cPanel Server
+        uses: appleboy/ssh-action@v1.0.3
+
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: 22
+
+          script: |
+            set -e
+
+            echo "Starting deployment..."
+
+            cd /home2/drulhaso/Dr-Ulhas-Backend-
+
+            echo "Pulling latest code..."
+            git pull origin master
+
+            echo "Activating virtualenv..."
+            source /home2/drulhaso/virtualenv/Dr-Ulhas-Backend-/3.12/bin/activate && cd /home2/drulhaso/Dr-Ulhas-Backend-
+
+            echo "Installing requirements..."
+            pip install -r requirements.txt
+
+            echo "Running migrations..."
+            python manage.py migrate --noinput
+
+            echo "Collecting static files..."
+            python manage.py collectstatic --noinput
+
+            echo "Restarting Passenger..."
+            mkdir -p tmp
+            touch tmp/restart.txt
+
+            echo "Deployment successful!"
