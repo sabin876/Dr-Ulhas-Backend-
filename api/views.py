@@ -6,6 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from .models import Article, Service, Translation, SiteSetting
 from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer
+from django.core.mail import send_mail
+from django.conf import settings
 
 class ArticleViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Article.objects.all().order_by('-date')
@@ -27,7 +29,34 @@ class TranslationViewSet(viewsets.ReadOnlyModelViewSet):
         translations = self.queryset.filter(language=language)
         data = {t.key: t.value for t in translations}
         return response.Response(data)
+    
 
+@api_view(['POST'])
+def send_contact_mail(request):
+    context = {}
+
+    if request.method == 'POST':
+        full_name = request.POST.get('full_name')
+        phone = request.POST.get('phone')
+        email_address = request.POST.get('address')
+        subject = request.POST.get('subject')
+        service= request.POST.get('service')
+        message = request.POST.get('message')
+
+        if email_address and subject and message:
+            try:
+                res=send_mail(subject, message, "contact@drulhasorthopedic.com", ["admin@drulhasorthopedic.com"], fail_silently=False)
+                print("mail response",res)
+                context['result'] = 'Thank you for contacting us. We will get back to you shortly.'
+            except Exception as e:
+                print(e)
+                context['result'] = f'Error sending email: {e}'
+        else:
+            context['result'] = 'All fields are required'
+    
+    return JsonResponse(context)
+
+        
 @api_view(['GET'])
 def site_settings(request):
     settings = SiteSetting.objects.first()
