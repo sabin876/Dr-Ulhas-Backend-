@@ -35,27 +35,32 @@ class TranslationViewSet(viewsets.ModelViewSet):
 def send_contact_mail(request):
     context = {}
 
-    if request.method == 'POST':
-        full_name = request.POST.get('full_name')
-        phone = request.POST.get('phone')
-        email_address = request.POST.get('address')
-        subject = request.POST.get('subject')
-        service= request.POST.get('service')
-        message = request.POST.get('message')
+    data = request.data  # ✅ DRF handles JSON + form-data automatically
 
-        if email_address and subject and message:
-            try:
-                res=send_mail(subject, message, "contact@drulhasorthopedic.com", ["admin@drulhasorthopedic.com"], fail_silently=False)
-                print("mail response",res)
-                context['result'] = 'Thank you for contacting us. We will get back to you shortly.'
-            except Exception as e:
-                print(e)
-                context['result'] = f'Error sending email: {e}'
-        else:
-            context['result'] = 'All fields are required'
-    
-    return JsonResponse(context)
+    full_name = data.get('full_name')
+    phone = data.get('phone')
+    email_address = data.get('address')
+    subject = data.get('subject')
+    service = data.get('service')
+    message = data.get('message')
 
+    if email_address and subject and message:
+        try:
+            res = send_mail(
+                subject,
+                message,
+                "contact@drulhasorthopedic.com",
+                ["admin@drulhasorthopedic.com"],
+                fail_silently=False
+            )
+
+            context['result'] = 'Thank you for contacting us. We will get back to you shortly.'
+        except Exception as e:
+            context['result'] = f'Error sending email: {e}'
+    else:
+        context['result'] = 'All fields are required'
+
+    return response.Response(context)
         
 @api_view(['GET'])
 def site_settings(request):
