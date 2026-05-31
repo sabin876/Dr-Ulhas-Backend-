@@ -1,3 +1,4 @@
+from requests import Response
 from rest_framework import viewsets, response
 from rest_framework.decorators import api_view
 from django.http import HttpResponse, JsonResponse
@@ -31,36 +32,79 @@ class TranslationViewSet(viewsets.ModelViewSet):
         return response.Response(data)
     
 
+from django.core.mail import EmailMultiAlternatives
+
+
 @api_view(['POST'])
 def send_contact_mail(request):
-    context = {}
-
-    data = request.data  # ✅ DRF handles JSON + form-data automatically
+    data = request.data
 
     full_name = data.get('full_name')
     phone = data.get('phone')
-    email_address = data.get('address')
+    email_address = data.get('email')
     subject = data.get('subject')
     service = data.get('service')
     message = data.get('message')
 
-    if email_address and subject and message:
-        try:
-            res = send_mail(
-                subject,
-                message,
-                "contact@drulhasorthopedic.com",
-                ["admin@drulhasorthopedic.com"],
-                fail_silently=False
-            )
+    if not all([full_name, email_address, subject, message]):
+        return Response({
+            "result": "All required fields must be provided."
+        })
 
-            context['result'] = 'Thank you for contacting us. We will get back to you shortly.'
-        except Exception as e:
-            context['result'] = f'Error sending email: {e}'
-    else:
-        context['result'] = 'All fields are required'
+    try:
+        html_content = f"""
+        <html>
+        <body style="font-family: Arial, sans-serif;">
+            <h2>New Contact Form Submission</h2>
 
-    return response.Response(context)
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td><strong>Full Name</strong></td>
+                    <td>{full_name}</td>
+                </tr>
+                <tr>
+                    <td><strong>Phone</strong></td>
+                    <td>{phone}</td>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td>{email_address}</td>
+                </tr>
+                <tr>
+                    <td><strong>Service</strong></td>
+                    <td>{service}</td>
+                </tr>
+                <tr>
+                    <td><strong>Subject</strong></td>
+                    <td>{subject}</td>
+                </tr>
+                <tr>
+                    <td><strong>Message</strong></td>
+                    <td>{message}</td>
+                </tr>
+            </table>
+        </body>
+        </html>
+        """
+
+        email = EmailMultiAlternatives(
+            subject=f"Website Contact: {subject}",
+            body=message,  # Plain text fallback
+            from_email="contact@drulhasorthopedic.com",
+            to=["admin@drulhasorthopedic.com"],
+        )
+
+        email.attach_alternative(html_content, "text/html")
+        email.send()
+
+        return Response({
+            "result": "Thank you for contacting us. We will get back to you shortly."
+        })
+
+    except Exception as e:
+        return Response({
+            "result": f"Error sending email: {str(e)}"
+        })
         
 @api_view(['GET'])
 def site_settings(request):
