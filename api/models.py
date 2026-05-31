@@ -121,3 +121,29 @@ class CustomRedirect(models.Model):
     class Meta:
         verbose_name = "Redirect"
         verbose_name_plural = "Redirects"
+
+
+class GalleryItem(models.Model):
+    CATEGORY_CHOICES = [
+        ('Clinic', 'Clinic'),
+        ('Surgery', 'Surgery'),
+        ('Consultation', 'Consultation'),
+        ('Awards', 'Awards'),
+        ('Conference', 'Conference'),
+        ('About', 'About'),
+    ]
+
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='gallery/', help_text="Upload the gallery image")
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='Clinic')
+    span = models.CharField(max_length=50, default='col-span-1 row-span-1', help_text="Grid span layout, e.g. col-span-1 row-span-1, col-span-2 row-span-2")
+    order = models.IntegerField(default=0, help_text="Display order (ascending)")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['order', '-created_at']
+
+    def __str__(self):
+        return f"{self.title} ({self.category})"
+

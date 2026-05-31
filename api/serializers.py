@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Service, Translation, SiteSetting
+from .models import Article, Service, Translation, SiteSetting, GalleryItem
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -39,3 +39,10 @@ class SiteSettingSerializer(serializers.ModelSerializer):
     class Meta:
         model = SiteSetting
         fields = '__all__'
+
+
+class GalleryItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GalleryItem
+        fields = '__all__'
+
