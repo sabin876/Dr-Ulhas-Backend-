@@ -42,11 +42,11 @@ def send_contact_mail(request):
     full_name = data.get('full_name')
     phone = data.get('phone')
     email_address = data.get('email')
-    subject = data.get('subject')
+    subject = f"Contact from {full_name}"
     service = data.get('service')
     message = data.get('message')
 
-    if not all([full_name, email_address, subject, message]):
+    if not all([full_name, email_address, message]):
         return Response({
             "result": "All required fields must be provided."
         })
