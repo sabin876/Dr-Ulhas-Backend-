@@ -1,12 +1,12 @@
-from requests import Response
+from rest_framework.response import Response
 from rest_framework import viewsets, response
 from rest_framework.decorators import api_view
 from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login as auth_login
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Article, Service, Translation, SiteSetting
-from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer
+from .models import Article, Service, Translation, SiteSetting, GalleryItem
+from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -30,6 +30,12 @@ class TranslationViewSet(viewsets.ModelViewSet):
         translations = self.queryset.filter(language=language)
         data = {t.key: t.value for t in translations}
         return response.Response(data)
+
+
+class GalleryItemViewSet(viewsets.ModelViewSet):
+    queryset = GalleryItem.objects.all()
+    serializer_class = GalleryItemSerializer
+
     
 
 from django.core.mail import EmailMultiAlternatives

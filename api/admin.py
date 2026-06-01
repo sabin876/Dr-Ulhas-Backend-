@@ -5,7 +5,7 @@ from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
-from .models import Article, Service, Translation, SiteSetting, CustomRedirect
+from .models import Article, Service, Translation, SiteSetting, CustomRedirect, GalleryItem
 
 class ArticleAdminForm(forms.ModelForm):
     class Meta:
@@ -156,3 +156,22 @@ class CustomRedirectAdmin(ModelAdmin):
     list_display = ('old_path', 'new_path', 'status_code', 'created_at')
     list_filter = ('status_code',)
     search_fields = ('old_path', 'new_path')
+
+
+@admin.register(GalleryItem)
+class GalleryItemAdmin(ModelAdmin):
+    list_display = ('title', 'edit_button', 'delete_button', 'category', 'span', 'order', 'created_at')
+    list_filter = ('category',)
+    search_fields = ('title', 'description')
+    ordering = ('order', '-created_at')
+
+    @display(description="Edit")
+    def edit_button(self, obj):
+        url = reverse('admin:api_galleryitem_change', args=[obj.id])
+        return format_html('<a href="{}" class="text-primary-600 hover:text-primary-800" title="Edit"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">edit</span></a>', url)
+
+    @display(description="Delete")
+    def delete_button(self, obj):
+        url = reverse('admin:api_galleryitem_delete', args=[obj.id])
+        return format_html('<a href="{}" class="text-red-600 hover:text-red-800" title="Delete"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">delete</span></a>', url)
+
