@@ -1,9 +1,9 @@
 from django.utils.deprecation import MiddlewareMixin
-from .models import CustomRedirect
 from django.http import HttpResponseRedirect, HttpResponsePermanentRedirect, HttpResponse
 
 class SEOMiddleware(MiddlewareMixin):
     def process_request(self, request):
+        from .models import CustomRedirect
         # 1. Custom Redirect Management
         path = request.path
         try:
