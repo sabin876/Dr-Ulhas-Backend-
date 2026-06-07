@@ -18,9 +18,11 @@ def send_report_otp(sender, instance, created, **kwargs):
         email=instance.patient_email,
         otp_hash=hash_otp(otp),
     )
-
+    print(f"Generated OTP {otp} for report {instance.id} and email {instance.patient_email}")
+    print(f"OTP record created with token {otp_record.token} and expires at {otp_record.expires_at}")
+    print(instance.patient_email)
     try:
-        send_otp_email(
+        res=send_otp_email(
             recipient_email=instance.patient_email,
             otp=otp,
             token=str(otp_record.token),
