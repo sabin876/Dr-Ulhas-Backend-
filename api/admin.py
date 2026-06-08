@@ -5,7 +5,7 @@ from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
-from .models import Article, Service, Translation, SiteSetting, CustomRedirect, GalleryItem
+from .models import Article, Service, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo
 
 class ArticleAdminForm(forms.ModelForm):
     class Meta:
@@ -145,14 +145,20 @@ class SiteSettingAdmin(ModelAdmin):
             'fields': ('header_scripts', 'footer_scripts'),
             'description': 'Add GSC, GA4, or Facebook Pixel scripts here.'
         }),
-        ('Media Assets', {
-            'fields': ('hero_video',),
-        }),
         ('Internal Linking', {
             'fields': ('internal_linking_rules',),
             'classes': ('collapse',),
         }),
     )
+
+
+@admin.register(HeroVideo)
+class HeroVideoAdmin(ModelAdmin):
+    list_display = ('__str__', 'updated_at')
+
+    def has_add_permission(self, request):
+        # Only allow one hero video object to exist
+        return not HeroVideo.objects.exists()
 
 @admin.register(CustomRedirect)
 class CustomRedirectAdmin(ModelAdmin):

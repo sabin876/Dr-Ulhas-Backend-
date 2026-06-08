@@ -94,7 +94,6 @@ class SiteSetting(models.Model):
     header_scripts = models.TextField(blank=True, help_text="GSC, Google Analytics, etc.")
     footer_scripts = models.TextField(blank=True)
     internal_linking_rules = models.JSONField(default=dict, blank=True, help_text='Enter a JSON object, e.g., {"Knee Pain": "/services/knee-pain"}')
-    hero_video = models.FileField(upload_to='videos/', blank=True, null=True, help_text="Upload the main hero section video")
 
     def __str__(self):
         return "Global Site Settings"
@@ -102,6 +101,18 @@ class SiteSetting(models.Model):
     class Meta:
         verbose_name = "Site Setting"
         verbose_name_plural = "Site Settings"
+
+
+class HeroVideo(models.Model):
+    video = models.FileField(upload_to='videos/', help_text="Upload the main hero section video")
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Hero Section Video (Updated: {self.updated_at.strftime('%Y-%m-%d %H:%M')})"
+
+    class Meta:
+        verbose_name = "Hero Video"
+        verbose_name_plural = "Hero Video"
 
 class CustomRedirect(models.Model):
     STATUS_CHOICES = [

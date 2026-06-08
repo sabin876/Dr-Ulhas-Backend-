@@ -5,8 +5,8 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login as auth_login
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Article, Service, Translation, SiteSetting, GalleryItem
-from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer
+from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo
+from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -192,3 +192,12 @@ def temp_reset_admin(request):
     except User.DoesNotExist:
         User.objects.create_superuser(username, 'admin@drulhasorthopedic.com', password)
         return Response({"status": "success", "message": f"Created new superuser '{username}' with password '{password}'."})
+
+
+@api_view(['GET'])
+def get_hero_video(request):
+    video = HeroVideo.objects.first()
+    if video:
+        serializer = HeroVideoSerializer(video, context={'request': request})
+        return Response(serializer.data)
+    return Response({"video": None})
