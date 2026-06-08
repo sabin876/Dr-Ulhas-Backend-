@@ -117,7 +117,7 @@ def site_settings(request):
     settings = SiteSetting.objects.first()
     if not settings:
         settings = SiteSetting.objects.create()
-    serializer = SiteSettingSerializer(settings)
+    serializer = SiteSettingSerializer(settings, context={'request': request})
     return response.Response(serializer.data)
 
 def robots_txt(request):

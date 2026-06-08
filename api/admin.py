@@ -145,6 +145,9 @@ class SiteSettingAdmin(ModelAdmin):
             'fields': ('header_scripts', 'footer_scripts'),
             'help_text': 'Add GSC, GA4, or Facebook Pixel scripts here.'
         }),
+        ('Media Assets', {
+            'fields': ('hero_video',),
+        }),
         ('Internal Linking', {
             'fields': ('internal_linking_rules',),
             'classes': ('collapse',),
