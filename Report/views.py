@@ -78,30 +78,39 @@ class SendOTPView(APIView):
     """
     POST /api/send-otp/
 
-    Body: { "report_id": <int>, "email": "<patient email>" }
+    Body: { "report_id": <int>, "email": "<patient email>" } OR { "token": "<uuid>" }
 
-    Validates that the report exists and the email matches, then
-    generates a fresh OTP + token, persists the hashed OTP, and
+    Validates the inputs, generates a fresh OTP, updates/persists it, and
     dispatches the verification email.
     """
 
     permission_classes = []   # No authentication required for this endpoint
 
     def post(self, request):
+        from datetime import timedelta
         serializer = SendOTPSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         report = serializer.validated_data["report"]
         email = serializer.validated_data["email"]
+        old_otp_record = serializer.validated_data.get("otp_record")
 
         otp = generate_otp()
 
-        otp_record = ReportAccessOTP.objects.create(
-            report=report,
-            email=email,
-            otp_hash=hash_otp(otp),
-        )
+        if old_otp_record:
+            old_otp_record.otp_hash = hash_otp(otp)
+            old_otp_record.is_verified = False
+            old_otp_record.is_used = False
+            old_otp_record.expires_at = timezone.now() + timedelta(minutes=10)
+            old_otp_record.save()
+            otp_record = old_otp_record
+        else:
+            otp_record = ReportAccessOTP.objects.create(
+                report=report,
+                email=email,
+                otp_hash=hash_otp(otp),
+            )
 
         try:
             send_otp_email(
@@ -110,8 +119,8 @@ class SendOTPView(APIView):
                 token=str(otp_record.token),
             )
         except Exception:
-            # Rollback the record so the patient can retry cleanly
-            otp_record.delete()
+            if not old_otp_record:
+                otp_record.delete()
             return Response(
                 {"detail": "Failed to send OTP email. Please try again."},
                 status=status.HTTP_502_BAD_GATEWAY,

@@ -267,3 +267,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER ="contact@drulhasorthopedic.com"
 EMAIL_ADMIN_USER="admin@drulhasorthopedic.com"
 EMAIL_HOST_PASSWORD ="tA6&>T&DpcZ"
+DEFAULT_FROM_EMAIL = "contact@drulhasorthopedic.com"
