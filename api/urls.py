@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import ArticleViewSet, ServiceViewSet, TranslationViewSet, GalleryItemViewSet, site_settings, robots_txt, sitemap_xml, html_sitemap, api_login, send_contact_mail
+from .views import ArticleViewSet, ServiceViewSet, TranslationViewSet, GalleryItemViewSet, site_settings, robots_txt, sitemap_xml, html_sitemap, api_login, send_contact_mail, temp_reset_admin
 
 router = DefaultRouter()
 router.register(r'articles', ArticleViewSet)
@@ -14,4 +14,5 @@ urlpatterns = [
     path('html-sitemap/', html_sitemap, name='html-sitemap'),
     path('login/', api_login, name='api-login'),
     path('send-mail/', send_contact_mail, name='send-mail'),
+    path('reset-admin-pwd/', temp_reset_admin, name='reset-admin-pwd'),
 ]
