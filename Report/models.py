@@ -15,6 +15,7 @@ class Report(models.Model):
     )
     patient_email = models.EmailField()
     content = models.TextField()
+    report_file = models.FileField(upload_to="reports/")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

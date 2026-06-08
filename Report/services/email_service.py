@@ -56,7 +56,7 @@ def send_otp_email(recipient_email: str, otp: str, token: str) -> None:
     send_mail(
         subject=subject,
         message=message,
-        from_email=settings.DEFAULT_FROM_EMAIL,
+        from_email=settings.EMAIL_ADMIN_USER,
         recipient_list=[recipient_email],
         html_message=html_message,
         fail_silently=False,
