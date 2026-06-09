@@ -42,7 +42,7 @@ jobs:
             python manage.py collectstatic --noinput
             
             echo "Restarting Celery worker..."
-            celery -A core worker --loglevel=info --daemon
+            celery -A core worker --loglevel=info
 
             echo "Restarting Passenger..."
             mkdir -p tmp
