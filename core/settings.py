@@ -46,10 +46,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    "unfold",
-    "unfold.contrib.filters",
-    "unfold.contrib.forms",
-    "unfold.contrib.inlines",
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -218,50 +215,57 @@ if not DEBUG:
     SECURE_CONTENT_TYPE_NOSNIFF = True
 
 # Unfold Admin Settings
-UNFOLD = {
-    "SITE_TITLE": "Dr. Ulhas Sonar Admin",
-    "SITE_HEADER": "Dr. Ulhas Sonar",
-    "SITE_URL": "/",
-    "SITE_ICON": "api/images/logo.png",
-    "DASHBOARD_CALLBACK": None,
-    "STYLES": [
-        lambda request: "/static/api/css/unfold_custom.css",
-    ],
-    "COLORS": {
-        "primary": {
-            "50": "240 249 255",
-            "100": "224 242 254",
-            "200": "186 230 253",
-            "300": "125 211 252",
-            "400": "56 189 248",
-            "500": "14 165 233",
-            "600": "2 132 199",
-            "700": "3 105 161",
-            "800": "7 89 133",
-            "900": "12 74 110",
-            "950": "8 47 73",
-        },
-    },
-    "SIDEBAR": {
-        "show_search": True,
-        "show_all_applications": True,
-        "navigation": [
-            {
-                "title": "Navigation",
-                "separator": True,
-                "items": [
-                    {
-                        "title": "Dashboard",
-                        "icon": "dashboard",
-                        "link": "/admin/",
-                    },
-                ],
-            },
-        ],
-    },
+# UNFOLD = {
+#     "SITE_TITLE": "Dr. Ulhas Sonar Admin",
+#     "SITE_HEADER": "Dr. Ulhas Sonar",
+#     "SITE_URL": "/",
+#     "SITE_ICON": "api/images/logo.png",
+#     "DASHBOARD_CALLBACK": None,
+#     "STYLES": [
+#         lambda request: "/static/api/css/unfold_custom.css",
+#     ],
+#     "COLORS": {
+#         "primary": {
+#             "50": "240 249 255",
+#             "100": "224 242 254",
+#             "200": "186 230 253",
+#             "300": "125 211 252",
+#             "400": "56 189 248",
+#             "500": "14 165 233",
+#             "600": "2 132 199",
+#             "700": "3 105 161",
+#             "800": "7 89 133",
+#             "900": "12 74 110",
+#             "950": "8 47 73",
+#         },
+#     },
+#     "SIDEBAR": {
+#         "show_search": True,
+#         "show_all_applications": True,
+#         "navigation": [
+#             {
+#                 "title": "Navigation",
+#                 "separator": True,
+#                 "items": [
+#                     {
+#                         "title": "Dashboard",
+#                         "icon": "dashboard",
+#                         "link": "/admin/",
+#                     },
+#                 ],
+#             },
+#         ],
+#     },
+# }
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Dr Ulhas Admin",
+    "site_header": "Dr Ulhas Dashboard",
+    "site_brand": "Ulhas System",
+    "welcome_sign": "Welcome Admin",
+    "show_sidebar": True,
+    "navigation_expanded": True,
 }
-
-
 # Monkey patch for MariaDB 10.4 compatibility
 try:
     from django.db.backends.base.base import BaseDatabaseWrapper
