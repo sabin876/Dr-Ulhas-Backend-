@@ -3,6 +3,9 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.shortcuts import redirect
+from django.contrib import messages
+from django.views import View
 
 from .models import Report, ReportAccessOTP
 from .serializers import (
@@ -11,8 +14,53 @@ from .serializers import (
     VerifyOTPSerializer,
     ReportSerializer,
 )
-from .services.otp_service import generate_otp, hash_otp, verify_otp
-from .services.email_service import send_otp_email
+from .services.otp_service import OTPService
+from .services.email_service import EmailService
+
+
+class SendOTPAdminView(View):
+    """
+    Admin action to send OTP for a specific report
+    Accessed via: /admin/report/report/<id>/send-otp/
+    """
+    
+    def get(self, request, report_id):
+        try:
+            report = Report.objects.get(id=report_id)
+            
+            # Create OTP record
+            otp_record, otp = OTPService.create_otp_record(report, report.patient_email)
+            
+            # Queue email task
+            email_sent = EmailService.send_otp_email(
+                email=report.patient_email,
+                otp=otp,
+                token=otp_record.token,
+                report_id=report.id
+            )
+            
+            if email_sent:
+                messages.success(
+                    request,
+                    f"OTP sent successfully to {report.patient_email}. Token: {otp_record.token}"
+                )
+            else:
+                otp_record.delete()
+                messages.error(
+                    request,
+                    "Failed to send OTP email. Please try again."
+                )
+            
+            # Redirect back to report admin change page
+            return redirect(f"/admin/Report/report/{report_id}/change/")
+        
+        except Report.DoesNotExist:
+            messages.error(request, "Report not found")
+            return redirect("/admin/Report/report/")
+        
+        except Exception as e:
+            messages.error(request, f"Error sending OTP: {str(e)}")
+            return redirect(f"/admin/Report/report/{report_id}/change/")
 
 
 class CreateReportView(APIView):
@@ -20,15 +68,16 @@ class CreateReportView(APIView):
     POST /api/reports/create/
 
     Doctor-only endpoint (must be authenticated).
-    Creates a Report and immediately generates + emails an OTP to the patient.
+    Creates a Report WITHOUT automatically sending OTP.
+    Use SendOTPView to send OTP after report is created.
 
-    Body: { "patient_email": "patient@example.com", "content": "..." }
+    Body: { "patient_email": "patient@example.com", "content": "...", "report_file": <file> }
 
     Response 201:
     {
+        "detail": "Report created successfully. Use Send OTP button to send verification link.",
         "report": { id, doctor, patient_email, content, created_at },
-        "token":  "<uuid>",
-        "detail": "Report created and OTP sent to patient."
+        "message": "Click 'Send OTP' button in admin to email the patient"
     }
     """
 
@@ -42,37 +91,15 @@ class CreateReportView(APIView):
         # Bind the authenticated doctor to the report
         report = serializer.save(doctor=request.user)
 
-        # Generate OTP and persist hashed version
-        otp = generate_otp()
-        otp_record = ReportAccessOTP.objects.create(
-            report=report,
-            email=report.patient_email,
-            otp_hash=hash_otp(otp),
-        )
-
-        # Send email — roll back both records on failure so nothing is left dangling
-        try:
-            send_otp_email(
-                recipient_email=report.patient_email,
-                otp=otp,
-                token=str(otp_record.token),
-            )
-        except Exception:
-            otp_record.delete()
-            report.delete()
-            return Response(
-                {"detail": "Report created but OTP email failed. Please try again."},
-                status=status.HTTP_502_BAD_GATEWAY,
-            )
-
         return Response(
             {
-                "detail": "Report created and OTP sent to patient.",
+                "detail": "Report created successfully. Use Send OTP button to send verification link.",
                 "report": ReportSerializer(report).data,
-                "token": str(otp_record.token),
+                "message": "Click 'Send OTP' button in admin to email the patient"
             },
             status=status.HTTP_201_CREATED,
         )
+
 
 class SendOTPView(APIView):
     """
@@ -82,7 +109,7 @@ class SendOTPView(APIView):
 
     Validates that the report exists and the email matches, then
     generates a fresh OTP + token, persists the hashed OTP, and
-    dispatches the verification email.
+    dispatches the verification email via Celery task.
     """
 
     permission_classes = []   # No authentication required for this endpoint
@@ -95,22 +122,18 @@ class SendOTPView(APIView):
         report = serializer.validated_data["report"]
         email = serializer.validated_data["email"]
 
-        otp = generate_otp()
+        # Create OTP record
+        otp_record, otp = OTPService.create_otp_record(report, email)
 
-        otp_record = ReportAccessOTP.objects.create(
-            report=report,
+        # Queue email task
+        email_sent = EmailService.send_otp_email(
             email=email,
-            otp_hash=hash_otp(otp),
+            otp=otp,
+            token=otp_record.token,
+            report_id=report.id
         )
 
-        try:
-            send_otp_email(
-                recipient_email=email,
-                otp=otp,
-                token=str(otp_record.token),
-            )
-        except Exception:
-            # Rollback the record so the patient can retry cleanly
+        if not email_sent:
             otp_record.delete()
             return Response(
                 {"detail": "Failed to send OTP email. Please try again."},
@@ -121,6 +144,7 @@ class SendOTPView(APIView):
             {
                 "detail": "OTP sent successfully. Please check your email.",
                 "token": str(otp_record.token),
+                "email": email,
             },
             status=status.HTTP_200_OK,
         )
@@ -168,15 +192,14 @@ class VerifyOTPView(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        if not verify_otp(plain_otp, otp_record.otp_hash):
+        # Validate and mark used
+        is_valid, error_message = OTPService.validate_and_mark_used(otp_record, plain_otp)
+        
+        if not is_valid:
             return Response(
-                {"detail": "Incorrect OTP."},
+                {"detail": error_message},
                 status=status.HTTP_400_BAD_REQUEST,
             )
-
-        otp_record.is_verified = True
-        otp_record.is_used = True
-        otp_record.save(update_fields=["is_verified", "is_used"])
 
         return Response(
             {

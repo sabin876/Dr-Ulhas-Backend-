@@ -32,7 +32,7 @@ class ReportAccessOTP(models.Model):
         related_name="otps",
     )
     email = models.EmailField()
-    otp_hash = models.CharField(max_length=64)          # SHA-256 hex digest
+    otp_hash = models.CharField(max_length=64)  # SHA-256 hex digest
     token = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
     is_verified = models.BooleanField(default=False)
     is_used = models.BooleanField(default=False)
@@ -49,7 +49,8 @@ class ReportAccessOTP(models.Model):
 
     @property
     def is_expired(self):
+        """Check if OTP has expired"""
         return timezone.now() > self.expires_at
 
     def __str__(self):
-        return f"OTP for {self.email} — report #{self.report_id}"
+        return f"OTP for {self.email} (Report #{self.report.id})"
