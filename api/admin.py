@@ -23,10 +23,12 @@ class ServiceAdminForm(forms.ModelForm):
         fields = "__all__"
         widgets = {
             "description": CKEditorWidget(),
+            "about_description": CKEditorWidget(),
             "items": ListStringWidget(),
             "conditions": ConditionsWidget(),
             "checklist_items": ListStringWidget(),
             "tag_badges": ListStringWidget(),
+            "who_needs_items": ListStringWidget(),
         }
 
     def clean_items(self):
@@ -49,6 +51,18 @@ class ServiceAdminForm(forms.ModelForm):
 
     def clean_tag_badges(self):
         val = self.cleaned_data.get('tag_badges')
+        if val is None or val == "":
+            return []
+        return val
+
+    def clean_who_needs_items(self):
+        val = self.cleaned_data.get('who_needs_items')
+        if val is None or val == "":
+            return []
+        return val
+
+    def clean_commonly_treated(self):
+        val = self.cleaned_data.get('commonly_treated')
         if val is None or val == "":
             return []
         return val
@@ -114,6 +128,14 @@ class ServiceAdmin(ModelAdmin):
         ('Treatment & Value Sections', {
             'fields': ('conditions_title', 'conditions', 'checklist_title', 'checklist_image', 'checklist_items', 'tag_badges'),
             'description': 'Optional: Customize section headings, upload illustrations, or override conditions, checklist items, and tag badges.'
+        }),
+        ('Custom Detailed Sections (About, Indications & Commonly Treated)', {
+            'fields': (
+                'about_title', 'about_description',
+                'who_needs_title', 'who_needs_description', 'who_needs_items',
+                'commonly_treated_title', 'commonly_treated_description', 'commonly_treated'
+            ),
+            'description': 'Optional: Customize detailed section content.'
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),
