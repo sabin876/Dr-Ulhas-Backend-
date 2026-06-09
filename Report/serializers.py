@@ -60,6 +60,7 @@ class SendOTPSerializer(serializers.Serializer):
 class VerifyOTPSerializer(serializers.Serializer):
     token = serializers.UUIDField()
     otp = serializers.CharField(min_length=6, max_length=6)
+    email = serializers.EmailField()
 
 
 class ReportSerializer(serializers.ModelSerializer):

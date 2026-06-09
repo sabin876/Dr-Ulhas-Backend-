@@ -154,6 +154,7 @@ class VerifyOTPView(APIView):
 
         token = serializer.validated_data["token"]
         plain_otp = serializer.validated_data["otp"]
+        email = serializer.validated_data["email"]
 
         try:
             otp_record = ReportAccessOTP.objects.select_related("report").get(
@@ -163,6 +164,12 @@ class VerifyOTPView(APIView):
             return Response(
                 {"detail": "Invalid or unrecognised token."},
                 status=status.HTTP_404_NOT_FOUND,
+            )
+
+        if otp_record.email.lower() != email.lower():
+            return Response(
+                {"detail": "The email address entered does not match this token."},
+                status=status.HTTP_400_BAD_REQUEST,
             )
 
         if otp_record.is_used:
