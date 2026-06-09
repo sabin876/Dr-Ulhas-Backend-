@@ -15,7 +15,7 @@ class ArticleAdminForm(forms.ModelForm):
             "content": CKEditorWidget(),
         }
 
-from .widgets import ListStringWidget, ConditionsWidget
+from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget
 
 class ServiceAdminForm(forms.ModelForm):
     class Meta:
@@ -29,7 +29,9 @@ class ServiceAdminForm(forms.ModelForm):
             "checklist_items": ListStringWidget(),
             "tag_badges": ListStringWidget(),
             "who_needs_items": ListStringWidget(),
+            "commonly_treated": CommonlyTreatedWidget(),
         }
+
 
     def clean_items(self):
         val = self.cleaned_data.get('items')
