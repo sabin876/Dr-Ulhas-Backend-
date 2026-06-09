@@ -18,24 +18,31 @@ class SendOTPSerializer(serializers.Serializer):
     """
     Send OTP using email address
     """
-    report_id = serializers.IntegerField()
+    report_id = serializers.IntegerField(required=False)
     email = serializers.EmailField()
 
     def validate(self, data):
         report_id = data.get("report_id")
         email = data.get("email")
 
-        try:
-            report = Report.objects.get(pk=report_id)
-        except Report.DoesNotExist:
-            raise serializers.ValidationError(
-                {"report_id": "Report not found."}
-            )
+        if report_id:
+            try:
+                report = Report.objects.get(pk=report_id)
+            except Report.DoesNotExist:
+                raise serializers.ValidationError(
+                    {"report_id": "Report not found."}
+                )
 
-        if report.patient_email.lower() != email.lower():
-            raise serializers.ValidationError(
-                {"email": "This email does not match the report's patient email."}
-            )
+            if report.patient_email.lower() != email.lower():
+                raise serializers.ValidationError(
+                    {"email": "This email does not match the report's patient email."}
+                )
+        else:
+            report = Report.objects.filter(patient_email__iexact=email).order_by("-created_at").first()
+            if not report:
+                raise serializers.ValidationError(
+                    {"email": "No report found for this email address."}
+                )
 
         data["report"] = report
         return data
