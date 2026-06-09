@@ -109,25 +109,27 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': config('DJANGO_DB_ENGINE', default='django.db.backends.mysql'),
-#         'NAME':  config('DJANGO_DB_NAME', default='drulhas_db'),
-#         'USER': config('DJANGO_DB_USER', default='root'),
-#         'PASSWORD': config('DJANGO_DB_PASSWORD', default='password'),
-#         'HOST': config('DJANGO_DB_HOST', default='localhost'),
-#         'PORT': config('DJANGO_DB_PORT', default='3306'),
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#         },
-#     }
-# }
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+if os.getenv('DJANGO_DB_ENGINE') or not DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': config('DJANGO_DB_ENGINE', default='django.db.backends.mysql'),
+            'NAME':  config('DJANGO_DB_NAME', default='drulhas_db'),
+            'USER': config('DJANGO_DB_USER', default='root'),
+            'PASSWORD': config('DJANGO_DB_PASSWORD', default='password'),
+            'HOST': config('DJANGO_DB_HOST', default='localhost'),
+            'PORT': config('DJANGO_DB_PORT', default='3306'),
+            # 'OPTIONS': {
+            #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            # },
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -163,16 +165,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-# Celery Configuration
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'UTC'
-CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
-
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
@@ -201,6 +193,17 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ],
 }
+
+
+# Celery Configuration
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
 
 # Production SEO & Security Settings
 if not DEBUG:
@@ -270,13 +273,13 @@ except Exception:
     pass
 
 
-# Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.hostinger.com'
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@gmail.com'  # Use environment variable
-EMAIL_HOST_PASSWORD = 'your-app-password'  # Use environment variable
-DEFAULT_FROM_EMAIL = 'noreply@drulhas.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER ="contact@drulhasorthopedic.com"
+EMAIL_ADMIN_USER="admin@drulhasorthopedic.com"
+EMAIL_HOST_PASSWORD ="tA6&>T&DpcZ"
+DEFAULT_FROM_EMAIL = "contact@drulhasorthopedic.com"
 
 FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:3000')

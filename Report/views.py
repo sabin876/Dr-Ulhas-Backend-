@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.views import View
+import logging
 
 from .models import Report, ReportAccessOTP
 from .serializers import (
@@ -16,6 +17,8 @@ from .serializers import (
 )
 from .services.otp_service import OTPService
 from .services.email_service import EmailService
+
+logger = logging.getLogger(__name__)
 
 
 class SendOTPAdminView(View):
@@ -42,24 +45,25 @@ class SendOTPAdminView(View):
             if email_sent:
                 messages.success(
                     request,
-                    f"OTP sent successfully to {report.patient_email}. Token: {otp_record.token}"
+                    f"✅ OTP sent successfully to {report.patient_email}"
                 )
             else:
                 otp_record.delete()
                 messages.error(
                     request,
-                    "Failed to send OTP email. Please try again."
+                    "❌ Failed to send OTP email. Please try again."
                 )
             
             # Redirect back to report admin change page
             return redirect(f"/admin/Report/report/{report_id}/change/")
         
         except Report.DoesNotExist:
-            messages.error(request, "Report not found")
+            messages.error(request, "❌ Report not found")
             return redirect("/admin/Report/report/")
         
         except Exception as e:
-            messages.error(request, f"Error sending OTP: {str(e)}")
+            logger.error(f"Error in SendOTPAdminView: {str(e)}")
+            messages.error(request, f"❌ Error sending OTP: {str(e)}")
             return redirect(f"/admin/Report/report/{report_id}/change/")
 
 
@@ -69,18 +73,20 @@ class CreateReportView(APIView):
 
     Doctor-only endpoint (must be authenticated).
     Creates a Report WITHOUT automatically sending OTP.
-    Use SendOTPView to send OTP after report is created.
 
-    Body: { "patient_email": "patient@example.com", "content": "...", "report_file": <file> }
+    Request:
+    {
+        "patient_email": "patient@example.com",
+        "content": "Medical diagnosis...",
+        "report_file": <file>
+    }
 
     Response 201:
     {
-        "detail": "Report created successfully. Use Send OTP button to send verification link.",
-        "report": { id, doctor, patient_email, content, created_at },
-        "message": "Click 'Send OTP' button in admin to email the patient"
+        "detail": "Report created successfully.",
+        "report": { id, doctor, patient_email, content, created_at }
     }
     """
-
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
@@ -93,9 +99,8 @@ class CreateReportView(APIView):
 
         return Response(
             {
-                "detail": "Report created successfully. Use Send OTP button to send verification link.",
-                "report": ReportSerializer(report).data,
-                "message": "Click 'Send OTP' button in admin to email the patient"
+                "detail": "✅ Report created successfully.",
+                "report": ReportSerializer(report).data
             },
             status=status.HTTP_201_CREATED,
         )
@@ -105,14 +110,22 @@ class SendOTPView(APIView):
     """
     POST /api/send-otp/
 
-    Body: { "report_id": <int>, "email": "<patient email>" }
+    Send OTP to patient's email using email + report_id.
 
-    Validates that the report exists and the email matches, then
-    generates a fresh OTP + token, persists the hashed OTP, and
-    dispatches the verification email via Celery task.
+    Request:
+    {
+        "report_id": 5,
+        "email": "patient@gmail.com"
+    }
+
+    Response 200:
+    {
+        "detail": "✅ OTP sent successfully to patient@gmail.com",
+        "email": "patient@gmail.com",
+        "message": "Check your email for the OTP"
+    }
     """
-
-    permission_classes = []   # No authentication required for this endpoint
+    permission_classes = []
 
     def post(self, request):
         serializer = SendOTPSerializer(data=request.data)
@@ -122,120 +135,189 @@ class SendOTPView(APIView):
         report = serializer.validated_data["report"]
         email = serializer.validated_data["email"]
 
-        # Create OTP record
-        otp_record, otp = OTPService.create_otp_record(report, email)
+        try:
+            # Delete old unused OTP for this email+report combo
+            ReportAccessOTP.objects.filter(
+                email=email,
+                report=report,
+                is_used=False
+            ).delete()
 
-        # Queue email task
-        email_sent = EmailService.send_otp_email(
-            email=email,
-            otp=otp,
-            token=otp_record.token,
-            report_id=report.id
-        )
+            # Create new OTP record
+            otp_record, otp = OTPService.create_otp_record(report, email)
 
-        if not email_sent:
-            otp_record.delete()
-            return Response(
-                {"detail": "Failed to send OTP email. Please try again."},
-                status=status.HTTP_502_BAD_GATEWAY,
+            # Queue email task
+            email_sent = EmailService.send_otp_email(
+                email=email,
+                otp=otp,
+                token=otp_record.token,
+                report_id=report.id
             )
 
-        return Response(
-            {
-                "detail": "OTP sent successfully. Please check your email.",
-                "token": str(otp_record.token),
-                "email": email,
-            },
-            status=status.HTTP_200_OK,
-        )
+            if not email_sent:
+                otp_record.delete()
+                return Response(
+                    {"detail": "Failed to send OTP email. Please try again."},
+                    status=status.HTTP_502_BAD_GATEWAY,
+                )
+
+            return Response(
+                {
+                    "detail": f"✅ OTP sent successfully to {email}",
+                    "email": email,
+                    "report_id": report.id,
+                    "message": "Check your email for the OTP"
+                },
+                status=status.HTTP_200_OK,
+            )
+        
+        except Exception as e:
+            logger.error(f"Error in SendOTPView: {str(e)}")
+            return Response(
+                {"detail": "Internal server error"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
 
 
 class VerifyOTPView(APIView):
     """
     POST /api/verify-otp/
 
-    Body: { "token": "<uuid>", "otp": "<6-digit code>" }
+    Verify OTP using email + report_id + OTP code.
+    No token needed - just use email!
 
-    Validates the token, checks expiry, compares hashed OTP,
-    and marks the record as verified + used on success.
+    Request:
+    {
+        "email": "patient@gmail.com",
+        "report_id": 5,
+        "otp": "123456"
+    }
+
+    Response 200:
+    {
+        "detail": "✅ OTP verified successfully.",
+        "email": "patient@gmail.com",
+        "report": {
+            "id": 5,
+            "doctor_name": "Dr. Rajesh",
+            "patient_email": "patient@gmail.com",
+            "content": "Medical diagnosis...",
+            "report_file": "/media/reports/report_5.pdf",
+            "created_at": "2026-06-09T10:00:00Z"
+        }
+    }
     """
-
     permission_classes = []
 
     def post(self, request):
         serializer = VerifyOTPSerializer(data=request.data)
+        
         if not serializer.is_valid():
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        token = serializer.validated_data["token"]
-        plain_otp = serializer.validated_data["otp"]
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
 
         try:
-            otp_record = ReportAccessOTP.objects.select_related("report").get(
-                token=token
-            )
-        except ReportAccessOTP.DoesNotExist:
-            return Response(
-                {"detail": "Invalid or unrecognised token."},
-                status=status.HTTP_404_NOT_FOUND,
-            )
+            otp_record = serializer.validated_data["otp_record"]
+            report = serializer.validated_data["report"]
+            email = serializer.validated_data["email"]
 
-        if otp_record.is_used:
-            return Response(
-                {"detail": "This token has already been used."},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
+            # Mark OTP as verified and used
+            otp_record.is_verified = True
+            otp_record.is_used = True
+            otp_record.save()
 
-        if otp_record.is_expired:
-            return Response(
-                {"detail": "OTP has expired. Please request a new one."},
-                status=status.HTTP_400_BAD_REQUEST,
-            )
+            logger.info(f"OTP verified for {email}, report {report.id}")
 
-        # Validate and mark used
-        is_valid, error_message = OTPService.validate_and_mark_used(otp_record, plain_otp)
+            return Response(
+                {
+                    "detail": "✅ OTP verified successfully.",
+                    "email": email,
+                    "report_id": report.id,
+                    "report": ReportSerializer(report).data
+                },
+                status=status.HTTP_200_OK
+            )
         
-        if not is_valid:
+        except Exception as e:
+            logger.error(f"Error in VerifyOTPView: {str(e)}")
             return Response(
-                {"detail": error_message},
-                status=status.HTTP_400_BAD_REQUEST,
+                {"detail": "Internal server error"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
-
-        return Response(
-            {
-                "detail": "OTP verified successfully.",
-                "token": str(otp_record.token),
-            },
-            status=status.HTTP_200_OK,
-        )
 
 
 class ReportAccessView(APIView):
     """
-    GET /api/report/<uuid:token>/
+    GET /api/report/
 
-    Returns the report only when the supplied token has been
-    previously verified (is_verified=True) and belongs to this patient.
+    Access report using email + report_id.
+    Only works if OTP has been verified for this email.
+
+    Request:
+    GET /api/report/?email=patient@gmail.com&report_id=5
+
+    Response 200:
+    {
+        "id": 5,
+        "doctor_name": "Dr. Rajesh",
+        "patient_email": "patient@gmail.com",
+        "content": "Medical diagnosis...",
+        "report_file": "/media/reports/report_5.pdf",
+        "created_at": "2026-06-09T10:00:00Z"
+    }
     """
-
     permission_classes = []
 
-    def get(self, request, token):
+    def get(self, request):
+        email = request.query_params.get('email')
+        report_id = request.query_params.get('report_id')
+
+        if not email or not report_id:
+            return Response(
+                {"detail": "Missing email or report_id query parameters"},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
         try:
-            otp_record = ReportAccessOTP.objects.select_related(
-                "report", "report__doctor"
-            ).get(token=token)
+            report = Report.objects.get(pk=report_id)
+        except Report.DoesNotExist:
+            return Response(
+                {"detail": "❌ Report not found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        if report.patient_email.lower() != email.lower():
+            return Response(
+                {"detail": "❌ Email does not match report's patient email."},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        try:
+            otp_record = ReportAccessOTP.objects.get(
+                email=email,
+                report=report
+            )
         except ReportAccessOTP.DoesNotExist:
             return Response(
-                {"detail": "Invalid token."},
-                status=status.HTTP_404_NOT_FOUND,
+                {"detail": "❌ No verification record found. Please verify OTP first."},
+                status=status.HTTP_403_FORBIDDEN,
             )
 
         if not otp_record.is_verified:
             return Response(
-                {"detail": "Token has not been verified. Please complete OTP verification."},
+                {"detail": "❌ Email has not been verified. Please complete OTP verification first."},
                 status=status.HTTP_403_FORBIDDEN,
             )
 
-        serializer = ReportSerializer(otp_record.report)
+        if otp_record.is_expired:
+            return Response(
+                {"detail": "❌ Verification has expired. Please request a new OTP."},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        logger.info(f"Report accessed by {email} for report {report.id}")
+
+        serializer = ReportSerializer(report)
         return Response(serializer.data, status=status.HTTP_200_OK)

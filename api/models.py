@@ -68,6 +68,17 @@ class Service(SEOBaseModel):
     conditions_title = models.CharField(max_length=255, blank=True, null=True, help_text="Optional: Customize the conditions section heading")
     checklist_title = models.CharField(max_length=255, blank=True, null=True, help_text="Optional: Customize the checklist section heading")
     checklist_image = models.ImageField(upload_to='services/illustrations/', blank=True, null=True, help_text="Optional: Upload an illustration/image to replace the default therapist SVG")
+    
+    # Custom detailed service sections
+    about_title = models.CharField(max_length=255, blank=True, null=True, help_text="Optional: Heading for the dynamic about section")
+    about_description = models.TextField(blank=True, null=True, help_text="Optional: Content for the dynamic about section")
+    who_needs_title = models.CharField(max_length=255, blank=True, null=True, help_text="Optional: Heading for indications section")
+    who_needs_description = models.TextField(blank=True, null=True, help_text="Optional: Subtext/description for indications section")
+    who_needs_items = models.JSONField(default=list, blank=True, help_text='JSON list of strings, e.g., ["Symptom 1", "Symptom 2"]')
+    commonly_treated_title = models.CharField(max_length=255, blank=True, null=True, help_text="Optional: Heading for commonly treated section")
+    commonly_treated_description = models.TextField(blank=True, null=True, help_text="Optional: Subtext for commonly treated section")
+    commonly_treated = models.JSONField(default=list, blank=True, help_text='JSON list of categories, e.g., [{"title": "Upper Limb", "icon": "PlusSquare", "items": ["Item 1", "Item 2"]}]')
+    
     updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
@@ -101,6 +112,18 @@ class SiteSetting(models.Model):
     class Meta:
         verbose_name = "Site Setting"
         verbose_name_plural = "Site Settings"
+
+
+class HeroVideo(models.Model):
+    video = models.FileField(upload_to='videos/', help_text="Upload the main hero section video")
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Hero Section Video (Updated: {self.updated_at.strftime('%Y-%m-%d %H:%M')})"
+
+    class Meta:
+        verbose_name = "Hero Video"
+        verbose_name_plural = "Hero Video"
 
 class CustomRedirect(models.Model):
     STATUS_CHOICES = [

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Service, Translation, SiteSetting, GalleryItem
+from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,7 +20,7 @@ class ServiceSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        json_fields = ['items', 'faqs', 'conditions', 'checklist_items', 'tag_badges', 'schema_markup']
+        json_fields = ['items', 'faqs', 'conditions', 'checklist_items', 'tag_badges', 'schema_markup', 'who_needs_items', 'commonly_treated']
         for field in json_fields:
             if field in data and isinstance(data[field], str):
                 try:
@@ -44,5 +44,11 @@ class SiteSettingSerializer(serializers.ModelSerializer):
 class GalleryItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = GalleryItem
+        fields = '__all__'
+
+
+class HeroVideoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HeroVideo
         fields = '__all__'
 

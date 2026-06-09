@@ -42,7 +42,7 @@ def send_otp_email_task(self, email, otp, token, report_id):
         send_mail(
             subject=subject,
             message=plain_message,
-            from_email="admin@drulhasorthopedic.com",
+            from_email="contact@drulhasorthopedic.com",
             recipient_list=[email],
             html_message=html_message,
             fail_silently=False,
@@ -79,7 +79,7 @@ def send_report_notification_email(self, email, doctor_name, report_id):
             recipient_list=[email],
             html_message=html_message,
             fail_silently=False,
-        )
+        )   
         
         logger.info(f"Report notification sent to {email}")
         return f"Report notification sent to {email}"

@@ -13,5 +13,5 @@ urlpatterns = [
     path('create/', CreateReportView.as_view(), name='create-report'),
     path('send-otp/', SendOTPView.as_view(), name='send-otp'),
     path('verify-otp/', VerifyOTPView.as_view(), name='verify-otp'),
-    path('report/<uuid:token>/', ReportAccessView.as_view(), name='report-access'),
+    path('report/', ReportAccessView.as_view(), name='report-access'),
 ]
