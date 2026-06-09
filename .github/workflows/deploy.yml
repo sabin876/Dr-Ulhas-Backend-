@@ -40,6 +40,9 @@ jobs:
 
             echo "Collecting static files..."
             python manage.py collectstatic --noinput
+            
+            echo "Restarting Celery worker..."
+            celery -A core worker --loglevel=info --daemon
 
             echo "Restarting Passenger..."
             mkdir -p tmp
