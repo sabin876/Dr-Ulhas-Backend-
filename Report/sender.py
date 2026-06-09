@@ -1,4 +1,4 @@
-from celery import shared_task
+
 from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import render_to_string
@@ -8,8 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-@shared_task(bind=True, max_retries=3)
-def send_otp_email_task(self, email, otp, token, report_id):
+def send_otp_email_task( email, otp, token, report_id):
     """
     Celery task to send OTP email asynchronously
     
@@ -53,11 +52,10 @@ def send_otp_email_task(self, email, otp, token, report_id):
     
     except Exception as exc:
         print(f"Error sending OTP email to {email}: {str(exc)}")
-        raise self.retry(exc=exc, countdown=60)
 
 
-@shared_task(bind=True, max_retries=3)
-def send_report_notification_email(self, email, doctor_name, report_id):
+
+def send_report_notification_email( email, doctor_name, report_id):
     """
     Task to send report notification email to patient
     """
@@ -86,4 +84,3 @@ def send_report_notification_email(self, email, doctor_name, report_id):
     
     except Exception as exc:
         logger.error(f"Failed to send report notification to {email}: {str(exc)}")
-        raise self.retry(exc=exc, countdown=60)

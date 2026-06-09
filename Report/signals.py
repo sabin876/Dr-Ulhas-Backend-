@@ -3,7 +3,7 @@ from django.dispatch import receiver
 
 from .models import Report, ReportAccessOTP
 from .services.otp_service import generate_otp, hash_otp
-from .tasks import send_otp_email_task
+from .sender import send_otp_email_task
 
 
 @receiver(post_save, sender=Report)
@@ -22,7 +22,7 @@ def send_report_otp(sender, instance, created, **kwargs):
     print(f"OTP record created with token {otp_record.token} and expires at {otp_record.expires_at}")
     print(instance.patient_email)
     try:
-        send_otp_email_task.delay(
+        send_otp_email_task(
             recipient_email=instance.patient_email,
             otp=otp,
             token=str(otp_record.token),

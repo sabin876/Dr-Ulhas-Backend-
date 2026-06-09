@@ -1,6 +1,6 @@
 from django.core.mail import send_mail
 from django.conf import settings
-from Report.tasks import send_otp_email_task
+from Report.sender import send_otp_email_task
 import logging
 
 logger = logging.getLogger(__name__)
@@ -27,7 +27,7 @@ class EmailService:
         """
         try:
             # Queue Celery task
-            send_otp_email_task.delay(
+            send_otp_email_task(
                 email=email,
                 otp=otp,
                 token=str(token),
@@ -53,9 +53,9 @@ class EmailService:
             bool: True if task queued successfully
         """
         try:
-            from Report.tasks import send_report_notification_email
+            from Report.sender import send_report_notification_email
 
-            send_report_notification_email.delay(
+            send_report_notification_email(
                 email=email, doctor_name=doctor_name, report_id=report_id
             )
             logger.info(f"Report notification task queued for {email}")
