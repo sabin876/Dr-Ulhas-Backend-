@@ -282,8 +282,8 @@ EMAIL_PORT = 25
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
 
-EMAIL_HOST_USER = "contact@drulhasorthopedic.com"
-EMAIL_HOST_PASSWORD = "tA6&>T&DpcZ"
+EMAIL_HOST_USER ="no-reply@drulhasorthopedic.com"
+EMAIL_HOST_PASSWORD = "Otp@2580"
 
 DEFAULT_FROM_EMAIL = "contact@drulhasorthopedic.com"
 
