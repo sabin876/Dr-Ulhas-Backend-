@@ -41,7 +41,7 @@ def send_otp_email_task( email, otp, token, report_id):
         send_mail(
             subject=subject,
             message=plain_message,
-            from_email="contact@drulhasorthopedic.com",
+            from_email=settings.EMAIL_OTP_GMAIL,
             recipient_list=[email],
             html_message=html_message,
             fail_silently=False,
