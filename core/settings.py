@@ -276,17 +276,15 @@ except Exception:
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
-EMAIL_HOST = "smtp.hostinger.com"
-EMAIL_PORT = 465
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 25
 
-EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
 
-# Main sending email (ONLY ONE)
 EMAIL_HOST_USER = "contact@drulhasorthopedic.com"
-EMAIL_HOST_PASSWORD = "tA6&>T&DpcZ"
+EMAIL_HOST_PASSWORD = "CPANEL_EMAIL_PASSWORD"
 
-# Default sender
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = "contact@drulhasorthopedic.com"
 
 FRONTEND_URL = config("FRONTEND_URL")
