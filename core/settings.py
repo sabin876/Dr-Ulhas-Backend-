@@ -287,4 +287,4 @@ EMAIL_HOST_PASSWORD = "Otp@2580"
 
 DEFAULT_FROM_EMAIL = "contact@drulhasorthopedic.com"
 
-FRONTEND_URL = config("FRONTEND_URL")
+FRONTEND_URL = config("no-reply@drulhasorthopedic.com")
