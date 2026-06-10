@@ -270,25 +270,23 @@ try:
 except Exception:
     pass
 
+# ===============================
+# EMAIL CONFIG (HOSTINGER SMTP)
+# ===============================
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
-# --- Internal Routing Setup ---
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 25                           # Standard port for internal localhost traffic
-EMAIL_USE_TLS = False                     # Disabled: Not needed for internal server loops
-EMAIL_USE_SSL = False                     # Disabled
+EMAIL_HOST = "smtp.hostinger.com"
+EMAIL_PORT = 465
 
-# --- Authentication Settings ---
-# Use the credentials of the account you created inside cPanel
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
+
+# Main sending email (ONLY ONE)
 EMAIL_HOST_USER = "contact@drulhasorthopedic.com"
-EMAIL_HOST_PASSWORD = "tA6&>T&DpcZ"      # Ensure this password matches the one set in cPanel
+EMAIL_HOST_PASSWORD = "tA6&>T&DpcZ"
 
-# --- Sender & Admin Configuration ---
-DEFAULT_FROM_EMAIL = "contact@drulhasorthopedic.com"
-EMAIL_ADMIN_USER = "admin@drulhasorthopedic.com"   # This can remain your Hostinger admin address
-
-# --- Custom App Settings ---
-EMAIL_OTP_GMAIL = "norply-otp@drulhasorthopedic.com"
+# Default sender
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 FRONTEND_URL = config("FRONTEND_URL")
