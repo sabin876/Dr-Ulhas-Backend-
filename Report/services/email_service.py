@@ -88,7 +88,9 @@ class EmailService:
             email_msg.attach_alternative(html_message, "text/html")
 
             # ✅ ASYNC SEND (NON-BLOCKING)
-            send_email_async(email_msg)
+            # send_email_async(email_msg)
+            email_msg.send(fail_silently=False)
+            
 
             logger.info(f"OTP email queued for {email}")
             return True
