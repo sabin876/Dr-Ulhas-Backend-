@@ -272,9 +272,9 @@ except Exception:
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.hostinger.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
 EMAIL_HOST_USER ="contact@drulhasorthopedic.com"
 EMAIL_ADMIN_USER="admin@drulhasorthopedic.com"
 EMAIL_HOST_PASSWORD ="tA6&>T&DpcZ"
