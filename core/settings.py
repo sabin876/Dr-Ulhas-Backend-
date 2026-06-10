@@ -283,7 +283,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
 
 EMAIL_HOST_USER = "contact@drulhasorthopedic.com"
-EMAIL_HOST_PASSWORD = "CPANEL_EMAIL_PASSWORD"
+EMAIL_HOST_PASSWORD = "tA6&>T&DpcZ"
 
 DEFAULT_FROM_EMAIL = "contact@drulhasorthopedic.com"
 
