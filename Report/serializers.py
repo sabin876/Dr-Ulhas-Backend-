@@ -74,18 +74,6 @@ class VerifyOTPSerializer(serializers.Serializer):
                 "email": "No OTP request found for this email."
             })
 
-        # Step 2: check expiry
-        if otp_record.is_expired:
-            raise serializers.ValidationError({
-                "otp": "OTP has expired. Please request a new one."
-            })
-
-        # Step 3: check reuse
-        if otp_record.is_used:
-            raise serializers.ValidationError({
-                "otp": "This OTP has already been used."
-            })
-
         # Step 4: verify OTP hash
         if not OTPService.verify_otp(otp, otp_record.otp_hash):
             raise serializers.ValidationError({
