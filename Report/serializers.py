@@ -53,7 +53,6 @@ class VerifyOTPSerializer(serializers.Serializer):
     """
     email = serializers.EmailField()
     otp = serializers.CharField(min_length=6, max_length=6)
-    email = serializers.EmailField()
 
     def validate_otp(self, value):
         if not value.isdigit():
