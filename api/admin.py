@@ -31,12 +31,16 @@ class ServiceAdminForm(forms.ModelForm):
         widgets = {
             "description": CKEditorWidget(),
             "about_description": CKEditorWidget(),
+            "highlight_description": CKEditorWidget(),
+            "highlight_doctor_description": CKEditorWidget(),
             "items": ListStringWidget(),
             "conditions": ConditionsWidget(),
             "checklist_items": ListStringWidget(),
             "tag_badges": ListStringWidget(),
             "who_needs_items": ListStringWidget(),
             "commonly_treated": CommonlyTreatedWidget(),
+            "highlight_checklist_items": ListStringWidget(),
+            "highlight_doctor_badges": ListStringWidget(),
         }
 
 
@@ -72,6 +76,18 @@ class ServiceAdminForm(forms.ModelForm):
 
     def clean_commonly_treated(self):
         val = self.cleaned_data.get('commonly_treated')
+        if val is None or val == "":
+            return []
+        return val
+
+    def clean_highlight_checklist_items(self):
+        val = self.cleaned_data.get('highlight_checklist_items')
+        if val is None or val == "":
+            return []
+        return val
+
+    def clean_highlight_doctor_badges(self):
+        val = self.cleaned_data.get('highlight_doctor_badges')
         if val is None or val == "":
             return []
         return val
@@ -146,6 +162,15 @@ class ServiceAdmin(ModelAdmin):
                 'commonly_treated_title', 'commonly_treated_description', 'commonly_treated'
             ),
             'description': 'Optional: Customize detailed section content.'
+        }),
+        ('Highlight Section (Doctor Profile / Why Choose Us Extra)', {
+            'fields': (
+                'highlight_badge', 'highlight_title', 'highlight_description',
+                'highlight_checklist_title', 'highlight_checklist_items',
+                'highlight_doctor_image', 'highlight_doctor_name', 'highlight_doctor_role',
+                'highlight_doctor_badges', 'highlight_doctor_description'
+            ),
+            'description': 'Optional: Add a specialized highlight section (e.g. Why Choose Dr Ulhas) with a doctor profile card.'
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),

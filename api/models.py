@@ -79,6 +79,18 @@ class Service(SEOBaseModel):
     commonly_treated_description = models.TextField(blank=True, null=True, help_text="Optional: Subtext for commonly treated section")
     commonly_treated = models.JSONField(default=list, blank=True, help_text='JSON list of categories, e.g., [{"title": "Upper Limb", "icon": "PlusSquare", "items": ["Item 1", "Item 2"]}]')
     
+    # Custom Highlight Section (Doctor Profile / Why Choose Us Extra)
+    highlight_badge = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Expertise & Precision'")
+    highlight_title = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Why Choose Dr Ulhas Sonar...'")
+    highlight_description = models.TextField(blank=True, null=True, help_text="Description under highlight title")
+    highlight_checklist_title = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Successful knee replacement requires:'")
+    highlight_checklist_items = models.JSONField(default=list, blank=True, help_text='JSON list of strings for highlight checklist')
+    highlight_doctor_image = models.ImageField(upload_to='services/doctors/', blank=True, null=True)
+    highlight_doctor_name = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Dr Ulhas Sonar'")
+    highlight_doctor_role = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Consultant Orthopedic Surgeon'")
+    highlight_doctor_badges = models.JSONField(default=list, blank=True, help_text='JSON list of badges, e.g., ["UK-TRAINED", "FRCS"]')
+    highlight_doctor_description = models.TextField(blank=True, null=True, help_text="Doctor biography snippet")
+    
     updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):

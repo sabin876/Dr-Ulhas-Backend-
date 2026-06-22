@@ -20,7 +20,7 @@ class ServiceSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        json_fields = ['items', 'faqs', 'conditions', 'checklist_items', 'tag_badges', 'schema_markup', 'who_needs_items', 'commonly_treated']
+        json_fields = ['items', 'faqs', 'conditions', 'checklist_items', 'tag_badges', 'schema_markup', 'who_needs_items', 'commonly_treated', 'highlight_checklist_items', 'highlight_doctor_badges']
         for field in json_fields:
             if field in data and isinstance(data[field], str):
                 try:
