@@ -269,6 +269,16 @@ UNFOLD = {
                         "icon": "settings",
                         "link": "/admin/api/sitesetting/",
                     },
+                    {
+                        "title": "Medical Reports",
+                        "icon": "description",
+                        "link": "/admin/Report/report/",
+                    },
+                    {
+                        "title": "Report Access OTPs",
+                        "icon": "vpn_key",
+                        "link": "/admin/Report/reportaccessotp/",
+                    },
                 ],
             },
         ],

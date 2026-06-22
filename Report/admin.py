@@ -14,11 +14,15 @@ class ReportAdminForm(forms.ModelForm):
         model = Report
         fields = "__all__"
         widgets = {
-            "content": CKEditorWidget(),
+            "content": CKEditorWidget(attrs={'placeholder': 'Enter the medical report content here...'}),
+            "patient_email": forms.EmailInput(attrs={'placeholder': 'e.g. patient@example.com'}),
+        }
+        labels = {
+            "report_file": "Upload the Report here",
         }
 
 
-# @admin.register(Report)
+@admin.register(Report)
 class ReportAdmin(ModelAdmin):
     form = ReportAdminForm
     list_display = ('id', 'doctor', 'patient_email', 'created_at', 'send_otp_button')
@@ -36,16 +40,8 @@ class ReportAdmin(ModelAdmin):
         ('Report Details', {
             'fields': ('content', 'report_file')
         }),
-        ('Metadata', {
-            'fields': ('created_at',),
-            'classes': ('collapse',)
-        }),
     )
 
-    class Media:
-        js = (
-            'Report/js/report_templates.js',
-        )
     
     def get_readonly_fields(self, request, obj=None):
         if obj:  # Editing an existing object
@@ -85,7 +81,7 @@ class ReportAdmin(ModelAdmin):
         return custom_urls + urls
 
 
-# @admin.register(ReportAccessOTP)
+@admin.register(ReportAccessOTP)
 class ReportAccessOTPAdmin(ModelAdmin):
     list_display = ('id', 'report', 'email', 'is_verified', 'is_used', 'is_expired', 'created_at')
     list_filter = ('is_verified', 'is_used', 'created_at')
