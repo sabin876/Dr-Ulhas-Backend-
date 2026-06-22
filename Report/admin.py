@@ -2,11 +2,25 @@ from django.contrib import admin
 from django.urls import reverse
 from django.utils.html import format_html
 from django.db.models import signals
+from django import forms
+from ckeditor.widgets import CKEditorWidget
+from unfold.admin import ModelAdmin
+from unfold.decorators import display
 from .models import Report, ReportAccessOTP
 
 
-@admin.register(Report)
-class ReportAdmin(admin.ModelAdmin):
+class ReportAdminForm(forms.ModelForm):
+    class Meta:
+        model = Report
+        fields = "__all__"
+        widgets = {
+            "content": CKEditorWidget(),
+        }
+
+
+# @admin.register(Report)
+class ReportAdmin(ModelAdmin):
+    form = ReportAdminForm
     list_display = ('id', 'doctor', 'patient_email', 'created_at', 'send_otp_button')
     list_filter = ('doctor', 'created_at')
     search_fields = ('patient_email', 'content')
@@ -27,22 +41,27 @@ class ReportAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
     )
+
+    class Media:
+        js = (
+            'Report/js/report_templates.js',
+        )
     
     def get_readonly_fields(self, request, obj=None):
         if obj:  # Editing an existing object
             return self.readonly_fields + ('patient_email',)
         return self.readonly_fields
     
+    @display(description="Actions")
     def send_otp_button(self, obj):
         """Display Send OTP button in list view"""
         if obj.id:
             url = reverse('admin:report_send_otp', args=[obj.id])
             return format_html(
-                '<a class="button" href="{}">Send OTP</a>',
+                '<a class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-1 px-3 rounded text-xs inline-block" href="{}">Send OTP</a>',
                 url
             )
         return "-"
-    send_otp_button.short_description = "Actions"
     
     def save_model(self, request, obj, form, change):
         """Set doctor to current user when creating report"""
@@ -66,8 +85,8 @@ class ReportAdmin(admin.ModelAdmin):
         return custom_urls + urls
 
 
-@admin.register(ReportAccessOTP)
-class ReportAccessOTPAdmin(admin.ModelAdmin):
+# @admin.register(ReportAccessOTP)
+class ReportAccessOTPAdmin(ModelAdmin):
     list_display = ('id', 'report', 'email', 'is_verified', 'is_used', 'is_expired', 'created_at')
     list_filter = ('is_verified', 'is_used', 'created_at')
     search_fields = ('email', 'report__patient_email')

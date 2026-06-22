@@ -1,0 +1,36 @@
+{% extends 'admin/change_list.html' %}
+{% load admin_urls admin_list unfold_list %}
+
+{% block object-tools-items %}
+    {% if has_add_permission %}
+        <div class="flex flex-row items-center">
+            <a href="{% url 'admin:api_service_add' %}" class="bg-primary-600 flex flex-row font-medium gap-2 items-center h-[38px] justify-center px-4 -my-1 rounded-default text-white hover:bg-primary-600/80">
+                <span class="material-symbols-outlined text-white" style="font-size: 20px;">add</span> Add servies
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block result_list %}
+    {% if not cl.result_count %}
+        <div class="bg-white border border-base-200 flex flex-col items-center px-8 py-24 shadow-xs dark:bg-base-900 dark:border-base-800 rounded-default">
+            <div class="border border-base-300 border-dashed flex h-24 items-center justify-center mb-8 rounded-full w-24 dark:border-base-700">
+                <span class="material-symbols-outlined text-base-500 text-5xl! dark:text-base-400">inbox</span>
+            </div>
+
+            <div class="flex flex-col gap-4 justify-center w-full lg:flex-row">
+                {% if has_add_permission %}
+                    <a href="{% url 'admin:api_service_add' %}" class="bg-primary-600 flex flex-row font-medium gap-2 items-center h-[38px] justify-center px-4 py-2 rounded-default text-white w-full lg:w-auto">
+                        <span class="material-symbols-outlined text-white" style="font-size: 20px;">add</span> Add servies
+                    </a>
+                {% endif %}
+                
+                <a href="{% url 'admin:api_service_changelist' %}?list=true" class="border border-base-200 flex flex-row font-medium gap-2 group/button h-[38px] items-center justify-center px-4 py-2 rounded-default w-full hover:text-primary-600 lg:w-auto dark:border-base-700 dark:hover:bg-base-900 dark:hover:text-primary-500 text-gray-700 dark:text-zinc-300">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">list</span> Edit Existing Services
+                </a>
+            </div>
+        </div>
+    {% else %}
+        {{ block.super }}
+    {% endif %}
+{% endblock %}

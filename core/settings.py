@@ -85,7 +85,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -207,11 +207,12 @@ if not DEBUG:
 
 # Unfold Admin Settings
 UNFOLD = {
+    "THEME": "dark",
     "SITE_TITLE": "Dr. Ulhas Sonar Admin",
     "SITE_HEADER": "Dr. Ulhas Sonar",
     "SITE_URL": "/",
-    "SITE_ICON": "api/images/logo.png",
-    "DASHBOARD_CALLBACK": None,
+    "SITE_ICON": "/static/api/images/logo.png",
+    "DASHBOARD_CALLBACK": "api.dashboard.dashboard_callback",
     "STYLES": [
         lambda request: "/static/api/css/unfold_custom.css",
     ],
@@ -232,16 +233,41 @@ UNFOLD = {
     },
     "SIDEBAR": {
         "show_search": True,
-        "show_all_applications": True,
+        "show_all_applications": False,
         "navigation": [
             {
                 "title": "Navigation",
                 "separator": True,
                 "items": [
                     {
-                        "title": "Dashboard",
-                        "icon": "dashboard",
-                        "link": "/admin/",
+                        "title": "Articles",
+                        "icon": "article",
+                        "link": "/admin/api/article/",
+                    },
+                    {
+                        "title": "Gallery Items",
+                        "icon": "photo_library",
+                        "link": "/admin/api/galleryitem/",
+                    },
+                    {
+                        "title": "Hero Video",
+                        "icon": "video_library",
+                        "link": "/admin/api/herovideo/",
+                    },
+                    {
+                        "title": "Redirects",
+                        "icon": "alt_route",
+                        "link": "/admin/api/customredirect/",
+                    },
+                    {
+                        "title": "Services",
+                        "icon": "medical_services",
+                        "link": "/admin/api/service/",
+                    },
+                    {
+                        "title": "Site Settings",
+                        "icon": "settings",
+                        "link": "/admin/api/sitesetting/",
                     },
                 ],
             },

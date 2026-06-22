@@ -6,6 +6,13 @@ from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
 from .models import Article, Service, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo
+from django.contrib.auth.models import Group, User
+
+try:
+    admin.site.unregister(Group)
+    admin.site.unregister(User)
+except admin.sites.NotRegistered:
+    pass
 
 class ArticleAdminForm(forms.ModelForm):
     class Meta:
@@ -72,6 +79,7 @@ class ServiceAdminForm(forms.ModelForm):
 @admin.register(Article)
 class ArticleAdmin(ModelAdmin):
     form = ArticleAdminForm
+    change_list_template = "admin/api/article/change_list.html"
     list_display = ('title', 'edit_button', 'delete_button', 'date', 'category', 'index_page')
     
     @display(description="Edit")
@@ -86,7 +94,6 @@ class ArticleAdmin(ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title', 'content')
     list_filter = ('category', 'date', 'index_page')
-    
     fieldsets = (
         ('Content', {
             'fields': ('title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color')
@@ -109,6 +116,7 @@ class ArticleAdmin(ModelAdmin):
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
     form = ServiceAdminForm
+    change_list_template = "admin/api/service/change_list.html"
     list_display = ('title', 'edit_button', 'delete_button', 'updated_at', 'index_page')
     
     @display(description="Edit")
@@ -193,6 +201,7 @@ class CustomRedirectAdmin(ModelAdmin):
 
 @admin.register(GalleryItem)
 class GalleryItemAdmin(ModelAdmin):
+    change_list_template = "admin/api/galleryitem/change_list.html"
     list_display = ('title', 'edit_button', 'delete_button', 'category', 'span', 'order', 'created_at')
     list_filter = ('category',)
     search_fields = ('title', 'description')

@@ -1,0 +1,12 @@
+{% extends 'admin/change_list.html' %}
+{% load admin_urls %}
+
+{% block object-tools-items %}
+    {% if has_add_permission %}
+        <div class="flex flex-row items-center">
+            <a href="{% url 'admin:api_galleryitem_add' %}" class="bg-primary-600 flex flex-row font-medium gap-2 items-center h-[38px] justify-center px-4 -my-1 rounded-default text-white hover:bg-primary-600/80">
+                <span class="material-symbols-outlined text-white" style="font-size: 20px;">add</span> Add Gallery
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}
