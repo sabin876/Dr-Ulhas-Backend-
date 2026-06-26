@@ -92,6 +92,12 @@ class ServiceAdminForm(forms.ModelForm):
             return []
         return val
 
+    def clean_journey_steps(self):
+        val = self.cleaned_data.get('journey_steps')
+        if val is None or val == "":
+            return []
+        return val
+
 @admin.register(Article)
 class ArticleAdmin(ModelAdmin):
     form = ArticleAdminForm
@@ -171,6 +177,12 @@ class ServiceAdmin(ModelAdmin):
                 'highlight_doctor_badges', 'highlight_doctor_description'
             ),
             'description': 'Optional: Add a specialized highlight section (e.g. Why Choose Dr Ulhas) with a doctor profile card.'
+        }),
+        ('Journey Section (Step-by-step)', {
+            'fields': (
+                'journey_is_active', 'journey_title', 'journey_description', 'journey_steps'
+            ),
+            'description': 'Optional: Add a step-by-step journey section (e.g. Your Robotic Knee Replacement Journey).'
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),

@@ -91,6 +91,12 @@ class Service(SEOBaseModel):
     highlight_doctor_badges = models.JSONField(default=list, blank=True, help_text='JSON list of badges, e.g., ["UK-TRAINED", "FRCS"]')
     highlight_doctor_description = models.TextField(blank=True, null=True, help_text="Doctor biography snippet")
     
+    # Custom Journey Section (e.g. Robotic Knee Journey)
+    journey_is_active = models.BooleanField(default=False, help_text="Enable the journey step-by-step section for this service")
+    journey_title = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Your Robotic Knee Replacement Journey'")
+    journey_description = models.TextField(blank=True, null=True, help_text="Subtext for the journey section")
+    journey_steps = models.JSONField(default=list, blank=True, help_text='JSON list of steps, e.g., [{"number": "01", "title": "Assessment", "description": "...", "icon": "ClipboardList", "color": "text-blue-500", "gradient": "from-blue-500/10 to-blue-500/0", "shadowHover": "hover:shadow-blue-500/20", "borderHover": "group-hover:border-blue-200"}]')
+    
     updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
