@@ -22,7 +22,7 @@ class ArticleAdminForm(forms.ModelForm):
             "content": CKEditorWidget(),
         }
 
-from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget
+from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget
 
 class ServiceAdminForm(forms.ModelForm):
     class Meta:
@@ -41,6 +41,7 @@ class ServiceAdminForm(forms.ModelForm):
             "commonly_treated": CommonlyTreatedWidget(),
             "highlight_checklist_items": ListStringWidget(),
             "highlight_doctor_badges": ListStringWidget(),
+            "journey_steps": JourneyStepsWidget(),
         }
 
 

@@ -576,3 +576,135 @@ class CommonlyTreatedWidget(forms.Widget):
         """
         return mark_safe(html)
 
+
+
+class JourneyStepsWidget(forms.Widget):
+    def render(self, name, value, attrs=None, renderer=None):
+        attrs = attrs or {}
+        id_str = attrs.get('id', name)
+        
+        if isinstance(value, str):
+            try:
+                items = json.loads(value)
+            except Exception:
+                items = []
+        elif isinstance(value, list):
+            items = value
+        else:
+            items = []
+            
+        items_json = json.dumps(items)
+        items_json_escaped = escape(items_json)
+        
+        html = f'''
+        <style>
+        #cms-journey-{id_str} {{ font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+        .cms-widget-container {{ background-color: #f8fafc !important; border-color: #e2e8f0 !important; }}
+        .cms-card {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; color: #1e293b !important; }}
+        .cms-card-title {{ color: #0f172a !important; }}
+        .cms-card-desc {{ color: #475569 !important; }}
+        .cms-input-field {{ background-color: #ffffff !important; border-color: #cbd5e1 !important; color: #0f172a !important; }}
+        .cms-input-field::placeholder {{ color: #94a3b8 !important; }}
+        .cms-form-box {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; }}
+        html.dark #cms-journey-{id_str} .cms-widget-container, body.dark #cms-journey-{id_str} .cms-widget-container, .dark #cms-journey-{id_str} .cms-widget-container {{ background-color: #0f172a !important; border-color: #1e293b !important; }}
+        html.dark #cms-journey-{id_str} .cms-card, body.dark #cms-journey-{id_str} .cms-card, .dark #cms-journey-{id_str} .cms-card {{ background-color: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }}
+        html.dark #cms-journey-{id_str} .cms-card-title, body.dark #cms-journey-{id_str} .cms-card-title, .dark #cms-journey-{id_str} .cms-card-title {{ color: #f8fafc !important; }}
+        html.dark #cms-journey-{id_str} .cms-card-desc, body.dark #cms-journey-{id_str} .cms-card-desc, .dark #cms-journey-{id_str} .cms-card-desc {{ color: #94a3b8 !important; }}
+        html.dark #cms-journey-{id_str} .cms-input-field, body.dark #cms-journey-{id_str} .cms-input-field, .dark #cms-journey-{id_str} .cms-input-field {{ background-color: #0f172a !important; border-color: #334155 !important; color: #f8fafc !important; }}
+        html.dark #cms-journey-{id_str} .cms-input-field::placeholder, body.dark #cms-journey-{id_str} .cms-input-field::placeholder, .dark #cms-journey-{id_str} .cms-input-field::placeholder {{ color: #475569 !important; }}
+        html.dark #cms-journey-{id_str} .cms-form-box, body.dark #cms-journey-{id_str} .cms-form-box, .dark #cms-journey-{id_str} .cms-form-box {{ background-color: #1e293b !important; border-color: #334155 !important; }}
+        html.dark #cms-journey-{id_str} .cms-label, body.dark #cms-journey-{id_str} .cms-label, .dark #cms-journey-{id_str} .cms-label {{ color: #94a3b8 !important; }}
+        </style>
+        
+        <div id="cms-journey-{id_str}" 
+             x-data="{{ 
+                 items: {items_json_escaped},
+                 newNum: '',
+                 newTitle: '',
+                 newDesc: '',
+                 newIcon: 'ClipboardList',
+                 newColor: 'text-blue-500',
+                 newGrad: 'from-blue-500/10 to-blue-500/0',
+                 newShadow: 'hover:shadow-blue-500/20',
+                 newBorder: 'group-hover:border-blue-200',
+                 addItem() {{
+                     if (this.newTitle.trim() && this.newDesc.trim()) {{
+                         this.items.push({{
+                             number: this.newNum.trim() || String(this.items.length + 1).padStart(2, '0'),
+                             title: this.newTitle.trim(),
+                             description: this.newDesc.trim(),
+                             icon: this.newIcon.trim() || 'ClipboardList',
+                             color: this.newColor.trim(),
+                             gradient: this.newGrad.trim(),
+                             shadowHover: this.newShadow.trim(),
+                             borderHover: this.newBorder.trim()
+                         }});
+                         this.newNum = '';
+                         this.newTitle = '';
+                         this.newDesc = '';
+                         this.newIcon = 'ClipboardList';
+                     }} else {{
+                         alert('Title and Description are required.');
+                     }}
+                 }},
+                 removeItem(idx) {{
+                     if (confirm('Remove this step?')) {{
+                         this.items.splice(idx, 1);
+                     }}
+                 }}
+             }}"
+             class="cms-widget-container space-y-4 font-sans p-5 border rounded-2xl max-w-2xl mt-1"
+        >
+            <textarea name="{name}" id="{id_str}" style="display:none;" :value="JSON.stringify(items)">{items_json_escaped}</textarea>
+            
+            <div class="space-y-3 max-h-[400px] overflow-y-auto pr-1">
+                <template x-for="(item, idx) in items" :key="idx">
+                    <div class="cms-card p-4 border rounded-xl shadow-sm relative space-y-2 hover:border-slate-350 transition-colors">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                            <div class="flex gap-2 items-center w-full">
+                                <span class="text-[10px] text-slate-400">Num:</span>
+                                <input type="text" x-model="item.number" class="cms-input-field text-xs font-bold px-2 py-1 border rounded-lg focus:outline-none focus:border-sky-500 w-16" />
+                                <span class="text-[10px] text-slate-400 ml-2">Title:</span>
+                                <input type="text" x-model="item.title" class="cms-input-field text-xs font-bold px-2 py-1 border rounded-lg focus:outline-none focus:border-sky-500 flex-1" />
+                            </div>
+                            <button type="button" class="text-red-500 hover:bg-red-50 p-1.5 rounded-lg border-0 bg-transparent cursor-pointer ml-2" @click="removeItem(idx)">
+                                <span class="material-symbols-outlined align-middle" style="font-size: 16px;">delete</span>
+                            </button>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-[10px] text-slate-400">Description:</span>
+                            <textarea x-model="item.description" class="cms-input-field w-full text-xs px-2 py-1 border rounded-lg focus:outline-none focus:border-sky-500" rows="2"></textarea>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 mt-2">
+                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Icon:</span><input type="text" x-model="item.icon" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
+                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Color:</span><input type="text" x-model="item.color" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
+                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Grad:</span><input type="text" x-model="item.gradient" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
+                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Shadow:</span><input type="text" x-model="item.shadowHover" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
+                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Border:</span><input type="text" x-model="item.borderHover" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
+                        </div>
+                    </div>
+                </template>
+                <div x-show="items.length === 0">
+                    <p class="text-[11px] text-slate-400 italic py-2">No journey steps added yet.</p>
+                </div>
+            </div>
+            
+            <div class="cms-form-box space-y-3 p-4 border rounded-xl shadow-sm">
+                <h4 class="text-[11px] font-bold text-slate-700 uppercase tracking-wide border-b border-slate-50 pb-1">Add New Step</h4>
+                <div class="grid sm:grid-cols-3 gap-2">
+                    <input type="text" x-model="newNum" placeholder="Num (e.g. 01)" class="cms-input-field text-xs px-3 py-2 border rounded-lg" />
+                    <input type="text" x-model="newTitle" placeholder="Title" class="cms-input-field text-xs px-3 py-2 border rounded-lg col-span-2" />
+                </div>
+                <textarea x-model="newDesc" rows="2" placeholder="Description..." class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg"></textarea>
+                <div class="grid sm:grid-cols-2 gap-2">
+                    <input type="text" x-model="newIcon" placeholder="Icon (e.g. ClipboardList)" class="cms-input-field text-xs px-3 py-2 border rounded-lg" />
+                    <input type="text" x-model="newColor" placeholder="Color (e.g. text-blue-500)" class="cms-input-field text-xs px-3 py-2 border rounded-lg" />
+                </div>
+                <button type="button" @click="addItem()" class="w-full py-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-[10px] rounded-lg border-0 cursor-pointer uppercase tracking-wider">
+                    Add Step
+                </button>
+            </div>
+        </div>
+        '''
+        return mark_safe(html)
+
