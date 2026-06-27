@@ -265,6 +265,11 @@ UNFOLD = {
                         "link": "/admin/api/service/",
                     },
                     {
+                        "title": "Sub Services",
+                        "icon": "account_tree",
+                        "link": "/admin/api/subservice/",
+                    },
+                    {
                         "title": "Site Settings",
                         "icon": "settings",
                         "link": "/admin/api/sitesetting/",

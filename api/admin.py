@@ -5,7 +5,7 @@ from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
-from .models import Article, Service, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo
+from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo
 from django.contrib.auth.models import Group, User
 
 try:
@@ -194,6 +194,13 @@ class ServiceAdmin(ModelAdmin):
             'classes': ('collapse',),
         }),
     )
+
+@admin.register(SubService)
+class SubServiceAdmin(ModelAdmin):
+    list_display = ('title', 'service', 'slug', 'created_at')
+    list_filter = ('service',)
+    search_fields = ('title', 'service__title')
+    prepopulated_fields = {'slug': ('title',)}
 
 @admin.register(Translation)
 class TranslationAdmin(ModelAdmin):

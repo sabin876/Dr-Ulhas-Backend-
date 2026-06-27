@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo
+from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,7 +8,14 @@ class ArticleSerializer(serializers.ModelSerializer):
 
 import json
 
+class SubServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SubService
+        fields = ['id', 'title', 'slug']
+
 class ServiceSerializer(serializers.ModelSerializer):
+    sub_services = SubServiceSerializer(many=True, read_only=True)
+
     class Meta:
         model = Service
         fields = '__all__'

@@ -107,6 +107,25 @@ class Service(SEOBaseModel):
     def __str__(self):
         return self.title
 
+class SubService(models.Model):
+    service = models.ForeignKey(Service, related_name='sub_services', on_delete=models.CASCADE)
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.title} (under {self.service.title})"
+    
+    class Meta:
+        verbose_name = "Sub Service"
+        verbose_name_plural = "Sub Services"
+        ordering = ['created_at']
+
 class Translation(models.Model):
     key = models.CharField(max_length=255)
     language = models.CharField(max_length=10, choices=[('EN', 'English'), ('AR', 'Arabic'), ('HI', 'Hindi')])
