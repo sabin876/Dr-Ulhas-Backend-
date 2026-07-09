@@ -156,7 +156,7 @@ class ServiceAdmin(ModelAdmin):
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'items', 'faqs')
+            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'faqs')
         }),
         ('Treatment & Value Sections', {
             'fields': ('conditions_title', 'conditions', 'checklist_title', 'checklist_image', 'checklist_items', 'tag_badges'),
