@@ -622,27 +622,16 @@ class JourneyStepsWidget(forms.Widget):
                  newNum: '',
                  newTitle: '',
                  newDesc: '',
-                 newIcon: 'ClipboardList',
-                 newColor: 'text-blue-500',
-                 newGrad: 'from-blue-500/10 to-blue-500/0',
-                 newShadow: 'hover:shadow-blue-500/20',
-                 newBorder: 'group-hover:border-blue-200',
                  addItem() {{
                      if (this.newTitle.trim() && this.newDesc.trim()) {{
                          this.items.push({{
                              number: this.newNum.trim() || String(this.items.length + 1).padStart(2, '0'),
                              title: this.newTitle.trim(),
-                             description: this.newDesc.trim(),
-                             icon: this.newIcon.trim() || 'ClipboardList',
-                             color: this.newColor.trim(),
-                             gradient: this.newGrad.trim(),
-                             shadowHover: this.newShadow.trim(),
-                             borderHover: this.newBorder.trim()
+                             description: this.newDesc.trim()
                          }});
                          this.newNum = '';
                          this.newTitle = '';
                          this.newDesc = '';
-                         this.newIcon = 'ClipboardList';
                      }} else {{
                          alert('Title and Description are required.');
                      }}
@@ -675,13 +664,6 @@ class JourneyStepsWidget(forms.Widget):
                             <span class="text-[10px] text-slate-400">Description:</span>
                             <textarea x-model="item.description" class="cms-input-field w-full text-xs px-2 py-1 border rounded-lg focus:outline-none focus:border-sky-500" rows="2"></textarea>
                         </div>
-                        <div class="grid grid-cols-2 gap-2 mt-2">
-                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Icon:</span><input type="text" x-model="item.icon" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
-                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Color:</span><input type="text" x-model="item.color" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
-                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Grad:</span><input type="text" x-model="item.gradient" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
-                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Shadow:</span><input type="text" x-model="item.shadowHover" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
-                            <div class="flex items-center gap-1.5"><span class="text-[10px] text-slate-400 w-12">Border:</span><input type="text" x-model="item.borderHover" class="cms-input-field text-xs px-2 py-1 border rounded w-full" /></div>
-                        </div>
                     </div>
                 </template>
                 <div x-show="items.length === 0">
@@ -696,10 +678,6 @@ class JourneyStepsWidget(forms.Widget):
                     <input type="text" x-model="newTitle" placeholder="Title" class="cms-input-field text-xs px-3 py-2 border rounded-lg col-span-2" />
                 </div>
                 <textarea x-model="newDesc" rows="2" placeholder="Description..." class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg"></textarea>
-                <div class="grid sm:grid-cols-2 gap-2">
-                    <input type="text" x-model="newIcon" placeholder="Icon (e.g. ClipboardList)" class="cms-input-field text-xs px-3 py-2 border rounded-lg" />
-                    <input type="text" x-model="newColor" placeholder="Color (e.g. text-blue-500)" class="cms-input-field text-xs px-3 py-2 border rounded-lg" />
-                </div>
                 <button type="button" @click="addItem()" class="w-full py-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-[10px] rounded-lg border-0 cursor-pointer uppercase tracking-wider">
                     Add Step
                 </button>
@@ -707,4 +685,3 @@ class JourneyStepsWidget(forms.Widget):
         </div>
         '''
         return mark_safe(html)
-

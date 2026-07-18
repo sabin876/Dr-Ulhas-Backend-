@@ -1,1791 +1,571 @@
+[
 {
-  "translations": {
-    "EN": {
-      "common": {
-        "doctorName": "Dr. Ulhas Sonar",
-        "specialty": "Orthopedic Surgeon"
+  "model": "api.service",
+  "pk": 1,
+  "fields": {
+    "meta_title": null,
+    "meta_description": "",
+    "canonical_url": null,
+    "og_title": null,
+    "og_description": "",
+    "og_image": "",
+    "schema_type": "None",
+    "schema_markup": null,
+    "index_page": true,
+    "follow_links": true,
+    "image_alt_text": null,
+    "h1_title": null,
+    "title": "Fracture & Trauma Surgery",
+    "slug": "fracture-trauma-surgery",
+    "description": "<p>A fracture or traumatic injury can happen unexpectedly and significantly affect mobility, independence, work, sport, and everyday life. Whether it is a simple fracture, a complex joint injury, or a high-energy trauma, timely diagnosis and appropriate treatment are essential for optimal recovery.&nbsp;</p>\r\n\r\n<p>Dr Ulhas Sonar provides comprehensive fracture and trauma care in Pune, including emergency assessment, fracture management, surgical fixation, complex trauma reconstruction, and rehabilitation planning. Treatment is tailored to the specific injury, patient requirements, and long-term functional goals, with a focus on restoring alignment, stability, movement, and return to daily activities.</p>",
+    "icon": "activity",
+    "image": "",
+    "items": [],
+    "faqs": [
+      {
+        "question": "What happens during a fracture consultation?",
+        "answer": "Your consultation includes a detailed assessment of the injury, clinical examination, and review of X-rays or scans. Dr Ulhas Sonar will explain the diagnosis, discuss treatment options, and create a personalised recovery plan."
       },
-      "topBar": {
-        "phone": "Call",
-        "email": "Email",
-        "location": "Location",
-        "locationValue": "DIP, Dubai, UAE"
+      {
+        "question": "How long does fracture healing take?",
+        "answer": "Healing times vary depending on the bone involved, fracture type, age, and overall health. Most fractures begin healing within weeks, although full recovery and return to normal activities may take longer."
       },
-      "nav": {
-        "home": "Home",
-        "about": "About Us",
-        "services": "Services",
-        "articles": "Articles",
-        "gallery": "Gallery",
-        "contact": "Contact",
-        "testimonials": "Reviews",
-        "faq": "FAQ",
-        "bookNow": "Book Appointment",
-        "bookAppointment": "Book Consult",
-        "exploreServices": "Explore Services",
-        "selectLanguage": "Select Language",
-        "awards": "Awards",
-        "affiliations": "Memberships & Affiliations"
+      {
+        "question": "When is surgery recommended for a fracture?",
+        "answer": "Surgery may be recommended when a fracture is displaced, unstable, involves a joint surface, causes deformity, or cannot be managed effectively with non-surgical treatment alone."
       },
-      "hero": {
-        "badge": "Expert Orthopedic Care",
-        "title": "Restore Your",
-        "titleHighlight": "Active Life",
-        "description": "Advanced orthopedic solutions for joint replacement, sports injuries, and complex trauma. World-class care tailored to your recovery.",
-        "bookAppointment": "Book Appointment",
-        "exploreServices": "Explore Services",
-        "highlights": [
-          "15+ Years Global Experience",
-          "Advanced Robotic Surgery",
-          "UK & European Certified",
-          "Complex Trauma Specialist",
-          "Personalized Recovery Plans",
-          "State-of-the-art Facilities"
-        ],
-        "stats": {
-          "exp": "YEARS EXP.",
-          "qualifications": "GLOBAL QUALIFICATIONS (UK, EU, IN)",
-          "research": "RESEARCH & PUBLICATIONS",
-          "audits": "CLINICAL AUDITS",
-          "podium": "PODIUM PRESENTATIONS",
-          "outcomes": "EXCEPTIONAL OUTCOMES & AWARDS"
-        },
-        "slides": [
-          {
-            "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
-            "headline1": "Restore Your",
-            "headline2": "Life",
-            "description": "With more than 15+ years of global experience across UK, India, Jersey Island and Dubai in trauma and orthopedic surgery. Delivering world-class care in knee, hip, shoulder and complex trauma.",
-            "nameplateSub": "Orthopedic Specialist"
-          },
-          {
-            "badge": "MBBS, MS Ortho, M Ch Ortho, FRCS (T&O)",
-            "headline1": "Precision",
-            "headline2": "Ortho",
-            "description": "A fellow of the Royal College of Surgeons with over 15 years of global experience. Specializing in robotic-assisted knee replacement and minimally invasive procedures.",
-            "nameplateSub": "Orthopedic Surgeon"
-          }
-        ]
+      {
+        "question": "What is the difference between simple and complex fractures?",
+        "answer": "Simple fractures usually involve a single clean break and are often easier to treat. Complex fractures may involve multiple fragments, joint surfaces, significant displacement, or severe trauma requiring advanced surgical management."
       },
-      "about": {
-        "badge": "Your Orthopaedic Surgeon in Dubai",
-        "credentials": "MBBS, MS (Ortho), MRCS (England), MCh Upper Limb Surgeries (Wrightington, UK), FEBOT (Switzerland), FRCS (T&O) UK, PG Dip in Computer & Robotics Assisted TKR (Glasgow, UK)",
-        "title": "About",
-        "titleHighlight": "Dr. Ulhas Sonar",
-        "titleEnd": "",
-        "experienceBadge": "Years of global experience",
-        "description1": "Dr. Ulhas Sonar is a British Indian orthopedic surgeon with extensive global experience across the UK, India, Jersey Island, and Dubai. A graduate of B J Medical College, Pune, he began his career as an Assistant Professor in India before pursuing advanced training in the UK at prestigious institutions like Wrightington Hospital and Golden Jubilee Hospital.",
-        "description2": "He is a Fellow of the Royal College of Surgeons (England) and the European Board of Orthopaedics and Traumatology (Switzerland), and holds an MCh Super Specialisation in Upper Limb Surgery along with a PG Diploma in Computer and Robotic-Assisted Total Knee Replacement. Committed to evidence-based, patient-centred care, Dr. Ulhas is also an accomplished researcher, educator, and passionate advocate for patient safety and rights.",
-        "qualifications": {
-          "global": {
-            "title": "Global Experience",
-            "desc": "UK, INDIA, JERSEY ISLAND, UAE"
-          },
-          "training": {
-            "title": "Advanced Training",
-            "desc": "WRIGHTINGTON & GOLDEN JUBILEE, UK"
-          },
-          "fellowships": {
-            "title": "Expert Fellowships",
-            "desc": "FRCS (ENG) & FEBOT (SWITZERLAND)"
-          },
-          "specialisation": {
-            "title": "Specialisation",
-            "desc": "UPPER LIMB & ROBOTIC TKR"
-          }
-        },
-        "stats": {
-          "experience": {
-            "value": "15+",
-            "label": "YEARS EXP."
-          },
-          "surgeries": {
-            "value": "5000+",
-            "label": "SURGERIES"
-          },
-          "patients": {
-            "value": "10k+",
-            "label": "HAPPY PATIENTS"
-          },
-          "global": {
-            "value": "4",
-            "label": "COUNTRIES"
-          }
-        }
+      {
+        "question": "Can fractures heal without surgery?",
+        "answer": "Yes. Many fractures heal well without surgery when alignment is acceptable, and the bone remains stable. The most appropriate treatment depends on the fracture pattern, location, and functional requirements of the patient."
       },
-      "services": {
-        "badge": "Specialized Care",
-        "title": "Our Orthopedic",
-        "titleHighlight": "Services",
-        "titleEnd": "& Expertise",
-        "description": "Providing a full spectrum of advanced orthopedic treatments designed for optimal recovery.",
-        "viewDetails": "View Details",
-        "showMore": "Show More Services",
-        "showLess": "Show Less",
-        "items": [
-          {
-            "title": "Joint Replacement",
-            "desc": "Advanced total and partial replacement for knee and hip using the latest techniques."
-          },
-          {
-            "title": "Sports Medicine",
-            "desc": "Comprehensive care for athletes, from injury prevention to advanced surgical repair."
-          },
-          {
-            "title": "Robotic Surgery",
-            "desc": "Precision-guided orthopedic procedures for faster recovery and better outcomes."
-          },
-          {
-            "title": "Arthroscopy",
-            "desc": "Minimally invasive keyhole surgery for joint diagnosis and treatment."
-          },
-          {
-            "title": "Deformity Correction",
-            "desc": "Specialized treatment for limb alignment and structural orthopedic issues."
-          },
-          {
-            "title": "Consultation",
-            "desc": "In-depth clinical evaluation and personalized treatment planning."
-          },
-          {
-            "title": "Orthopedic Trauma",
-            "desc": "Expert management of complex fractures and emergency musculoskeletal injuries."
-          },
-          {
-            "title": "Physiotherapy",
-            "desc": "Integrated rehabilitation to ensure complete recovery and long-term joint health."
-          }
-        ]
-      },
-      "personalizedSolutions": {
-        "title": "Personalized Solutions",
-        "description": "Targeted treatments for specific orthopedic conditions to get you back to your best.",
-        "viewAll": "View All Solutions",
-        "items": [
-          {
-            "title": "Hand & Wrist"
-          },
-          {
-            "title": "Back & Neck"
-          },
-          {
-            "title": "Foot & Ankle"
-          },
-          {
-            "title": "Shoulder"
-          },
-          {
-            "title": "Knee"
-          },
-          {
-            "title": "Hip"
-          },
-          {
-            "title": "Sports Injuries"
-          }
-        ]
-      },
-      "ctaBanner": {
-        "title": "Struggling with Joint or Back Pain?",
-        "subtitle": "Get expert orthopedic care today.",
-        "button": "Book Appointment Now"
-      },
-      "sportingInjury": {
-        "badge": "Sports Injury Clinic",
-        "title": "Suffering from a",
-        "titleHighlight": "sporting injury?",
-        "titleEnd": "",
-        "description": "Don't let pain keep you on the sidelines. We offer expert diagnosis and advanced treatments for athletes of all levels.",
-        "learnMore": "LEARN MORE ABOUT SPORTS RECOVERY",
-        "items": [
-          {
-            "title": "ACL Reconstruction",
-            "desc": "Advanced ligament repair to restore knee stability and strength."
-          },
-          {
-            "title": "Meniscus Repair",
-            "desc": "Precision surgery to preserve knee cushioning and prevent future issues."
-          },
-          {
-            "title": "Shoulder Instability",
-            "desc": "Treatment for dislocations and chronic shoulder weakness."
-          },
-          {
-            "title": "Ligament Injuries",
-            "desc": "Comprehensive care for ankle, wrist, and multi-ligament knee injuries."
-          }
-        ]
-      },
-      "publications": {
-        "badge": "Academic Excellence",
-        "title": "Research &",
-        "titleHighlight": "Publications",
-        "description": "Clinical contributions and published research in leading international orthopedic journals.",
-        "firstAuthor": "Lead Author",
-        "secondAuthor": "Collaborative Research",
-        "stats": {
-          "papers": "PEER REVIEWED PAPERS",
-          "impact": "GLOBAL CLINICAL IMPACT",
-          "journals": "TOP-TIER JOURNALS"
-        }
-      },
-      "articles": {
-        "badge": "Medical Insights",
-        "title": "Expert Orthopedic",
-        "titleHighlight": "Articles",
-        "description": "Stay informed with the latest insights on orthopedic health, treatments, and surgical innovations.",
-        "readMore": "Read Full Article",
-        "viewAll": "View All Articles"
-      },
-      "testimonials": {
-        "badge": "Patient Reviews",
-        "title": "What Our Patients Say",
-        "description": "Real stories from patients who restored their mobility and life through our care.",
-        "reviewButton": "Write a Review on Google",
-        "items": [
-          {
-            "name": "James Wilson",
-            "role": "Professional Athlete",
-            "content": "Dr. Sonar's expertise in robotic surgery is unmatched. I was back on the field sooner than expected."
-          },
-          {
-            "name": "Sarah Ahmed",
-            "role": "Grandmother",
-            "content": "My hip replacement has given me a new lease on life. I can finally play with my grandkids again."
-          }
-        ]
-      },
-      "faq": {
-        "badge": "Help Center",
-        "title": "Frequently Asked Questions",
-        "description": "Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.",
-        "items": [
-          {
-            "question": "What is robotic-assisted surgery?",
-            "answer": "It is a precision-guided technique that allows the surgeon to perform joint replacements with higher accuracy, leading to better outcomes."
-          },
-          {
-            "question": "How long is the recovery period?",
-            "answer": "Recovery varies by procedure, but most patients return to normal activities within 6 to 12 weeks with proper physical therapy."
-          },
-          {
-            "question": "Do you treat sports injuries?",
-            "answer": "Yes, we specialize in ACL repairs, meniscus treatments, and all types of athletic musculoskeletal injuries."
-          },
-          {
-            "question": "Where is the clinic located?",
-            "answer": "Our main consultation rooms are located in Dubai, within premium medical facilities."
-          },
-          {
-            "question": "Is second opinion available?",
-            "answer": "Yes, we encourage patients to seek second opinions for complex orthopedic cases to ensure confidence in their treatment."
-          }
-        ]
-      },
-      "contact": {
-        "badge": "Contact Us",
-        "title": "Book Your",
-        "titleHighlight": "Consultation",
-        "description": "Take the first step towards recovery. Connect with our expert team today.",
-        "form": {
-          "title": "Send a message",
-          "name": "Your Name",
-          "namePlaceholder": "Enter your full name",
-          "email": "Email Address",
-          "emailPlaceholder": "yourname@email.com",
-          "phone": "Phone Number",
-          "phonePlaceholder": "+971 -- --- ----",
-          "medicalInquiry": "Inquiry Type",
-          "placeholder": "How can we help you today?",
-          "submit": "Request Appointment"
-        },
-        "cards": {
-          "call": {
-            "title": "Call Us",
-            "sub": "Available for urgent inquiries"
-          },
-          "email": {
-            "title": "Email Support",
-            "sub": "Response within 24 hours"
-          },
-          "visit": {
-            "title": "Visit Clinic",
-            "content": "DIP 1, Dubai, UAE",
-            "sub": "Monday - Saturday: 9am - 7pm"
-          },
-          "social": "Follow Our Updates"
-        },
-        "info": {
-          "call": "Call Us",
-          "email": "Email Support",
-          "visit": "Visit Clinic",
-          "hours": "Mon-Sat: 9am - 7pm"
-        }
-      },
-      "footer": {
-        "nav": "Quick Links",
-        "support": "Support",
-        "clinic": "Clinic Location",
-        "hospitalName": "Canadian Specialist Hospital",
-        "emergency": "Emergency",
-        "visitMeAt": "Visit Me At",
-        "rights": "All Rights Reserved",
-        "patientResources": "Patient Resources",
-        "articles": "Articles",
-        "privacy": "Privacy Policy",
-        "services": "Services",
-        "serviceLinks": {
-          "arthroscopy": "Arthroscopy",
-          "sportsMedicine": "Sports Medicine",
-          "roboticSurgery": "Robotic Surgery",
-          "jointReplacement": "Joint Replacement",
-          "deformityCorrection": "Deformity Correction",
-          "physiotherapy": "Physiotherapy",
-          "consultation": "Consultation",
-          "orthopedicTrauma": "Orthopedic Trauma",
-          "more": "More"
-        }
-      },
-      "faq_services": {
-        "title": "Services FAQ",
-        "description": "Common questions about our orthopedic procedures and specialized care plans.",
-        "items": [
-          {
-            "question": "Do you offer robotic joint replacement?",
-            "answer": "Yes, we specialize in advanced robotic-assisted total and partial knee replacements for superior precision."
-          },
-          {
-            "question": "What is the typical recovery for arthroscopy?",
-            "answer": "Most patients return to light activities within a few days, though full athletic recovery may take 6-12 weeks."
-          },
-          {
-            "question": "Are physiotherapy services available?",
-            "answer": "We provide integrated rehabilitation plans through our partner facilities to ensure complete recovery."
-          }
-        ]
-      },
-      "faq_articles": {
-        "title": "Learning Center FAQ",
-        "description": "Information about our medical insights, blog updates, and research initiatives.",
-        "items": [
-          {
-            "question": "How often are new articles published?",
-            "answer": "We share new medical insights and clinical research updates every few weeks to keep our patients informed."
-          },
-          {
-            "question": "Can I suggest a topic for the blog?",
-            "answer": "Absolutely! We welcome patient inquiries and often address common concerns in our detailed medical articles."
-          }
-        ]
-      },
-      "physioHome": {
-        "seo": {
-          "title": "Physiotherapy Home Services in Dubai | DHA Licensed Experts",
-          "description": "Get expert physiotherapy services in Dubai with home visits by DHA-licensed professionals. Personalized treatment for pain relief, recovery, and mobility. Book now."
-        },
-        "hero": {
-          "title": "Physiotherapy Services in Dubai | Home Physiotherapy & Rehabilitation Care",
-          "description": "Struggling with pain, stiffness, or difficulty moving? Our physiotherapy services in Dubai are designed to help you recover safely and regain confidence in your daily activities. Whether you need treatment at home, in your hotel, or at your workplace, we provide structured and professional care tailored to your condition."
-        },
-        "features": [
-          "DHA-licensed physiotherapists for home visits across Dubai.",
-          "Physiotherapy at home, hotel, or office â flexible and convenient.",
-          "Personalized treatment plans for faster and safe recovery.",
-          "Suitable for post-surgery, injury, elderly care, and chronic pain.",
-          "Affordable and Transparent price with no hidden prices."
-        ],
-        "ctas": {
-          "call": "Call us Now",
-          "whatsapp": "WhatsApp Now"
-        },
-        "conditions": {
-          "badge": "Conditions managed with physiotherapy services",
-          "title": "Professional care for common pain, stiffness, and movement problems",
-          "description": "Physiotherapy plays an important role in managing a wide range of conditions. Early treatment often leads to faster recovery and helps prevent long-term complications.",
-          "items": [
-            {
-              "title": "Back and neck pain",
-              "desc": "Targeted rehabilitation for stiffness, postural pain, muscular spasm, and reduced function."
-            },
-            {
-              "title": "Knee pain and stiffness",
-              "desc": "Structured therapy to improve joint movement, strength, and confidence during walking and activity."
-            },
-            {
-              "title": "Shoulder pain",
-              "desc": "Focused treatment for pain, weakness, and limited shoulder movement during daily activities."
-            },
-            {
-              "title": "Sports injuries",
-              "desc": "Recovery programs for muscle strains, soft tissue injury, overuse problems, and return to activity."
-            },
-            {
-              "title": "Arthritis care",
-              "desc": "Gentle, progressive treatment to reduce pain, improve movement, and support long-term joint health."
-            },
-            {
-              "title": "Post-surgical rehabilitation",
-              "desc": "Planned recovery support after orthopaedic procedures with mobility and strengthening progression."
-            },
-            {
-              "title": "Deformity correction support",
-              "desc": "Rehabilitation care to improve alignment-related movement patterns and functional recovery."
-            },
-            {
-              "title": "Hip joint replacement recovery",
-              "desc": "Stepwise physiotherapy focused on strength, balance, walking confidence, and safe independence."
-            }
-          ],
-          "footer": "Early treatment often leads to faster recovery and prevents long-term complications."
-        },
-        "benefits": {
-          "title": "Benefits of Physiotherapy Treatment With Dr. Ulhas",
-          "description": "Physiotherapy with Dr. Ulhas is focused on restoring movement, reducing pain, and helping you return to your daily activities with confidence.",
-          "items": [
-            "Reduction in pain and inflammation",
-            "Improved movement and flexibility",
-            "Faster recovery after injury or surgery",
-            "Better strength and stability",
-            "Reduced dependence on medications"
-          ],
-          "footer": "With the right treatment plan, most patients notice gradual but steady improvement."
-        },
-        "expertTreatment": {
-          "title": "Expert Home Treatment with Dr. Ulhas Sonar",
-          "description": "Dr. Ulhas provides the physiotherapy services for individuals of all ages from pediatric to geriatric care, with proper care and concerns.",
-          "categories": [
-            "Post-Surgical Patients",
-            "Athletes",
-            "Elder Patients",
-            "Chronic Care Patients",
-            "Neurological Condition Patients",
-            "Musculoskeletal Patients"
-          ]
-        },
-        "ctaBanner": {
-          "title": "Start Your Recovery Today with Expert Physiotherapy in Dubai",
-          "subtitle": "Advanced care focused on faster recovery, strength, and long-term results"
-        },
-        "whyChoose": {
-          "title": "Why Choose Our Physiotherapy Services in Dubai",
-          "description": "Choosing the right physiotherapy service is important for both safety and results. Our approach is based on clinical experience and structured care:",
-          "items": [
-            "Treatment guided by orthopaedic specialist expertise",
-            "Individual attention with one-to-one sessions",
-            "Clear diagnosis and targeted treatment planning",
-            "Focus on long-term recovery, not temporary relief",
-            "Availability of both clinic-based and home physiotherapy services"
-          ],
-          "footer": "Every patient is assessed carefully, and treatment is adapted as recovery progresses."
-        },
-        "expectations": {
-          "title": "What to Expect from Your Physiotherapy Session?",
-          "description": "Your physiotherapy session is structured to ensure safe, effective, and consistent recovery.",
-          "steps": [
-            {
-              "title": "Initial Assessment",
-              "desc": "Your condition, pain areas, and movement are carefully assessed to understand the root cause and plan the right treatment."
-            },
-            {
-              "title": "Treatment Session",
-              "desc": "You will receive hands-on therapy along with guided exercises focused on reducing pain and improving mobility."
-            },
-            {
-              "title": "Progress Monitoring",
-              "desc": "Your improvement is reviewed regularly, and your treatment plan is adjusted to ensure steady recovery."
-            }
-          ]
-        },
-        "faqs": {
-          "title": "Frequently Asked Questions",
-          "items": [
-            {
-              "q": "How much does physiotherapy cost in Dubai?",
-              "a": "The cost depends on the type of treatment and number of sessions required. Flexible packages are available to make treatment more affordable."
-            },
-            {
-              "q": "Is physiotherapy at home effective?",
-              "a": "Yes, home physiotherapy is equally effective when delivered by qualified professionals. It also improves convenience and consistency."
-            },
-            {
-              "q": "How many physiotherapy sessions will I need?",
-              "a": "This depends on your condition. Some patients improve within a few sessions, while others may require a structured rehabilitation program."
-            },
-            {
-              "q": "Do you provide physiotherapy for elderly patients at home?",
-              "a": "Yes, home physiotherapy is commonly used for elderly patients to improve mobility, balance, and strength safely."
-            },
-            {
-              "q": "Can I get same-day physiotherapy service in Dubai?",
-              "a": "Same-day appointments may be available depending on schedule and location."
-            },
-            {
-              "q": "Are the physiotherapists certified for home visits in Dubai?",
-              "a": "Yes, all physiotherapists providing home visits are DHA-licensed and qualified to deliver treatment in Dubai. Each session follows clinical standards with proper assessment, structured treatment, and ongoing monitoring to ensure safe and effective care at home."
-            },
-            {
-              "q": "Is physiotherapy at home cheaper than a clinic visit?",
-              "a": "Home physiotherapy may have slightly higher per-session cost due to travel and convenience, but it often provides better value through personalized care, time savings, and improved treatment consistency. Flexible packages are available to make home physiotherapy accessible and cost-effective."
-            }
-          ]
-        }
+      {
+        "question": "How soon can I return to work or sports after a fracture?",
+        "answer": "Return to work or sport depends on the fracture type, treatment received, and healing progress. A personalised rehabilitation plan helps ensure a safe return while minimising the risk of reinjury."
       }
-    },
-    "HI": {
-      "common": {
-        "doctorName": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤¸à¥à¤¨à¤¾à¤°",
-        "specialty": "à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¸à¤°à¥à¤à¤¨"
+    ],
+    "conditions": [
+      {
+        "id": 1,
+        "title": "Upper Limb Fractures",
+        "description": "Surgical and conservative treatment for clavicle, shoulder, elbow, forearm, wrist, and hand fractures.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
       },
-      "topBar": {
-        "phone": "à¤à¥à¤² à¤à¤°à¥à¤",
-        "email": "à¤à¤®à¥à¤²",
-        "location": "à¤¸à¥à¤¥à¤¾à¤¨",
-        "locationValue": "DIP, à¤¦à¥à¤¬à¤, à¤¯à¥à¤à¤"
+      {
+        "id": 2,
+        "title": "Lower Limb Fractures",
+        "description": "Advanced stabilization and fracture care for hip, femur (thigh), patella (kneecap), tibia, ankle, and foot fractures.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
       },
-      "nav": {
-        "home": "à¤¹à¥à¤®",
-        "about": "à¤¹à¤®à¤¾à¤°à¥ à¤¬à¤¾à¤°à¥ à¤®à¥à¤",
-        "services": "à¤¸à¥à¤µà¤¾à¤à¤",
-        "articles": "à¤²à¥à¤",
-        "gallery": "à¤à¥à¤²à¤°à¥",
-        "contact": "à¤¸à¤à¤ªà¤°à¥à¤",
-        "testimonials": "à¤¸à¤®à¥à¤à¥à¤·à¤¾à¤à¤",
-        "faq": "à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤ªà¥à¤°à¤¶à¥à¤¨",
-        "bookNow": "à¤à¤ªà¥à¤à¤à¤à¤®à¥à¤à¤ à¤¬à¥à¤ à¤à¤°à¥à¤",
-        "bookAppointment": "à¤ªà¤°à¤¾à¤®à¤°à¥à¤¶ à¤¬à¥à¤ à¤à¤°à¥à¤",
-        "exploreServices": "à¤¸à¥à¤µà¤¾à¤à¤ à¤¦à¥à¤à¥à¤",
-        "selectLanguage": "à¤­à¤¾à¤·à¤¾ à¤à¥à¤¨à¥à¤",
-        "awards": "à¤ªà¥à¤°à¤¸à¥à¤à¤¾à¤°",
-        "affiliations": "à¤¸à¤¦à¤¸à¥à¤¯à¤¤à¤¾ à¤à¤° à¤¸à¤à¤¬à¤¦à¥à¤§à¤¤à¤¾"
+      {
+        "id": 3,
+        "title": "Joint & Articular Fractures",
+        "description": "Anatomic realignment of complex joint-involving fractures (e.g. tibial plateau, distal radius) to preserve cartilage.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
       },
-      "hero": {
-        "badge": "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¦à¥à¤à¤­à¤¾à¤²",
-        "title": "à¤à¤ªà¤¨à¥",
-        "titleHighlight": "à¤¸à¤à¥à¤°à¤¿à¤¯ à¤à¥à¤µà¤¨ à¤à¥",
-        "description": "à¤à¥à¤¡à¤¼ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨, à¤à¥à¤² à¤à¥ à¤à¥à¤à¥à¤ à¤à¤° à¤à¤à¤¿à¤² à¤à¥à¤°à¥à¤®à¤¾ à¤à¥ à¤²à¤¿à¤ à¤à¤¨à¥à¤¨à¤¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¸à¤®à¤¾à¤§à¤¾à¤¨à¥¤ à¤à¤ªà¤à¥ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤²à¤¿à¤ à¤µà¤¿à¤¶à¥à¤µà¤¸à¥à¤¤à¤°à¥à¤¯ à¤¦à¥à¤à¤­à¤¾à¤²à¥¤",
-        "bookAppointment": "à¤à¤ªà¥à¤à¤à¤à¤®à¥à¤à¤ à¤¬à¥à¤ à¤à¤°à¥à¤",
-        "exploreServices": "à¤¸à¥à¤µà¤¾à¤à¤ à¤¦à¥à¤à¥à¤",
-        "highlights": [
-          "15+ à¤µà¤°à¥à¤·à¥à¤ à¤à¤¾ à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤à¤¨à¥à¤­à¤µ",
-          "à¤à¤¨à¥à¤¨à¤¤ à¤°à¥à¤¬à¥à¤à¤¿à¤ à¤¸à¤°à¥à¤à¤°à¥",
-          "à¤¯à¥à¤à¥ à¤à¤° à¤¯à¥à¤°à¥à¤ªà¥à¤¯ à¤ªà¥à¤°à¤®à¤¾à¤£à¤¿à¤¤",
-          "à¤à¤à¤¿à¤² à¤à¥à¤°à¥à¤®à¤¾ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤",
-          "à¤µà¥à¤¯à¤à¥à¤¤à¤¿à¤à¤¤ à¤°à¤¿à¤à¤µà¤°à¥ à¤¯à¥à¤à¤¨à¤¾à¤à¤",
-          "à¤à¤¤à¥à¤¯à¤¾à¤§à¥à¤¨à¤¿à¤ à¤¸à¥à¤µà¤¿à¤§à¤¾à¤à¤"
-        ],
-        "stats": {
-          "exp": "à¤µà¤°à¥à¤·à¥à¤ à¤à¤¾ à¤à¤¨à¥à¤­à¤µ",
-          "qualifications": "à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤¯à¥à¤à¥à¤¯à¤¤à¤¾à¤à¤ (UK, EU, IN)",
-          "research": "à¤à¤¨à¥à¤¸à¤à¤§à¤¾à¤¨ à¤à¤° à¤ªà¥à¤°à¤à¤¾à¤¶à¤¨",
-          "audits": "à¤¨à¥à¤¦à¤¾à¤¨à¤¿à¤ à¤à¤¡à¤¿à¤",
-          "podium": "à¤ªà¥à¤¡à¤¿à¤¯à¤® à¤ªà¥à¤°à¤¸à¥à¤¤à¥à¤¤à¤¿à¤¯à¤¾à¤",
-          "outcomes": "à¤à¤¸à¤¾à¤§à¤¾à¤°à¤£ à¤ªà¤°à¤¿à¤£à¤¾à¤® à¤à¤° à¤ªà¥à¤°à¤¸à¥à¤à¤¾à¤°"
-        },
-        "slides": [
-          {
-            "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
-            "headline1": "à¤à¤ªà¤¨à¥ à¤à¥à¤µà¤¨ à¤à¥",
-            "headline2": "à¤¬à¤¹à¤¾à¤² à¤à¤°à¥à¤",
-            "description": "à¤à¥à¤°à¥à¤®à¤¾ à¤à¤° à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¸à¤°à¥à¤à¤°à¥ à¤®à¥à¤ à¤¯à¥à¤à¥, à¤­à¤¾à¤°à¤¤, à¤à¤°à¥à¤¸à¥ à¤à¤à¤²à¥à¤à¤¡ à¤à¤° à¤¦à¥à¤¬à¤ à¤®à¥à¤ 15+ à¤µà¤°à¥à¤·à¥à¤ à¤à¥ à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤à¤¨à¥à¤­à¤µ à¤à¥ à¤¸à¤¾à¤¥à¥¤ à¤à¥à¤à¤¨à¥, à¤à¥à¤²à¥à¤¹à¥, à¤à¤à¤§à¥ à¤à¤° à¤à¤à¤¿à¤² à¤à¥à¤°à¥à¤®à¤¾ à¤®à¥à¤ à¤µà¤¿à¤¶à¥à¤µ à¤¸à¥à¤¤à¤°à¥à¤¯ à¤¦à¥à¤à¤­à¤¾à¤² à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¨à¤¾à¥¤",
-            "nameplateSub": "à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤"
-          },
-          {
-            "badge": "MBBS, MS Ortho, M Ch Ortho, FRCS (T&O)",
-            "headline1": "à¤¸à¤à¥à¤",
-            "headline2": "à¤à¤°à¥à¤¥à¥",
-            "description": "15 à¤µà¤°à¥à¤·à¥à¤ à¤¸à¥ à¤à¤§à¤¿à¤ à¤à¥ à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤à¤¨à¥à¤­à¤µ à¤à¥ à¤¸à¤¾à¤¥ à¤°à¥à¤¯à¤² à¤à¥à¤²à¥à¤ à¤à¤« à¤¸à¤°à¥à¤à¤¨à¥à¤¸ à¤à¥ à¤«à¥à¤²à¥à¥¤ à¤°à¥à¤¬à¥à¤à¤¿à¤-à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤à¥à¤à¤¨à¤¾ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨ à¤à¤° à¤¨à¥à¤¯à¥à¤¨à¤¤à¤® à¤à¤à¥à¤°à¤¾à¤®à¤ à¤ªà¥à¤°à¤à¥à¤°à¤¿à¤¯à¤¾à¤à¤ à¤®à¥à¤ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¤¤à¤¾à¥¤",
-            "nameplateSub": "à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¸à¤°à¥à¤à¤¨"
-          }
-        ]
-      },
-      "about": {
-        "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
-        "title": "à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤à¥à¤¸ à¤®à¥à¤",
-        "titleHighlight": "à¤µà¤¿à¤¶à¥à¤µà¤¸à¥à¤¤à¤°à¥à¤¯",
-        "titleEnd": "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¤¤à¤¾",
-        "experienceBadge": "à¤µà¤°à¥à¤·à¥à¤ à¤à¤¾ à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤à¤¨à¥à¤­à¤µ",
-        "description1": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤¸à¥à¤¨à¤¾à¤° à¤à¤ à¤ªà¥à¤°à¤¤à¤¿à¤·à¥à¤ à¤¿à¤¤ à¤¬à¥à¤°à¤¿à¤à¤¿à¤¶-à¤­à¤¾à¤°à¤¤à¥à¤¯ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¸à¤°à¥à¤à¤¨ à¤¹à¥à¤, à¤à¤¿à¤¨à¤à¥ à¤ªà¤¾à¤¸ à¤¯à¥à¤à¥, à¤¯à¥à¤°à¥à¤ª, à¤­à¤¾à¤°à¤¤ à¤à¤° à¤¯à¥à¤à¤ à¤®à¥à¤ 15 à¤µà¤°à¥à¤·à¥à¤ à¤¸à¥ à¤à¤§à¤¿à¤ à¤à¤¾ à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤à¤¨à¥à¤­à¤µ à¤¹à¥à¥¤",
-        "description2": "à¤°à¥à¤¬à¥à¤à¤¿à¤-à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤à¥à¤¡à¤¼ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨ à¤à¤° à¤à¤à¤¿à¤² à¤à¥à¤°à¥à¤®à¤¾ à¤®à¥à¤ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¤¤à¤¾ à¤°à¤à¤¤à¥ à¤¹à¥à¤, à¤µà¥ à¤à¤¤à¤¿à¤¶à¥à¤²à¤¤à¤¾ à¤à¥ à¤¬à¤¹à¤¾à¤² à¤à¤°à¤¨à¥ à¤à¤° à¤à¥à¤µà¤¨ à¤à¥ à¤¬à¤¦à¤²à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤¶à¤²à¥à¤¯ à¤à¤¿à¤à¤¿à¤¤à¥à¤¸à¤¾ à¤¸à¤à¥à¤à¤¤à¤¾ à¤à¥ à¤¸à¤¾à¤¥ à¤°à¥à¤à¥-à¤à¥à¤à¤¦à¥à¤°à¤¿à¤¤ à¤¦à¥à¤·à¥à¤à¤¿à¤à¥à¤£ à¤à¤ªà¤¨à¤¾à¤¤à¥ à¤¹à¥à¤à¥¤",
-        "qualifications": {
-          "global": {
-            "title": "à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤à¤¨à¥à¤­à¤µ",
-            "desc": "à¤¯à¥à¤à¥, à¤¯à¥à¤°à¥à¤ª, à¤­à¤¾à¤°à¤¤, à¤¯à¥à¤à¤"
-          },
-          "training": {
-            "title": "à¤¸à¤à¤°à¤à¤¿à¤¤ à¤ªà¥à¤°à¤¶à¤¿à¤à¥à¤·à¤£",
-            "desc": "à¤¯à¥à¤à¥ (NHS) à¤®à¥à¤ 10+ à¤µà¤°à¥à¤·"
-          },
-          "fellowships": {
-            "title": "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤«à¥à¤²à¥à¤¶à¤¿à¤ª",
-            "desc": "à¤°à¥à¤¬à¥à¤à¤¿à¤à¥à¤¸ à¤à¤° à¤à¥à¤¡à¤¼ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨"
-          },
-          "specialisation": {
-            "title": "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¤¤à¤¾",
-            "desc": "à¤à¤à¤¿à¤² à¤à¥à¤°à¥à¤®à¤¾ à¤à¤° à¤à¥à¤² à¤à¤¿à¤à¤¿à¤¤à¥à¤¸à¤¾"
-          }
-        },
-        "stats": {
-          "experience": {
-            "value": "15+",
-            "label": "à¤µà¤°à¥à¤·à¥à¤ à¤à¤¾ à¤à¤¨à¥à¤­à¤µ"
-          },
-          "surgeries": {
-            "value": "5000+",
-            "label": "à¤¸à¤°à¥à¤à¤°à¥"
-          },
-          "patients": {
-            "value": "10k+",
-            "label": "à¤¸à¤à¤¤à¥à¤·à¥à¤ à¤®à¤°à¥à¤à¤¼"
-          },
-          "global": {
-            "value": "4",
-            "label": "à¤¦à¥à¤¶"
-          }
-        }
-      },
-      "services": {
-        "badge": "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤¦à¥à¤à¤­à¤¾à¤²",
-        "title": "à¤¹à¤®à¤¾à¤°à¥ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤",
-        "titleHighlight": "à¤¸à¥à¤µà¤¾à¤à¤",
-        "titleEnd": "à¤à¤° à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¤¤à¤¾",
-        "description": "à¤à¤·à¥à¤à¤¤à¤® à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤²à¤¿à¤ à¤¡à¤¿à¤à¤¼à¤¾à¤à¤¨ à¤à¤¿à¤ à¤à¤ à¤à¤¨à¥à¤¨à¤¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤à¤ªà¤à¤¾à¤°à¥à¤ à¤à¤¾ à¤à¤ à¤ªà¥à¤°à¥à¤£ à¤¸à¥à¤ªà¥à¤à¥à¤à¥à¤°à¤® à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¨à¤¾à¥¤",
-        "viewDetails": "à¤µà¤¿à¤µà¤°à¤£ à¤¦à¥à¤à¥à¤",
-        "showMore": "à¤à¤§à¤¿à¤ à¤¸à¥à¤µà¤¾à¤à¤ à¤¦à¤¿à¤à¤¾à¤à¤",
-        "showLess": "à¤à¤® à¤¦à¤¿à¤à¤¾à¤à¤",
-        "items": [
-          {
-            "title": "à¤à¥à¤¡à¤¼ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨",
-            "desc": "à¤¨à¤µà¥à¤¨à¤¤à¤® à¤¤à¤à¤¨à¥à¤à¥à¤ à¤à¤¾ à¤à¤ªà¤¯à¥à¤ à¤à¤°à¤à¥ à¤à¥à¤à¤¨à¥ à¤à¤° à¤à¥à¤²à¥à¤¹à¥ à¤à¥ à¤²à¤¿à¤ à¤à¤¨à¥à¤¨à¤¤ à¤à¥à¤² à¤à¤° à¤à¤à¤¶à¤¿à¤ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨à¥¤"
-          },
-          {
-            "title": "à¤¸à¥à¤ªà¥à¤°à¥à¤à¥à¤¸ à¤®à¥à¤¡à¤¿à¤¸à¤¿à¤¨",
-            "desc": "à¤à¤¥à¤²à¥à¤à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤à¥à¤ à¤à¥ à¤°à¥à¤à¤¥à¤¾à¤® à¤¸à¥ à¤²à¥à¤à¤° à¤à¤¨à¥à¤¨à¤¤ à¤¸à¤°à¥à¤à¤¿à¤à¤² à¤®à¤°à¤®à¥à¤®à¤¤ à¤¤à¤ à¤µà¥à¤¯à¤¾à¤ªà¤ à¤¦à¥à¤à¤­à¤¾à¤²à¥¤"
-          },
-          {
-            "title": "à¤°à¥à¤¬à¥à¤à¤¿à¤ à¤¸à¤°à¥à¤à¤°à¥",
-            "desc": "à¤¤à¥à¤à¤¼à¥ à¤¸à¥ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¤° à¤¬à¥à¤¹à¤¤à¤° à¤ªà¤°à¤¿à¤£à¤¾à¤®à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤¸à¤à¥à¤à¤¤à¤¾-à¤¨à¤¿à¤°à¥à¤¦à¥à¤¶à¤¿à¤¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤ªà¥à¤°à¤à¥à¤°à¤¿à¤¯à¤¾à¤à¤à¥¤"
-          },
-          {
-            "title": "à¤à¤°à¥à¤¥à¥à¤°à¥à¤¸à¥à¤à¥à¤ªà¥",
-            "desc": "à¤à¥à¤¡à¤¼à¥à¤ à¤à¥ à¤¨à¤¿à¤¦à¤¾à¤¨ à¤à¤° à¤à¤ªà¤à¤¾à¤° à¤à¥ à¤²à¤¿à¤ à¤¨à¥à¤¯à¥à¤¨à¤¤à¤® à¤à¤à¥à¤°à¤¾à¤®à¤ à¤à¥à¤¹à¥à¤² à¤¸à¤°à¥à¤à¤°à¥à¥¤"
-          },
-          {
-            "title": "à¤µà¤¿à¤à¥à¤¤à¤¿ à¤¸à¥à¤§à¤¾à¤°",
-            "desc": "à¤à¤à¤ à¤¸à¤à¤°à¥à¤à¤£ à¤à¤° à¤¸à¤à¤°à¤à¤¨à¤¾à¤¤à¥à¤®à¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤®à¥à¤¦à¥à¤¦à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤µà¤¿à¤¶à¥à¤· à¤à¤ªà¤à¤¾à¤°à¥¤"
-          },
-          {
-            "title": "à¤ªà¤°à¤¾à¤®à¤°à¥à¤¶",
-            "desc": "à¤à¤¹à¤¨ à¤¨à¥à¤¦à¤¾à¤¨à¤¿à¤ à¤®à¥à¤²à¥à¤¯à¤¾à¤à¤à¤¨ à¤à¤° à¤µà¥à¤¯à¤à¥à¤¤à¤¿à¤à¤¤ à¤à¤ªà¤à¤¾à¤° à¤¯à¥à¤à¤¨à¤¾à¥¤"
-          },
-          {
-            "title": "à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤à¥à¤°à¥à¤®à¤¾",
-            "desc": "à¤à¤à¤¿à¤² à¤«à¥à¤°à¥à¤à¥à¤à¤° à¤à¤° à¤à¤ªà¤¾à¤¤à¤à¤¾à¤²à¥à¤¨ à¤®à¤¸à¥à¤à¥à¤²à¥à¤¸à¥à¤à¥à¤²à¥à¤à¤² à¤à¥à¤à¥à¤ à¤à¤¾ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤ªà¥à¤°à¤¬à¤à¤§à¤¨à¥¤"
-          },
-          {
-            "title": "à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥",
-            "desc": "à¤ªà¥à¤°à¥à¤£ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¤° à¤¦à¥à¤°à¥à¤à¤à¤¾à¤²à¤¿à¤ à¤à¥à¤¡à¤¼ à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤¸à¥à¤¨à¤¿à¤¶à¥à¤à¤¿à¤¤ à¤à¤°à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤à¤à¥à¤à¥à¤¤ à¤ªà¥à¤¨à¤°à¥à¤µà¤¾à¤¸à¥¤"
-          }
-        ]
-      },
-      "personalizedSolutions": {
-        "title": "à¤µà¥à¤¯à¤à¥à¤¤à¤¿à¤à¤¤ à¤¸à¤®à¤¾à¤§à¤¾à¤¨",
-        "description": "à¤à¤ªà¤à¥ à¤à¤ªà¤à¥ à¤¸à¤°à¥à¤µà¤¶à¥à¤°à¥à¤·à¥à¤  à¤¸à¥à¤¤à¤° à¤ªà¤° à¤µà¤¾à¤ªà¤¸ à¤²à¤¾à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤µà¤¿à¤¶à¤¿à¤·à¥à¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¸à¥à¤¥à¤¿à¤¤à¤¿à¤¯à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤²à¤à¥à¤·à¤¿à¤¤ à¤à¤ªà¤à¤¾à¤°à¥¤",
-        "viewAll": "à¤¸à¤­à¥ à¤¸à¤®à¤¾à¤§à¤¾à¤¨ à¤¦à¥à¤à¥à¤",
-        "items": [
-          {
-            "title": "à¤¹à¤¾à¤¥ à¤à¤° à¤à¤²à¤¾à¤"
-          },
-          {
-            "title": "à¤ªà¥à¤  à¤à¤° à¤à¤°à¥à¤¦à¤¨"
-          },
-          {
-            "title": "à¤ªà¥à¤° à¤à¤° à¤à¤à¤¨à¥"
-          },
-          {
-            "title": "à¤à¤à¤§à¤¾"
-          },
-          {
-            "title": "à¤à¥à¤à¤¨à¤¾"
-          },
-          {
-            "title": "à¤à¥à¤²à¥à¤¹à¤¾"
-          },
-          {
-            "title": "à¤à¥à¤² à¤à¥ à¤à¥à¤à¥à¤"
-          }
-        ]
-      },
-      "ctaBanner": {
-        "title": "à¤à¥à¤¯à¤¾ à¤à¤ª à¤à¥à¤¡à¤¼à¥à¤ à¤¯à¤¾ à¤ªà¥à¤  à¤à¥ à¤¦à¤°à¥à¤¦ à¤¸à¥ à¤ªà¤°à¥à¤¶à¤¾à¤¨ à¤¹à¥à¤?",
-        "subtitle": "à¤à¤ à¤¹à¥ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¦à¥à¤à¤­à¤¾à¤² à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤à¤°à¥à¤à¥¤",
-        "button": "à¤à¤­à¥ à¤à¤ªà¥à¤à¤à¤à¤®à¥à¤à¤ à¤¬à¥à¤ à¤à¤°à¥à¤"
-      },
-      "sportingInjury": {
-        "badge": "à¤¸à¥à¤ªà¥à¤°à¥à¤à¥à¤¸ à¤à¤à¤à¤°à¥ à¤à¥à¤²à¤¿à¤¨à¤¿à¤",
-        "title": "à¤à¥à¤¯à¤¾ à¤à¤ª",
-        "titleHighlight": "à¤à¥à¤² à¤à¥ à¤à¥à¤",
-        "titleEnd": "à¤¸à¥ à¤ªà¤°à¥à¤¶à¤¾à¤¨ à¤¹à¥à¤?",
-        "description": "à¤¦à¤°à¥à¤¦ à¤à¥ à¤à¤ªà¤à¥ à¤¸à¤¾à¤à¤¡à¤²à¤¾à¤à¤¨ à¤ªà¤° à¤¨ à¤°à¤à¤¨à¥ à¤¦à¥à¤à¥¤ à¤¹à¤® à¤¸à¤­à¥ à¤¸à¥à¤¤à¤°à¥à¤ à¤à¥ à¤Ø«à¤²à¥à¤à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤¨à¤¿à¤¦à¤¾à¤¨ à¤à¤° à¤à¤¨à¥à¤¨à¤¤ à¤à¤ªà¤à¤¾à¤° à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¤à¥ à¤¹à¥à¤à¥¤",
-        "learnMore": "à¤¸à¥à¤ªà¥à¤°à¥à¤à¥à¤¸ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤¬à¤¾à¤°à¥ à¤®à¥à¤ à¤à¤° à¤à¤¾à¤¨à¥à¤",
-        "items": [
-          {
-            "title": "ACL à¤ªà¥à¤¨à¤°à¥à¤¨à¤¿à¤°à¥à¤®à¤¾à¤£",
-            "desc": "à¤à¥à¤à¤¨à¥ à¤à¥ à¤¸à¥à¤¥à¤¿à¤°à¤¤à¤¾ à¤à¤° à¤®à¤à¤¬à¥à¤¤à¥ à¤¬à¤¹à¤¾à¤² à¤à¤°à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤à¤¨à¥à¤¨à¤¤ à¤²à¤¿à¤à¤¾à¤®à¥à¤à¤ à¤®à¤°à¤®à¥à¤®à¤¤à¥¤"
-          },
-          {
-            "title": "à¤®à¥à¤¨à¤¿à¤¸à¥à¤à¤¸ à¤®à¤°à¤®à¥à¤®à¤¤",
-            "desc": "à¤à¥à¤à¤¨à¥ à¤à¥ à¤à¥à¤¶à¤¨à¤¿à¤à¤ à¤à¥ à¤¬à¤¨à¤¾à¤ à¤°à¤à¤¨à¥ à¤à¤° à¤­à¤µà¤¿à¤·à¥à¤¯ à¤à¥ à¤¸à¤®à¤¸à¥à¤¯à¤¾à¤à¤ à¤à¥ à¤°à¥à¤à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤¸à¤à¥à¤ à¤¸à¤°à¥à¤à¤°à¥à¥¤"
-          },
-          {
-            "title": "à¤à¤à¤§à¥ à¤à¥ à¤à¤¸à¥à¤¥à¤¿à¤°à¤¤à¤¾",
-            "desc": "à¤¡à¤¿à¤¸à¥à¤²à¥à¤à¥à¤¶à¤¨ à¤à¤° à¤ªà¥à¤°à¤¾à¤¨à¥ à¤à¤à¤§à¥ à¤à¥ à¤à¤®à¤à¥à¤°à¥ à¤à¤¾ à¤à¤ªà¤à¤¾à¤°à¥¤"
-          },
-          {
-            "title": "à¤²à¤¿à¤à¤¾à¤®à¥à¤à¤ à¤à¥ à¤à¥à¤à¥à¤",
-            "desc": "à¤à¤à¤¨à¥, à¤à¤²à¤¾à¤ à¤à¤° à¤à¥à¤à¤¨à¥ à¤à¥ à¤²à¤¿à¤à¤¾à¤®à¥à¤à¤ à¤à¥à¤à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤µà¥à¤¯à¤¾à¤ªà¤ à¤¦à¥à¤à¤­à¤¾à¤²à¥¤"
-          }
-        ]
-      },
-      "publications": {
-        "badge": "à¤à¤à¤¾à¤¦à¤®à¤¿à¤ à¤à¤¤à¥à¤à¥à¤·à¥à¤à¤¤à¤¾",
-        "title": "à¤à¤¨à¥à¤¸à¤à¤§à¤¾à¤¨ à¤à¤°",
-        "titleHighlight": "à¤ªà¥à¤°à¤à¤¾à¤¶à¤¨",
-        "description": "à¤ªà¥à¤°à¤®à¥à¤ à¤à¤à¤¤à¤°à¤°à¤¾à¤·à¥à¤à¥à¤°à¥à¤¯ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤ªà¤¤à¥à¤°à¤¿à¤à¤¾à¤à¤ à¤®à¥à¤ à¤¨à¥à¤¦à¤¾à¤¨à¤¿à¤ à¤¯à¥à¤à¤¦à¤¾à¤¨ à¤à¤° à¤ªà¥à¤°à¤à¤¾à¤¶à¤¿à¤¤ à¤¶à¥à¤§à¥¤",
-        "firstAuthor": "à¤®à¥à¤à¥à¤¯ à¤²à¥à¤à¤",
-        "secondAuthor": "à¤¸à¤¹à¤¯à¥à¤à¤¾à¤¤à¥à¤®à¤ à¤à¤¨à¥à¤¸à¤à¤§à¤¾à¤¨",
-        "stats": {
-          "papers": "à¤ªà¥à¤¯à¤° à¤°à¤¿à¤µà¥à¤¯à¥à¤¡ à¤ªà¥à¤ªà¤°à¥à¤¸",
-          "impact": "à¤µà¥à¤¶à¥à¤µà¤¿à¤ à¤¨à¥à¤¦à¤¾à¤¨à¤¿à¤ à¤ªà¥à¤°à¤­à¤¾à¤µ",
-          "journals": "à¤¶à¥à¤°à¥à¤· à¤¸à¥à¤¤à¤°à¥à¤¯ à¤ªà¤¤à¥à¤°à¤¿à¤à¤¾à¤à¤"
-        }
-      },
-      "articles": {
-        "badge": "à¤à¤¿à¤à¤¿à¤¤à¥à¤¸à¤¾ à¤à¤à¤¤à¤°à¥à¤¦à¥à¤·à¥à¤à¤¿",
-        "title": "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤",
-        "titleHighlight": "à¤²à¥à¤",
-        "description": "à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯, à¤à¤ªà¤à¤¾à¤° à¤à¤° à¤¸à¤°à¥à¤à¤¿à¤à¤² à¤¨à¤µà¤¾à¤à¤¾à¤°à¥à¤ à¤ªà¤° à¤¨à¤µà¥à¤¨à¤¤à¤® à¤à¤à¤¤à¤°à¥à¤¦à¥à¤·à¥à¤à¤¿ à¤à¥ à¤¸à¤¾à¤¥ à¤¸à¥à¤à¤¿à¤¤ à¤°à¤¹à¥à¤à¥¤",
-        "readMore": "à¤ªà¥à¤°à¤¾ à¤²à¥à¤ à¤ªà¤¢à¤¼à¥à¤",
-        "viewAll": "à¤¸à¤­à¥ à¤²à¥à¤ à¤¦à¥à¤à¥à¤"
-      },
-      "testimonials": {
-        "badge": "à¤°à¥à¤à¥ à¤¸à¤®à¥à¤à¥à¤·à¤¾à¤à¤",
-        "title": "à¤¹à¤®à¤¾à¤°à¥ à¤®à¤°à¥à¤à¤¼ à¤à¥à¤¯à¤¾ à¤à¤¹à¤¤à¥ à¤¹à¥à¤",
-        "description": "à¤à¤¨ à¤°à¥à¤à¤¿à¤¯à¥à¤ à¤à¥ à¤µà¤¾à¤¸à¥à¤¤à¤µà¤¿à¤ à¤à¤¹à¤¾à¤¨à¤¿à¤¯à¤¾à¤ à¤à¤¿à¤¨à¥à¤¹à¥à¤à¤¨à¥ à¤¹à¤®à¤¾à¤°à¥ à¤®à¤¾à¤§à¥à¤¯à¤® à¤¸à¥ à¤à¤ªà¤¨à¥ à¤à¤¤à¤¿à¤¶à¥à¤²à¤¤à¤¾ à¤à¤° à¤à¥à¤µà¤¨ à¤à¥ à¤µà¤¾à¤ªà¤¸ à¤ªà¤¾à¤¯à¤¾à¥¤",
-        "reviewButton": "à¤à¥à¤à¤² à¤ªà¤° à¤¸à¤®à¥à¤à¥à¤·à¤¾ à¤²à¤¿à¤à¥à¤",
-        "items": [
-          {
-            "name": "à¤à¥à¤®à¥à¤¸ à¤µà¤¿à¤²à¥à¤¸à¤¨",
-            "role": "à¤ªà¥à¤¶à¥à¤µà¤° à¤à¤¥à¤²à¥à¤",
-            "content": "à¤°à¥à¤¬à¥à¤à¤¿à¤ à¤¸à¤°à¥à¤à¤°à¥ à¤®à¥à¤ à¤¡à¥. à¤¸à¥à¤¨à¤¾à¤° à¤à¥ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¤¤à¤¾ à¤¬à¥à¤à¥à¤¡à¤¼ à¤¹à¥à¥¤ à¤®à¥à¤ à¤à¤®à¥à¤®à¥à¤¦ à¤¸à¥ à¤à¤²à¥à¤¦à¥ à¤®à¥à¤¦à¤¾à¤¨ à¤ªà¤° à¤µà¤¾à¤ªà¤¸ à¤ à¤à¤¯à¤¾à¥¤"
-          },
-          {
-            "name": "à¤¸à¤¾à¤°à¤¾ à¤à¤¹à¤®à¤¦",
-            "role": "à¤¦à¤¾à¤¦à¥",
-            "content": "à¤®à¥à¤°à¥ à¤¹à¤¿à¤ª à¤°à¤¿à¤ªà¥à¤²à¥à¤¸à¤®à¥à¤à¤ à¤¨à¥ à¤®à¥à¤à¥ à¤à¥à¤µà¤¨ à¤à¤¾ à¤à¤ à¤¨à¤¯à¤¾ à¤à¤§à¤¾à¤° à¤¦à¤¿à¤¯à¤¾ à¤¹à¥à¥¤ à¤®à¥à¤ à¤à¤à¤¿à¤°à¤à¤¾à¤° à¤à¤ªà¤¨à¥ à¤ªà¥à¤¤à¥-à¤ªà¥à¤¤à¤¿à¤¯à¥à¤ à¤à¥ à¤¸à¤¾à¤¥ à¤à¥à¤² à¤¸à¤à¤¤à¥ à¤¹à¥à¤à¥¤"
-          }
-        ]
-      },
-      "faq": {
-        "badge": "à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤à¥à¤à¤¦à¥à¤°",
-        "title": "à¤à¤à¥à¤¸à¤° à¤ªà¥à¤à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤ªà¥à¤°à¤¶à¥à¤¨",
-        "description": "à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤¹à¤®à¤¾à¤°à¥ à¤¦à¥à¤à¤­à¤¾à¤², à¤°à¥à¤¬à¥à¤à¤¿à¤ à¤¸à¤°à¥à¤à¤°à¥ à¤à¤° à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤à¤ªà¤à¤¾à¤°à¥à¤ à¤à¥ à¤¬à¤¾à¤°à¥ à¤®à¥à¤ à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤ªà¥à¤°à¤¶à¥à¤¨à¥¤",
-        "items": [
-          {
-            "question": "à¤°à¥à¤¬à¥à¤à¤¿à¤-à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤¸à¤°à¥à¤à¤°à¥ à¤à¥à¤¯à¤¾ à¤¹à¥?",
-            "answer": "à¤¯à¤¹ à¤à¤ à¤¸à¤à¥à¤à¤¤à¤¾-à¤¨à¤¿à¤°à¥à¤¦à¥à¤¶à¤¿à¤¤ à¤¤à¤à¤¨à¥à¤ à¤¹à¥ à¤à¥ à¤¸à¤°à¥à¤à¤¨ à¤à¥ à¤à¤à¥à¤ à¤¸à¤à¥à¤à¤¤à¤¾ à¤à¥ à¤¸à¤¾à¤¥ à¤à¥à¤¡à¤¼ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨ à¤à¤°à¤¨à¥ à¤à¥ à¤à¤¨à¥à¤®à¤¤à¤¿ à¤¦à¥à¤¤à¥ à¤¹à¥, à¤à¤¿à¤¸à¤¸à¥ à¤¬à¥à¤¹à¤¤à¤° à¤ªà¤°à¤¿à¤£à¤¾à¤® à¤®à¤¿à¤²à¤¤à¥ à¤¹à¥à¤à¥¤"
-          },
-          {
-            "question": "à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤à¤µà¤§à¤¿ à¤à¤¿à¤¤à¤¨à¥ à¤²à¤à¤¬à¥ à¤¹à¥?",
-            "answer": "à¤°à¤¿à¤à¤µà¤°à¥ à¤ªà¥à¤°à¤à¥à¤°à¤¿à¤¯à¤¾ à¤à¥ à¤à¤§à¤¾à¤° à¤ªà¤° à¤­à¤¿à¤¨à¥à¤¨ à¤¹à¥à¤¤à¥ à¤¹à¥, à¤²à¥à¤à¤¿à¤¨ à¤à¤        "benefits": {
-          "title": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤à¥ à¤¸à¤¾à¤¥ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤à¥ à¤²à¤¾à¤­",
-          "description": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤à¥ à¤¸à¤¾à¤¥ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤à¤ªà¤à¤¾à¤° à¤à¤¤à¤¿à¤¶à¥à¤²à¤¤à¤¾ à¤¬à¤¹à¤¾à¤² à¤à¤°à¤¨à¥, à¤¦à¤°à¥à¤¦ à¤à¥ à¤à¤® à¤à¤°à¤¨à¥ à¤à¤° à¤à¤¤à¥à¤®à¤µà¤¿à¤¶à¥à¤µà¤¾à¤¸ à¤à¥ à¤¸à¤¾à¤¥ à¤¦à¥à¤¨à¤¿à¤ à¤à¤¤à¤¿à¤µà¤¿à¤§à¤¿à¤¯à¥à¤ à¤®à¥à¤ à¤²à¥à¤à¤¨à¥ à¤ªà¤° à¤à¥à¤à¤¦à¥à¤°à¤¿à¤¤ à¤¹à¥.",
-          "items": [
-            "à¤¦à¤°à¥à¤¦ à¤à¤° à¤¸à¥à¤à¤¨ à¤®à¥à¤ à¤à¤®à¥",
-            "à¤¬à¥à¤¹à¤¤à¤° à¤à¤¤à¤¿à¤¶à¥à¤²à¤¤à¤¾",
-            "à¤¤à¥à¤à¥ à¤¸à¥ à¤°à¤¿à¤à¤µà¤°à¥",
-            "à¤¬à¥à¤¹à¤¤à¤° à¤¤à¤¾à¤à¤¤",
-            "à¤¦à¤µà¤¾à¤à¤ à¤ªà¤° à¤à¤® à¤¨à¤¿à¤°à¥à¤­à¤°à¤¤à¤¾"
-          ],
-          "footer": "à¤¸à¤¹à¥ à¤à¤ªà¤à¤¾à¤° à¤¯à¥à¤à¤¨à¤¾ à¤à¥ à¤¸à¤¾à¤¥, à¤à¤§à¤¿à¤à¤¾à¤à¤¶ à¤°à¥à¤à¥ à¤§à¥à¤°à¥-à¤§à¥à¤°à¥ à¤²à¥à¤à¤¿à¤¨ à¤¨à¤¿à¤°à¤à¤¤à¤° à¤¸à¥à¤§à¤¾à¤° à¤¦à¥à¤à¤¤à¥ à¤¹à¥à¤."
-        },
-        "expertTreatment": {
-          "title": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤¸à¥à¤¨à¤¾à¤° à¤à¥ à¤¸à¤¾à¤¥ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤à¥à¤¹ à¤à¤ªà¤à¤¾à¤°",
-          "description": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤¬à¤¾à¤² à¤à¤¿à¤à¤¿à¤¤à¥à¤¸à¤¾ à¤¸à¥ à¤²à¥à¤à¤° à¤µà¥à¤¦à¥à¤§à¥à¤ à¤à¥ à¤¦à¥à¤à¤­à¤¾à¤² à¤¤à¤, à¤à¤à¤¿à¤¤ à¤¦à¥à¤à¤­à¤¾à¤² à¤à¤° à¤à¤¿à¤à¤¤à¤¾à¤à¤ à¤à¥ à¤¸à¤¾à¤¥ à¤¸à¤­à¥ à¤à¤®à¥à¤° à¤à¥ à¤µà¥à¤¯à¤à¥à¤¤à¤¿à¤¯à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤µà¤¾à¤à¤ à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¤à¥ à¤¹à¥à¤.",
-          "categories": [
-            "à¤¸à¤°à¥à¤à¤°à¥ à¤à¥ à¤¬à¤¾à¤¦ à¤à¥ à¤®à¤°à¥à¤",
-            "à¤à¤¥à¤²à¥à¤",
-            "à¤¬à¥à¤à¥à¤°à¥à¤ à¤®à¤°à¥à¤",
-            "à¤à¥à¤°à¥à¤¨à¤¿à¤ à¤à¥à¤¯à¤°",
-            "à¤¨à¥à¤¯à¥à¤°à¥à¤²à¥à¤à¤¿à¤à¤² à¤¸à¥à¤¥à¤¿à¤¤à¤¿à¤¯à¤¾à¤",
-            "à¤®à¤¸à¥à¤à¥à¤²à¥à¤¸à¥à¤à¥à¤²à¥à¤à¤² à¤°à¥à¤à¥"
-          ]
-        },
-        "ctaBanner": {
-          "title": "à¤à¤ à¤¹à¥ à¤à¤ªà¤¨à¥ à¤°à¤¿à¤à¤µà¤°à¥ à¤¶à¥à¤°à¥ à¤à¤°à¥à¤",
-          "subtitle": "à¤¶à¤à¥à¤¤à¤¿ à¤à¤° à¤¦à¥à¤°à¥à¤à¤à¤¾à¤²à¤¿à¤ à¤ªà¤°à¤¿à¤£à¤¾à¤®à¥à¤ à¤ªà¤° à¤à¥à¤à¤¦à¥à¤°à¤¿à¤¤ à¤à¤¨à¥à¤¨à¤¤ à¤¦à¥à¤à¤­à¤¾à¤²"
-        },
-        "whyChoose": {
-          "title": "à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤¹à¤®à¤¾à¤°à¥ à¤¸à¥à¤µà¤¾à¤à¤ à¤à¥à¤¯à¥à¤ à¤à¥à¤¨à¥à¤",
-          "description": "à¤¸à¥à¤°à¤à¥à¤·à¤¾ à¤à¤° à¤ªà¤°à¤¿à¤£à¤¾à¤® à¤¦à¥à¤¨à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤¸à¤¹à¥ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤µà¤¾ à¤à¤¾ à¤à¤¯à¤¨ à¤à¤°à¤¨à¤¾ à¤®à¤¹à¤¤à¥à¤µà¤ªà¥à¤°à¥à¤£ à¤¹à¥. à¤¹à¤®à¤¾à¤°à¤¾ à¤¦à¥à¤·à¥à¤à¤¿à¤à¥à¤£ à¤¨à¥à¤¦à¤¾à¤¨à¤¿à¤ à¤à¤¨à¥à¤­à¤µ à¤à¤° à¤¸à¤à¤°à¤à¤¿à¤¤ à¤¦à¥à¤à¤­à¤¾à¤² à¤ªà¤° à¤à¤§à¤¾à¤°à¤¿à¤¤ à¤¹à¥:",
-          "items": [
-            "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤®à¤¾à¤°à¥à¤à¤¦à¤°à¥à¤¶à¤¨",
-            "à¤à¤-à¤¸à¥-à¤à¤ à¤¸à¤¤à¥à¤°",
-            "à¤¸à¥à¤ªà¤·à¥à¤ à¤¨à¤¿à¤¦à¤¾à¤¨",
-            "à¤¦à¥à¤°à¥à¤à¤à¤¾à¤²à¤¿à¤ à¤°à¤¿à¤à¤µà¤°à¥",
-            "à¤²à¤à¥à¤²à¥ à¤¸à¥à¤µà¤¾à¤à¤"
-          ],
-          "footer": "à¤ªà¥à¤°à¤¤à¥à¤¯à¥à¤ à¤°à¥à¤à¥ à¤à¤¾ à¤¸à¤¾à¤µà¤§à¤¾à¤¨à¥à¤ªà¥à¤°à¥à¤µà¤ à¤®à¥à¤²à¥à¤¯à¤¾à¤à¤à¤¨ à¤à¤¿à¤¯à¤¾ à¤à¤¾à¤¤à¤¾ à¤¹à¥, à¤à¤° à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤¸à¤¾à¤¥ à¤à¤ªà¤à¤¾à¤° à¤à¥ à¤à¤¨à¥à¤à¥à¤²à¤¿à¤¤ à¤à¤¿à¤¯à¤¾ à¤à¤¾à¤¤à¤¾ à¤¹à¥."
-        },
-        "expectations": {
-          "title": "à¤¸à¤¤à¥à¤° à¤¸à¥ à¤à¥à¤¯à¤¾ à¤à¤®à¥à¤®à¥à¤¦ à¤à¤°à¥à¤?",
-          "description": "à¤à¤ªà¤à¤¾ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¤¤à¥à¤° à¤¸à¥à¤°à¤à¥à¤·à¤¿à¤¤, à¤ªà¥à¤°à¤­à¤¾à¤µà¥ à¤à¤° à¤¸à¥à¤¸à¤à¤à¤¤ à¤°à¤¿à¤à¤µà¤°à¥ à¤¸à¥à¤¨à¤¿à¤¶à¥à¤à¤¿à¤¤ à¤à¤°à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤¸à¤à¤°à¤à¤¿à¤¤ à¤¹à¥.",
-          "steps": [
-            {
-              "title": "à¤ªà¥à¤°à¤¾à¤°à¤à¤­à¤¿à¤ à¤®à¥à¤²à¥à¤¯à¤¾à¤à¤à¤¨",
-              "desc": "à¤à¤ªà¤à¥ à¤¸à¥à¤¥à¤¿à¤¤à¤¿ à¤à¤° à¤¦à¤°à¥à¤¦ à¤à¥ à¤à¥à¤·à¥à¤¤à¥à¤°à¥à¤ à¤à¤¾ à¤¸à¤¾à¤µà¤§à¤¾à¤¨à¥à¤ªà¥à¤°à¥à¤µà¤ à¤®à¥à¤²à¥à¤¯à¤¾à¤à¤à¤¨ à¤à¤¿à¤¯à¤¾ à¤à¤¾à¤¤à¤¾ à¤¹à¥."
-            },
-            {
-              "title": "à¤à¤ªà¤à¤¾à¤° à¤¸à¤¤à¥à¤°",
-              "desc": "à¤¹à¤¾à¤¥à¥à¤ à¤¸à¥ à¤¦à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤¥à¥à¤°à¥à¤ªà¥ à¤à¤° à¤¨à¤¿à¤°à¥à¤¦à¥à¤¶à¤¿à¤¤ à¤µà¥à¤¯à¤¾à¤¯à¤¾à¤®."
-            },
-            {
-              "title": "à¤ªà¥à¤°à¤à¤¤à¤¿ à¤à¥ à¤¨à¤¿à¤à¤°à¤¾à¤¨à¥",
-              "desc": "à¤¨à¤¿à¤¯à¤®à¤¿à¤¤ à¤¸à¤®à¥à¤à¥à¤·à¤¾ à¤à¤° à¤¯à¥à¤à¤¨à¤¾ à¤®à¥à¤ à¤¸à¥à¤§à¤¾à¤°."
-            }
-          ]
-        },
-        "faqs": {
-          "title": "à¤à¤à¥à¤¸à¤° à¤ªà¥à¤à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤ªà¥à¤°à¤¶à¥à¤¨",
-          "items": [
-            {
-              "q": "à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤²à¤¾à¤à¤¤ à¤à¤¿à¤¤à¤¨à¥ à¤¹à¥?",
-              "a": "à¤²à¤¾à¤à¤¤ à¤à¤ªà¤à¤¾à¤° à¤à¥ à¤ªà¥à¤°à¤à¤¾à¤° à¤ªà¤° à¤¨à¤¿à¤°à¥à¤­à¤° à¤à¤°à¤¤à¥ à¤¹à¥. à¤à¤¿à¤«à¤¾à¤¯à¤¤à¥ à¤ªà¥à¤à¥à¤ à¤à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥à¤."
-            },
-            {
-              "q": "à¤à¥à¤¯à¤¾ à¤à¤° à¤ªà¤° à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤ªà¥à¤°à¤­à¤¾à¤µà¥ à¤¹à¥?",
-              "a": "à¤¹à¤¾à¤, à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¥à¤ à¤¦à¥à¤µà¤¾à¤°à¤¾ à¤¦à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤¹à¥à¤® à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¤®à¤¾à¤¨ à¤°à¥à¤ª à¤¸à¥ à¤ªà¥à¤°à¤­à¤¾à¤µà¥ à¤¹à¥."
-            },
-            {
-              "q": "à¤®à¥à¤à¥ à¤à¤¿à¤¤à¤¨à¥ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¤¤à¥à¤°à¥à¤ à¤à¥ à¤à¤µà¤¶à¥à¤¯à¤à¤¤à¤¾ à¤¹à¥à¤à¥?",
-              "a": "à¤¯à¤¹ à¤à¤ªà¤à¥ à¤¸à¥à¤¥à¤¿à¤¤à¤¿ à¤ªà¤° à¤¨à¤¿à¤°à¥à¤­à¤° à¤à¤°à¤¤à¤¾ à¤¹à¥. à¤à¥à¤ à¤°à¥à¤à¤¿à¤¯à¥à¤ à¤®à¥à¤ à¤à¥à¤ à¤¹à¥ à¤¸à¤¤à¥à¤°à¥à¤ à¤®à¥à¤ à¤¸à¥à¤§à¤¾à¤° à¤¹à¥à¤¤à¤¾ à¤¹à¥, à¤à¤¬à¤à¤¿ à¤à¤¨à¥à¤¯ à¤à¥ à¤¸à¤à¤°à¤à¤¿à¤¤ à¤ªà¥à¤¨à¤°à¥à¤µà¤¾à¤¸ à¤à¤¾à¤°à¥à¤¯à¤à¥à¤°à¤® à¤à¥ à¤à¤µà¤¶à¥à¤¯à¤à¤¤à¤¾ à¤¹à¥ à¤¸à¤à¤¤à¥ à¤¹à¥."
-            },
-            {
-              "q": "à¤à¥à¤¯à¤¾ à¤à¤ª à¤à¤° à¤ªà¤° à¤¬à¥à¤à¥à¤°à¥à¤ à¤®à¤°à¥à¤à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¤à¥ à¤¹à¥à¤?",
-              "a": "à¤¹à¤¾à¤, à¤¬à¥à¤à¥à¤°à¥à¤ à¤®à¤°à¥à¤à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤à¤° à¤ªà¤° à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤à¤¾ à¤à¤ªà¤¯à¥à¤ à¤¸à¥à¤°à¤à¥à¤·à¤¿à¤¤ à¤°à¥à¤ª à¤¸à¥ à¤à¤¤à¤¿à¤¶à¥à¤²à¤¤à¤¾, à¤¸à¤à¤¤à¥à¤²à¤¨ à¤à¤° à¤¤à¤¾à¤à¤¤ à¤®à¥à¤ à¤¸à¥à¤§à¤¾à¤° à¤à¥ à¤²à¤¿à¤ à¤à¤¿à¤¯à¤¾ à¤à¤¾à¤¤à¤¾ à¤¹à¥."
-            },
-            {
-              "q": "à¤à¥à¤¯à¤¾ à¤®à¥à¤à¥ à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤à¤¸à¥ à¤¦à¤¿à¤¨ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤µà¤¾ à¤®à¤¿à¤² à¤¸à¤à¤¤à¥ à¤¹à¥?",
-              "a": "à¤¶à¥à¤¡à¥à¤¯à¥à¤² à¤à¤° à¤¸à¥à¤¥à¤¾à¤¨ à¤à¥ à¤à¤§à¤¾à¤° à¤ªà¤° à¤à¤¸à¥ à¤¦à¤¿à¤¨ à¤à¤ªà¥à¤à¤à¤à¤®à¥à¤à¤ à¤à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥ à¤¸à¤à¤¤à¥ à¤¹à¥à¤."
-            },
-            {
-              "q": "à¤à¥à¤¯à¤¾ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¤¿à¤¸à¥à¤ à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤à¥à¤¹ à¤¦à¥à¤°à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤ªà¥à¤°à¤®à¤¾à¤£à¤¿à¤¤ à¤¹à¥à¤?",
-              "a": "à¤¹à¤¾à¤, à¤¹à¥à¤® à¤µà¤¿à¤à¤¿à¤ à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¨à¥ à¤µà¤¾à¤²à¥ à¤¸à¤­à¥ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¤¿à¤¸à¥à¤ DHA-à¤²à¤¾à¤à¤¸à¥à¤à¤¸ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤à¤° à¤¯à¥à¤à¥à¤¯ à¤¹à¥à¤. à¤ªà¥à¤°à¤¤à¥à¤¯à¥à¤ à¤¸à¤¤à¥à¤° à¤¨à¥à¤¦à¤¾à¤¨à¤¿à¤ à¤®à¤¾à¤¨à¤à¥à¤ à¤à¤¾ à¤ªà¤¾à¤²à¤¨ à¤à¤°à¤¤à¤¾ à¤¹à¥."
-            },
-            {
-              "q": "à¤à¥à¤¯à¤¾ à¤à¤° à¤ªà¤° à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤à¥à¤²à¤¿à¤¨à¤¿à¤ à¤à¤¾à¤¨à¥ à¤¸à¥ à¤¸à¤¸à¥à¤¤à¥ à¤¹à¥?",
-              "a": "à¤¯à¤¾à¤¤à¥à¤°à¤¾ à¤à¤° à¤¸à¥à¤µà¤¿à¤§à¤¾ à¤à¥ à¤à¤¾à¤°à¤£ à¤à¤° à¤ªà¤° à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤à¥ à¤ªà¥à¤°à¤¤à¤¿-à¤¸à¤¤à¥à¤° à¤²à¤¾à¤à¤¤ à¤¥à¥à¤¡à¤¼à¥ à¤à¤§à¤¿à¤ à¤¹à¥ à¤¸à¤à¤¤à¥ à¤¹à¥, à¤²à¥à¤à¤¿à¤¨ à¤¯à¤¹ à¤µà¥à¤¯à¤à¥à¤¤à¤¿à¤à¤¤ à¤¦à¥à¤à¤­à¤¾à¤², à¤¸à¤®à¤¯ à¤à¥ à¤¬à¤à¤¤ à¤à¤° à¤¨à¤¿à¤°à¤à¤¤à¤°à¤¤à¤¾ à¤à¥ à¤®à¤¾à¤§à¥à¤¯à¤® à¤¸à¥ à¤¬à¥à¤¹à¤¤à¤° à¤®à¥à¤²à¥à¤¯ à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¤à¥ à¤¹à¥."
-            }
-          ]
-        }  "email": "à¤à¤®à¥à¤² à¤ªà¤¤à¤¾",
-          "emailPlaceholder": "yourname@email.com",
-          "phone": "à¤«à¥à¤¨ à¤¨à¤à¤¬à¤°",
-          "phonePlaceholder": "+971 -- --- ----",
-          "medicalInquiry": "à¤ªà¥à¤à¤¤à¤¾à¤ à¤à¤¾ à¤ªà¥à¤°à¤à¤¾à¤°",
-          "placeholder": "à¤¹à¤® à¤à¤ à¤à¤ªà¤à¥ à¤à¥à¤¸à¥ à¤®à¤¦à¤¦ à¤à¤° à¤¸à¤à¤¤à¥ à¤¹à¥à¤?",
-          "submit": "à¤à¤ªà¥à¤à¤à¤à¤®à¥à¤à¤ à¤à¤¾ à¤à¤¨à¥à¤°à¥à¤§ à¤à¤°à¥à¤"
-        },
-        "cards": {
-          "call": {
-            "title": "à¤¹à¤®à¥à¤ à¤à¥à¤² à¤à¤°à¥à¤",
-            "sub": "à¤¤à¤¤à¥à¤à¤¾à¤² à¤ªà¥à¤à¤¤à¤¾à¤ à¤à¥ à¤²à¤¿à¤ à¤à¤ªà¤²à¤¬à¥à¤§"
-          },
-          "email": {
-            "title": "à¤à¤®à¥à¤² à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾",
-            "sub": "24 à¤à¤à¤à¥ à¤à¥ à¤­à¥à¤¤à¤° à¤à¤µà¤¾à¤¬"
-          },
-          "visit": {
-            "title": "à¤à¥à¤²à¤¿à¤¨à¤¿à¤ à¤ªà¤° à¤à¤à¤",
-            "content": "à¤¡à¥à¤à¤à¤ªà¥ 1, à¤¦à¥à¤¬à¤, à¤¯à¥à¤à¤",
-            "sub": "à¤¸à¥à¤®à¤µà¤¾à¤° - à¤¶à¤¨à¤¿à¤µà¤¾à¤°: à¤¸à¥à¤¬à¤¹ 9 à¤¬à¤à¥ - à¤¶à¤¾à¤® 7 à¤¬à¤à¥"
-          },
-          "social": "à¤¹à¤®à¤¾à¤°à¥ à¤à¤ªà¤¡à¥à¤ à¤à¤¾ à¤ªà¤¾à¤²à¤¨ à¤à¤°à¥à¤"
-        },
-        "info": {
-          "call": "à¤¹à¤®à¥à¤ à¤à¥à¤² à¤à¤°à¥à¤",
-          "email": "à¤à¤®à¥à¤² à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾",
-          "visit": "à¤à¥à¤²à¤¿à¤¨à¤¿à¤ à¤ªà¤° à¤à¤à¤",
-          "hours": "à¤¸à¥à¤®-à¤¶à¤¨à¤¿: à¤¸à¥à¤¬à¤¹ 9 à¤¬à¤à¥ - à¤¶à¤¾à¤® 7 à¤¬à¤à¥"
-        }
-      },
-      "footer": {
-        "nav": "à¤¤à¥à¤µà¤°à¤¿à¤¤ à¤¸à¤à¤ªà¤°à¥à¤",
-        "support": "à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾",
-        "clinic": "à¤à¥à¤²à¤¿à¤¨à¤¿à¤ à¤à¤¾ à¤¸à¥à¤¥à¤¾à¤¨",
-        "hospitalName": "à¤à¥à¤¨à¥à¤¡à¤¿à¤¯à¤¨ à¤¸à¥à¤ªà¥à¤¶à¤²à¤¿à¤¸à¥à¤ à¤à¤¸à¥à¤ªà¤¤à¤¾à¤²",
-        "emergency": "à¤à¤ªà¤¾à¤¤à¤à¤¾à¤²à¥à¤¨",
-        "visitMeAt": "à¤®à¥à¤à¤¸à¥ à¤®à¤¿à¤²à¥à¤",
-        "rights": "à¤¸à¤°à¥à¤µà¤¾à¤§à¤¿à¤à¤¾à¤° à¤¸à¥à¤°à¤à¥à¤·à¤¿à¤¤",
-        "patientResources": "à¤°à¥à¤à¥ à¤¸à¤à¤¸à¤¾à¤§à¤¨",
-        "articles": "à¤²à¥à¤",
-        "privacy": "à¤à¥à¤ªà¤¨à¥à¤¯à¤¤à¤¾ à¤¨à¥à¤¤à¤¿",
-        "services": "à¤¹à¤®à¤¾à¤°à¥ à¤¸à¥à¤µà¤¾à¤à¤",
-        "serviceLinks": {
-          "arthroscopy": "à¤à¤°à¥à¤¥à¥à¤°à¥à¤¸à¥à¤à¥à¤ªà¥",
-          "sportsMedicine": "à¤¸à¥à¤ªà¥à¤°à¥à¤à¥à¤¸ à¤®à¥à¤¡à¤¿à¤¸à¤¿à¤¨",
-          "roboticSurgery": "à¤°à¥à¤¬à¥à¤à¤¿à¤ à¤¸à¤°à¥à¤à¤°à¥",
-          "jointReplacement": "à¤à¥à¤¡à¤¼ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨",
-          "deformityCorrection": "à¤µà¤¿à¤à¥à¤¤à¤¿ à¤¸à¥à¤§à¤¾à¤°",
-          "physiotherapy": "à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥",
-          "consultation": "à¤ªà¤°à¤¾à¤®à¤°à¥à¤¶",
-          "orthopedicTrauma": "à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤à¥à¤°à¥à¤®à¤¾",
-          "more": "à¤à¤§à¤¿à¤"
-        }
-      },
-      "faq_services": {
-        "title": "à¤¸à¥à¤µà¤¾à¤à¤ à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤ªà¥à¤°à¤¶à¥à¤¨",
-        "description": "à¤¹à¤®à¤¾à¤°à¥ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤ªà¥à¤°à¤à¥à¤°à¤¿à¤¯à¤¾à¤à¤ à¤à¤° à¤µà¤¿à¤¶à¤¿à¤·à¥à¤ à¤¦à¥à¤à¤­à¤¾à¤² à¤¯à¥à¤à¤¨à¤¾à¤à¤ à¤à¥ à¤¬à¤¾à¤°à¥ à¤®à¥à¤ à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤ªà¥à¤°à¤¶à¥à¤¨à¥¤",
-        "items": [
-          {
-            "question": "à¤à¥à¤¯à¤¾ à¤à¤ª à¤°à¥à¤¬à¥à¤à¤¿à¤ à¤à¥à¤¡à¤¼ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨ à¤à¥ à¤ªà¥à¤¶à¤à¤¶ à¤à¤°à¤¤à¥ à¤¹à¥à¤?",
-            "answer": "à¤¹à¤¾à¤, à¤¹à¤® à¤¬à¥à¤¹à¤¤à¤° à¤¸à¤à¥à¤à¤¤à¤¾ à¤à¥ à¤²à¤¿à¤ à¤à¤¨à¥à¤¨à¤¤ à¤°à¥à¤¬à¥à¤à¤¿à¤-à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤à¥à¤² à¤à¤° à¤à¤à¤¶à¤¿à¤ à¤à¥à¤à¤¨à¥ à¤à¥ à¤ªà¥à¤°à¤¤à¤¿à¤¸à¥à¤¥à¤¾à¤ªà¤¨ à¤®à¥à¤ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤¹à¥à¤à¥¤"
-          },
-          {
-            "question": "à¤à¤°à¥à¤¥à¥à¤°à¥à¤¸à¥à¤à¥à¤ªà¥ à¤à¥ à¤²à¤¿à¤ à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥à¤¯à¤¾ à¤¹à¥?",
-            "answer": "à¤à¤§à¤¿à¤à¤¾à¤à¤¶ à¤°à¥à¤à¥ à¤à¥à¤ à¤¹à¥ à¤¦à¤¿à¤¨à¥à¤ à¤®à¥à¤ à¤¹à¤²à¥à¤à¥ à¤à¤¤à¤¿à¤µà¤¿à¤§à¤¿à¤¯à¥à¤ à¤®à¥à¤ à¤²à¥à¤ à¤à¤¤à¥ à¤¹à¥à¤, à¤¹à¤¾à¤²à¤¾à¤à¤à¤¿ à¤ªà¥à¤°à¥à¤£ à¤°à¤¿à¤à¤µà¤°à¥ à¤®à¥à¤ 6-12 à¤¸à¤ªà¥à¤¤à¤¾à¤¹ à¤²à¤ à¤¸à¤à¤¤à¥ à¤¹à¥à¤à¥¤"
-          },
-          {
-            "question": "à¤à¥à¤¯à¤¾ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤µà¤¾à¤à¤ à¤à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥à¤?",
-            "answer": "à¤¹à¤® à¤ªà¥à¤°à¥à¤£ à¤°à¤¿à¤à¤µà¤°à¥ à¤¸à¥à¤¨à¤¿à¤¶à¥à¤à¤¿à¤¤ à¤à¤°à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤à¤ªà¤¨à¥ à¤­à¤¾à¤à¥à¤¦à¤¾à¤° à¤¸à¥à¤µà¤¿à¤§à¤¾à¤à¤ à¤à¥ à¤®à¤¾à¤§à¥à¤¯à¤® à¤¸à¥ à¤à¤à¥à¤à¥à¤¤ à¤ªà¥à¤¨à¤°à¥à¤µà¤¾à¤¸ à¤¯à¥à¤à¤¨à¤¾à¤à¤ à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤à¤°à¤¤à¥ à¤¹à¥à¤à¥¤"
-          }
-        ]
-      },
-      "faq_articles": {
-        "title": "à¤¸à¥à¤à¤¨à¥ à¤à¤¾ à¤à¥à¤à¤¦à¥à¤° à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤ªà¥à¤°à¤¶à¥à¤¨",
-        "description": "à¤¹à¤®à¤¾à¤°à¥ à¤à¤¿à¤à¤¿à¤¤à¥à¤¸à¤¾ à¤à¤à¤¤à¤°à¥à¤¦à¥à¤·à¥à¤à¤¿, à¤¬à¥à¤²à¥à¤ à¤à¤ªà¤¡à¥à¤ à¤à¤° à¤à¤¨à¥à¤¸à¤à¤§à¤¾à¤¨ à¤ªà¤¹à¤²à¥à¤ à¤à¥ à¤¬à¤¾à¤°à¥ à¤®à¥à¤ à¤à¤¾à¤¨à¤à¤¾à¤°à¥.",
-        "items": [
-          {
-            "question": "à¤¨à¤ à¤²à¥à¤ à¤à¤¿à¤¤à¤¨à¥ à¤¬à¤¾à¤° à¤ªà¥à¤°à¤à¤¾à¤¶à¤¿à¤¤ à¤¹à¥à¤¤à¥ à¤¹à¥à¤?",
-            "answer": "à¤¹à¤® à¤à¤ªà¤¨à¥ à¤°à¥à¤à¤¿à¤¯à¥à¤ à¤à¥ à¤¸à¥à¤à¤¿à¤¤ à¤°à¤à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤¹à¤° à¤à¥à¤ à¤¹à¤«à¥à¤¤à¥à¤ à¤®à¥à¤ à¤¨à¤ à¤à¤¿à¤à¤¿à¤¤à¥à¤¸à¤¾ à¤à¤à¤¤à¤°à¥à¤¦à¥à¤·à¥à¤à¤¿ à¤à¤° à¤¨à¥à¤¦à¤¾à¤¨à¤¿à¤ à¤à¤¨à¥à¤¸à¤à¤§à¤¾à¤¨ à¤à¤ªà¤¡à¥à¤ à¤¸à¤¾à¤à¤¾ à¤à¤°à¤¤à¥ à¤¹à¥à¤à¥¤"
-          },
-          {
-            "question": "à¤à¥à¤¯à¤¾ à¤®à¥à¤ à¤¬à¥à¤²à¥à¤ à¤à¥ à¤²à¤¿à¤ à¤à¥à¤ à¤µà¤¿à¤·à¤¯ à¤¸à¥à¤à¤¾ à¤¸à¤à¤¤à¤¾ à¤¹à¥à¤?",
-            "answer": "à¤¬à¤¿à¤²à¥à¤à¥à¤²! à¤¹à¤® à¤°à¥à¤à¥ à¤ªà¥à¤à¤¤à¤¾à¤ à¤à¤¾ à¤¸à¥à¤µà¤¾à¤à¤¤ à¤à¤°à¤¤à¥ à¤¹à¥à¤ à¤à¤° à¤à¤à¥à¤¸à¤° à¤à¤ªà¤¨à¥ à¤µà¤¿à¤¸à¥à¤¤à¥à¤¤ à¤à¤¿à¤à¤¿à¤¤à¥à¤¸à¤¾ à¤²à¥à¤à¥à¤ à¤®à¥à¤ à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤à¤¿à¤à¤¤à¤¾à¤à¤ à¤à¤¾ à¤¸à¤®à¤¾à¤§à¤¾à¤¨ à¤à¤°à¤¤à¥ à¤¹à¥à¤à¥¤"
-          }
-        ]
-      },
-      "physioHome": {
-        "seo": {
-          "title": "à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¹à¥à¤® à¤¸à¤°à¥à¤µà¤¿à¤¸à¥à¤ à¤¦à¥à¤¬à¤ | DHA à¤²à¤¾à¤à¤¸à¥à¤à¤¸ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤",
-          "description": "à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¥à¤ à¤¦à¥à¤µà¤¾à¤°à¤¾ à¤à¤° à¤ªà¤° à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤µà¤¾à¤à¤ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤à¤°à¥à¤à¥¤ à¤¦à¤°à¥à¤¦ à¤¸à¥ à¤°à¤¾à¤¹à¤¤ à¤à¤° à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤²à¤¿à¤ à¤µà¥à¤¯à¤à¥à¤¤à¤¿à¤à¤¤ à¤à¤ªà¤à¤¾à¤°à¥¤ à¤à¤­à¥ à¤¬à¥à¤ à¤à¤°à¥à¤à¥¤"
-        },
-        "hero": {
-          "title": "à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤µà¤¾à¤à¤ | à¤¹à¥à¤® à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤à¤° à¤ªà¥à¤¨à¤°à¥à¤µà¤¾à¤¸ à¤¦à¥à¤à¤­à¤¾à¤²",
-          "description": "à¤à¥à¤¯à¤¾ à¤à¤ª à¤¦à¤°à¥à¤¦, à¤à¤à¤¡à¤¼à¤¨ à¤¯à¤¾ à¤à¤²à¤¨à¥-à¤«à¤¿à¤°à¤¨à¥ à¤®à¥à¤ à¤à¤ à¤¿à¤¨à¤¾à¤ à¤¸à¥ à¤à¥à¤ à¤°à¤¹à¥ à¤¹à¥à¤? à¤¹à¤®à¤¾à¤°à¥ à¤¸à¥à¤µà¤¾à¤à¤ à¤à¤ªà¤à¥ à¤¸à¥à¤°à¤à¥à¤·à¤¿à¤¤ à¤°à¥à¤ª à¤¸à¥ à¤ à¥à¤ à¤¹à¥à¤¨à¥ à¤®à¥à¤ à¤®à¤¦à¤¦ à¤à¤°à¤¨à¥ à¤à¥ à¤²à¤¿à¤ à¤¡à¤¿à¤à¤¼à¤¾à¤à¤¨ à¤à¥ à¤à¤ à¤¹à¥à¤à¥¤"
-        },
-        "features": [
-          "DHA-à¤²à¤¾à¤à¤¸à¥à¤à¤¸ à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¤¿à¤¸à¥à¤",
-          "à¤à¤°, à¤¹à¥à¤à¤² à¤¯à¤¾ à¤à¤¾à¤°à¥à¤¯à¤¾à¤²à¤¯ à¤®à¥à¤ à¤¸à¥à¤µà¤¾",
-          "à¤µà¥à¤¯à¤à¥à¤¤à¤¿à¤à¤¤ à¤à¤ªà¤à¤¾à¤° à¤¯à¥à¤à¤¨à¤¾",
-          "à¤¸à¤°à¥à¤à¤°à¥ à¤à¥ à¤¬à¤¾à¤¦ à¤à¥ à¤¦à¥à¤à¤­à¤¾à¤²",
-          "à¤¸à¤¸à¥à¤¤à¥ à¤à¤° à¤ªà¤¾à¤°à¤¦à¤°à¥à¤¶à¥ à¤à¥à¤®à¤¤à¥à¤"
-        ],
-        "ctas": {
-          "call": "à¤à¤­à¥ à¤à¥à¤² à¤à¤°à¥à¤",
-          "whatsapp": "à¤à¤­à¥ à¤µà¥à¤¹à¤¾à¤à¥à¤¸à¤à¤ª à¤à¤°à¥à¤"
-        },
-        "conditions": {
-          "badge": "à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤µà¤¾à¤à¤ à¤à¥ à¤¸à¤¾à¤¥ à¤ªà¥à¤°à¤¬à¤à¤§à¤¨ à¤à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤¸à¥à¤¥à¤¿à¤¤à¤¿à¤¯à¤¾à¤",
-          "title": "à¤¸à¤¾à¤®à¤¾à¤¨à¥à¤¯ à¤¦à¤°à¥à¤¦, à¤à¤à¤¡à¤¼à¤¨ à¤à¤° à¤à¤¤à¤¿à¤µà¤¿à¤§à¤¿ à¤¸à¤®à¤¸à¥à¤¯à¤¾à¤à¤ à¤à¥ à¤²à¤¿à¤ à¤ªà¥à¤¶à¥à¤µà¤° à¤¦à¥à¤à¤­à¤¾à¤²",
-          "description": "à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¥à¤¥à¤¿à¤¤à¤¿à¤¯à¥à¤ à¤à¥ à¤à¤ à¤µà¤¿à¤¸à¥à¤¤à¥à¤¤ à¤¶à¥à¤°à¥à¤à¤à¤²à¤¾ à¤à¥ à¤ªà¥à¤°à¤¬à¤à¤§à¤¨ à¤®à¥à¤ à¤®à¤¹à¤¤à¥à¤µà¤ªà¥à¤°à¥à¤£ à¤­à¥à¤®à¤¿à¤à¤¾ à¤¨à¤¿à¤­à¤¾à¤¤à¥ à¤¹à¥à¥¤ à¤¶à¥à¤à¥à¤° à¤à¤ªà¤à¤¾à¤° à¤à¤à¥à¤¸à¤° à¤¤à¥à¤à¥ à¤¸à¥ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤à¤° à¤²à¥ à¤à¤¾à¤¤à¤¾ à¤¹à¥à¥¤",
-          "items": [
-            {
-              "title": "à¤ªà¥à¤  à¤à¤° à¤à¤°à¥à¤¦à¤¨ à¤à¤¾ à¤¦à¤°à¥à¤¦",
-              "desc": "à¤à¤à¤¡à¤¼à¤¨, à¤®à¤¸à¥à¤à¥à¤²à¤° à¤¸à¥à¤ªà¥à¤® à¤à¤° à¤à¤® à¤à¤¾à¤°à¥à¤¯à¤à¥à¤·à¤®à¤¤à¤¾ à¤à¥ à¤²à¤¿à¤ à¤²à¤à¥à¤·à¤¿à¤¤ à¤ªà¥à¤¨à¤°à¥à¤µà¤¾à¤¸à¥¤"
-            },
-            {
-              "title": "à¤à¥à¤à¤¨à¥ à¤à¤¾ à¤¦à¤°à¥à¤¦ à¤à¤° à¤à¤à¤¡à¤¼à¤¨",
-              "desc": "à¤à¥à¤¡à¤¼à¥à¤ à¤à¥ à¤à¤¤à¤¿, à¤¤à¤¾à¤à¤¤ à¤à¤° à¤à¤²à¤¨à¥ à¤à¥ à¤¦à¥à¤°à¤¾à¤¨ à¤à¤¤à¥à¤®à¤µà¤¿à¤¶à¥à¤µà¤¾à¤¸ à¤®à¥à¤ à¤¸à¥à¤§à¤¾à¤° à¤à¥ à¤²à¤¿à¤ à¤¸à¤à¤°à¤à¤¿à¤¤ à¤¥à¥à¤°à¥à¤ªà¥à¥¤"
-            },
-            {
-              "title": "à¤à¤à¤§à¥ à¤à¤¾ à¤¦à¤°à¥à¤¦",
-              "desc": "à¤¦à¥à¤¨à¤¿à¤ à¤à¤¤à¤¿à¤µà¤¿à¤§à¤¿à¤¯à¥à¤ à¤à¥ à¤¦à¥à¤°à¤¾à¤¨ à¤¦à¤°à¥à¤¦, à¤à¤®à¤à¥à¤°à¥ à¤à¤° à¤¸à¥à¤®à¤¿à¤¤ à¤à¤à¤§à¥ à¤à¥ à¤à¤¤à¤¿ à¤à¥ à¤²à¤¿à¤ à¤à¥à¤à¤¦à¥à¤°à¤¿à¤¤ à¤à¤ªà¤à¤¾à¤°à¥¤"
-            },
-            {
-              "title": "à¤à¥à¤² à¤à¥ à¤à¥à¤à¥à¤",
-              "desc": "à¤®à¤¾à¤à¤¸à¤ªà¥à¤¶à¤¿à¤¯à¥à¤ à¤à¥ à¤à¤¿à¤à¤à¤¾à¤µ, à¤à¥à¤®à¤² à¤à¤¤à¤à¥à¤ à¤à¥ à¤à¥à¤ à¤à¤° à¤à¤¤à¤¿à¤µà¤¿à¤§à¤¿ à¤ªà¤° à¤µà¤¾à¤ªà¤¸à¥ à¤à¥ à¤²à¤¿à¤ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¤¾à¤°à¥à¤¯à¤à¥à¤°à¤®à¥¤"
-            },
-            {
-              "title": "à¤à¤ à¤¿à¤¯à¤¾ à¤¦à¥à¤à¤­à¤¾à¤²",
-              "desc": "à¤¦à¤°à¥à¤¦ à¤à¤® à¤à¤°à¤¨à¥, à¤à¤¤à¤¿ à¤®à¥à¤ à¤¸à¥à¤§à¤¾à¤° à¤à¤° à¤¦à¥à¤°à¥à¤à¤à¤¾à¤²à¤¿à¤ à¤à¥à¤¡à¤¼ à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤à¥ à¤²à¤¿à¤ à¤¸à¥à¤®à¥à¤¯ à¤à¤ªà¤à¤¾à¤°à¥¤"
-            },
-            {
-              "title": "à¤¸à¤°à¥à¤à¤°à¥ à¤à¥ à¤¬à¤¾à¤¦ à¤ªà¥à¤¨à¤°à¥à¤µà¤¾à¤¸",
-              "desc": "à¤à¤¤à¤¿à¤¶à¥à¤²à¤¤à¤¾ à¤à¤° à¤®à¤à¤¬à¥à¤¤à¥ à¤à¥ à¤¸à¤¾à¤¥ à¤à¤°à¥à¤¥à¥à¤ªà¥à¤¡à¤¿à¤ à¤ªà¥à¤°à¤à¥à¤°à¤¿à¤¯à¤¾à¤à¤ à¤à¥ à¤¬à¤¾à¤¦ à¤¯à¥à¤à¤¨à¤¾à¤¬à¤¦à¥à¤§ à¤°à¤¿à¤à¤µà¤°à¥ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾à¥¤"
-            },
-            {
-              "title": "à¤µà¤¿à¤à¥à¤¤à¤¿ à¤¸à¥à¤§à¤¾à¤° à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾",
-              "desc": "à¤¸à¤à¤°à¥à¤à¤£-à¤¸à¤à¤¬à¤à¤§à¥ à¤à¤¤à¤¿à¤µà¤¿à¤§à¤¿ à¤ªà¥à¤à¤°à¥à¤¨ à¤à¤° à¤à¤¾à¤°à¥à¤¯à¤¾à¤¤à¥à¤®à¤ à¤°à¤¿à¤à¤µà¤°à¥ à¤®à¥à¤ à¤¸à¥à¤§à¤¾à¤° à¤à¥ à¤²à¤¿à¤ à¤¦à¥à¤à¤­à¤¾à¤²à¥¤"
-            },
-            {
-              "title": "à¤¹à¤¿à¤ª à¤à¥à¤à¤à¤ à¤°à¤¿à¤ªà¥à¤²à¥à¤¸à¤®à¥à¤à¤ à¤°à¤¿à¤à¤µà¤°à¥",
-              "desc": "à¤¤à¤¾à¤à¤¤, à¤¸à¤à¤¤à¥à¤²à¤¨ à¤à¤° à¤à¤²à¤¨à¥ à¤à¥ à¤à¤¤à¥à¤®à¤µà¤¿à¤¶à¥à¤µà¤¾à¤¸ à¤ªà¤° à¤à¥à¤à¤¦à¥à¤°à¤¿à¤¤ à¤à¤°à¤£à¤¬à¤¦à¥à¤§ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥à¥¤"
-            }
-          ],
-          "footer": "à¤¶à¥à¤à¥à¤° à¤à¤ªà¤à¤¾à¤° à¤à¤à¥à¤¸à¤° à¤¤à¥à¤à¥ à¤¸à¥ à¤°à¤¿à¤à¤µà¤°à¥ à¤à¥ à¤à¤° à¤²à¥ à¤à¤¾à¤¤à¤¾ à¤¹à¥ à¤à¤° à¤¦à¥à¤°à¥à¤à¤à¤¾à¤²à¤¿à¤ à¤à¤à¤¿à¤²à¤¤à¤¾à¤à¤ à¤à¥ à¤°à¥à¤à¤¤à¤¾ à¤¹à¥à¥¤"
-        },
-        "benefits": {
-          "title": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤à¥ à¤¸à¤¾à¤¥ à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤à¥ à¤²à¤¾à¤­",
-          "items": [
-            "à¤¦à¤°à¥à¤¦ à¤à¤° à¤¸à¥à¤à¤¨ à¤®à¥à¤ à¤à¤®à¥",
-            "à¤¬à¥à¤¹à¤¤à¤° à¤à¤¤à¤¿à¤¶à¥à¤²à¤¤à¤¾",
-            "à¤¤à¥à¤à¥ à¤¸à¥ à¤°à¤¿à¤à¤µà¤°à¥",
-            "à¤¬à¥à¤¹à¤¤à¤° à¤¤à¤¾à¤à¤¤",
-            "à¤¦à¤µà¤¾à¤à¤ à¤ªà¤° à¤à¤® à¤¨à¤¿à¤°à¥à¤­à¤°à¤¤à¤¾"
-          ]
-        },
-        "expertTreatment": {
-          "title": "à¤¡à¥. à¤à¤²à¥à¤¹à¤¾à¤¸ à¤¸à¥à¤¨à¤¾à¤° à¤à¥ à¤¸à¤¾à¤¥ à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤à¥à¤¹ à¤à¤ªà¤à¤¾à¤°",
-          "categories": [
-            "à¤¸à¤°à¥à¤à¤°à¥ à¤à¥ à¤¬à¤¾à¤¦ à¤à¥ à¤®à¤°à¥à¤",
-            "à¤à¤¥à¤²à¥à¤",
-            "à¤¬à¥à¤à¥à¤°à¥à¤ à¤®à¤°à¥à¤",
-            "à¤à¥à¤°à¥à¤¨à¤¿à¤ à¤à¥à¤¯à¤°",
-            "à¤¨à¥à¤¯à¥à¤°à¥à¤²à¥à¤à¤¿à¤à¤² à¤¸à¥à¤¥à¤¿à¤¤à¤¿à¤¯à¤¾à¤"
-          ]
-        },
-        "ctaBanner": {
-          "title": "à¤à¤ à¤¹à¥ à¤à¤ªà¤¨à¥ à¤°à¤¿à¤à¤µà¤°à¥ à¤¶à¥à¤°à¥ à¤à¤°à¥à¤",
-          "subtitle": "à¤¶à¤à¥à¤¤à¤¿ à¤à¤° à¤¦à¥à¤°à¥à¤à¤à¤¾à¤²à¤¿à¤ à¤ªà¤°à¤¿à¤£à¤¾à¤®à¥à¤ à¤ªà¤° à¤à¥à¤à¤¦à¥à¤°à¤¿à¤¤ à¤à¤¨à¥à¤¨à¤¤ à¤¦à¥à¤à¤­à¤¾à¤²"
-        },
-        "whyChoose": {
-          "title": "à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤¹à¤®à¤¾à¤°à¥ à¤¸à¥à¤µà¤¾à¤à¤ à¤à¥à¤¯à¥à¤ à¤à¥à¤¨à¥à¤",
-          "items": [
-            "à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤ à¤®à¤¾à¤°à¥à¤à¤¦à¤°à¥à¤¶à¤¨",
-            "à¤à¤-à¤¸à¥-à¤à¤ à¤¸à¤¤à¥à¤°",
-            "à¤¸à¥à¤ªà¤·à¥à¤ à¤¨à¤¿à¤¦à¤¾à¤¨",
-            "à¤¦à¥à¤°à¥à¤à¤à¤¾à¤²à¤¿à¤ à¤°à¤¿à¤à¤µà¤°à¥",
-            "à¤²à¤à¥à¤²à¥ à¤¸à¥à¤µà¤¾à¤à¤"
-          ]
-        },
-        "expectations": {
-          "title": "à¤¸à¤¤à¥à¤° à¤¸à¥ à¤à¥à¤¯à¤¾ à¤à¤®à¥à¤®à¥à¤¦ à¤à¤°à¥à¤?",
-          "steps": [
-            {
-              "title": "à¤ªà¥à¤°à¤¾à¤°à¤à¤­à¤¿à¤ à¤®à¥à¤²à¥à¤¯à¤¾à¤à¤à¤¨",
-              "desc": "à¤à¤ªà¤à¥ à¤¸à¥à¤¥à¤¿à¤¤à¤¿ à¤à¤° à¤¦à¤°à¥à¤¦ à¤à¥ à¤à¥à¤·à¥à¤¤à¥à¤°à¥à¤ à¤à¤¾ à¤¸à¤¾à¤µà¤§à¤¾à¤¨à¥à¤ªà¥à¤°à¥à¤µà¤ à¤®à¥à¤²à¥à¤¯à¤¾à¤à¤à¤¨ à¤à¤¿à¤¯à¤¾ à¤à¤¾à¤¤à¤¾ à¤¹à¥à¥¤"
-            },
-            {
-              "title": "à¤à¤ªà¤à¤¾à¤° à¤¸à¤¤à¥à¤°",
-              "desc": "à¤¹à¤¾à¤¥à¥à¤ à¤¸à¥ à¤¦à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤¥à¥à¤°à¥à¤ªà¥ à¤à¤° à¤¨à¤¿à¤°à¥à¤¦à¥à¤¶à¤¿à¤¤ à¤µà¥à¤¯à¤¾à¤¯à¤¾à¤®à¥¤"
-            },
-            {
-              "title": "à¤ªà¥à¤°à¤à¤¤à¤¿ à¤à¥ à¤¨à¤¿à¤à¤°à¤¾à¤¨à¥",
-              "desc": "à¤¨à¤¿à¤¯à¤®à¤¿à¤¤ à¤¸à¤®à¥à¤à¥à¤·à¤¾ à¤à¤° à¤¯à¥à¤à¤¨à¤¾ à¤®à¥à¤ à¤¸à¥à¤§à¤¾à¤°à¥¤"
-            }
-          ]
-        },
-        "faqs": {
-          "title": "à¤à¤à¥à¤¸à¤° à¤ªà¥à¤à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤ªà¥à¤°à¤¶à¥à¤¨",
-          "items": [
-            {
-              "q": "à¤¦à¥à¤¬à¤ à¤®à¥à¤ à¤²à¤¾à¤à¤¤ à¤à¤¿à¤¤à¤¨à¥ à¤¹à¥?",
-              "a": "à¤²à¤¾à¤à¤¤ à¤à¤ªà¤à¤¾à¤° à¤à¥ à¤ªà¥à¤°à¤à¤¾à¤° à¤ªà¤° à¤¨à¤¿à¤°à¥à¤­à¤° à¤à¤°à¤¤à¥ à¤¹à¥à¥¤ à¤à¤¿à¤«à¤¾à¤¯à¤¤à¥ à¤ªà¥à¤à¥à¤ à¤à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥à¤à¥¤"
-            },
-            {
-              "q": "à¤à¥à¤¯à¤¾ à¤à¤° à¤ªà¤° à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤ªà¥à¤°à¤­à¤¾à¤µà¥ à¤¹à¥?",
-              "a": "à¤¹à¤¾à¤, à¤µà¤¿à¤¶à¥à¤·à¤à¥à¤à¥à¤ à¤¦à¥à¤µà¤¾à¤°à¤¾ à¤¦à¥ à¤à¤¾à¤¨à¥ à¤µà¤¾à¤²à¥ à¤¹à¥à¤® à¤«à¤¿à¤à¤¿à¤¯à¥à¤¥à¥à¤°à¥à¤ªà¥ à¤¸à¤®à¤¾à¤¨ à¤°à¥à¤ª à¤¸à¥ à¤ªà¥à¤°à¤­à¤¾à¤µà¥ à¤¹à¥à¥¤"
-            }
-          ]
-        }
+      {
+        "id": 4,
+        "title": "Complex Polytrauma",
+        "description": "Coordinated multi-stage emergency care for high-energy traumatic injuries, open fractures, and pelvic injuries.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
       }
-    },
-    "AR": {
-      "common": {
-        "doctorName": "Ø¯. Ø£ÙÙÙØ§Ø³ Ø³ÙÙØ§Ø±",
-        "specialty": "Ø¬Ø±Ø§Ø­ Ø§ÙØ¹Ø¸Ø§Ù ÙØ§ÙÙÙØ§ØµÙ"
-      },
-      "topBar": {
-        "phone": "Ø§ØªØµÙ Ø¨ÙØ§",
-        "email": "Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ",
-        "location": "Ø§ÙÙÙÙØ¹",
-        "locationValue": "ÙØ¬ÙØ¹ Ø¯Ø¨Ù ÙÙØ§Ø³ØªØ«ÙØ§Ø±Ø Ø¯Ø¨ÙØ Ø§ÙØ¥ÙØ§Ø±Ø§Øª"
-      },
-      "nav": {
-        "home": "Ø§ÙØ±Ø¦ÙØ³ÙØ©",
-        "about": "Ø¹Ù Ø§ÙØ·Ø¨ÙØ¨",
-        "services": "Ø®Ø¯ÙØ§ØªÙØ§",
-        "articles": "Ø§ÙÙÙØ§ÙØ§Øª",
-        "gallery": "Ø§ÙÙØ¹Ø±Ø¶",
-        "contact": "Ø§ØªØµÙ Ø¨ÙØ§",
-        "testimonials": "Ø¢Ø±Ø§Ø¡ Ø§ÙÙØ±Ø¶Ù",
-        "faq": "Ø§ÙØ£Ø³Ø¦ÙØ© Ø§ÙØ´Ø§Ø¦Ø¹Ø©",
-        "bookNow": "Ø§Ø­Ø¬Ø² ÙÙØ¹Ø¯Ø§Ù",
-        "bookAppointment": "Ø§Ø­Ø¬Ø² Ø§Ø³ØªØ´Ø§Ø±Ø©",
-        "exploreServices": "Ø§Ø³ØªÙØ´Ù Ø§ÙØ®Ø¯ÙØ§Øª",
-        "selectLanguage": "Ø§Ø®ØªØ± Ø§ÙÙØºØ©",
-        "awards": "Ø§ÙØ¬ÙØ§Ø¦Ø²",
-        "affiliations": "Ø§ÙØ¹Ø¶ÙÙØ§Øª ÙØ§ÙØ§ÙØªØ³Ø§Ø¨Ø§Øª"
-      },
-      "hero": {
-        "badge": "Ø±Ø¹Ø§ÙØ© Ø¹Ø¸Ø§Ù ÙØªØ®ØµØµØ©",
-        "title": "Ø§Ø³ØªØ¹Ø¯",
-        "titleHighlight": "Ø­ÙØ§ØªÙ Ø§ÙÙØ´Ø·Ø©",
-        "description": "Ø­ÙÙÙ Ø¹Ø¸Ø§Ù ÙØªÙØ¯ÙØ© ÙØ§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙÙØ§ØµÙØ ÙØ¥ØµØ§Ø¨Ø§Øª Ø§ÙØ±ÙØ§Ø¶Ø©Ø ÙØ§ÙØ­Ø§ÙØ§Øª Ø§ÙÙØ¹ÙØ¯Ø©. Ø±Ø¹Ø§ÙØ© Ø¹Ø§ÙÙÙØ© Ø§ÙÙØ³ØªÙÙ ÙØµÙÙØ© ÙØªØ¹Ø§ÙÙÙ.",
-        "bookAppointment": "Ø§Ø­Ø¬Ø² ÙÙØ¹Ø¯Ø§Ù",
-        "exploreServices": "Ø§Ø³ØªÙØ´Ù Ø§ÙØ®Ø¯ÙØ§Øª",
-        "highlights": [
-          "Ø®Ø¨Ø±Ø© Ø¹Ø§ÙÙÙØ© ØªØ²ÙØ¯ Ø¹Ù 15 Ø¹Ø§ÙØ§Ù",
-          "Ø¬Ø±Ø§Ø­Ø© Ø±ÙØ¨ÙØªÙØ© ÙØªÙØ¯ÙØ©",
-          "ÙØ¹ØªÙØ¯ ÙÙ Ø§ÙÙÙÙÙØ© Ø§ÙÙØªØ­Ø¯Ø© ÙØ£ÙØ±ÙØ¨Ø§",
-          "ÙØªØ®ØµØµ ÙÙ Ø­Ø§ÙØ§Øª Ø§ÙÙØ³ÙØ± Ø§ÙÙØ¹ÙØ¯Ø©",
-          "Ø®Ø·Ø· ØªØ¹Ø§ÙÙ ÙØ®ØµØµØ©",
-          "ÙØ±Ø§ÙÙ Ø·Ø¨ÙØ© ÙØªØ·ÙØ±Ø©"
-        ],
-        "stats": {
-          "exp": "Ø³ÙÙØ§Øª Ø§ÙØ®Ø¨Ø±Ø©",
-          "qualifications": "ÙØ¤ÙÙØ§Øª Ø¹Ø§ÙÙÙØ© (UK, EU, IN)",
-          "research": "Ø§ÙØ£Ø¨Ø­Ø§Ø« ÙØ§ÙÙÙØ´ÙØ±Ø§Øª",
-          "audits": "Ø§ÙØªØ¯ÙÙÙ Ø§ÙØ³Ø±ÙØ±Ù",
-          "podium": "Ø¹Ø±ÙØ¶ ØªÙØ¯ÙÙÙØ©",
-          "outcomes": "ÙØªØ§Ø¦Ø¬ ÙØ¬ÙØ§Ø¦Ø² Ø§Ø³ØªØ«ÙØ§Ø¦ÙØ©"
-        },
-        "slides": [
-          {
-            "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
-            "headline1": "Ø§Ø³ØªØ¹Ø¯",
-            "headline2": "Ø­ÙØ§ØªÙ",
-            "description": "ÙØ¹ Ø£ÙØ«Ø± ÙÙ 15 Ø¹Ø§ÙØ§Ù ÙÙ Ø§ÙØ®Ø¨Ø±Ø© Ø§ÙØ¹Ø§ÙÙÙØ© ÙÙ Ø§ÙÙÙÙÙØ© Ø§ÙÙØªØ­Ø¯Ø© ÙØ§ÙÙÙØ¯ ÙØ¬Ø²ÙØ±Ø© Ø¬ÙØ±Ø³Ù ÙØ¯Ø¨Ù ÙÙ Ø¬Ø±Ø§Ø­Ø© Ø§ÙØ¹Ø¸Ø§Ù ÙØ§ÙØµØ¯ÙØ§Øª. ØªÙØ¯ÙÙ Ø±Ø¹Ø§ÙØ© Ø¹Ø§ÙÙÙØ© Ø§ÙÙØ³ØªÙÙ ÙÙØ±ÙØ¨Ø© ÙØ§ÙÙØ±Ù ÙØ§ÙÙØªÙ.",
-            "nameplateSub": "Ø£Ø®ØµØ§Ø¦Ù Ø¬Ø±Ø§Ø­Ø© Ø§ÙØ¹Ø¸Ø§Ù"
-          },
-          {
-            "badge": "MBBS, MS Ortho, M Ch Ortho, FRCS (T&O)",
-            "headline1": "Ø¯ÙØ©",
-            "headline2": "Ø§ÙØ¹Ø¸Ø§Ù",
-            "description": "Ø²ÙÙÙ Ø§ÙÙÙÙØ© Ø§ÙÙÙÙÙØ© ÙÙØ¬Ø±Ø§Ø­ÙÙ ÙØ¹ Ø®Ø¨Ø±Ø© Ø¹Ø§ÙÙÙØ© ØªØ²ÙØ¯ Ø¹Ù 15 Ø¹Ø§ÙØ§Ù. ÙØªØ®ØµØµ ÙÙ Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙØ±ÙØ¨Ø© Ø¨ÙØ³Ø§Ø¹Ø¯Ø© Ø§ÙØ±ÙØ¨ÙØª ÙØ§ÙØ¥Ø¬Ø±Ø§Ø¡Ø§Øª Ø·ÙÙÙØ© Ø§ÙØªÙØºÙ.",
-            "nameplateSub": "Ø¬Ø±Ø§Ø­ Ø¹Ø¸Ø§Ù"
-          }
-        ]
-      },
-      "about": {
-        "badge": "FRCS (UK), FEBOT, MCh, PGDip Robotics, MBBS, MS",
-        "title": "Ø®Ø¨Ø±Ø© Ø¹Ø§ÙÙÙØ©",
-        "titleHighlight": "ÙÙ Ø¬Ø±Ø§Ø­Ø©",
-        "titleEnd": "Ø§ÙØ¹Ø¸Ø§Ù ÙØ§ÙÙÙØ§ØµÙ",
-        "experienceBadge": "Ø³ÙÙØ§Øª ÙÙ Ø§ÙØ®Ø¨Ø±Ø© Ø§ÙØ¹Ø§ÙÙÙØ©",
-        "description1": "Ø§ÙØ¯ÙØªÙØ± Ø£ÙÙÙØ§Ø³ Ø³ÙÙØ§Ø± Ø¬Ø±Ø§Ø­ Ø¹Ø¸Ø§Ù Ø¨Ø±ÙØ·Ø§ÙÙ ÙÙØ¯Ù ÙØªÙÙØ² ÙØªÙØªØ¹ Ø¨Ø®Ø¨Ø±Ø© ØªØ²ÙØ¯ Ø¹Ù 15 Ø¹Ø§ÙØ§Ù ÙÙ Ø¨Ø±ÙØ·Ø§ÙÙØ§ ÙØ£ÙØ±ÙØ¨Ø§ ÙØ§ÙÙÙØ¯ ÙØ§ÙØ¥ÙØ§Ø±Ø§Øª.",
-        "description2": "ÙØªØ®ØµØµ ÙÙ Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙÙØ§ØµÙ Ø¨ÙØ³Ø§Ø¹Ø¯Ø© Ø§ÙØ±ÙØ¨ÙØª ÙØ§ÙØ­Ø§ÙØ§Øª Ø§ÙÙØ¹ÙØ¯Ø©Ø ÙÙØ¬ÙØ¹ Ø¨ÙÙ Ø§ÙØ¯ÙØ© Ø§ÙØ¬Ø±Ø§Ø­ÙØ© ÙØ§ÙÙÙØ¬ Ø§ÙÙØªÙØ­ÙØ± Ø­ÙÙ Ø§ÙÙØ±ÙØ¶ ÙØ§Ø³ØªØ¹Ø§Ø¯Ø© Ø§ÙØ­Ø±ÙØ© ÙØªØºÙÙØ± Ø§ÙØ­ÙØ§Ø©.",
-        "qualifications": {
-          "global": {
-            "title": "Ø®Ø¨Ø±Ø© Ø¹Ø§ÙÙÙØ©",
-            "desc": "Ø¨Ø±ÙØ·Ø§ÙÙØ§Ø Ø£ÙØ±ÙØ¨Ø§Ø Ø§ÙÙÙØ¯Ø Ø§ÙØ¥ÙØ§Ø±Ø§Øª"
-          },
-          "training": {
-            "title": "ØªØ¯Ø±ÙØ¨ ÙÙØ¸Ù",
-            "desc": "Ø£ÙØ«Ø± ÙÙ 10 Ø³ÙÙØ§Øª ÙÙ Ø¨Ø±ÙØ·Ø§ÙÙØ§ (NHS)"
-          },
-          "fellowships": {
-            "title": "Ø²ÙØ§ÙØ§Øª ØªØ®ØµØµÙØ©",
-            "desc": "Ø§ÙØ±ÙØ¨ÙØª ÙØ§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙÙØ§ØµÙ"
-          },
-          "specialisation": {
-            "title": "Ø§ÙØªØ®ØµØµ",
-            "desc": "Ø§ÙÙØ³ÙØ± Ø§ÙÙØ¹ÙØ¯Ø© ÙØ§ÙØ·Ø¨ Ø§ÙØ±ÙØ§Ø¶Ù"
-          }
-        },
-        "stats": {
-          "experience": {
-            "value": "+15",
-            "label": "Ø³ÙÙØ§Øª Ø§ÙØ®Ø¨Ø±Ø©"
-          },
-          "surgeries": {
-            "value": "+5000",
-            "label": "Ø¹ÙÙÙØ© Ø¬Ø±Ø§Ø­ÙØ©"
-          },
-          "patients": {
-            "value": "+10k",
-            "label": "ÙØ±ÙØ¶ Ø³Ø¹ÙØ¯"
-          },
-          "global": {
-            "value": "4",
-            "label": "Ø¯ÙÙ"
-          }
-        }
-      },
-      "services": {
-        "badge": "Ø±Ø¹Ø§ÙØ© ÙØªØ®ØµØµØ©",
-        "title": "Ø®Ø¯ÙØ§ØªÙØ§ Ù",
-        "titleHighlight": "ØªØ®ØµØµØ§ØªÙØ§",
-        "titleEnd": "ÙÙ Ø§ÙØ¹Ø¸Ø§Ù",
-        "description": "ØªÙØ¯ÙÙ ÙØ¬ÙÙØ¹Ø© ÙØ§ÙÙØ© ÙÙ Ø¹ÙØ§Ø¬Ø§Øª Ø§ÙØ¹Ø¸Ø§Ù Ø§ÙÙØªÙØ¯ÙØ© Ø§ÙÙØµÙÙØ© ÙØªØ­ÙÙÙ Ø§ÙØªØ¹Ø§ÙÙ Ø§ÙØ£ÙØ«Ù.",
-        "viewDetails": "Ø¹Ø±Ø¶ Ø§ÙØªÙØ§ØµÙÙ",
-        "showMore": "Ø¹Ø±Ø¶ Ø§ÙÙØ²ÙØ¯ ÙÙ Ø§ÙØ®Ø¯ÙØ§Øª",
-        "showLess": "Ø¹Ø±Ø¶ Ø£ÙÙ",
+    ],
+    "checklist_items": [
+      "UK-Trained Orthopedic Surgeon",
+      "FRCS (England)",
+      "European Board Certified Orthopedic Surgeon",
+      "Experience in Routine and Complex Trauma",
+      "Fracture Reconstruction Expertise",
+      "Joint Preservation Principles",
+      "Individualised Treatment Planning",
+      "Evidence-Based Orthopedic Care",
+      "Focus on Functional Recovery"
+    ],
+    "tag_badges": [],
+    "conditions_title": "Conditions Managed with Fracture & Trauma Surgery",
+    "checklist_title": "Why Choose Dr Ulhas Sonar for Fracture & Trauma Surgery in Pune?",
+    "checklist_image": "",
+    "about_title": "About Fracture & Trauma Surgery",
+    "about_description": "<p>Fracture and trauma surgery involves the diagnosis, treatment, and reconstruction of injuries affecting bones, joints, ligaments, tendons, and surrounding soft tissues. Treatment may range from non-surgical fracture management to advanced surgical fixation and complex trauma reconstruction depending on the nature of the injury.</p>",
+    "who_needs_title": "Who May Need Fracture & Trauma Surgery?",
+    "who_needs_description": "Specialist assessment may be required if you experience any of the following symptoms:",
+    "who_needs_items": [
+      "A suspected fracture following an injury",
+      "Significant pain after a fall",
+      "Swelling and deformity",
+      "Difficulty walking or using a limb",
+      "Fracture involving a joint",
+      "Displaced fractures",
+      "Multiple injuries",
+      "Sports-related fractures",
+      "Previous fracture healing problems",
+      "Persistent pain after injury"
+    ],
+    "commonly_treated_title": "Fractures & Injuries We Commonly Treat",
+    "commonly_treated_description": "From simple fractures requiring precise immobilization to complex high-energy polytrauma demanding multi-stage surgical intervention.",
+    "commonly_treated": [
+      {
+        "title": "Upper Limb Injuries",
+        "icon": "PlusSquare",
         "items": [
-          {
-            "title": "Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙÙØ§ØµÙ",
-            "desc": "Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙØ±ÙØ¨Ø© ÙØ§ÙÙØ±Ù Ø§ÙÙÙÙ ÙØ§ÙØ¬Ø²Ø¦Ù Ø§ÙÙØªÙØ¯Ù Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù Ø£Ø­Ø¯Ø« Ø§ÙØªÙÙÙØ§Øª."
-          },
-          {
-            "title": "Ø§ÙØ·Ø¨ Ø§ÙØ±ÙØ§Ø¶Ù",
-            "desc": "Ø±Ø¹Ø§ÙØ© Ø´Ø§ÙÙØ© ÙÙØ±ÙØ§Ø¶ÙÙÙØ ÙÙ Ø§ÙÙÙØ§ÙØ© ÙÙ Ø§ÙØ¥ØµØ§Ø¨Ø§Øª Ø¥ÙÙ Ø§ÙØ¥ØµÙØ§Ø­ Ø§ÙØ¬Ø±Ø§Ø­Ù Ø§ÙÙØªÙØ¯Ù."
-          },
-          {
-            "title": "Ø§ÙØ¬Ø±Ø§Ø­Ø© Ø§ÙØ±ÙØ¨ÙØªÙØ©",
-            "desc": "Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª Ø¹Ø¸Ø§Ù ÙÙØ¬ÙØ© Ø¨Ø¯ÙØ© ÙØªØ¹Ø§ÙÙ Ø£Ø³Ø±Ø¹ ÙÙØªØ§Ø¦Ø¬ Ø£ÙØ¶Ù."
-          },
-          {
-            "title": "Ø¬Ø±Ø§Ø­Ø© Ø§ÙÙÙØ¸Ø§Ø±",
-            "desc": "Ø¬Ø±Ø§Ø­Ø© Ø«ÙØ¨ Ø§ÙÙÙØªØ§Ø­ Ø·ÙÙÙØ© Ø§ÙØªÙØºÙ ÙØªØ´Ø®ÙØµ ÙØ¹ÙØ§Ø¬ Ø§ÙÙÙØ§ØµÙ."
-          },
-          {
-            "title": "ØªØµØ­ÙØ­ Ø§ÙØªØ´ÙÙØ§Øª",
-            "desc": "Ø¹ÙØ§Ø¬ ÙØªØ®ØµØµ ÙÙØ­Ø§Ø°Ø§Ø© Ø§ÙØ£Ø·Ø±Ø§Ù ÙØ§ÙÙØ´Ø§ÙÙ Ø§ÙÙÙÙÙÙØ© ÙÙØ¹Ø¸Ø§Ù."
-          },
-          {
-            "title": "Ø§ÙØ§Ø³ØªØ´Ø§Ø±Ø§Øª",
-            "desc": "ØªÙÙÙÙ Ø³Ø±ÙØ±Ù ÙØªØ¹ÙÙ ÙØªØ®Ø·ÙØ· Ø´Ø®ØµÙ ÙÙØ¹ÙØ§Ø¬."
-          },
-          {
-            "title": "ØµØ¯ÙØ§Øª Ø§ÙØ¹Ø¸Ø§Ù",
-            "desc": "Ø¥Ø¯Ø§Ø±Ø© ÙØªØ®ØµØµØ© ÙÙÙØ³ÙØ± Ø§ÙÙØ¹ÙØ¯Ø© ÙØ¥ØµØ§Ø¨Ø§Øª Ø§ÙØ¬ÙØ§Ø² Ø§ÙØ¹Ø¶ÙÙ Ø§ÙÙÙÙÙÙ Ø§ÙØ·Ø§Ø±Ø¦Ø©."
-          },
-          {
-            "title": "Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù",
-            "desc": "Ø¥Ø¹Ø§Ø¯Ø© ØªØ£ÙÙÙ ÙØªÙØ§ÙÙØ© ÙØ¶ÙØ§Ù Ø§ÙØªØ¹Ø§ÙÙ Ø§ÙÙØ§ÙÙ ÙØµØ­Ø© Ø§ÙÙÙØ§ØµÙ Ø¹ÙÙ Ø§ÙÙØ¯Ù Ø§ÙØ·ÙÙÙ."
-          }
+          "Wrist fractures",
+          "Distal radius fractures",
+          "Hand fractures",
+          "Finger fractures",
+          "Forearm fractures",
+          "Elbow fractures",
+          "Arm fractures",
+          "Shoulder fractures",
+          "Clavicle fractures"
         ]
       },
-      "personalizedSolutions": {
-        "title": "Ø­ÙÙÙ ÙØ®ØµØµØ©",
-        "description": "Ø¹ÙØ§Ø¬Ø§Øª ÙØ³ØªÙØ¯ÙØ© ÙØ­Ø§ÙØ§Øª Ø§ÙØ¹Ø¸Ø§Ù Ø§ÙÙØ­Ø¯Ø¯Ø© ÙØ¥Ø¹Ø§Ø¯ØªÙ Ø¥ÙÙ Ø£ÙØ¶Ù Ø­Ø§ÙØ§ØªÙ.",
-        "viewAll": "Ø¹Ø±Ø¶ Ø¬ÙÙØ¹ Ø§ÙØ­ÙÙÙ",
+      {
+        "title": "Lower Limb Injuries",
+        "icon": "Triangle",
         "items": [
-          {
-            "title": "Ø§ÙÙØ¯ ÙØ§ÙÙØ¹ØµÙ"
-          },
-          {
-            "title": "Ø§ÙØ¸ÙØ± ÙØ§ÙØ±ÙØ¨Ø©"
-          },
-          {
-            "title": "Ø§ÙÙØ¯Ù ÙØ§ÙÙØ§Ø­Ù"
-          },
-          {
-            "title": "Ø§ÙÙØªÙ"
-          },
-          {
-            "title": "Ø§ÙØ±ÙØ¨Ø©"
-          },
-          {
-            "title": "Ø§ÙÙØ±Ù"
-          },
-          {
-            "title": "Ø¥ØµØ§Ø¨Ø§Øª Ø§ÙØ±ÙØ§Ø¶Ø©"
-          }
+          "Hip fractures",
+          "Femur fractures",
+          "Knee fractures",
+          "Patella fractures",
+          "Tibial fractures",
+          "Ankle fractures",
+          "Foot fractures"
         ]
       },
-      "ctaBanner": {
-        "title": "ÙÙ ØªØ¹Ø§ÙÙ ÙÙ Ø¢ÙØ§Ù Ø§ÙÙÙØ§ØµÙ Ø£Ù Ø§ÙØ¸ÙØ±Ø",
-        "subtitle": "Ø§Ø­ØµÙ Ø¹ÙÙ Ø±Ø¹Ø§ÙØ© ÙØªØ®ØµØµØ© ÙÙ Ø§ÙØ¹Ø¸Ø§Ù Ø§ÙÙÙÙ.",
-        "button": "Ø§Ø­Ø¬Ø² ÙÙØ¹Ø¯Ù Ø§ÙØ¢Ù"
-      },
-      "sportingInjury": {
-        "badge": "Ø¹ÙØ§Ø¯Ø© Ø¥ØµØ§Ø¨Ø§Øª Ø§ÙØ±ÙØ§Ø¶Ø©",
-        "title": "ÙÙ ØªØ¹Ø§ÙÙ ÙÙ",
-        "titleHighlight": "Ø¥ØµØ§Ø¨Ø© Ø±ÙØ§Ø¶ÙØ©Ø",
-        "titleEnd": "",
-        "description": "ÙØ§ ØªØ¯Ø¹ Ø§ÙØ£ÙÙ ÙÙÙØ¹Ù ÙÙ Ø§ÙÙØ´Ø§Ø±ÙØ©. ÙÙØ¯Ù ØªØ´Ø®ÙØµØ§Ù ÙØªØ®ØµØµØ§Ù ÙØ¹ÙØ§Ø¬Ø§Øª ÙØªÙØ¯ÙØ© ÙÙØ±ÙØ§Ø¶ÙÙÙ ÙÙ Ø¬ÙÙØ¹ Ø§ÙÙØ³ØªÙÙØ§Øª.",
-        "learnMore": "Ø§Ø¹Ø±Ù Ø§ÙÙØ²ÙØ¯ Ø¹Ù Ø§ÙØªØ¹Ø§ÙÙ Ø§ÙØ±ÙØ§Ø¶Ù",
+      {
+        "title": "Joint and Trauma Injuries",
+        "icon": "Hexagon",
         "items": [
-          {
-            "title": "Ø¥Ø¹Ø§Ø¯Ø© Ø¨ÙØ§Ø¡ Ø§ÙØ±Ø¨Ø§Ø· Ø§ÙØµÙÙØ¨Ù",
-            "desc": "Ø¥ØµÙØ§Ø­ Ø§ÙØ£Ø±Ø¨Ø·Ø© Ø§ÙÙØªÙØ¯Ù ÙØ§Ø³ØªØ¹Ø§Ø¯Ø© Ø§Ø³ØªÙØ±Ø§Ø± ÙÙÙØ© Ø§ÙØ±ÙØ¨Ø©."
-          },
-          {
-            "title": "Ø¥ØµÙØ§Ø­ Ø§ÙØºØ¶Ø±ÙÙ",
-            "desc": "Ø¬Ø±Ø§Ø­Ø© Ø¯ÙÙÙØ© ÙÙØ­ÙØ§Ø¸ Ø¹ÙÙ ÙØ³Ø§Ø¯Ø© Ø§ÙØ±ÙØ¨Ø© ÙÙÙØ¹ Ø§ÙÙØ´Ø§ÙÙ Ø§ÙÙØ³ØªÙØ¨ÙÙØ©."
-          },
-          {
-            "title": "Ø¹Ø¯Ù Ø§Ø³ØªÙØ±Ø§Ø± Ø§ÙÙØªÙ",
-            "desc": "Ø¹ÙØ§Ø¬ Ø§ÙØ®ÙØ¹ ÙØ¶Ø¹Ù Ø§ÙÙØªÙ Ø§ÙÙØ²ÙÙ."
-          },
-          {
-            "title": "Ø¥ØµØ§Ø¨Ø§Øª Ø§ÙØ£Ø±Ø¨Ø·Ø©",
-            "desc": "Ø±Ø¹Ø§ÙØ© Ø´Ø§ÙÙØ© ÙØ¥ØµØ§Ø¨Ø§Øª Ø§ÙÙØ§Ø­Ù ÙØ§ÙÙØ¹ØµÙ ÙØ£Ø±Ø¨Ø·Ø© Ø§ÙØ±ÙØ¨Ø© Ø§ÙÙØªØ¹Ø¯Ø¯Ø©."
-          }
+          "Intra-articular fractures",
+          "Fracture dislocations",
+          "Complex joint injuries",
+          "Sports trauma",
+          "High-energy trauma",
+          "Post-fall injuries",
+          "Sprains and ligament injuries",
+          "Tendon and muscle injuries",
+          "Soft-tissue injuries"
         ]
-      },
-      "publications": {
-        "badge": "Ø§ÙØªÙÙØ² Ø§ÙØ£ÙØ§Ø¯ÙÙÙ",
-        "title": "Ø§ÙØ£Ø¨Ø­Ø§Ø« Ù",
-        "titleHighlight": "Ø§ÙÙÙØ´ÙØ±Ø§Øª",
-        "description": "Ø§ÙÙØ³Ø§ÙÙØ§Øª Ø§ÙØ³Ø±ÙØ±ÙØ© ÙØ§ÙØ£Ø¨Ø­Ø§Ø« Ø§ÙÙÙØ´ÙØ±Ø© ÙÙ Ø§ÙÙØ¬ÙØ§Øª Ø§ÙØ¯ÙÙÙØ© Ø§ÙØ±Ø§Ø¦Ø¯Ø© ÙØ¬Ø±Ø§Ø­Ø© Ø§ÙØ¹Ø¸Ø§Ù.",
-        "firstAuthor": "ÙØ¤ÙÙ Ø±Ø¦ÙØ³Ù",
-        "secondAuthor": "Ø£Ø¨Ø­Ø§Ø« ØªØ¹Ø§ÙÙÙØ©",
-        "stats": {
-          "papers": "Ø£ÙØ±Ø§Ù Ø¨Ø­Ø«ÙØ© ÙØ­ÙÙØ©",
-          "impact": "ØªØ£Ø«ÙØ± Ø³Ø±ÙØ±Ù Ø¹Ø§ÙÙÙ",
-          "journals": "ÙØ¬ÙØ§Øª ÙÙ Ø§ÙØ¯Ø±Ø¬Ø© Ø§ÙØ£ÙÙÙ"
-        }
-      },
-      "articles": {
-        "badge": "Ø±Ø¤Ù Ø·Ø¨ÙØ©",
-        "title": "ÙÙØ§ÙØ§Øª Ø§ÙØ¹Ø¸Ø§Ù",
-        "titleHighlight": "Ø§ÙÙØªØ®ØµØµØ©",
-        "description": "Ø§Ø¨Ù Ø¹ÙÙ Ø§Ø·ÙØ§Ø¹ Ø¨Ø£Ø­Ø¯Ø« Ø§ÙØ±Ø¤Ù Ø­ÙÙ ØµØ­Ø© Ø§ÙØ¹Ø¸Ø§Ù ÙØ¹ÙØ§Ø¬Ø§ØªÙØ§ ÙØ§Ø¨ØªÙØ§Ø±Ø§ØªÙØ§ Ø§ÙØ¬Ø±Ø§Ø­ÙØ©.",
-        "readMore": "Ø§ÙØ±Ø£ Ø§ÙÙÙØ§Ù ÙØ§ÙÙØ§Ù",
-        "viewAll": "Ø¹Ø±Ø¶ Ø¬ÙÙØ¹ Ø§ÙÙÙØ§ÙØ§Øª"
-      },
-      "testimonials": {
-        "badge": "Ø¢Ø±Ø§Ø¡ Ø§ÙÙØ±Ø¶Ù",
-        "title": "ÙØ§Ø°Ø§ ÙÙÙÙ ÙØ±Ø¶Ø§ÙØ§",
-        "description": "ÙØµØµ Ø­ÙÙÙÙØ© ÙÙ ÙØ±Ø¶Ù Ø§Ø³ØªØ¹Ø§Ø¯ÙØ§ Ø­Ø±ÙØªÙÙ ÙØ­ÙØ§ØªÙÙ ÙÙ Ø®ÙØ§Ù Ø±Ø¹Ø§ÙØªÙØ§.",
-        "reviewButton": "Ø§ÙØªØ¨ ÙØ±Ø§Ø¬Ø¹Ø© Ø¹ÙÙ Ø¬ÙØ¬Ù",
-        "items": [
-          {
-            "name": "Ø¬ÙÙØ³ ÙÙÙØ³ÙÙ",
-            "role": "Ø±ÙØ§Ø¶Ù ÙØ­ØªØ±Ù",
-            "content": "Ø®Ø¨Ø±Ø© Ø§ÙØ¯ÙØªÙØ± Ø³ÙÙØ§Ø± ÙÙ Ø§ÙØ¬Ø±Ø§Ø­Ø© Ø§ÙØ±ÙØ¨ÙØªÙØ© ÙØ§ ØªÙØ¹ÙÙ Ø¹ÙÙÙØ§. Ø¹Ø¯Øª Ø¥ÙÙ Ø§ÙÙÙØ¹Ø¨ ÙÙ ÙÙØª Ø£ÙØµØ± ÙÙ Ø§ÙÙØªÙÙØ¹."
-          },
-          {
-            "name": "Ø³Ø§Ø±Ø© Ø£Ø­ÙØ¯",
-            "role": "Ø¬Ø¯Ø©",
-            "content": "Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙØ±Ù ÙÙØ­ÙÙ Ø­ÙØ§Ø© Ø¬Ø¯ÙØ¯Ø©. Ø£Ø³ØªØ·ÙØ¹ Ø£Ø®ÙØ±Ø§Ù Ø§ÙÙØ¹Ø¨ ÙØ¹ Ø£Ø­ÙØ§Ø¯Ù ÙØ±Ø© Ø£Ø®Ø±Ù."
-          }
-        ]
-      },
-      "faq": {
-        "badge": "ÙØ±ÙØ² Ø§ÙÙØ³Ø§Ø¹Ø¯Ø©",
-        "title": "Ø§ÙØ£Ø³Ø¦ÙØ© Ø§ÙØ´Ø§Ø¦Ø¹Ø©",
-        "description": "Ø£Ø³Ø¦ÙØ© Ø´Ø§Ø¦Ø¹Ø© Ø­ÙÙ Ø±Ø¹Ø§ÙØªÙØ§Ø ÙØ§ÙØ¬Ø±Ø§Ø­Ø© Ø§ÙØ±ÙØ¨ÙØªÙØ©Ø ÙØ¹ÙØ§Ø¬Ø§Øª Ø§ÙØ¹Ø¸Ø§Ù ÙÙ Ø¯Ø¨Ù.",
-        "items": [
-          {
-            "question": "ÙØ§ ÙÙ Ø§ÙØ¬Ø±Ø§Ø­Ø© Ø¨ÙØ³Ø§Ø¹Ø¯Ø© Ø§ÙØ±ÙØ¨ÙØªØ",
-            "answer": "ÙÙ ØªÙÙÙØ© ÙÙØ¬ÙØ© Ø¨Ø¯ÙØ© ØªØªÙØ­ ÙÙØ¬Ø±Ø§Ø­ Ø¥Ø¬Ø±Ø§Ø¡ Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙÙØ§ØµÙ Ø¨Ø¯ÙØ© Ø£Ø¹ÙÙØ ÙÙØ§ ÙØ¤Ø¯Ù ÙÙØªØ§Ø¦Ø¬ Ø£ÙØ¶Ù."
-          },
-          {
-            "question": "ÙÙ ØªØ³ØªØºØ±Ù ÙØªØ±Ø© Ø§ÙØªØ¹Ø§ÙÙØ",
-            "answer": "ØªØ®ØªÙÙ Ø§ÙÙØªØ±Ø© Ø­Ø³Ø¨ Ø§ÙØ¥Ø¬Ø±Ø§Ø¡Ø ÙÙÙ ÙØ¹Ø¸Ù Ø§ÙÙØ±Ø¶Ù ÙØ¹ÙØ¯ÙÙ ÙØ£ÙØ´Ø·ØªÙÙ Ø§ÙØ·Ø¨ÙØ¹ÙØ© Ø®ÙØ§Ù 6 Ø¥ÙÙ 12 Ø£Ø³Ø¨ÙØ¹Ø§Ù."
-          },
-          {
-            "question": "ÙÙ ØªØ¹Ø§ÙØ¬ÙÙ Ø¥ØµØ§Ø¨Ø§Øª Ø§ÙØ±ÙØ§Ø¶Ø©Ø",
-            "answer": "ÙØ¹ÙØ ÙØ­Ù ÙØªØ®ØµØµÙÙ ÙÙ Ø¥ØµÙØ§Ø­ Ø§ÙØ±Ø¨Ø§Ø· Ø§ÙØµÙÙØ¨Ù ÙØ¹ÙØ§Ø¬Ø§Øª Ø§ÙØºØ¶Ø±ÙÙ ÙØ¬ÙÙØ¹ Ø¥ØµØ§Ø¨Ø§Øª Ø§ÙØ±ÙØ§Ø¶Ø©."
-          },
-          {
-            "question": "Ø£ÙÙ ØªÙØ¹ Ø§ÙØ¹ÙØ§Ø¯Ø©Ø",
-            "answer": "ØªÙØ¹ ØºØ±Ù Ø§ÙØ§Ø³ØªØ´Ø§Ø±Ø© Ø§ÙØ±Ø¦ÙØ³ÙØ© ÙØ¯ÙÙØ§ ÙÙ Ø¯Ø¨ÙØ Ø¶ÙÙ ÙØ±Ø§ÙÙ Ø·Ø¨ÙØ© ÙØªÙÙØ²Ø©."
-          },
-          {
-            "question": "ÙÙ ÙØªÙÙØ± Ø±Ø£Ù Ø·Ø¨Ù Ø«Ø§ÙÙØ",
-            "answer": "ÙØ¹ÙØ ÙØ´Ø¬Ø¹ Ø§ÙÙØ±Ø¶Ù Ø¹ÙÙ Ø·ÙØ¨ Ø±Ø£Ù Ø«Ø§ÙÙ ÙÙØ­Ø§ÙØ§Øª Ø§ÙÙØ¹ÙØ¯Ø© ÙØ¶ÙØ§Ù Ø§ÙØ«ÙØ© ÙÙ Ø¹ÙØ§Ø¬ÙÙ."
-          }
-        ]
-      },
-      "contact": {
-        "badge": "ØªÙØ§ØµÙ ÙØ¹ÙØ§",
-        "title": "Ø§Ø­Ø¬Ø²",
-        "titleHighlight": "Ø§Ø³ØªØ´Ø§Ø±ØªÙ",
-        "description": "Ø§ØªØ®Ø° Ø§ÙØ®Ø·ÙØ© Ø§ÙØ£ÙÙÙ ÙØ­Ù Ø§ÙØªØ¹Ø§ÙÙ. ØªÙØ§ØµÙ ÙØ¹ ÙØ±ÙÙÙØ§ Ø§ÙØ®Ø¨ÙØ± Ø§ÙÙÙÙ.",
-        "form": {
-          "title": "Ø£Ø±Ø³Ù Ø±Ø³Ø§ÙØ©",
-          "name": "Ø§Ø³ÙÙ",
-          "namePlaceholder": "Ø£Ø¯Ø®Ù Ø§Ø³ÙÙ Ø§ÙÙØ§ÙÙ",
-          "email": "Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ",
-          "emailPlaceholder": "yourname@email.com",
-          "phone": "Ø±ÙÙ Ø§ÙÙØ§ØªÙ",
-          "phonePlaceholder": "+971 -- --- ----",
-          "medicalInquiry": "ÙÙØ¹ Ø§ÙØ§Ø³ØªÙØ³Ø§Ø±",
-          "placeholder": "ÙÙÙ ÙÙÙÙÙØ§ ÙØ³Ø§Ø¹Ø¯ØªÙ Ø§ÙÙÙÙØ",
-          "submit": "Ø·ÙØ¨ ÙÙØ¹Ø¯"
-        },
-        "cards": {
-          "call": {
-            "title": "Ø§ØªØµÙ Ø¨ÙØ§",
-            "sub": "ÙØªØ§Ø­ ÙÙØ§Ø³ØªÙØ³Ø§Ø±Ø§Øª Ø§ÙØ¹Ø§Ø¬ÙØ©"
-          },
-          "email": {
-            "title": "Ø§ÙØ¯Ø¹Ù Ø¹Ø¨Ø± Ø§ÙØ¨Ø±ÙØ¯",
-            "sub": "Ø§ÙØ±Ø¯ Ø®ÙØ§Ù 24 Ø³Ø§Ø¹Ø©"
-          },
-          "visit": {
-            "title": "Ø²ÙØ§Ø±Ø© Ø§ÙØ¹ÙØ§Ø¯Ø©",
-            "content": "ÙØ¬ÙØ¹ Ø¯Ø¨Ù ÙÙØ§Ø³ØªØ«ÙØ§Ø± 1Ø Ø¯Ø¨Ù",
-            "sub": "Ø§ÙØ§Ø«ÙÙÙ - Ø§ÙØ³Ø¨Øª: 9 ØµØ¨Ø§Ø­Ø§Ù - 7 ÙØ³Ø§Ø¡Ù"
-          },
-          "social": "ØªØ§Ø¨Ø¹ ØªØ­Ø¯ÙØ«Ø§ØªÙØ§"
-        },
-        "info": {
-          "call": "Ø§ØªØµÙ Ø¨ÙØ§",
-          "email": "Ø§ÙØ¯Ø¹Ù Ø¹Ø¨Ø± Ø§ÙØ¨Ø±ÙØ¯",
-          "visit": "Ø²ÙØ§Ø±Ø© Ø§ÙØ¹ÙØ§Ø¯Ø©",
-          "hours": "Ø§ÙØ§Ø«ÙÙÙ-Ø§ÙØ³Ø¨Øª: 9 ØµØ¨Ø§Ø­Ø§Ù - 7 ÙØ³Ø§Ø¡Ù"
-        }
-      },
-      "footer": {
-        "nav": "Ø±ÙØ§Ø¨Ø· Ø³Ø±ÙØ¹Ø©",
-        "support": "Ø§ÙØ¯Ø¹Ù",
-        "clinic": "ÙÙÙØ¹ Ø§ÙØ¹ÙØ§Ø¯Ø©",
-        "hospitalName": "Ø§ÙÙØ³ØªØ´ÙÙ Ø§ÙÙÙØ¯Ù Ø§ÙØªØ®ØµØµÙ",
-        "emergency": "Ø§ÙØ·ÙØ§Ø±Ø¦",
-        "visitMeAt": "ÙÙ Ø¨Ø²ÙØ§Ø±ØªÙ ÙÙ",
-        "rights": "Ø¬ÙÙØ¹ Ø§ÙØ­ÙÙÙ ÙØ­ÙÙØ¸Ø©",
-        "patientResources": "ÙØµØ§Ø¯Ø± Ø§ÙÙØ±ÙØ¶",
-        "articles": "Ø§ÙÙÙØ§ÙØ§Øª",
-        "privacy": "Ø³ÙØ§Ø³Ø© Ø§ÙØ®ØµÙØµÙØ©",
-        "services": "Ø®Ø¯ÙØ§ØªÙØ§",
-        "serviceLinks": {
-          "arthroscopy": "Ø¬Ø±Ø§Ø­Ø© Ø§ÙÙÙØ¸Ø§Ø±",
-          "sportsMedicine": "Ø§ÙØ·Ø¨ Ø§ÙØ±ÙØ§Ø¶Ù",
-          "roboticSurgery": "Ø§ÙØ¬Ø±Ø§Ø­Ø© Ø§ÙØ±ÙØ¨ÙØªÙØ©",
-          "jointReplacement": "Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙÙØ§ØµÙ",
-          "deformityCorrection": "ØªØµØ­ÙØ­ Ø§ÙØªØ´ÙÙØ§Øª",
-          "physiotherapy": "Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù",
-          "consultation": "Ø§ÙØ§Ø³ØªØ´Ø§Ø±Ø§Øª",
-          "orthopedicTrauma": "ØµØ¯ÙØ§Øª Ø§ÙØ¹Ø¸Ø§Ù",
-          "more": "Ø§ÙÙØ²ÙØ¯"
-        }
-      },
-      "faq_services": {
-        "title": "Ø§ÙØ£Ø³Ø¦ÙØ© Ø§ÙØ´Ø§Ø¦Ø¹Ø© ÙÙØ®Ø¯ÙØ§Øª",
-        "description": "Ø£Ø³Ø¦ÙØ© Ø´Ø§Ø¦Ø¹Ø© Ø­ÙÙ Ø¥Ø¬Ø±Ø§Ø¡Ø§Øª Ø§ÙØ¹Ø¸Ø§Ù ÙØ®Ø·Ø· Ø§ÙØ±Ø¹Ø§ÙØ© Ø§ÙÙØªØ®ØµØµØ© ÙØ¯ÙÙØ§.",
-        "items": [
-          {
-            "question": "ÙÙ ØªÙØ¯ÙÙÙ Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙÙÙØ§ØµÙ Ø§ÙØ±ÙØ¨ÙØªÙØ",
-            "answer": "ÙØ¹ÙØ ÙØ­Ù ÙØªØ®ØµØµÙÙ ÙÙ Ø§Ø³ØªØ¨Ø¯Ø§Ù Ø§ÙØ±ÙØ¨Ø© Ø§ÙÙÙÙ ÙØ§ÙØ¬Ø²Ø¦Ù Ø§ÙÙØªÙØ¯Ù Ø¨ÙØ³Ø§Ø¹Ø¯Ø© Ø§ÙØ±ÙØ¨ÙØª ÙØ¯ÙØ© ÙØ§Ø¦ÙØ©."
-          },
-          {
-            "question": "ÙØ§ ÙÙ ÙØªØ±Ø© Ø§ÙØªØ¹Ø§ÙÙ Ø¨Ø¹Ø¯ Ø¬Ø±Ø§Ø­Ø© Ø§ÙÙÙØ¸Ø§Ø±Ø",
-            "answer": "ÙØ¹ÙØ¯ ÙØ¹Ø¸Ù Ø§ÙÙØ±Ø¶Ù ÙÙØ£ÙØ´Ø·Ø© Ø§ÙØ®ÙÙÙØ© ÙÙ ØºØ¶ÙÙ Ø£ÙØ§Ù ÙÙÙÙØ©Ø Ø¨ÙÙÙØ§ ÙØ¯ ÙØ³ØªØºØ±Ù Ø§ÙØªØ¹Ø§ÙÙ Ø§ÙØ±ÙØ§Ø¶Ù Ø§ÙÙØ§ÙÙ 6-12 Ø£Ø³Ø¨ÙØ¹Ø§Ù."
-          },
-          {
-            "question": "ÙÙ ØªØªÙÙØ± Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹ÙØ",
-            "answer": "ÙØ­Ù ÙÙØ¯Ù Ø®Ø·Ø· ØªØ£ÙÙÙ ÙØªÙØ§ÙÙØ© ÙØ¶ÙØ§Ù Ø§ÙØªØ¹Ø§ÙÙ Ø§ÙÙØ§ÙÙ."
-          }
-        ]
-      },
-      "faq_articles": {
-        "title": "ÙØ±ÙØ² Ø§ÙØªØ¹ÙÙ - Ø§ÙØ£Ø³Ø¦ÙØ© Ø§ÙØ´Ø§Ø¦Ø¹Ø©",
-        "description": "ÙØ¹ÙÙÙØ§Øª Ø­ÙÙ Ø±Ø¤ÙØªÙØ§ Ø§ÙØ·Ø¨ÙØ© ÙØªØ­Ø¯ÙØ«Ø§Øª Ø§ÙÙØ¯ÙÙØ© ÙÙØ¨Ø§Ø¯Ø±Ø§Øª Ø§ÙØ£Ø¨Ø­Ø§Ø«.",
-        "items": [
-          {
-            "question": "ÙÙ ÙØ±Ø© ÙØªÙ ÙØ´Ø± ÙÙØ§ÙØ§Øª Ø¬Ø¯ÙØ¯Ø©Ø",
-            "answer": "ÙØ´Ø§Ø±Ù Ø±Ø¤Ù Ø·Ø¨ÙØ© ÙØªØ­Ø¯ÙØ«Ø§Øª Ø£Ø¨Ø­Ø§Ø« Ø³Ø±ÙØ±ÙØ© Ø¬Ø¯ÙØ¯Ø© ÙÙ Ø¨Ø¶Ø¹Ø© Ø£Ø³Ø§Ø¨ÙØ¹ ÙØ¥Ø¨ÙØ§Ø¡ ÙØ±Ø¶Ø§ÙØ§ Ø¹ÙÙ Ø§Ø·ÙØ§Ø¹."
-          },
-          {
-            "question": "ÙÙ ÙÙÙÙÙÙ Ø§ÙØªØ±Ø§Ø­ ÙÙØ¶ÙØ¹ ÙÙÙØ¯ÙÙØ©Ø",
-            "answer": "Ø¨Ø§ÙØªØ£ÙÙØ¯! ÙØ±Ø­Ø¨ Ø¨Ø§Ø³ØªÙØ³Ø§Ø±Ø§Øª Ø§ÙÙØ±Ø¶Ù ÙØºØ§ÙØ¨Ø§Ù ÙØ§ ÙØ¹Ø§ÙØ¬ Ø§ÙØ§ÙØªÙØ§ÙØ§Øª Ø§ÙØ´Ø§Ø¦Ø¹Ø© ÙÙ ÙÙØ§ÙØ§ØªÙØ§ Ø§ÙØ·Ø¨ÙØ© Ø§ÙÙÙØµÙØ©."
-          }
-        ]
-      },
-      "physioHome": {
-        "seo": {
-          "title": "Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙÙØ²ÙÙ ÙÙ Ø¯Ø¨Ù | Ø®Ø¨Ø±Ø§Ø¡ ÙØ±Ø®ØµÙÙ ÙÙ ÙÙØ¦Ø© Ø§ÙØµØ­Ø© Ø¨Ø¯Ø¨Ù",
-          "description": "Ø§Ø­ØµÙ Ø¹ÙÙ Ø®Ø¯ÙØ§Øª Ø¹ÙØ§Ø¬ Ø·Ø¨ÙØ¹Ù Ø®Ø¨ÙØ±Ø© ÙÙ Ø¯Ø¨Ù ÙØ¹ Ø²ÙØ§Ø±Ø§Øª ÙÙØ²ÙÙØ© ÙÙ ÙØ¨Ù ÙØ­ØªØ±ÙÙÙ ÙØ±Ø®ØµÙÙ ÙÙ ÙÙØ¦Ø© Ø§ÙØµØ­Ø© Ø¨Ø¯Ø¨Ù. Ø¹ÙØ§Ø¬ ÙØ®ØµØµ ÙØªØ®ÙÙÙ Ø§ÙØ¢ÙØ§Ù ÙØ§ÙØªØ¹Ø§ÙÙ ÙØ§ÙØ­Ø±ÙØ©. Ø§Ø­Ø¬Ø² Ø§ÙØ¢Ù."
-        },
-        "hero": {
-          "title": "Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙÙ Ø¯Ø¨Ù | Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙÙØ²ÙÙ ÙØ±Ø¹Ø§ÙØ© Ø§ÙØªØ£ÙÙÙ",
-          "description": "ÙÙ ØªØ¹Ø§ÙÙ ÙÙ Ø§ÙØ£ÙÙ Ø£Ù Ø§ÙØªÙØ¨Ø³ Ø£Ù ØµØ¹ÙØ¨Ø© Ø§ÙØ­Ø±ÙØ©Ø ØªÙ ØªØµÙÙÙ Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙØ¯ÙÙØ§ ÙÙ Ø¯Ø¨Ù ÙÙØ³Ø§Ø¹Ø¯ØªÙ Ø¹ÙÙ Ø§ÙØªØ¹Ø§ÙÙ Ø¨Ø£ÙØ§Ù ÙØ§Ø³ØªØ¹Ø§Ø¯Ø© Ø§ÙØ«ÙØ© ÙÙ Ø£ÙØ´Ø·ØªÙ Ø§ÙÙÙÙÙØ©. Ø³ÙØ§Ø¡ ÙÙØª Ø¨Ø­Ø§Ø¬Ø© Ø¥ÙÙ Ø§ÙØ¹ÙØ§Ø¬ ÙÙ Ø§ÙÙÙØ²Ù Ø£Ù ÙÙ Ø§ÙÙÙØ¯Ù Ø£Ù ÙÙ ÙÙØ§Ù Ø¹ÙÙÙØ ÙÙØ­Ù ÙÙØ¯Ù Ø±Ø¹Ø§ÙØ© ÙÙØ¸ÙØ© ÙÙÙÙÙØ© ÙØµÙÙØ© Ø®ØµÙØµØ§Ù ÙØ­Ø§ÙØªÙ."
-        },
-        "features": [
-          "Ø£Ø®ØµØ§Ø¦ÙÙ Ø¹ÙØ§Ø¬ Ø·Ø¨ÙØ¹Ù ÙØ±Ø®ØµÙÙ ÙÙ ÙÙØ¦Ø© Ø§ÙØµØ­Ø© Ø¨Ø¯Ø¨Ù ÙÙØ²ÙØ§Ø±Ø§Øª Ø§ÙÙÙØ²ÙÙØ© ÙÙ Ø¬ÙÙØ¹ Ø£ÙØ­Ø§Ø¡ Ø¯Ø¨Ù.",
-          "Ø¹ÙØ§Ø¬ Ø·Ø¨ÙØ¹Ù ÙÙ Ø§ÙÙÙØ²Ù Ø£Ù Ø§ÙÙÙØ¯Ù Ø£Ù Ø§ÙÙÙØªØ¨ â ÙØ±Ù ÙÙØ±ÙØ­.",
-          "Ø®Ø·Ø· Ø¹ÙØ§Ø¬ ÙØ®ØµØµØ© ÙØªØ¹Ø§ÙÙ Ø£Ø³Ø±Ø¹ ÙØ¢ÙÙ.",
-          "ÙÙØ§Ø³Ø¨ ÙÙØ§ Ø¨Ø¹Ø¯ Ø§ÙØ¬Ø±Ø§Ø­Ø© ÙØ§ÙØ¥ØµØ§Ø¨Ø§Øª ÙØ±Ø¹Ø§ÙØ© Ø§ÙÙØ³ÙÙÙ ÙØ§ÙØ¢ÙØ§Ù Ø§ÙÙØ²ÙÙØ©.",
-          "Ø£Ø³Ø¹Ø§Ø± Ø´ÙØ§ÙØ© ÙØ¨Ø£Ø³Ø¹Ø§Ø± ÙØ¹ÙÙÙØ© Ø¨Ø¯ÙÙ ØªÙØ§ÙÙÙ ÙØ®ÙÙØ©."
-        ],
-        "ctas": {
-          "call": "Ø§ØªØµÙ Ø¨ÙØ§ Ø§ÙØ¢Ù",
-          "whatsapp": "ÙØ§ØªØ³Ø§Ø¨ Ø§ÙØ¢Ù"
-        },
-        "conditions": {
-          "badge": "Ø§ÙØ­Ø§ÙØ§Øª Ø§ÙØªÙ ÙØªÙ Ø¹ÙØ§Ø¬ÙØ§ Ø¨Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù",
-          "title": "Ø±Ø¹Ø§ÙØ© ÙÙÙÙØ© ÙØ¢ÙØ§Ù Ø§ÙØ¸ÙØ± ÙØ§ÙÙÙØ§ØµÙ ÙÙØ´Ø§ÙÙ Ø§ÙØ­Ø±ÙØ©",
-          "description": "ÙÙØ¹Ø¨ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø¯ÙØ±Ø§Ù ÙÙÙØ§Ù ÙÙ Ø¥Ø¯Ø§Ø±Ø© ÙØ¬ÙÙØ¹Ø© ÙØ§Ø³Ø¹Ø© ÙÙ Ø§ÙØ­Ø§ÙØ§Øª. ØºØ§ÙØ¨Ø§Ù ÙØ§ ÙØ¤Ø¯Ù Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙÙØ¨ÙØ± Ø¥ÙÙ ØªØ¹Ø§ÙÙ Ø£Ø³Ø±Ø¹ ÙÙØ³Ø§Ø¹Ø¯ ÙÙ ÙÙØ¹ Ø§ÙÙØ¶Ø§Ø¹ÙØ§Øª Ø·ÙÙÙØ© Ø§ÙÙØ¯Ù.",
-          "items": [
-            {
-              "title": "Ø¢ÙØ§Ù Ø§ÙØ¸ÙØ± ÙØ§ÙØ±ÙØ¨Ø©",
-              "desc": "Ø¥Ø¹Ø§Ø¯Ø© ØªØ£ÙÙÙ ÙØ³ØªÙØ¯ÙØ© ÙÙØªØµÙØ¨ ÙØ¢ÙØ§Ù Ø§ÙÙÙØ§Ù ÙØ§ÙØªØ´ÙØ¬ Ø§ÙØ¹Ø¶ÙÙ ÙØ¶Ø¹Ù Ø§ÙÙØ¸ÙÙØ©."
-            },
-            {
-              "title": "Ø¢ÙØ§Ù Ø§ÙØ±ÙØ¨Ø© ÙØªÙØ¨Ø³ÙØ§",
-              "desc": "Ø¹ÙØ§Ø¬ ÙÙØ¸Ù ÙØªØ­Ø³ÙÙ Ø­Ø±ÙØ© Ø§ÙÙÙØ§ØµÙ ÙÙÙØªÙØ§ ÙØ§ÙØ«ÙØ© Ø£Ø«ÙØ§Ø¡ Ø§ÙÙØ´Ù ÙØ§ÙÙØ´Ø§Ø·."
-            },
-            {
-              "title": "Ø¢ÙØ§Ù Ø§ÙÙØªÙ",
-              "desc": "Ø¹ÙØ§Ø¬ ÙØ±ÙØ² ÙÙØ£ÙÙ ÙØ§ÙØ¶Ø¹Ù ÙØ­Ø±ÙØ© Ø§ÙÙØªÙ Ø§ÙÙØ­Ø¯ÙØ¯Ø© Ø£Ø«ÙØ§Ø¡ Ø§ÙØ£ÙØ´Ø·Ø© Ø§ÙÙÙÙÙØ©."
-            },
-            {
-              "title": "Ø§ÙØ¥ØµØ§Ø¨Ø§Øª Ø§ÙØ±ÙØ§Ø¶ÙØ©",
-              "desc": "Ø¨Ø±Ø§ÙØ¬ ØªØ¹Ø§ÙÙ ÙØ¥ØµØ§Ø¨Ø§Øª Ø§ÙØ¹Ø¶ÙØ§Øª ÙØ¥ØµØ§Ø¨Ø§Øª Ø§ÙØ£ÙØ³Ø¬Ø© Ø§ÙØ±Ø®ÙØ© ÙÙØ´Ø§ÙÙ Ø§ÙØ¥Ø¬ÙØ§Ø¯ Ø§ÙÙÙØ±Ø· ÙØ§ÙØ¹ÙØ¯Ø© ÙÙÙØ´Ø§Ø·."
-            },
-            {
-              "title": "Ø±Ø¹Ø§ÙØ© Ø§ÙØªÙØ§Ø¨ Ø§ÙÙÙØ§ØµÙ",
-              "desc": "Ø¹ÙØ§Ø¬ ÙØ·ÙÙ ÙØªØ¯Ø±ÙØ¬Ù ÙØªÙÙÙÙ Ø§ÙØ£ÙÙ ÙØªØ­Ø³ÙÙ Ø§ÙØ­Ø±ÙØ© ÙØ¯Ø¹Ù ØµØ­Ø© Ø§ÙÙÙØ§ØµÙ Ø¹ÙÙ Ø§ÙÙØ¯Ù Ø§ÙØ·ÙÙÙ."
-            },
-            {
-              "title": "Ø¥Ø¹Ø§Ø¯Ø© Ø§ÙØªØ£ÙÙÙ Ø¨Ø¹Ø¯ Ø§ÙØ¬Ø±Ø§Ø­Ø©",
-              "desc": "Ø¯Ø¹Ù ØªØ¹Ø§ÙÙ ÙØ®Ø·Ø· ÙÙ Ø¨Ø¹Ø¯ Ø¹ÙÙÙØ§Øª Ø§ÙØ¹Ø¸Ø§Ù ÙØ¹ ØªØ¹Ø²ÙØ² Ø§ÙØ­Ø±ÙØ© ÙØ§ÙÙÙØ§ÙÙØ©."
-            },
-            {
-              "title": "Ø¯Ø¹Ù ØªØµØ­ÙØ­ Ø§ÙØªØ´ÙÙØ§Øª",
-              "desc": "Ø±Ø¹Ø§ÙØ© ØªØ£ÙÙÙÙØ© ÙØªØ­Ø³ÙÙ Ø£ÙÙØ§Ø· Ø§ÙØ­Ø±ÙØ© Ø§ÙÙØªØ¹ÙÙØ© Ø¨Ø§ÙÙØ­Ø§Ø°Ø§Ø© ÙØ§ÙØªØ¹Ø§ÙÙ Ø§ÙÙØ¸ÙÙÙ."
-            },
-            {
-              "title": "Ø§ÙØªØ¹Ø§ÙÙ ÙÙ Ø§Ø³ØªØ¨Ø¯Ø§Ù ÙÙØµÙ Ø§ÙÙØ±Ù",
-              "desc": "Ø¹ÙØ§Ø¬ Ø·Ø¨ÙØ¹Ù ØªØ¯Ø±ÙØ¬Ù ÙØ±ÙØ² Ø¹ÙÙ Ø§ÙÙÙØ© ÙØ§ÙØªÙØ§Ø²Ù ÙØ§ÙØ«ÙØ© ÙÙ Ø§ÙÙØ´Ù ÙØ§ÙØ§Ø³ØªÙÙØ§Ù Ø§ÙØ¢ÙÙ."
-            }
-          ],
-          "footer": "ØºØ§ÙØ¨Ø§Ù ÙØ§ ÙØ¤Ø¯Ù Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙÙØ¨ÙØ± Ø¥ÙÙ ØªØ¹Ø§ÙÙ Ø£Ø³Ø±Ø¹ ÙÙÙÙØ¹ Ø§ÙÙØ¶Ø§Ø¹ÙØ§Øª Ø·ÙÙÙØ© Ø§ÙÙØ¯Ù."
-        },
-        "benefits": {
-          "title": "ÙÙØ§Ø¦Ø¯ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙØ¹ Ø§ÙØ¯ÙØªÙØ± Ø£ÙÙÙØ§Ø³",
-          "description": "ÙØ±ÙØ² Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙØ¹ Ø§ÙØ¯ÙØªÙØ± Ø£ÙÙÙØ§Ø³ Ø¹ÙÙ Ø§Ø³ØªØ¹Ø§Ø¯Ø© Ø§ÙØ­Ø±ÙØ© ÙØªÙÙÙÙ Ø§ÙØ£ÙÙ ÙÙØ³Ø§Ø¹Ø¯ØªÙ Ø¹ÙÙ Ø§ÙØ¹ÙØ¯Ø© Ø¥ÙÙ Ø£ÙØ´Ø·ØªÙ Ø§ÙÙÙÙÙØ© Ø¨Ø«ÙØ©.",
-          "items": [
-            "ØªÙÙÙÙ Ø§ÙØ£ÙÙ ÙØ§ÙØ§ÙØªÙØ§Ø¨",
-            "ØªØ­Ø³ÙÙ Ø§ÙØ­Ø±ÙØ© ÙØ§ÙÙØ±ÙÙØ©",
-            "ØªØ¹Ø§ÙÙ Ø£Ø³Ø±Ø¹ Ø¨Ø¹Ø¯ Ø§ÙØ¥ØµØ§Ø¨Ø© Ø£Ù Ø§ÙØ¬Ø±Ø§Ø­Ø©",
-            "ÙÙØ© ÙØ§Ø³ØªÙØ±Ø§Ø± Ø£ÙØ¶Ù",
-            "ØªÙÙÙÙ Ø§ÙØ§Ø¹ØªÙØ§Ø¯ Ø¹ÙÙ Ø§ÙØ£Ø¯ÙÙØ©"
-          ],
-          "footer": "ÙØ¹ ÙØ¬ÙØ¯ Ø®Ø·Ø© Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙÙÙØ§Ø³Ø¨Ø©Ø ÙÙØ§Ø­Ø¸ ÙØ¹Ø¸Ù Ø§ÙÙØ±Ø¶Ù ØªØ­Ø³ÙØ§Ù ØªØ¯Ø±ÙØ¬ÙØ§Ù ÙØ«Ø§Ø¨ØªØ§Ù."
-        },
-        "expertTreatment": {
-          "title": "Ø¹ÙØ§Ø¬ ÙÙØ²ÙÙ ÙØªØ®ØµØµ ÙØ¹ Ø§ÙØ¯ÙØªÙØ± Ø£ÙÙÙØ§Ø³ Ø³ÙÙØ§Ø±",
-          "description": "ÙÙØ¯Ù Ø§ÙØ¯ÙØªÙØ± Ø£ÙÙÙØ§Ø³ Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙÙØ£ÙØ±Ø§Ø¯ ÙÙ Ø¬ÙÙØ¹ Ø§ÙØ£Ø¹ÙØ§Ø± ÙÙ Ø±Ø¹Ø§ÙØ© Ø§ÙØ£Ø·ÙØ§Ù Ø¥ÙÙ Ø±Ø¹Ø§ÙØ© ÙØ¨Ø§Ø± Ø§ÙØ³ÙØ ÙØ¹ Ø±Ø¹Ø§ÙØ© ÙØ§ÙØªÙØ§Ù ÙÙØ§Ø³Ø¨ÙÙ.",
-          "categories": [
-            "ÙØ±Ø¶Ù ÙØ§ Ø¨Ø¹Ø¯ Ø§ÙØ¬Ø±Ø§Ø­Ø©",
-            "Ø§ÙØ±ÙØ§Ø¶ÙÙÙ",
-            "Ø§ÙÙØ±Ø¶Ù ÙØ¨Ø§Ø± Ø§ÙØ³Ù",
-            "ÙØ±Ø¶Ù Ø§ÙØ±Ø¹Ø§ÙØ© Ø§ÙÙØ²ÙÙØ©",
-            "ÙØ±Ø¶Ù Ø§ÙØ­Ø§ÙØ§Øª Ø§ÙØ¹ØµØ¨ÙØ©",
-            "ÙØ±Ø¶Ù Ø§ÙØ¬ÙØ§Ø² Ø§ÙØ¹Ø¶ÙÙ Ø§ÙÙÙÙÙÙ"
-          ]
-        },
-        "ctaBanner": {
-          "title": "Ø§Ø¨Ø¯Ø£ Ø±Ø­ÙØ© ØªØ¹Ø§ÙÙÙ Ø§ÙÙÙÙ ÙØ¹ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙØªØ®ØµØµ ÙÙ Ø¯Ø¨Ù",
-          "subtitle": "Ø±Ø¹Ø§ÙØ© ÙØªÙØ¯ÙØ© ØªØ±ÙØ² Ø¹ÙÙ Ø§ÙØªØ¹Ø§ÙÙ Ø§ÙØ£Ø³Ø±Ø¹ ÙØ§ÙÙÙØ© ÙØ§ÙÙØªØ§Ø¦Ø¬ Ø·ÙÙÙØ© Ø§ÙÙØ¯Ù"
-        },
-        "whyChoose": {
-          "title": "ÙÙØ§Ø°Ø§ ØªØ®ØªØ§Ø± Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙØªÙ ÙÙØ¯ÙÙØ§ ÙÙ Ø¯Ø¨Ù",
-          "description": "ÙØ¹Ø¯ Ø§Ø®ØªÙØ§Ø± Ø®Ø¯ÙØ© Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙÙØ§Ø³Ø¨Ø© Ø£ÙØ±Ø§Ù ÙÙÙØ§Ù ÙÙØ³ÙØ§ÙØ© ÙØ§ÙÙØªØ§Ø¦Ø¬ Ø¹ÙÙ Ø­Ø¯ Ø³ÙØ§Ø¡. ÙØ¹ØªÙØ¯ ÙÙØ¬ÙØ§ Ø¹ÙÙ Ø§ÙØ®Ø¨Ø±Ø© Ø§ÙØ³Ø±ÙØ±ÙØ© ÙØ§ÙØ±Ø¹Ø§ÙØ© Ø§ÙÙÙØ¸ÙØ©:",
-          "items": [
-            "Ø¹ÙØ§Ø¬ ÙÙØ¬Ù Ø¨Ø®Ø¨Ø±Ø© Ø£Ø®ØµØ§Ø¦Ù Ø§ÙØ¹Ø¸Ø§Ù ÙØ§ÙÙÙØ§ØµÙ",
-            "Ø§ÙØªÙØ§Ù ÙØ±Ø¯Ù Ø¨Ø¬ÙØ³Ø§Øª Ø´Ø®ØµÙØ© (ÙØ§Ø­Ø¯ ÙÙØ§Ø­Ø¯)",
-            "ØªØ´Ø®ÙØµ ÙØ§Ø¶Ø­ ÙØªØ®Ø·ÙØ· Ø¹ÙØ§Ø¬Ù ÙØ³ØªÙØ¯Ù",
-            "Ø§ÙØªØ±ÙÙØ² Ø¹ÙÙ Ø§ÙØªØ¹Ø§ÙÙ Ø·ÙÙÙ Ø§ÙÙØ¯Ù ÙÙÙØ³ Ø§ÙØ±Ø§Ø­Ø© Ø§ÙÙØ¤ÙØªØ©",
-            "ØªÙÙØ± Ø®Ø¯ÙØ§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙÙ Ø§ÙØ¹ÙØ§Ø¯Ø© ÙØ§ÙÙÙØ²Ù Ø¹ÙÙ Ø­Ø¯ Ø³ÙØ§Ø¡"
-          ],
-          "footer": "ÙØªÙ ØªÙÙÙÙ ÙÙ ÙØ±ÙØ¶ Ø¨Ø¹ÙØ§ÙØ©Ø ÙÙØªÙ ØªØ¹Ø¯ÙÙ Ø§ÙØ¹ÙØ§Ø¬ ÙØ¹ ØªÙØ¯Ù Ø§ÙØªØ¹Ø§ÙÙ."
-        },
-        "expectations": {
-          "title": "ÙØ§Ø°Ø§ ØªØªÙÙØ¹ ÙÙ Ø¬ÙØ³Ø© Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙØ®Ø§ØµØ© Ø¨ÙØ",
-          "description": "ØªÙ ØªÙØ¸ÙÙ Ø¬ÙØ³Ø© Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙØ®Ø§ØµØ© Ø¨Ù ÙØ¶ÙØ§Ù ØªØ¹Ø§ÙÙ Ø£ÙÙ ÙÙØ¹Ø§Ù ÙÙØªØ³Ù.",
-          "steps": [
-            {
-              "title": "Ø§ÙØªÙÙÙÙ Ø§ÙØ£ÙÙÙ",
-              "desc": "ÙØªÙ ØªÙÙÙÙ Ø­Ø§ÙØªÙ ÙÙÙØ§Ø·Ù Ø§ÙØ£ÙÙ ÙØ§ÙØ­Ø±ÙØ© Ø¨Ø¹ÙØ§ÙØ© ÙÙÙÙ Ø§ÙØ³Ø¨Ø¨ Ø§ÙØ¬Ø°Ø±Ù ÙØ§ÙØªØ®Ø·ÙØ· ÙÙØ¹ÙØ§Ø¬ Ø§ÙÙÙØ§Ø³Ø¨."
-            },
-            {
-              "title": "Ø¬ÙØ³Ø© Ø§ÙØ¹ÙØ§Ø¬",
-              "desc": "Ø³ØªØªÙÙÙ Ø¹ÙØ§Ø¬Ø§Ù ÙØ¯ÙÙØ§Ù Ø¨Ø§ÙØ¥Ø¶Ø§ÙØ© Ø¥ÙÙ ØªÙØ§Ø±ÙÙ ÙÙØ¬ÙØ© ØªØ±ÙØ² Ø¹ÙÙ ØªÙÙÙÙ Ø§ÙØ£ÙÙ ÙØªØ­Ø³ÙÙ Ø§ÙØ­Ø±ÙØ©."
-            },
-            {
-              "title": "ÙØ±Ø§ÙØ¨Ø© Ø§ÙØªÙØ¯Ù",
-              "desc": "ÙØªÙ ÙØ±Ø§Ø¬Ø¹Ø© ØªØ­Ø³ÙÙ Ø¨Ø§ÙØªØ¸Ø§Ù ÙØªØ¹Ø¯ÙÙ Ø®Ø·Ø© Ø§ÙØ¹ÙØ§Ø¬ ÙØ¶ÙØ§Ù Ø§ÙØªØ¹Ø§ÙÙ Ø§ÙÙØ³ØªÙØ±."
-            }
-          ]
-        },
-        "faqs": {
-          "title": "Ø§ÙØ£Ø³Ø¦ÙØ© Ø§ÙØ´Ø§Ø¦Ø¹Ø©",
-          "items": [
-            {
-              "q": "ÙÙ ØªØ¨ÙØº ØªÙÙÙØ© Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙÙ Ø¯Ø¨ÙØ",
-              "a": "ØªØ¹ØªÙØ¯ Ø§ÙØªÙÙÙØ© Ø¹ÙÙ ÙÙØ¹ Ø§ÙØ¹ÙØ§Ø¬ ÙØ¹Ø¯Ø¯ Ø§ÙØ¬ÙØ³Ø§Øª Ø§ÙÙØ·ÙÙØ¨Ø©. ØªØªÙÙØ± Ø¨Ø§ÙØ§Øª ÙØ±ÙØ© ÙØ¬Ø¹Ù Ø§ÙØ¹ÙØ§Ø¬ Ø£ÙØ«Ø± ÙÙØ§Ø¡ÙØ© ÙÙÙÙØ²Ø§ÙÙØ©."
-            },
-            {
-              "q": "ÙÙ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙÙ Ø§ÙÙÙØ²Ù ÙØ¹Ø§ÙØ",
-              "a": "ÙØ¹ÙØ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙÙØ²ÙÙ ÙØ¹Ø§Ù Ø¨ÙÙØ³ Ø§ÙÙØ¯Ø± Ø¹ÙØ¯ÙØ§ ÙÙØ¯ÙÙ ÙØªØ®ØµØµÙÙ ÙØ¤ÙÙÙÙØ ÙÙØ§ Ø£ÙÙ ÙØ²ÙØ¯ ÙÙ Ø§ÙØ±Ø§Ø­Ø© ÙØ§ÙØ§Ø³ØªÙØ±Ø§Ø±ÙØ©."
-            },
-            {
-              "q": "ÙÙ Ø¹Ø¯Ø¯ Ø¬ÙØ³Ø§Øª Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙØªÙ Ø³Ø£Ø­ØªØ§Ø¬ÙØ§ï¼",
-              "a": "ÙØ¹ØªÙØ¯ ÙØ°Ø§ Ø¹ÙÙ Ø­Ø§ÙØªÙ. ÙØªØ­Ø³Ù Ø¨Ø¹Ø¶ Ø§ÙÙØ±Ø¶Ù Ø®ÙØ§Ù Ø¬ÙØ³Ø§Øª ÙÙÙÙØ©Ø Ø¨ÙÙÙØ§ ÙØ¯ ÙØ­ØªØ§Ø¬ Ø¢Ø®Ø±ÙÙ Ø¥ÙÙ Ø¨Ø±ÙØ§ÙØ¬ Ø¥Ø¹Ø§Ø¯Ø© ØªØ£ÙÙÙ ÙÙØ¸Ù."
-            },
-            {
-              "q": "ÙÙ ØªÙØ¯ÙÙÙ Ø¹ÙØ§Ø¬Ø§Ù Ø·Ø¨ÙØ¹ÙØ§Ù ÙÙØ¨Ø§Ø± Ø§ÙØ³Ù ÙÙ Ø§ÙÙÙØ²ÙØ",
-              "a": "ÙØ¹ÙØ ÙÙØ³ØªØ®Ø¯Ù Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙÙØ²ÙÙ Ø¨Ø´ÙÙ Ø´Ø§Ø¦Ø¹ ÙÙØ¨Ø§Ø± Ø§ÙØ³Ù ÙØªØ­Ø³ÙÙ Ø§ÙØ­Ø±ÙØ© ÙØ§ÙØªÙØ§Ø²Ù ÙØ§ÙÙÙØ© Ø¨Ø£ÙØ§Ù."
-            },
-            {
-              "q": "ÙÙ ÙÙÙÙÙÙ Ø§ÙØ­ØµÙÙ Ø¹ÙÙ Ø®Ø¯ÙØ© Ø¹ÙØ§Ø¬ Ø·Ø¨ÙØ¹Ù ÙÙ ÙÙØ³ Ø§ÙÙÙÙ ÙÙ Ø¯Ø¨ÙØ",
-              "a": "ÙØ¯ ØªØªÙÙØ± ÙÙØ§Ø¹ÙØ¯ ÙÙ ÙÙØ³ Ø§ÙÙÙÙ Ø§Ø¹ØªÙØ§Ø¯Ø§Ù Ø¹ÙÙ Ø§ÙØ¬Ø¯ÙÙ ÙØ§ÙÙÙÙØ¹."
-            },
-            {
-              "q": "ÙÙ Ø£Ø®ØµØ§Ø¦ÙÙ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙØ¹ØªÙØ¯ÙÙ ÙÙØ²ÙØ§Ø±Ø§Øª Ø§ÙÙÙØ²ÙÙØ© ÙÙ Ø¯Ø¨ÙØ",
-              "a": "ÙØ¹ÙØ Ø¬ÙÙØ¹ Ø£Ø®ØµØ§Ø¦ÙÙ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙØ°ÙÙ ÙÙØ¯ÙÙÙ Ø²ÙØ§Ø±Ø§Øª ÙÙØ²ÙÙØ© ÙØ±Ø®ØµÙÙ ÙÙ ÙÙØ¦Ø© Ø§ÙØµØ­Ø© Ø¨Ø¯Ø¨Ù ÙÙØ¤ÙÙÙÙ ÙØªÙØ¯ÙÙ Ø§ÙØ¹ÙØ§Ø¬ ÙÙ Ø¯Ø¨Ù. ØªØªØ¨Ø¹ ÙÙ Ø¬ÙØ³Ø© Ø§ÙÙØ¹Ø§ÙÙØ± Ø§ÙØ³Ø±ÙØ±ÙØ© ÙØ¹ ØªÙÙÙÙ ÙÙØ§Ø³Ø¨ ÙØ¹ÙØ§Ø¬ ÙÙØ¸Ù ÙÙØ±Ø§ÙØ¨Ø© ÙØ³ØªÙØ±Ø© ÙØ¶ÙØ§Ù Ø±Ø¹Ø§ÙØ© ÙÙØ²ÙÙØ© Ø¢ÙÙØ© ÙÙØ¹Ø§ÙØ©."
-            },
-            {
-              "q": "ÙÙ Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù ÙÙ Ø§ÙÙÙØ²Ù Ø£Ø±Ø®Øµ ÙÙ Ø²ÙØ§Ø±Ø© Ø§ÙØ¹ÙØ§Ø¯Ø©Ø",
-              "a": "ÙØ¯ ÙÙÙÙ ÙÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙÙØ²ÙÙ ØªÙÙÙØ© Ø£Ø¹ÙÙ ÙÙÙÙØ§Ù ÙÙÙ Ø¬ÙØ³Ø© Ø¨Ø³Ø¨Ø¨ Ø§ÙØ³ÙØ± ÙØ§ÙØ±Ø§Ø­Ø©Ø ÙÙÙÙÙ ØºØ§ÙØ¨Ø§Ù ÙØ§ ÙÙÙØ± ÙÙÙØ© Ø£ÙØ¶Ù ÙÙ Ø®ÙØ§Ù Ø§ÙØ±Ø¹Ø§ÙØ© Ø§ÙØ´Ø®ØµÙØ© ÙØªÙÙÙØ± Ø§ÙÙÙØª ÙØªØ­Ø³ÙÙ Ø§Ø³ØªÙØ±Ø§Ø±ÙØ© Ø§ÙØ¹ÙØ§Ø¬. ØªØªÙÙØ± Ø¨Ø§ÙØ§Øª ÙØ±ÙØ© ÙØ¬Ø¹Ù Ø§ÙØ¹ÙØ§Ø¬ Ø§ÙØ·Ø¨ÙØ¹Ù Ø§ÙÙÙØ²ÙÙ ÙØªØ§Ø­Ø§Ù ÙÙØ¹Ø§ÙØ§Ù ÙÙ Ø­ÙØ« Ø§ÙØªÙÙÙØ©."
-            }
-          ]
-        }
       }
-    }
-  },
-  "articles": {
-    "causes-of-knee-pain": {
-      "id": "causes-of-knee-pain",
-      "title": "Understanding Common Causes of Knee Pain",
-      "metaTitle": "Common Causes of Knee Pain â From Sports Injuries to Arthritis",
-      "metaDescription": "Learn about the most common causes of knee pain, from acute sports injuries to chronic conditions like arthritis, and how to identify them.",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Knee Health",
-      "categoryColor": "bg-blue-100 text-blue-700",
-      "image": "/images/articles/article_causes_knee.png",
-      "readTime": "5 min read",
-      "excerpt": "Knee pain affects people of all ages. Whether it's a sports injury or arthritis, understanding the underlying cause is the first step toward effective treatment.",
-      "content": "\n            <p>Knee pain is a common complaint that affects people of all ages. Understanding the underlying cause is the first step toward effective treatment. Whether it's a sudden injury or a gradual onset of discomfort, identifying the source is crucial.</p>\n            <h3>Common Causes in Young Adults</h3>\n            <p>In younger, active individuals, knee pain is often related to sports or overuse. Conditions like <strong>patellofemoral pain syndrome</strong> or ligament tears are frequent. If you've been active lately, you might notice <a href=\"/blog/knee-pain-gym-sports\">knee pain after gym or sports</a>, which could indicate anything from simple strain to a more serious injury.</p>\n            <h3>Age-Related Wear and Tear</h3>\n            <p>As we age, degenerative changes like <strong>osteoarthritis</strong> become more common. This occurs when the protective cartilage that cushions the ends of your bones wears down over time. It's often helpful to understand the <a href=\"/blog/causes-of-knee-pain\">causes of knee pain in young adults</a> versus older populations to tailor the recovery plan.</p>\n            <h3>When to Seek Help</h3>\n            <p>Persistent pain, swelling, or instability should not be ignored. Many patients ask <a href=\"/blog/when-to-get-mri-knee\">when knee pain needs MRI</a> to rule out internal structural damage. Furthermore, understanding the <a href=\"/blog/continuing-sports-risks\">continuing sports with knee pain risks</a> can prevent long-term joint damage.</p>\n        ",
-      "relatedServiceIds": [
-        0,
-        1,
-        3
-      ]
-    },
-    "knee-pain-gym-sports": {
-      "id": "knee-pain-gym-sports",
-      "title": "Knee Pain After Gym or Sports in Working Professionals: Ligament Injury or Cartilage Damage?",
-      "metaTitle": "Knee Pain After Gym or Sports in Working Professionals â Ligament vs Cartilage Injury",
-      "metaDescription": "Knee pain after gym or sports is common in working professionals. Learn how to distinguish ligament injury from cartilage damage, warning signs, and management options.",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Sports Medicine",
-      "categoryColor": "bg-orange-100 text-orange-700",
-      "image": "/images/articles/article_gym_sports.png",
-      "readTime": "10 min read",
-      "excerpt": "Knee pain after gym or sports is common in working professionals. Learn how to distinguish ligament injury from cartilage damage, warning signs, and management options.",
-      "content": "\n            <p>Knee pain following gym workouts or sports activity is a frequent complaint among active adults and working professionals. This is particularly common in individuals who combine prolonged desk-based work with recreational sports, gym training, or weekend athletic activity. While delayed muscle soreness is expected after exercise, knee pain associated with swelling, instability, or mechanical symptoms may indicate underlying joint injury.</p>\n            <p>In working professionals, knee pain is often underestimated or self-managed due to work commitments, travel, or limited time for rehabilitation. Continuing activity without proper evaluation can lead to worsening symptoms, prolonged recovery, and secondary joint damage. Differentiating between ligament injury, cartilage damage, and overload-related pain is essential for appropriate management.</p>\n\n            <h3>Why knee pain after gym or sports is common in working professionals</h3>\n            <p>Several factors contribute to the high incidence of post-exercise knee pain in this group:</p>\n            <ul>\n                <li>Prolonged sitting leading to reduced flexibility and neuromuscular control</li>\n                <li>Irregular training patterns (weekend sports or sporadic gym sessions)</li>\n                <li>Sudden increases in training intensity or load</li>\n                <li>Inadequate recovery due to work schedules</li>\n                <li>Limited time for structured rehabilitation</li>\n            </ul>\n            <p>This combination places increased stress on the knee joint when physical activity resumes, particularly during high-load or impact exercises.</p>\n\n            <h3>Understanding post-exercise knee pain</h3>\n            <p>Not all knee pain after gym or sports represents structural injury. Broadly, post-exercise knee pain can be divided into:</p>\n            <ul>\n                <li><strong>Overload-related pain:</strong> Occurs when training load exceeds joint capacity. Common when resuming gym after inactivity or increasing weights too quickly.</li>\n                <li><strong>Ligament injury:</strong> Usually sudden pivoting, twisting, or awkward landing. Common in sports like football or badminton.</li>\n                <li><strong>Meniscal or cartilage injury:</strong> Often follows twisting with the knee flexed or deep squatting under load.</li>\n            </ul>\n\n            <h3>Ligament vs Cartilage: How to tell the difference?</h3>\n            <p><strong>Ligament injuries</strong> often present with sudden swelling (within hours) and a feeling of instability or \"giving way.\" <strong>Meniscal/Cartilage injuries</strong> may have delayed swelling and mechanical symptoms like locking or catching.</p>\n            \n            <p>For more details, see our <a href=\"/blog/meniscus-tear-vs-strain\">meniscus vs strain guide</a> or check out <a href=\"/blog/when-to-get-mri-knee\">when you need an MRI</a>.</p>\n\n            <h3>When to seek evaluation</h3>\n            <p>Clinical assessment is advisable if you experience recurrent swelling, instability, locking, or pain persisting beyond 2-3 weeks. Early diagnosis is key to avoiding secondary joint damage.</p>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
-      "relatedServiceIds": [
-        1,
-        3
-      ]
-    },
-    "when-to-get-mri-knee": {
-      "id": "when-to-get-mri-knee",
-      "title": "When Knee Pain Needs a Scan: Understanding MRI, X-rays, and Decision-Making",
-      "metaTitle": "When Knee Pain Needs a Scan â MRI, X-rays and Clinical Decision-Making Explained",
-      "metaDescription": "When should knee pain be investigated with MRI or X-ray? A detailed clinical guide for active adults and working professionals on symptoms, red flags, imaging, and decision-making.",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Diagnostics",
-      "categoryColor": "bg-purple-100 text-purple-700",
-      "image": "/images/articles/article_mri_scan.png",
-      "readTime": "12 min read",
-      "excerpt": "When should knee pain be investigated with MRI or X-ray? A detailed clinical guide for active adults on symptoms, red flags, and imaging decisions.",
-      "content": "\n            <p>Knee pain is one of the most common musculoskeletal complaints in active adults and working professionals. It affects individuals across a broad spectrum, from those who participate in football, padel, badminton, running, gym training, and recreational sport to those whose main strain arises from long working hours, prolonged sitting, frequent commuting, and irregular exercise patterns. In many patients, the central question arises early: <strong>does this knee pain need a scan?</strong></p>\n            \n            <p>Imaging, and MRI in particular, is often seen as the definitive way to identify the exact source of pain. However, the clinical reality is more nuanced. Not every painful knee requires immediate imaging, and not every MRI changes treatment. Understanding when a scan is important, useful, and sometimes time-sensitive is key to effective management.</p>\n\n            <h3>Why the question of imaging comes up so often</h3>\n            <p>One common reason is fear of missing a structural injury, particularly after <a href=\"/blog/knee-pain-gym-sports\">injury types after gym</a> or twisting injuries in sports. Another is the modern expectation of rapid answers. Working professionals often prefer a quick, definitive explanation to structure exercise around their commitments. However, the central clinical question is whether the scan will provide information that meaningfully changes the treatment pathway.</p>\n\n            <h3>Clinical assessment comes before imaging</h3>\n            <p>A careful history and physical examination often provide most of the information needed to decide whether imaging is necessary. The examiner looks at the pattern of onset, the mechanism of injury (e.g., a twist vs. gradual load), and mechanical symptoms like locking or instability. If you're unsure about the <a href=\"/blog/causes-of-knee-pain\">common causes of knee pain</a>, clinical assessment is the first step. Imaging follows the clinical question; it is not a substitute for it.</p>\n\n            <h3>Understanding what X-rays actually show</h3>\n            <p>X-rays remain a highly useful first-line investigation. They are excellent for identifying fractures, malalignment, degenerative changes (arthritis), and loose bodies. In younger active patients, weight-bearing X-rays can reveal patterns of chronic overload that MRI might miss. A normal X-ray also helps narrow the diagnostic field.</p>\n\n            <h3>What MRI adds</h3>\n            <p>MRI is the investigation of choice for soft tissue structures like ligaments, menisci, and cartilage. It is particularly valuable when there is suspicion of an ACL injury, a meniscus tear, or unexplained persistent pain despite appropriate initial treatment. However, it should be used when the clinician has a focused reason for requesting it, rather than as a general \"screening\" tool.</p>\n\n            <h3>Why not every knee pain needs immediate MRI</h3>\n            <p>Many knee presentations, especially gym-related overload issues in young adults, improve with time and structured rehabilitation. Immediate MRI in low-risk situations may identify minor signal changes or incidental findings that are not the true source of pain, leading to unnecessary anxiety or over-medicalisation.</p>\n\n            <h3>When knee pain clearly does need imaging</h3>\n            <p>Imaging is indicated when there has been a significant injury mechanism (like a twist with immediate swelling), recurrent mechanical symptoms (locking or catching), or when instability/giving way is reported. It is also warranted if symptoms fail to improve after an adequate period of appropriate treatment. Understanding <a href=\"/blog/continuing-sports-risks\">why ignoring pain is risky</a> is essential; a timely scan can prevent long-term joint damage.</p>\n\n            <h3>Red flags and urgent scenarios</h3>\n            <p>Certain presentations require prompt investigation: acute inability to bear weight after trauma, marked swelling within hours of an injury (suggesting a hemarthrosis), fever or redness (raising concern for infection), and persistent night pain.</p>\n\n            <h3>Clinical Scenarios: Active Adults & Professionals</h3>\n            <p>For a desk professional with gradual-onset pain and no swelling, rehabilitation is often the first step. Conversely, for a football player with a twisting injury and swelling, MRI is relevant to plan surgical or return-to-sport strategies. Functional demand matters as much as the scan finding itself.</p>\n\n            <h3>Incidental MRI findings & Decision-making</h3>\n            <p>MRI is highly sensitive, often showing minor wear or signal changes even in asymptomatic people. This is why we treat the patient, not the scan. Imaging has its greatest value when it answers a question that changes the treatment plan, such as choosing between surgery and conservative care for a meniscus tear.</p>\n\n            <h3>Summary</h3>\n            <p>Knee pain is common, but scanning decisions should be based on a structured clinical framework. While X-rays assess bone and alignment, MRI clarifies soft tissue structures. Ideally, scans support good clinical decision-making, ensuring we protect long-term joint health while avoiding unnecessary interventions.</p>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
-      "relatedServiceIds": [
-        5,
-        6
-      ]
-    },
-    "continuing-sports-risks": {
-      "id": "continuing-sports-risks",
-      "title": "Continuing Sports with Knee Pain in Working Professionals: Risks and Mistakes",
-      "metaTitle": "Continuing Sports With Knee Pain in Working Professionals â Risks and Mistakes",
-      "metaDescription": "Continuing sports with knee pain is common in active adults and working professionals. Learn risks, common mistakes, warning signs, and safer management strategies.",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Injury Prevention",
-      "categoryColor": "bg-red-100 text-red-700",
-      "image": "/images/articles/article_sports_risk.png",
-      "readTime": "12 min read",
-      "excerpt": "Is it safe to play through knee pain? Learn the common mistakes, long-term risks, and safer management strategies for active adults balancing work and sport.",
-      "content": "\n            <p>Continuing sports or gym activity despite knee pain is a common and often underestimated problem among active adults and working professionals. While some minor symptoms may resolve with rest, ignoring unresolved pain can lead to progression of injury, prolonged recovery, and secondary joint damage. Differentiating between benign <a href=\"/blog/knee-pain-gym-sports\">injury vs overload</a> is critical for long-term health.</p>\n\n            <h3>Why professionals often continue sports despite knee pain</h3>\n            <p>Lifestyle factors like fitness goals, stress management, and limited time windows for exercise often drive individuals to \"push through\" symptoms. A common mistake is attributing joint-related painâoften felt deep within the knee or along the joint lineâto routine muscle soreness. In desk-based professionals, the lack of pain during the workday further contributes to underestimating the injury.</p>\n\n            <h3>Understanding knee pain patterns</h3>\n            <p>Pain arising from different mechanisms carries different risks:</p>\n            <ul>\n                <li><strong>Overload-related pain:</strong> Usually gradual onset, linked to training errors or sudden increases in intensity.</li>\n                <li><strong>Mechanical pain (Meniscal/Cartilage):</strong> Suggested by joint locking, catching, or pain during twisting and squatting.</li>\n                <li><strong>Instability-related pain (Ligament):</strong> Characterized by the knee \"giving way\" or a loss of confidence during turning.</li>\n            </ul>\n\n            <h3>Common mistakes and cumulative load</h3>\n            <p>Many professionals ignore swelling or use medication to mask symptoms, allowing them to continue activity while a structural injury worsens. In modern lifestyles, the cumulative load from prolonged sitting, stair climbing, and travel-related strain also contributes significantly to joint stress. Resuming high-impact sport without identifying the <a href=\"/blog/causes-of-knee-pain\">underlying causes of knee pain</a> then becomes the \"tipping point\" for injury.</p>\n\n            <h3>The risks of \"playing through\"</h3>\n            <p>Continuing activity with unresolved pain poses several risks: small meniscal tears may enlarge and become unrepairable; repeated instability episodes from ligament damage lead to rapid joint deterioration; and chronic overload accelerates cartilage wear. This not only impacts your sporting goals but can eventually limit daily function, such as climbing stairs or standing during travel.</p>\n\n            <h3>When to seek evaluation</h3>\n            <p>If you experience recurrent swelling, locking, catching, or a sense of the knee \"giving way,\" activity should be stopped and a clinical assessment performed. Understanding <a href=\"/blog/when-to-get-mri-knee\">when to get an MRI</a> or X-ray is vital to define the pathology and prevent long-term joint health issues.</p>\n\n            <h3>Summary</h3>\n            <p>Ignoring knee pain increases the risk of progression and long-term joint damage. A structured approach involving early evaluation, activity modification, and targeted rehabilitation is essential for active professionals to maintain both their sporting performance and their daily functional capacity.</p>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
-      "relatedServiceIds": [
-        1,
-        7
-      ]
-    },
-    "anterior-knee-pain-office": {
-      "id": "anterior-knee-pain-office",
-      "title": "Anterior Knee Pain in Office Workers",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Ergonomics",
-      "categoryColor": "bg-teal-100 text-teal-700",
-      "image": "/images/articles/article_office_pain.png",
-      "readTime": "5 min read",
-      "excerpt": "Long hours at a desk can lead to 'theater sign' pain. Learn simple ergonomic fixes and lifestyle adjustments for office-based knee pain.",
-      "content": "\n            <p>Many office workers experience a dull ache at the front of the knee, often called \"movie-goer's knee\" or patellofemoral pain. This condition is frequently linked to long periods of sitting with knees bent.</p>\n            <h3>The Impact of Sedentary Work</h3>\n            <p>Sitting for hours increases the pressure on the patella (kneecap) against the femur. This can lead to irritation of the cartilage and subsequent pain when standing up or climbing stairs.</p>\n            <h3>Ergonomic Solutions</h3>\n            <p>Adjusting your chair height and ensuring your feet rest flat on the floor can help. Alternating between sitting and standing is also beneficial to keep the joints mobile and reduce sustained pressure.</p>\n        ",
-      "relatedServiceIds": [
-        3,
-        7
-      ]
-    },
-    "meniscus-tear-vs-strain": {
-      "id": "meniscus-tear-vs-strain",
-      "title": "Meniscus Tear vs. Muscle Strain â How to Tell",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Diagnosis",
-      "categoryColor": "bg-emerald-100 text-emerald-700",
-      "image": "/images/articles/article_meniscus_tear.png",
-      "readTime": "6 min read",
-      "excerpt": "Is it a sharp joint line pain or a soft tissue ache? Compare the symptoms and recovery timelines for these common knee injuries.",
-      "content": "\n            <p>Not all knee pains are the same. Distinguishing between a meniscus tear and a simple muscle strain is crucial for choosing the right treatment and recovery timeline.</p>\n            <h3>Symptom Comparison</h3>\n            <p>A <strong>meniscus tear</strong> often involves clicking, locking, or sharp pain along the joint line. In contrast, a <strong>muscle strain</strong> (like a hamstring or quad pull) usually feels like a dull ache or tightness in the soft tissue surrounding the joint.</p>\n            <h3>Recovery Timelines</h3>\n            <p>Strains typically improve with rest and gentle stretching over 2-3 weeks. A meniscus tear may require more formal physical therapy or even surgical intervention if it causes mechanical symptoms. Consulting a specialist is the only way to get a definitive diagnosis.</p>\n        ",
-      "relatedServiceIds": [
-        1,
-        3
-      ]
-    },
-    "knee-pain-exercises-desk": {
-      "id": "knee-pain-exercises-desk",
-      "title": "Best Exercises for Knee Pain (Desk Professionals)",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Rehabilitation",
-      "categoryColor": "bg-cyan-100 text-cyan-700",
-      "image": "/images/articles/article_desk_exercise.png",
-      "readTime": "4 min read",
-      "excerpt": "Keep your joints moving with these simple stretches and strengthening exercises you can perform right at your workstation.",
-      "content": "\n            <p>If you're stuck at a desk all day, your knees can pay the price. Fortunately, there are several simple exercises you can do without even leaving your chair to keep your knees healthy and pain-free.</p>\n            <h3>Seated Leg Extensions</h3>\n            <p>Simply straighten your leg while sitting and hold for 5 seconds. This strengthens the quadriceps, which are vital for supporting the knee joint.</p>\n            <h3>Ankle Pumps and Glute Squeezes</h3>\n            <p>Keeping blood flowing and engaging the muscles around the hip can take significant pressure off the knees. Aim to perform these movements every hour to combat the stiffness of prolonged sitting.</p>\n        ",
-      "relatedServiceIds": [
-        5,
-        7
-      ]
-    },
-    "knee-pain-travel-flights": {
-      "id": "knee-pain-travel-flights",
-      "title": "Managing Knee Pain During Travel and Flights",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Lifestyle",
-      "categoryColor": "bg-indigo-100 text-indigo-700",
-      "image": "/images/articles/article_travel_flight.png",
-      "readTime": "5 min read",
-      "excerpt": "Long-haul travel can cause joint stiffness and discomfort. Use these expert tips for staying comfortable on your next journey.",
-      "content": "\n            <p>Traveling, especially on long-haul flights, can be a nightmare for those with chronic knee pain or stiffness. The cramped quarters and lack of movement are major contributors to joint distress.</p>\n            <h3>Tips for the Air</h3>\n            <p>Choose an aisle seat if possible to allow for easier stretching. Hydration is also key, as it keeps your joint tissues healthy and reduces the risk of overall stiffness.</p>\n            <h3>Post-Flight Recovery</h3>\n            <p>Once you land, take a brisk walk to \"lubricate\" the joints. Gentle stretching of the quads and hamstrings can help reset your body after hours of being in a fixed position.</p>\n        ",
-      "relatedServiceIds": [
-        5,
-        7
-      ]
-    },
-    "knee-pain-pillar": {
-      "id": "knee-pain-pillar",
-      "title": "Knee Pain in Professionals: The Ultimate Specialist Guide",
-      "metaTitle": "Knee Pain in Young Adults & Working Professionals â Causes, MRI, Treatment Guide",
-      "metaDescription": "A complete clinical guide to knee pain in young adults and working professionals. Understand causes, gym injuries, MRI decisions, and safe return to sports.",
-      "date": "March 21, 2026",
-      "author": "Dr. Ulhas Sonar",
-      "category": "Pillar Page",
-      "categoryColor": "bg-blue-100 text-blue-700",
-      "image": "/images/articles/article_pillar_guide.png",
-      "readTime": "15 min read",
-      "excerpt": "A complete clinical guide to knee pain for active adults. Understand causes, gym injuries, MRI decisions, and safe return to sports.",
-      "content": "\n            <p>Knee pain is one of the most frequently encountered musculoskeletal complaints in young adults and working professionals. It is increasingly seen in individuals who combine prolonged desk-based work with intermittent participation in gym training, running, recreational sports, or weekend athletic activity. This combination of sedentary work patterns and sudden physical loading creates a unique environment where the knee is repeatedly exposed to demands that may exceed its capacity to adapt.</p>\n            \n            <p>This guide provides a structured, clinically grounded approach to understanding knee pain in this population. It explains common causes, patterns of injury, the role of imaging, and practical decision-making relevant to both active individuals and working professionals.</p>\n\n            <h3>Why Knee Pain Is Increasing in Working Professionals</h3>\n            <p>Modern working environments often involve prolonged sitting, reduced baseline conditioning, and limited time for consistent physical activity. Many individuals compensate for this with high-intensity workouts performed within restricted time windows. Key factors include reduced gluteal activation and sudden increases in gym training or running volume. These factors combine to increase joint stress and make the knee more susceptible to both overload and structural injury.</p>\n\n            <h3>Understanding Different Types of Knee Pain</h3>\n            <p>Knee pain is a symptom, not a diagnosis. Recognising the pattern is key:</p>\n            <ul>\n                <li><strong>Overload-Related Pain:</strong> Gradual onset, activity-related, and often linked to sudden training changes or <a href=\"/blog/knee-pain-gym-sports\">gym-related strain</a>.</li>\n                <li><strong>Ligament Injury:</strong> Sudden onset after twisting or pivoting, often with swelling and instability.</li>\n                <li><strong>Meniscal and Cartilage Injury:</strong> Characterised by joint-line pain, deep aching, and mechanical symptoms like catching or locking.</li>\n            </ul>\n\n            <h3>When Knee Pain Needs Imaging</h3>\n            <p>The decision to perform imaging depends on whether it will influence diagnosis or management. While X-rays assess bone structure and alignment, MRI is the gold standard for soft tissue like ligaments and menisci. However, understanding <a href=\"/blog/when-to-get-mri-knee\">when knee pain needs MRI</a> is vital, as early MRI in low-risk cases can identify incidental findings that don't correlate with symptoms.</p>\n\n            <h3>Continuing Sports with Knee Pain: Risks</h3>\n            <p>Continuing activity despite unresolved pain is common among professionals. While mild overload symptoms may improve with modification, ignoring structural pathology increases the risk of secondary injuries. Understanding <a href=\"/blog/continuing-sports-risks\">why ignoring knee pain is risky</a> is essential; repeated cycles of activity without completion of rehabilitation can contribute to chronic symptoms.</p>\n\n            <h3>Common Mistakes in Management</h3>\n            <p>Playing through pain, ignoring recurrent swelling, and using medication to mask symptoms are frequent errors. Returning to sport without completing structured rehabilitation leaves the joint vulnerable to recurrence. A structured approach involving activity modification, load management, and physiotherapy is the foundation of long-term knee health.</p>\n\n            <div class=\"mt-12 bg-gray-50 p-6 rounded-xl border border-gray-100\">\n                <h3 class=\"text-xl font-bold text-gray-900 mb-6\">Expert FAQ: Knee Pain Management</h3>\n                <div class=\"space-y-6\">\n                    <div>\n                        <h4 class=\"font-bold text-gray-900\">When should knee pain be investigated with MRI?</h4>\n                        <p class=\"text-gray-600 mt-1\">MRI is indicated when knee pain is associated with swelling, instability, locking, or when symptoms persist despite appropriate rehabilitation.</p>\n                    </div>\n                    <div>\n                        <h4 class=\"font-bold text-gray-900\">Is knee pain after gym always serious?</h4>\n                        <p class=\"text-gray-600 mt-1\">No. Most cases are due to overload. However, swelling, instability, or mechanical symptoms suggest structural injury.</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"mt-8 pt-8 border-t border-gray-200\">\n                <p class=\"text-sm font-bold text-gray-900\">Author: Dr. Ulhas Sonar</p>\n                <p class=\"text-xs text-gray-500 mt-2 leading-relaxed\">\n                    Dr. Ulhas Sonar is a UK-trained orthopedic surgeon specializing in sports injuries, joint preservation, and joint replacement surgery. He holds FRCS (England) and has completed over a decade of structured orthopedic training within the NHS. He is European Board certified (EBOT) and holds a diploma in robotic orthopedic surgery. Currently practicing in Dubai, he is also pursuing further training in regenerative medicine, with a focus on evolving biologic treatments in orthopedics.\n                </p>\n            </div>\n        ",
-      "relatedServiceIds": [
-        0,
-        1,
-        3
-      ]
-    }
+    ],
+    "highlight_badge": "Expertise & Precision",
+    "highlight_title": "Why Choose Dr Ulhas Sonar for Robotic Knee Replacement Surgery in Pune?",
+    "highlight_description": "<p>Patients seeking robotic knee surgery in Pune often look for more than technology alone. True success comes from a combination of advanced tools and an expert surgeon&#39;s touch.</p>",
+    "highlight_checklist_title": "Successful knee replacement requires:",
+    "highlight_checklist_items": [
+      "Accurate diagnosis",
+      "Appropriate patient selection",
+      "Detailed surgical planning",
+      "Technical precision",
+      "Structured rehabilitation"
+    ],
+    "highlight_doctor_image": "",
+    "highlight_doctor_name": "Dr Ulhas Sonar",
+    "highlight_doctor_role": "Consultant Orthopedic Surgeon",
+    "highlight_doctor_badges": [
+      "UK-TRAINED",
+      "FRCS (ENG)"
+    ],
+    "highlight_doctor_description": "<p>Dr Ulhas Sonar is a UK-trained Orthopedic Surgeon with FRCS (England) and European Board Certification in Orthopedics. His practice focuses on knee reconstruction, robotic knee replacement, sports injuries, and knee preservation procedures.</p>",
+    "journey_is_active": true,
+    "journey_title": "Your Treatment Journey",
+    "journey_description": "",
+    "journey_steps": [
+      {
+        "number": "1",
+        "title": "Detailed Consultation",
+        "description": "The process begins with a careful discussion of symptoms, walking ability, pain pattern, stiffness, previous treatment, medical history, work needs and lifestyle goals."
+      },
+      {
+        "number": "2",
+        "title": "Clinical Examination",
+        "description": "Dr Ulhas Sonar assesses joint movement, alignment, deformity, stability, walking pattern, swelling and functional limitations."
+      },
+      {
+        "number": "3",
+        "title": "Imaging Review",
+        "description": "X-rays, MRI scans, CT scans or previous surgical records may be reviewed to understand the severity of arthritis, implant condition, bone quality and joint alignment."
+      },
+      {
+        "number": "4",
+        "title": "Personalised Treatment Planning",
+        "description": "Treatment may include non-surgical care, physiotherapy, injections, knee preservation, partial knee replacement, total knee replacement, robotic knee replacement, hip replacement or revision surgery depending on the diagnosis."
+      },
+      {
+        "number": "5",
+        "title": "Surgery When Appropriate",
+        "description": "If surgery is required, the procedure is planned according to the patient�s anatomy, joint damage, health condition and recovery expectations."
+      },
+      {
+        "number": "6",
+        "title": "Surgery When Appropriate",
+        "description": "If surgery is required, the procedure is planned according to the patient�s anatomy, joint damage, health condition and recovery expectations."
+      }
+    ],
+    "updated_at": "2026-07-18T07:02:37.241Z"
+  }
+},
+{
+  "model": "api.service",
+  "pk": 2,
+  "fields": {
+    "meta_title": null,
+    "meta_description": "",
+    "canonical_url": null,
+    "og_title": null,
+    "og_description": "",
+    "og_image": "",
+    "schema_type": "None",
+    "schema_markup": null,
+    "index_page": true,
+    "follow_links": true,
+    "image_alt_text": null,
+    "h1_title": null,
+    "title": "Deformity Correction & Osteotomy Surgery",
+    "slug": "deformity-correction-osteotomy-surgery",
+    "description": "<p><span style=\"color:#000000\">Deformity Correction &amp; Osteotomy SurgeryDeformity Correction &amp; Osteotomy Surgery</span></p>",
+    "icon": "activity",
+    "image": "",
+    "items": [],
+    "faqs": [],
+    "conditions": [],
+    "checklist_items": [],
+    "tag_badges": [],
+    "conditions_title": null,
+    "checklist_title": null,
+    "checklist_image": "",
+    "about_title": null,
+    "about_description": "",
+    "who_needs_title": null,
+    "who_needs_description": "",
+    "who_needs_items": [],
+    "commonly_treated_title": null,
+    "commonly_treated_description": "",
+    "commonly_treated": [],
+    "highlight_badge": null,
+    "highlight_title": null,
+    "highlight_description": "",
+    "highlight_checklist_title": null,
+    "highlight_checklist_items": [],
+    "highlight_doctor_image": "",
+    "highlight_doctor_name": null,
+    "highlight_doctor_role": null,
+    "highlight_doctor_badges": [],
+    "highlight_doctor_description": "",
+    "journey_is_active": false,
+    "journey_title": null,
+    "journey_description": "",
+    "journey_steps": [],
+    "updated_at": "2026-07-14T13:32:01.294Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 1,
+  "fields": {
+    "service": 1,
+    "title": "Test1",
+    "slug": "test1",
+    "created_at": "2026-06-27T08:39:56.968Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 2,
+  "fields": {
+    "service": 1,
+    "title": "test 2",
+    "slug": "test-2",
+    "created_at": "2026-06-27T08:40:09.445Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 3,
+  "fields": {
+    "service": 1,
+    "title": "test3",
+    "slug": "test3",
+    "created_at": "2026-06-27T08:40:19.162Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 4,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:12.499Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 5,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:19.203Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 6,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:25.360Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 7,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:32.129Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 8,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:38.586Z"
+  }
+},
+{
+  "model": "api.sitesetting",
+  "pk": 1,
+  "fields": {
+    "robots_txt": "User-agent: *\nAllow: /",
+    "header_scripts": "",
+    "footer_scripts": "",
+    "internal_linking_rules": {}
+  }
+},
+{
+  "model": "api.herovideo",
+  "pk": 1,
+  "fields": {
+    "video": "videos/Home_section_video.mp4",
+    "updated_at": "2026-06-18T14:47:42.187Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 1,
+  "fields": {
+    "title": "Patient Testimonials",
+    "description": "Exceptional patient satisfaction and positive feedback from those who have undergone treatment with Dr. Ulhas.",
+    "image": "gallery/gallery_1.webp",
+    "category": "About",
+    "span": "col-span-2 row-span-2",
+    "order": 1,
+    "created_at": "2026-06-07T17:19:12.271Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 2,
+  "fields": {
+    "title": "Excellence Recognition",
+    "description": "Dr. Ulhas Sonar receiving recognition for outstanding clinical contributions and surgical excellence.",
+    "image": "gallery/gallery_2.webp",
+    "category": "Awards",
+    "span": "col-span-1 row-span-1",
+    "order": 2,
+    "created_at": "2026-06-07T17:19:12.273Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 3,
+  "fields": {
+    "title": "Clinical Excellence Award",
+    "description": "Honouring the dedication to patient care and surgical innovation in the field of orthopedics.",
+    "image": "gallery/gallery_3.webp",
+    "category": "Awards",
+    "span": "col-span-1 row-span-1",
+    "order": 3,
+    "created_at": "2026-06-07T17:19:12.275Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 4,
+  "fields": {
+    "title": "Our Dedicated Team",
+    "description": "A cohesive team of healthcare professionals committed to delivering world-class orthopedic care.",
+    "image": "gallery/gallery_4.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-2",
+    "order": 4,
+    "created_at": "2026-06-07T17:19:12.276Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 5,
+  "fields": {
+    "title": "Advanced Surgical Precision",
+    "description": "Intra-operative perspective showcasing the meticulous approach to joint preservation and replacement.",
+    "image": "gallery/gallery_5.webp",
+    "category": "Surgery",
+    "span": "col-span-1 row-span-1",
+    "order": 5,
+    "created_at": "2026-06-07T17:19:12.277Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 6,
+  "fields": {
+    "title": "Team Collaboration",
+    "description": "Regular clinical meetings and team celebrations to ensure excellence in patient care pathways.",
+    "image": "gallery/gallery_6.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 6,
+    "created_at": "2026-06-07T17:19:12.277Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 7,
+  "fields": {
+    "title": "Team Social Engagement",
+    "description": "Fostering strong professional relationships through social events and team-building activities.",
+    "image": "gallery/gallery_7.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 7,
+    "created_at": "2026-06-07T17:19:12.278Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 8,
+  "fields": {
+    "title": "Professional Growth",
+    "description": "Celebrating milestones and collective achievements in our journey of clinical excellence.",
+    "image": "gallery/gallery_8.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 8,
+    "created_at": "2026-06-07T17:19:12.280Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 9,
+  "fields": {
+    "title": "Global Orthopedic Networking",
+    "description": "Exchanging knowledge and surgical concepts with international colleagues at global conferences.",
+    "image": "gallery/gallery_9.webp",
+    "category": "Conference",
+    "span": "col-span-1 row-span-1",
+    "order": 9,
+    "created_at": "2026-06-07T17:19:12.281Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 10,
+  "fields": {
+    "title": "Comprehensive Knee Assessment",
+    "description": "Detailed examination focusing on biomechanics and joint health for personalized recovery.",
+    "image": "gallery/kneeassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 10,
+    "created_at": "2026-06-07T17:19:12.282Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 11,
+  "fields": {
+    "title": "Shoulder Mobility Care",
+    "description": "Expert assessment and management of rotator cuff injuries and shoulder instability.",
+    "image": "gallery/shoulderassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 11,
+    "created_at": "2026-06-07T17:19:12.283Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 12,
+  "fields": {
+    "title": "Hip Preservation Strategies",
+    "description": "Specialized interventions designed to preserve the joint and delay degenerative changes.",
+    "image": "gallery/hipassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 12,
+    "created_at": "2026-06-07T17:19:12.283Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 13,
+  "fields": {
+    "title": "Spine & Back Health",
+    "description": "Multidisciplinary approach to managing chronic back pain and spinal conditions.",
+    "image": "gallery/spineassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 13,
+    "created_at": "2026-06-07T17:19:12.284Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 14,
+  "fields": {
+    "title": "Elite Sports Recovery",
+    "description": "Advanced surgical and biological treatments to return athletes to their peak performance.",
+    "image": "gallery/sportsrecovery.webp",
+    "category": "Surgery",
+    "span": "col-span-1 row-span-1",
+    "order": 14,
+    "created_at": "2026-06-07T17:19:12.285Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 15,
+  "fields": {
+    "title": "Hand & Wrist Precision",
+    "description": "Delicate care for carpal tunnel, tendon injuries, and arthritic hand conditions.",
+    "image": "gallery/handwristcare.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 15,
+    "created_at": "2026-06-07T17:19:12.286Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 16,
+  "fields": {
+    "title": "Combined Limb Procedures",
+    "description": "Holistic surgical management of complex lower limb injuries and deformities.",
+    "image": "gallery/combinedjoint.webp",
+    "category": "Surgery",
+    "span": "col-span-1 row-span-1",
+    "order": 16,
+    "created_at": "2026-06-07T17:19:12.288Z"
   }
 }
+]
