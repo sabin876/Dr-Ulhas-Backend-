@@ -1,4 +1,4 @@
-from unfold.admin import ModelAdmin
+from unfold.admin import ModelAdmin, TabularInline
 from unfold.decorators import display
 from django.contrib import admin
 from django import forms
@@ -136,9 +136,16 @@ class ArticleAdmin(ModelAdmin):
         }),
     )
 
+class SubServiceInline(TabularInline):
+    model = SubService
+    extra = 1
+    prepopulated_fields = {'slug': ('title',)}
+    fields = ('title', 'slug', 'description')
+
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
     form = ServiceAdminForm
+    inlines = [SubServiceInline]
     change_list_template = "admin/api/service/change_list.html"
     list_display = ('title', 'edit_button', 'delete_button', 'updated_at', 'index_page')
     
