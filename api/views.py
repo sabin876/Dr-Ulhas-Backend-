@@ -112,11 +112,17 @@ def send_contact_mail(request):
             "result": f"Error sending email: {str(e)}"
         })
         
-@api_view(['GET'])
+@api_view(['GET', 'PUT', 'PATCH'])
 def site_settings(request):
     settings = SiteSetting.objects.first()
     if not settings:
         settings = SiteSetting.objects.create()
+    if request.method in ['PUT', 'PATCH']:
+        serializer = SiteSettingSerializer(settings, data=request.data, partial=True, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return response.Response(serializer.data)
+        return response.Response(serializer.errors, status=400)
     serializer = SiteSettingSerializer(settings, context={'request': request})
     return response.Response(serializer.data)
 

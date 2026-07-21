@@ -97,6 +97,12 @@ class Service(SEOBaseModel):
     journey_description = models.TextField(blank=True, null=True, help_text="Subtext for the journey section")
     journey_steps = models.JSONField(default=list, blank=True, help_text='JSON list of steps, e.g., [{"number": "01", "title": "Assessment", "description": "..."}]')
     
+    # Custom Call To Action (CTA Banner) Section
+    cta_title = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Struggling with Joint or Back Pain?'")
+    cta_subtitle = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Get expert orthopedic care today.'")
+    cta_button_text = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Book Appointment Now'")
+    cta_button_link = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. '/contact'")
+
     updated_at = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
@@ -143,6 +149,10 @@ class SiteSetting(models.Model):
     header_scripts = models.TextField(blank=True, help_text="GSC, Google Analytics, etc.")
     footer_scripts = models.TextField(blank=True)
     internal_linking_rules = models.JSONField(default=dict, blank=True, help_text='Enter a JSON object, e.g., {"Knee Pain": "/services/knee-pain"}')
+    cta_title = models.CharField(max_length=255, default="Struggling with Joint or Back Pain?", blank=True, null=True)
+    cta_subtitle = models.CharField(max_length=255, default="Get expert orthopedic care today.", blank=True, null=True)
+    cta_button_text = models.CharField(max_length=255, default="Book Appointment Now", blank=True, null=True)
+    cta_button_link = models.CharField(max_length=255, default="/contact", blank=True, null=True)
 
     def __str__(self):
         return "Global Site Settings"
