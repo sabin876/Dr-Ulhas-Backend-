@@ -98,7 +98,7 @@ class Service(SEOBaseModel):
     journey_steps = models.JSONField(default=list, blank=True, help_text='JSON list of steps, e.g., [{"number": "01", "title": "Assessment", "description": "..."}]')
     
     # Custom Second Opinion Section (Specialized Orthopedic Care)
-    second_opinion_is_active = models.BooleanField(default=True, help_text="Enable the Second Opinion / Specialized Orthopedic Care section")
+    second_opinion_is_active = models.BooleanField(default=False, help_text="Enable the Second Opinion / Specialized Orthopedic Care section for this service")
     second_opinion_badge = models.CharField(max_length=255, default="Specialized Orthopedic Care", blank=True, null=True, help_text="Badge text above heading")
     second_opinion_title = models.CharField(max_length=255, default="Second Opinion Services", blank=True, null=True, help_text="Heading title for second opinions section")
     second_opinion_description = models.TextField(blank=True, null=True, help_text="Subtitle description for second opinions section")
