@@ -13,8 +13,14 @@ class SubServiceSerializer(serializers.ModelSerializer):
         model = SubService
         fields = ['id', 'title', 'slug', 'description']
 
+class SecondOpinionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SecondOpinion
+        fields = ['id', 'category', 'title', 'paragraph_1', 'paragraph_2', 'order', 'is_active']
+
 class ServiceSerializer(serializers.ModelSerializer):
     sub_services = SubServiceSerializer(many=True, read_only=True)
+    second_opinions = SecondOpinionSerializer(many=True, read_only=True)
 
     class Meta:
         model = Service
