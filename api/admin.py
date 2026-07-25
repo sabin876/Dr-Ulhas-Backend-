@@ -1,11 +1,11 @@
-from unfold.admin import ModelAdmin, TabularInline
+from unfold.admin import ModelAdmin, TabularInline, StackedInline
 from unfold.decorators import display
 from django.contrib import admin
 from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
-from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo
+from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo, SecondOpinion
 from django.contrib.auth.models import Group, User
 
 try:
@@ -142,10 +142,17 @@ class SubServiceInline(TabularInline):
     prepopulated_fields = {'slug': ('title',)}
     fields = ('title', 'slug', 'description')
 
+class SecondOpinionInline(StackedInline):
+    model = SecondOpinion
+    extra = 0
+    fields = ('title', 'category', 'paragraph_1', 'paragraph_2', 'order', 'is_active')
+    verbose_name = "Specialized Orthopedic Care (Second Opinion)"
+    verbose_name_plural = "Specialized Orthopedic Care (Second Opinions)"
+
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
     form = ServiceAdminForm
-    inlines = [SubServiceInline]
+    inlines = [SubServiceInline, SecondOpinionInline]
     change_list_template = "admin/api/service/change_list.html"
     list_display = ('title', 'edit_button', 'delete_button', 'updated_at', 'index_page')
     
@@ -191,6 +198,12 @@ class ServiceAdmin(ModelAdmin):
                 'journey_is_active', 'journey_title', 'journey_description', 'journey_steps'
             ),
             'description': 'Optional: Add a step-by-step journey section (e.g. Your Robotic Knee Replacement Journey).'
+        }),
+        ('Second Opinion Section (Specialized Orthopedic Care)', {
+            'fields': (
+                'second_opinion_is_active', 'second_opinion_badge', 'second_opinion_title', 'second_opinion_description'
+            ),
+            'description': 'Customize the Second Opinion / Specialized Orthopedic Care section heading and intro.'
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),
@@ -268,4 +281,38 @@ class GalleryItemAdmin(ModelAdmin):
     def delete_button(self, obj):
         url = reverse('admin:api_galleryitem_delete', args=[obj.id])
         return format_html('<a href="{}" class="text-red-600 hover:text-red-800" title="Delete"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">delete</span></a>', url)
+
+
+@admin.register(SecondOpinion)
+class SecondOpinionAdmin(ModelAdmin):
+    list_display = ('title', 'edit_button', 'delete_button', 'category', 'order', 'is_active', 'updated_at')
+    list_filter = ('category', 'is_active')
+    search_fields = ('title', 'paragraph_1', 'paragraph_2')
+    list_editable = ('order', 'is_active')
+    ordering = ('order', 'created_at')
+
+    @display(description="Edit")
+    def edit_button(self, obj):
+        url = reverse('admin:api_secondopinion_change', args=[obj.id])
+        return format_html('<a href="{}" class="text-primary-600 hover:text-primary-800" title="Edit"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">edit</span></a>', url)
+
+    @display(description="Delete")
+    def delete_button(self, obj):
+        url = reverse('admin:api_secondopinion_delete', args=[obj.id])
+        return format_html('<a href="{}" class="text-red-600 hover:text-red-800" title="Delete"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">delete</span></a>', url)
+
+    fieldsets = (
+        ('Second Opinion Information', {
+            'fields': ('title', 'category')
+        }),
+        ('Paragraph Content', {
+            'fields': ('paragraph_1', 'paragraph_2'),
+            'description': 'Paragraph 1: Basis of surgical decisions. Paragraph 2: What options a second opinion clarifies.'
+        }),
+        ('Ordering & Status', {
+            'fields': ('order', 'is_active')
+        }),
+    )
+
+
 

@@ -1,12 +1,13 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import ArticleViewSet, ServiceViewSet, TranslationViewSet, GalleryItemViewSet, site_settings, robots_txt, sitemap_xml, html_sitemap, api_login, send_contact_mail, temp_reset_admin, get_hero_video
+from .views import ArticleViewSet, ServiceViewSet, TranslationViewSet, GalleryItemViewSet, SecondOpinionViewSet, site_settings, robots_txt, sitemap_xml, html_sitemap, api_login, send_contact_mail, temp_reset_admin, get_hero_video
 
 router = DefaultRouter()
 router.register(r'articles', ArticleViewSet)
 router.register(r'services', ServiceViewSet)
 router.register(r'translations', TranslationViewSet)
 router.register(r'gallery', GalleryItemViewSet)
+router.register(r'second-opinions', SecondOpinionViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

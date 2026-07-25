@@ -5,8 +5,8 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login as auth_login
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo
-from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer
+from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion
+from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer, SecondOpinionSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -35,6 +35,11 @@ class TranslationViewSet(viewsets.ModelViewSet):
 class GalleryItemViewSet(viewsets.ModelViewSet):
     queryset = GalleryItem.objects.all()
     serializer_class = GalleryItemSerializer
+
+
+class SecondOpinionViewSet(viewsets.ModelViewSet):
+    queryset = SecondOpinion.objects.filter(is_active=True).order_by('order', 'created_at')
+    serializer_class = SecondOpinionSerializer
 
     
 

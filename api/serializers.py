@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo
+from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -103,4 +103,11 @@ class HeroVideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = HeroVideo
         fields = '__all__'
+
+
+class SecondOpinionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SecondOpinion
+        fields = '__all__'
+
 

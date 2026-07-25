@@ -97,6 +97,12 @@ class Service(SEOBaseModel):
     journey_description = models.TextField(blank=True, null=True, help_text="Subtext for the journey section")
     journey_steps = models.JSONField(default=list, blank=True, help_text='JSON list of steps, e.g., [{"number": "01", "title": "Assessment", "description": "..."}]')
     
+    # Custom Second Opinion Section (Specialized Orthopedic Care)
+    second_opinion_is_active = models.BooleanField(default=True, help_text="Enable the Second Opinion / Specialized Orthopedic Care section")
+    second_opinion_badge = models.CharField(max_length=255, default="Specialized Orthopedic Care", blank=True, null=True, help_text="Badge text above heading")
+    second_opinion_title = models.CharField(max_length=255, default="Second Opinion Services", blank=True, null=True, help_text="Heading title for second opinions section")
+    second_opinion_description = models.TextField(blank=True, null=True, help_text="Subtitle description for second opinions section")
+    
     # Custom Call To Action (CTA Banner) Section
     cta_title = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Struggling with Joint or Back Pain?'")
     cta_subtitle = models.CharField(max_length=255, blank=True, null=True, help_text="e.g. 'Get expert orthopedic care today.'")
@@ -217,4 +223,32 @@ class GalleryItem(models.Model):
 
     def __str__(self):
         return f"{self.title} ({self.category})"
+
+
+class SecondOpinion(models.Model):
+    CATEGORY_CHOICES = [
+        ('knee', 'Knee Replacement'),
+        ('acl', 'ACL or Meniscus Surgery'),
+        ('hipShoulder', 'Hip or Shoulder Surgery'),
+        ('fracture', 'Fracture or Trauma Treatment'),
+        ('general', 'General Orthopedic Second Opinion'),
+    ]
+    service = models.ForeignKey(Service, related_name='second_opinions', on_delete=models.SET_NULL, null=True, blank=True, help_text="Associated Service (optional)")
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='knee')
+    title = models.CharField(max_length=255, help_text="Title, e.g., Second Opinion Before Knee Replacement")
+    paragraph_1 = models.TextField(help_text="First paragraph: what decisions are based on")
+    paragraph_2 = models.TextField(help_text="Second paragraph: what a second opinion clarifies")
+    order = models.IntegerField(default=0, help_text="Display order (ascending)")
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'created_at']
+        verbose_name = "Specialized Orthopedic Care"
+        verbose_name_plural = "Specialized Orthopedic Care (Second Opinions)"
+
+    def __str__(self):
+        return f"{self.title} ({self.category})"
+
 
