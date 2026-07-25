@@ -33,6 +33,9 @@ class ServiceSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
+        if 'second_opinion_is_active' in data and isinstance(data['second_opinion_is_active'], str):
+            data['second_opinion_is_active'] = data['second_opinion_is_active'].lower() in ['true', '1', 'yes']
+
         json_fields = ['items', 'faqs', 'conditions', 'checklist_items', 'tag_badges', 'schema_markup', 'who_needs_items', 'commonly_treated', 'highlight_checklist_items', 'highlight_doctor_badges', 'journey_steps']
         for field in json_fields:
             if field in data and isinstance(data[field], str):
