@@ -145,7 +145,7 @@ class SubServiceInline(TabularInline):
 class SecondOpinionInline(StackedInline):
     model = SecondOpinion
     extra = 0
-    fields = ('title', 'category', 'paragraph_1', 'paragraph_2', 'order', 'is_active')
+    fields = ('title', 'paragraph_1', 'paragraph_2', 'order', 'is_active')
     verbose_name = "Specialized Orthopedic Care (Second Opinion)"
     verbose_name_plural = "Specialized Orthopedic Care (Second Opinions)"
 
@@ -285,8 +285,8 @@ class GalleryItemAdmin(ModelAdmin):
 
 @admin.register(SecondOpinion)
 class SecondOpinionAdmin(ModelAdmin):
-    list_display = ('title', 'edit_button', 'delete_button', 'category', 'order', 'is_active', 'updated_at')
-    list_filter = ('category', 'is_active')
+    list_display = ('title', 'edit_button', 'delete_button', 'order', 'is_active', 'updated_at')
+    list_filter = ('is_active',)
     search_fields = ('title', 'paragraph_1', 'paragraph_2')
     list_editable = ('order', 'is_active')
     ordering = ('order', 'created_at')
