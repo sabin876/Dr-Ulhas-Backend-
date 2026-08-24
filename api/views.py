@@ -137,21 +137,25 @@ def robots_txt(request):
     return HttpResponse(content, content_type="text/plain")
 
 def sitemap_xml(request):
-    # Basic dynamic sitemap generation
-    articles = Article.objects.all()
-    services = Service.objects.all()
+    settings = SiteSetting.objects.first()
+    if settings and settings.sitemap_xml and settings.sitemap_xml.strip():
+        return HttpResponse(settings.sitemap_xml.strip(), content_type="application/xml")
+
+    # Dynamic fallback XML sitemap generation
+    articles = Article.objects.filter(index_page=True)
+    services = Service.objects.filter(index_page=True)
     
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     
     # Add home page
-    xml += '  <url><loc>https://drulhas.com/</loc><priority>1.0</priority></url>\n'
+    xml += '  <url><loc>https://drulhasorthopedic.com/</loc><priority>1.0</priority></url>\n'
     
     for article in articles:
-        xml += f'  <url><loc>https://drulhas.com/blog/{article.slug}</loc><lastmod>{article.updated_at.strftime("%Y-%m-%d")}</lastmod></url>\n'
+        xml += f'  <url><loc>https://drulhasorthopedic.com/blog/{article.slug}</loc><lastmod>{article.updated_at.strftime("%Y-%m-%d")}</lastmod></url>\n'
         
     for service in services:
-        xml += f'  <url><loc>https://drulhas.com/services/{service.slug}</loc><lastmod>{service.updated_at.strftime("%Y-%m-%d")}</lastmod></url>\n'
+        xml += f'  <url><loc>https://drulhasorthopedic.com/services/{service.slug}</loc><lastmod>{service.updated_at.strftime("%Y-%m-%d")}</lastmod></url>\n'
         
     xml += '</urlset>'
     return HttpResponse(xml, content_type="application/xml")

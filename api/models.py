@@ -155,6 +155,7 @@ class Translation(models.Model):
 
 class SiteSetting(models.Model):
     robots_txt = models.TextField(default="User-agent: *\nAllow: /")
+    sitemap_xml = models.TextField(blank=True, null=True, help_text="Custom sitemap.xml content. Leave empty to automatically generate dynamic sitemap from articles & services.")
     header_scripts = models.TextField(blank=True, help_text="GSC, Google Analytics, etc.")
     footer_scripts = models.TextField(blank=True)
     internal_linking_rules = models.JSONField(default=dict, blank=True, help_text='Enter a JSON object, e.g., {"Knee Pain": "/services/knee-pain"}')

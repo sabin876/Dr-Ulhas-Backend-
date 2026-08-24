@@ -27,7 +27,7 @@ sitemaps = {
     'static': StaticViewSitemap,
 }
 
-from api.views import robots_txt
+from api.views import robots_txt, sitemap_xml
 
 from django.urls import re_path
 from django.views.static import serve
@@ -52,7 +52,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('api/', include('Report.urls')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml', sitemap_xml, name='sitemap-xml'),
     path('robots.txt', robots_txt, name='robots-txt'),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),

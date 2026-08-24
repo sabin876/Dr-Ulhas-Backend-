@@ -253,7 +253,11 @@ class SiteSettingAdmin(ModelAdmin):
     fieldsets = (
         ('Robots.txt & Crawling Rules', {
             'fields': ('robots_txt',),
-            'description': 'Configure search engine bot crawling rules and Sitemap URL directives for the website.'
+            'description': 'Configure search engine bot crawling rules.'
+        }),
+        ('Sitemap.xml Configuration', {
+            'fields': ('sitemap_xml',),
+            'description': 'Custom XML Sitemap rules. Leave empty to automatically generate dynamic sitemap from articles & services.'
         }),
         ('Global Scripts', {
             'fields': ('header_scripts', 'footer_scripts'),
