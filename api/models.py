@@ -43,6 +43,7 @@ class Article(SEOBaseModel):
     author = models.CharField(max_length=100, default="Dr. Ulhas Sonar")
     category = models.CharField(max_length=100)
     category_color = models.CharField(max_length=50, default="bg-blue-100 text-blue-600")
+    faqs = models.JSONField(default=list, blank=True, help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]')
     date = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -32,7 +32,23 @@ from api.views import robots_txt
 from django.urls import re_path
 from django.views.static import serve
 
+from django.http import JsonResponse
+
+def home_view(request):
+    return JsonResponse({
+        "status": "online",
+        "message": "Dr. Ulhas Backend API is running successfully.",
+        "frontend_url": "http://localhost:5173",
+        "endpoints": {
+            "admin": "/admin/",
+            "api_articles": "/api/articles/",
+            "api_services": "/api/services/",
+            "api_settings": "/api/settings/",
+        }
+    })
+
 urlpatterns = [
+    path('', home_view, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('api/', include('Report.urls')),

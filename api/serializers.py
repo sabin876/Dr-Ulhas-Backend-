@@ -1,10 +1,26 @@
 from rest_framework import serializers
 from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion
 
+import json
+
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
         fields = '__all__'
+
+    def to_internal_value(self, data):
+        if hasattr(data, 'dict'):
+            data = data.dict()
+        elif hasattr(data, '_mutable'):
+            data._mutable = True
+
+        if 'faqs' in data and isinstance(data['faqs'], str):
+            try:
+                data['faqs'] = json.loads(data['faqs'])
+            except (ValueError, TypeError):
+                pass
+
+        return super().to_internal_value(data)
 
 import json
 

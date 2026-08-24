@@ -1,571 +1,571 @@
-[
-{
-  "model": "api.service",
-  "pk": 1,
-  "fields": {
-    "meta_title": null,
-    "meta_description": "",
-    "canonical_url": null,
-    "og_title": null,
-    "og_description": "",
-    "og_image": "",
-    "schema_type": "None",
-    "schema_markup": null,
-    "index_page": true,
-    "follow_links": true,
-    "image_alt_text": null,
-    "h1_title": null,
-    "title": "Fracture & Trauma Surgery",
-    "slug": "fracture-trauma-surgery",
-    "description": "<p>A fracture or traumatic injury can happen unexpectedly and significantly affect mobility, independence, work, sport, and everyday life. Whether it is a simple fracture, a complex joint injury, or a high-energy trauma, timely diagnosis and appropriate treatment are essential for optimal recovery.&nbsp;</p>\r\n\r\n<p>Dr Ulhas Sonar provides comprehensive fracture and trauma care in Pune, including emergency assessment, fracture management, surgical fixation, complex trauma reconstruction, and rehabilitation planning. Treatment is tailored to the specific injury, patient requirements, and long-term functional goals, with a focus on restoring alignment, stability, movement, and return to daily activities.</p>",
-    "icon": "activity",
-    "image": "",
-    "items": [],
-    "faqs": [
-      {
-        "question": "What happens during a fracture consultation?",
-        "answer": "Your consultation includes a detailed assessment of the injury, clinical examination, and review of X-rays or scans. Dr Ulhas Sonar will explain the diagnosis, discuss treatment options, and create a personalised recovery plan."
-      },
-      {
-        "question": "How long does fracture healing take?",
-        "answer": "Healing times vary depending on the bone involved, fracture type, age, and overall health. Most fractures begin healing within weeks, although full recovery and return to normal activities may take longer."
-      },
-      {
-        "question": "When is surgery recommended for a fracture?",
-        "answer": "Surgery may be recommended when a fracture is displaced, unstable, involves a joint surface, causes deformity, or cannot be managed effectively with non-surgical treatment alone."
-      },
-      {
-        "question": "What is the difference between simple and complex fractures?",
-        "answer": "Simple fractures usually involve a single clean break and are often easier to treat. Complex fractures may involve multiple fragments, joint surfaces, significant displacement, or severe trauma requiring advanced surgical management."
-      },
-      {
-        "question": "Can fractures heal without surgery?",
-        "answer": "Yes. Many fractures heal well without surgery when alignment is acceptable, and the bone remains stable. The most appropriate treatment depends on the fracture pattern, location, and functional requirements of the patient."
-      },
-      {
-        "question": "How soon can I return to work or sports after a fracture?",
-        "answer": "Return to work or sport depends on the fracture type, treatment received, and healing progress. A personalised rehabilitation plan helps ensure a safe return while minimising the risk of reinjury."
-      }
-    ],
-    "conditions": [
-      {
-        "id": 1,
-        "title": "Upper Limb Fractures",
-        "description": "Surgical and conservative treatment for clavicle, shoulder, elbow, forearm, wrist, and hand fractures.",
-        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
-      },
-      {
-        "id": 2,
-        "title": "Lower Limb Fractures",
-        "description": "Advanced stabilization and fracture care for hip, femur (thigh), patella (kneecap), tibia, ankle, and foot fractures.",
-        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
-      },
-      {
-        "id": 3,
-        "title": "Joint & Articular Fractures",
-        "description": "Anatomic realignment of complex joint-involving fractures (e.g. tibial plateau, distal radius) to preserve cartilage.",
-        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
-      },
-      {
-        "id": 4,
-        "title": "Complex Polytrauma",
-        "description": "Coordinated multi-stage emergency care for high-energy traumatic injuries, open fractures, and pelvic injuries.",
-        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
-      }
-    ],
-    "checklist_items": [
-      "UK-Trained Orthopedic Surgeon",
-      "FRCS (England)",
-      "European Board Certified Orthopedic Surgeon",
-      "Experience in Routine and Complex Trauma",
-      "Fracture Reconstruction Expertise",
-      "Joint Preservation Principles",
-      "Individualised Treatment Planning",
-      "Evidence-Based Orthopedic Care",
-      "Focus on Functional Recovery"
-    ],
-    "tag_badges": [],
-    "conditions_title": "Conditions Managed with Fracture & Trauma Surgery",
-    "checklist_title": "Why Choose Dr Ulhas Sonar for Fracture & Trauma Surgery in Pune?",
-    "checklist_image": "",
-    "about_title": "About Fracture & Trauma Surgery",
-    "about_description": "<p>Fracture and trauma surgery involves the diagnosis, treatment, and reconstruction of injuries affecting bones, joints, ligaments, tendons, and surrounding soft tissues. Treatment may range from non-surgical fracture management to advanced surgical fixation and complex trauma reconstruction depending on the nature of the injury.</p>",
-    "who_needs_title": "Who May Need Fracture & Trauma Surgery?",
-    "who_needs_description": "Specialist assessment may be required if you experience any of the following symptoms:",
-    "who_needs_items": [
-      "A suspected fracture following an injury",
-      "Significant pain after a fall",
-      "Swelling and deformity",
-      "Difficulty walking or using a limb",
-      "Fracture involving a joint",
-      "Displaced fractures",
-      "Multiple injuries",
-      "Sports-related fractures",
-      "Previous fracture healing problems",
-      "Persistent pain after injury"
-    ],
-    "commonly_treated_title": "Fractures & Injuries We Commonly Treat",
-    "commonly_treated_description": "From simple fractures requiring precise immobilization to complex high-energy polytrauma demanding multi-stage surgical intervention.",
-    "commonly_treated": [
-      {
-        "title": "Upper Limb Injuries",
-        "icon": "PlusSquare",
-        "items": [
-          "Wrist fractures",
-          "Distal radius fractures",
-          "Hand fractures",
-          "Finger fractures",
-          "Forearm fractures",
-          "Elbow fractures",
-          "Arm fractures",
-          "Shoulder fractures",
-          "Clavicle fractures"
-        ]
-      },
-      {
-        "title": "Lower Limb Injuries",
-        "icon": "Triangle",
-        "items": [
-          "Hip fractures",
-          "Femur fractures",
-          "Knee fractures",
-          "Patella fractures",
-          "Tibial fractures",
-          "Ankle fractures",
-          "Foot fractures"
-        ]
-      },
-      {
-        "title": "Joint and Trauma Injuries",
-        "icon": "Hexagon",
-        "items": [
-          "Intra-articular fractures",
-          "Fracture dislocations",
-          "Complex joint injuries",
-          "Sports trauma",
-          "High-energy trauma",
-          "Post-fall injuries",
-          "Sprains and ligament injuries",
-          "Tendon and muscle injuries",
-          "Soft-tissue injuries"
-        ]
-      }
-    ],
-    "highlight_badge": "Expertise & Precision",
-    "highlight_title": "Why Choose Dr Ulhas Sonar for Robotic Knee Replacement Surgery in Pune?",
-    "highlight_description": "<p>Patients seeking robotic knee surgery in Pune often look for more than technology alone. True success comes from a combination of advanced tools and an expert surgeon&#39;s touch.</p>",
-    "highlight_checklist_title": "Successful knee replacement requires:",
-    "highlight_checklist_items": [
-      "Accurate diagnosis",
-      "Appropriate patient selection",
-      "Detailed surgical planning",
-      "Technical precision",
-      "Structured rehabilitation"
-    ],
-    "highlight_doctor_image": "",
-    "highlight_doctor_name": "Dr Ulhas Sonar",
-    "highlight_doctor_role": "Consultant Orthopedic Surgeon",
-    "highlight_doctor_badges": [
-      "UK-TRAINED",
-      "FRCS (ENG)"
-    ],
-    "highlight_doctor_description": "<p>Dr Ulhas Sonar is a UK-trained Orthopedic Surgeon with FRCS (England) and European Board Certification in Orthopedics. His practice focuses on knee reconstruction, robotic knee replacement, sports injuries, and knee preservation procedures.</p>",
-    "journey_is_active": true,
-    "journey_title": "Your Treatment Journey",
-    "journey_description": "",
-    "journey_steps": [
-      {
-        "number": "1",
-        "title": "Detailed Consultation",
-        "description": "The process begins with a careful discussion of symptoms, walking ability, pain pattern, stiffness, previous treatment, medical history, work needs and lifestyle goals."
-      },
-      {
-        "number": "2",
-        "title": "Clinical Examination",
-        "description": "Dr Ulhas Sonar assesses joint movement, alignment, deformity, stability, walking pattern, swelling and functional limitations."
-      },
-      {
-        "number": "3",
-        "title": "Imaging Review",
-        "description": "X-rays, MRI scans, CT scans or previous surgical records may be reviewed to understand the severity of arthritis, implant condition, bone quality and joint alignment."
-      },
-      {
-        "number": "4",
-        "title": "Personalised Treatment Planning",
-        "description": "Treatment may include non-surgical care, physiotherapy, injections, knee preservation, partial knee replacement, total knee replacement, robotic knee replacement, hip replacement or revision surgery depending on the diagnosis."
-      },
-      {
-        "number": "5",
-        "title": "Surgery When Appropriate",
-        "description": "If surgery is required, the procedure is planned according to the patient’s anatomy, joint damage, health condition and recovery expectations."
-      },
-      {
-        "number": "6",
-        "title": "Surgery When Appropriate",
-        "description": "If surgery is required, the procedure is planned according to the patient’s anatomy, joint damage, health condition and recovery expectations."
-      }
-    ],
-    "updated_at": "2026-07-18T07:02:37.241Z"
-  }
-},
-{
-  "model": "api.service",
-  "pk": 2,
-  "fields": {
-    "meta_title": null,
-    "meta_description": "",
-    "canonical_url": null,
-    "og_title": null,
-    "og_description": "",
-    "og_image": "",
-    "schema_type": "None",
-    "schema_markup": null,
-    "index_page": true,
-    "follow_links": true,
-    "image_alt_text": null,
-    "h1_title": null,
-    "title": "Deformity Correction & Osteotomy Surgery",
-    "slug": "deformity-correction-osteotomy-surgery",
-    "description": "<p><span style=\"color:#000000\">Deformity Correction &amp; Osteotomy SurgeryDeformity Correction &amp; Osteotomy Surgery</span></p>",
-    "icon": "activity",
-    "image": "",
-    "items": [],
-    "faqs": [],
-    "conditions": [],
-    "checklist_items": [],
-    "tag_badges": [],
-    "conditions_title": null,
-    "checklist_title": null,
-    "checklist_image": "",
-    "about_title": null,
-    "about_description": "",
-    "who_needs_title": null,
-    "who_needs_description": "",
-    "who_needs_items": [],
-    "commonly_treated_title": null,
-    "commonly_treated_description": "",
-    "commonly_treated": [],
-    "highlight_badge": null,
-    "highlight_title": null,
-    "highlight_description": "",
-    "highlight_checklist_title": null,
-    "highlight_checklist_items": [],
-    "highlight_doctor_image": "",
-    "highlight_doctor_name": null,
-    "highlight_doctor_role": null,
-    "highlight_doctor_badges": [],
-    "highlight_doctor_description": "",
-    "journey_is_active": false,
-    "journey_title": null,
-    "journey_description": "",
-    "journey_steps": [],
-    "updated_at": "2026-07-14T13:32:01.294Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 1,
-  "fields": {
-    "service": 1,
-    "title": "Test1",
-    "slug": "test1",
-    "created_at": "2026-06-27T08:39:56.968Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 2,
-  "fields": {
-    "service": 1,
-    "title": "test 2",
-    "slug": "test-2",
-    "created_at": "2026-06-27T08:40:09.445Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 3,
-  "fields": {
-    "service": 1,
-    "title": "test3",
-    "slug": "test3",
-    "created_at": "2026-06-27T08:40:19.162Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 4,
-  "fields": {
-    "service": 1,
-    "title": "Second Opinion for PRP / Regenerative Treatment",
-    "slug": "second-opinion-for-prp-regenerative-treatment",
-    "created_at": "2026-07-09T07:41:12.499Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 5,
-  "fields": {
-    "service": 1,
-    "title": "Second Opinion for PRP / Regenerative Treatment",
-    "slug": "second-opinion-for-prp-regenerative-treatment",
-    "created_at": "2026-07-09T07:41:19.203Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 6,
-  "fields": {
-    "service": 1,
-    "title": "Second Opinion for PRP / Regenerative Treatment",
-    "slug": "second-opinion-for-prp-regenerative-treatment",
-    "created_at": "2026-07-09T07:41:25.360Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 7,
-  "fields": {
-    "service": 1,
-    "title": "Second Opinion for PRP / Regenerative Treatment",
-    "slug": "second-opinion-for-prp-regenerative-treatment",
-    "created_at": "2026-07-09T07:41:32.129Z"
-  }
-},
-{
-  "model": "api.subservice",
-  "pk": 8,
-  "fields": {
-    "service": 1,
-    "title": "Second Opinion for PRP / Regenerative Treatment",
-    "slug": "second-opinion-for-prp-regenerative-treatment",
-    "created_at": "2026-07-09T07:41:38.586Z"
-  }
-},
-{
-  "model": "api.sitesetting",
-  "pk": 1,
-  "fields": {
-    "robots_txt": "User-agent: *\nAllow: /",
-    "header_scripts": "",
-    "footer_scripts": "",
-    "internal_linking_rules": {}
-  }
-},
-{
-  "model": "api.herovideo",
-  "pk": 1,
-  "fields": {
-    "video": "videos/Home_section_video.mp4",
-    "updated_at": "2026-06-18T14:47:42.187Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 1,
-  "fields": {
-    "title": "Patient Testimonials",
-    "description": "Exceptional patient satisfaction and positive feedback from those who have undergone treatment with Dr. Ulhas.",
-    "image": "gallery/gallery_1.webp",
-    "category": "About",
-    "span": "col-span-2 row-span-2",
-    "order": 1,
-    "created_at": "2026-06-07T17:19:12.271Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 2,
-  "fields": {
-    "title": "Excellence Recognition",
-    "description": "Dr. Ulhas Sonar receiving recognition for outstanding clinical contributions and surgical excellence.",
-    "image": "gallery/gallery_2.webp",
-    "category": "Awards",
-    "span": "col-span-1 row-span-1",
-    "order": 2,
-    "created_at": "2026-06-07T17:19:12.273Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 3,
-  "fields": {
-    "title": "Clinical Excellence Award",
-    "description": "Honouring the dedication to patient care and surgical innovation in the field of orthopedics.",
-    "image": "gallery/gallery_3.webp",
-    "category": "Awards",
-    "span": "col-span-1 row-span-1",
-    "order": 3,
-    "created_at": "2026-06-07T17:19:12.275Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 4,
-  "fields": {
-    "title": "Our Dedicated Team",
-    "description": "A cohesive team of healthcare professionals committed to delivering world-class orthopedic care.",
-    "image": "gallery/gallery_4.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-2",
-    "order": 4,
-    "created_at": "2026-06-07T17:19:12.276Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 5,
-  "fields": {
-    "title": "Advanced Surgical Precision",
-    "description": "Intra-operative perspective showcasing the meticulous approach to joint preservation and replacement.",
-    "image": "gallery/gallery_5.webp",
-    "category": "Surgery",
-    "span": "col-span-1 row-span-1",
-    "order": 5,
-    "created_at": "2026-06-07T17:19:12.277Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 6,
-  "fields": {
-    "title": "Team Collaboration",
-    "description": "Regular clinical meetings and team celebrations to ensure excellence in patient care pathways.",
-    "image": "gallery/gallery_6.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 6,
-    "created_at": "2026-06-07T17:19:12.277Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 7,
-  "fields": {
-    "title": "Team Social Engagement",
-    "description": "Fostering strong professional relationships through social events and team-building activities.",
-    "image": "gallery/gallery_7.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 7,
-    "created_at": "2026-06-07T17:19:12.278Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 8,
-  "fields": {
-    "title": "Professional Growth",
-    "description": "Celebrating milestones and collective achievements in our journey of clinical excellence.",
-    "image": "gallery/gallery_8.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 8,
-    "created_at": "2026-06-07T17:19:12.280Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 9,
-  "fields": {
-    "title": "Global Orthopedic Networking",
-    "description": "Exchanging knowledge and surgical concepts with international colleagues at global conferences.",
-    "image": "gallery/gallery_9.webp",
-    "category": "Conference",
-    "span": "col-span-1 row-span-1",
-    "order": 9,
-    "created_at": "2026-06-07T17:19:12.281Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 10,
-  "fields": {
-    "title": "Comprehensive Knee Assessment",
-    "description": "Detailed examination focusing on biomechanics and joint health for personalized recovery.",
-    "image": "gallery/kneeassessment.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 10,
-    "created_at": "2026-06-07T17:19:12.282Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 11,
-  "fields": {
-    "title": "Shoulder Mobility Care",
-    "description": "Expert assessment and management of rotator cuff injuries and shoulder instability.",
-    "image": "gallery/shoulderassessment.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 11,
-    "created_at": "2026-06-07T17:19:12.283Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 12,
-  "fields": {
-    "title": "Hip Preservation Strategies",
-    "description": "Specialized interventions designed to preserve the joint and delay degenerative changes.",
-    "image": "gallery/hipassessment.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 12,
-    "created_at": "2026-06-07T17:19:12.283Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 13,
-  "fields": {
-    "title": "Spine & Back Health",
-    "description": "Multidisciplinary approach to managing chronic back pain and spinal conditions.",
-    "image": "gallery/spineassessment.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 13,
-    "created_at": "2026-06-07T17:19:12.284Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 14,
-  "fields": {
-    "title": "Elite Sports Recovery",
-    "description": "Advanced surgical and biological treatments to return athletes to their peak performance.",
-    "image": "gallery/sportsrecovery.webp",
-    "category": "Surgery",
-    "span": "col-span-1 row-span-1",
-    "order": 14,
-    "created_at": "2026-06-07T17:19:12.285Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 15,
-  "fields": {
-    "title": "Hand & Wrist Precision",
-    "description": "Delicate care for carpal tunnel, tendon injuries, and arthritic hand conditions.",
-    "image": "gallery/handwristcare.webp",
-    "category": "Clinic",
-    "span": "col-span-1 row-span-1",
-    "order": 15,
-    "created_at": "2026-06-07T17:19:12.286Z"
-  }
-},
-{
-  "model": "api.galleryitem",
-  "pk": 16,
-  "fields": {
-    "title": "Combined Limb Procedures",
-    "description": "Holistic surgical management of complex lower limb injuries and deformities.",
-    "image": "gallery/combinedjoint.webp",
-    "category": "Surgery",
-    "span": "col-span-1 row-span-1",
-    "order": 16,
-    "created_at": "2026-06-07T17:19:12.288Z"
-  }
-}
-]
+[
+{
+  "model": "api.service",
+  "pk": 1,
+  "fields": {
+    "meta_title": null,
+    "meta_description": "",
+    "canonical_url": null,
+    "og_title": null,
+    "og_description": "",
+    "og_image": "",
+    "schema_type": "None",
+    "schema_markup": null,
+    "index_page": true,
+    "follow_links": true,
+    "image_alt_text": null,
+    "h1_title": null,
+    "title": "Fracture & Trauma Surgery",
+    "slug": "fracture-trauma-surgery",
+    "description": "<p>A fracture or traumatic injury can happen unexpectedly and significantly affect mobility, independence, work, sport, and everyday life. Whether it is a simple fracture, a complex joint injury, or a high-energy trauma, timely diagnosis and appropriate treatment are essential for optimal recovery.&nbsp;</p>\r\n\r\n<p>Dr Ulhas Sonar provides comprehensive fracture and trauma care in Pune, including emergency assessment, fracture management, surgical fixation, complex trauma reconstruction, and rehabilitation planning. Treatment is tailored to the specific injury, patient requirements, and long-term functional goals, with a focus on restoring alignment, stability, movement, and return to daily activities.</p>",
+    "icon": "activity",
+    "image": "",
+    "items": [],
+    "faqs": [
+      {
+        "question": "What happens during a fracture consultation?",
+        "answer": "Your consultation includes a detailed assessment of the injury, clinical examination, and review of X-rays or scans. Dr Ulhas Sonar will explain the diagnosis, discuss treatment options, and create a personalised recovery plan."
+      },
+      {
+        "question": "How long does fracture healing take?",
+        "answer": "Healing times vary depending on the bone involved, fracture type, age, and overall health. Most fractures begin healing within weeks, although full recovery and return to normal activities may take longer."
+      },
+      {
+        "question": "When is surgery recommended for a fracture?",
+        "answer": "Surgery may be recommended when a fracture is displaced, unstable, involves a joint surface, causes deformity, or cannot be managed effectively with non-surgical treatment alone."
+      },
+      {
+        "question": "What is the difference between simple and complex fractures?",
+        "answer": "Simple fractures usually involve a single clean break and are often easier to treat. Complex fractures may involve multiple fragments, joint surfaces, significant displacement, or severe trauma requiring advanced surgical management."
+      },
+      {
+        "question": "Can fractures heal without surgery?",
+        "answer": "Yes. Many fractures heal well without surgery when alignment is acceptable, and the bone remains stable. The most appropriate treatment depends on the fracture pattern, location, and functional requirements of the patient."
+      },
+      {
+        "question": "How soon can I return to work or sports after a fracture?",
+        "answer": "Return to work or sport depends on the fracture type, treatment received, and healing progress. A personalised rehabilitation plan helps ensure a safe return while minimising the risk of reinjury."
+      }
+    ],
+    "conditions": [
+      {
+        "id": 1,
+        "title": "Upper Limb Fractures",
+        "description": "Surgical and conservative treatment for clavicle, shoulder, elbow, forearm, wrist, and hand fractures.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
+      },
+      {
+        "id": 2,
+        "title": "Lower Limb Fractures",
+        "description": "Advanced stabilization and fracture care for hip, femur (thigh), patella (kneecap), tibia, ankle, and foot fractures.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
+      },
+      {
+        "id": 3,
+        "title": "Joint & Articular Fractures",
+        "description": "Anatomic realignment of complex joint-involving fractures (e.g. tibial plateau, distal radius) to preserve cartilage.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
+      },
+      {
+        "id": 4,
+        "title": "Complex Polytrauma",
+        "description": "Coordinated multi-stage emergency care for high-energy traumatic injuries, open fractures, and pelvic injuries.",
+        "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' width='22' height='22'><path d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' /></svg>"
+      }
+    ],
+    "checklist_items": [
+      "UK-Trained Orthopedic Surgeon",
+      "FRCS (England)",
+      "European Board Certified Orthopedic Surgeon",
+      "Experience in Routine and Complex Trauma",
+      "Fracture Reconstruction Expertise",
+      "Joint Preservation Principles",
+      "Individualised Treatment Planning",
+      "Evidence-Based Orthopedic Care",
+      "Focus on Functional Recovery"
+    ],
+    "tag_badges": [],
+    "conditions_title": "Conditions Managed with Fracture & Trauma Surgery",
+    "checklist_title": "Why Choose Dr Ulhas Sonar for Fracture & Trauma Surgery in Pune?",
+    "checklist_image": "",
+    "about_title": "About Fracture & Trauma Surgery",
+    "about_description": "<p>Fracture and trauma surgery involves the diagnosis, treatment, and reconstruction of injuries affecting bones, joints, ligaments, tendons, and surrounding soft tissues. Treatment may range from non-surgical fracture management to advanced surgical fixation and complex trauma reconstruction depending on the nature of the injury.</p>",
+    "who_needs_title": "Who May Need Fracture & Trauma Surgery?",
+    "who_needs_description": "Specialist assessment may be required if you experience any of the following symptoms:",
+    "who_needs_items": [
+      "A suspected fracture following an injury",
+      "Significant pain after a fall",
+      "Swelling and deformity",
+      "Difficulty walking or using a limb",
+      "Fracture involving a joint",
+      "Displaced fractures",
+      "Multiple injuries",
+      "Sports-related fractures",
+      "Previous fracture healing problems",
+      "Persistent pain after injury"
+    ],
+    "commonly_treated_title": "Fractures & Injuries We Commonly Treat",
+    "commonly_treated_description": "From simple fractures requiring precise immobilization to complex high-energy polytrauma demanding multi-stage surgical intervention.",
+    "commonly_treated": [
+      {
+        "title": "Upper Limb Injuries",
+        "icon": "PlusSquare",
+        "items": [
+          "Wrist fractures",
+          "Distal radius fractures",
+          "Hand fractures",
+          "Finger fractures",
+          "Forearm fractures",
+          "Elbow fractures",
+          "Arm fractures",
+          "Shoulder fractures",
+          "Clavicle fractures"
+        ]
+      },
+      {
+        "title": "Lower Limb Injuries",
+        "icon": "Triangle",
+        "items": [
+          "Hip fractures",
+          "Femur fractures",
+          "Knee fractures",
+          "Patella fractures",
+          "Tibial fractures",
+          "Ankle fractures",
+          "Foot fractures"
+        ]
+      },
+      {
+        "title": "Joint and Trauma Injuries",
+        "icon": "Hexagon",
+        "items": [
+          "Intra-articular fractures",
+          "Fracture dislocations",
+          "Complex joint injuries",
+          "Sports trauma",
+          "High-energy trauma",
+          "Post-fall injuries",
+          "Sprains and ligament injuries",
+          "Tendon and muscle injuries",
+          "Soft-tissue injuries"
+        ]
+      }
+    ],
+    "highlight_badge": "Expertise & Precision",
+    "highlight_title": "Why Choose Dr Ulhas Sonar for Robotic Knee Replacement Surgery in Pune?",
+    "highlight_description": "<p>Patients seeking robotic knee surgery in Pune often look for more than technology alone. True success comes from a combination of advanced tools and an expert surgeon&#39;s touch.</p>",
+    "highlight_checklist_title": "Successful knee replacement requires:",
+    "highlight_checklist_items": [
+      "Accurate diagnosis",
+      "Appropriate patient selection",
+      "Detailed surgical planning",
+      "Technical precision",
+      "Structured rehabilitation"
+    ],
+    "highlight_doctor_image": "",
+    "highlight_doctor_name": "Dr Ulhas Sonar",
+    "highlight_doctor_role": "Consultant Orthopedic Surgeon",
+    "highlight_doctor_badges": [
+      "UK-TRAINED",
+      "FRCS (ENG)"
+    ],
+    "highlight_doctor_description": "<p>Dr Ulhas Sonar is a UK-trained Orthopedic Surgeon with FRCS (England) and European Board Certification in Orthopedics. His practice focuses on knee reconstruction, robotic knee replacement, sports injuries, and knee preservation procedures.</p>",
+    "journey_is_active": true,
+    "journey_title": "Your Treatment Journey",
+    "journey_description": "",
+    "journey_steps": [
+      {
+        "number": "1",
+        "title": "Detailed Consultation",
+        "description": "The process begins with a careful discussion of symptoms, walking ability, pain pattern, stiffness, previous treatment, medical history, work needs and lifestyle goals."
+      },
+      {
+        "number": "2",
+        "title": "Clinical Examination",
+        "description": "Dr Ulhas Sonar assesses joint movement, alignment, deformity, stability, walking pattern, swelling and functional limitations."
+      },
+      {
+        "number": "3",
+        "title": "Imaging Review",
+        "description": "X-rays, MRI scans, CT scans or previous surgical records may be reviewed to understand the severity of arthritis, implant condition, bone quality and joint alignment."
+      },
+      {
+        "number": "4",
+        "title": "Personalised Treatment Planning",
+        "description": "Treatment may include non-surgical care, physiotherapy, injections, knee preservation, partial knee replacement, total knee replacement, robotic knee replacement, hip replacement or revision surgery depending on the diagnosis."
+      },
+      {
+        "number": "5",
+        "title": "Surgery When Appropriate",
+        "description": "If surgery is required, the procedure is planned according to the patientâ€™s anatomy, joint damage, health condition and recovery expectations."
+      },
+      {
+        "number": "6",
+        "title": "Surgery When Appropriate",
+        "description": "If surgery is required, the procedure is planned according to the patientâ€™s anatomy, joint damage, health condition and recovery expectations."
+      }
+    ],
+    "updated_at": "2026-07-18T07:02:37.241Z"
+  }
+},
+{
+  "model": "api.service",
+  "pk": 2,
+  "fields": {
+    "meta_title": null,
+    "meta_description": "",
+    "canonical_url": null,
+    "og_title": null,
+    "og_description": "",
+    "og_image": "",
+    "schema_type": "None",
+    "schema_markup": null,
+    "index_page": true,
+    "follow_links": true,
+    "image_alt_text": null,
+    "h1_title": null,
+    "title": "Deformity Correction & Osteotomy Surgery",
+    "slug": "deformity-correction-osteotomy-surgery",
+    "description": "<p><span style=\"color:#000000\">Deformity Correction &amp; Osteotomy SurgeryDeformity Correction &amp; Osteotomy Surgery</span></p>",
+    "icon": "activity",
+    "image": "",
+    "items": [],
+    "faqs": [],
+    "conditions": [],
+    "checklist_items": [],
+    "tag_badges": [],
+    "conditions_title": null,
+    "checklist_title": null,
+    "checklist_image": "",
+    "about_title": null,
+    "about_description": "",
+    "who_needs_title": null,
+    "who_needs_description": "",
+    "who_needs_items": [],
+    "commonly_treated_title": null,
+    "commonly_treated_description": "",
+    "commonly_treated": [],
+    "highlight_badge": null,
+    "highlight_title": null,
+    "highlight_description": "",
+    "highlight_checklist_title": null,
+    "highlight_checklist_items": [],
+    "highlight_doctor_image": "",
+    "highlight_doctor_name": null,
+    "highlight_doctor_role": null,
+    "highlight_doctor_badges": [],
+    "highlight_doctor_description": "",
+    "journey_is_active": false,
+    "journey_title": null,
+    "journey_description": "",
+    "journey_steps": [],
+    "updated_at": "2026-07-14T13:32:01.294Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 1,
+  "fields": {
+    "service": 1,
+    "title": "Test1",
+    "slug": "test1",
+    "created_at": "2026-06-27T08:39:56.968Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 2,
+  "fields": {
+    "service": 1,
+    "title": "test 2",
+    "slug": "test-2",
+    "created_at": "2026-06-27T08:40:09.445Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 3,
+  "fields": {
+    "service": 1,
+    "title": "test3",
+    "slug": "test3",
+    "created_at": "2026-06-27T08:40:19.162Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 4,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:12.499Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 5,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:19.203Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 6,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:25.360Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 7,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:32.129Z"
+  }
+},
+{
+  "model": "api.subservice",
+  "pk": 8,
+  "fields": {
+    "service": 1,
+    "title": "Second Opinion for PRP / Regenerative Treatment",
+    "slug": "second-opinion-for-prp-regenerative-treatment",
+    "created_at": "2026-07-09T07:41:38.586Z"
+  }
+},
+{
+  "model": "api.sitesetting",
+  "pk": 1,
+  "fields": {
+    "robots_txt": "User-agent: *\nAllow: /",
+    "header_scripts": "",
+    "footer_scripts": "",
+    "internal_linking_rules": {}
+  }
+},
+{
+  "model": "api.herovideo",
+  "pk": 1,
+  "fields": {
+    "video": "videos/Home_section_video.mp4",
+    "updated_at": "2026-06-18T14:47:42.187Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 1,
+  "fields": {
+    "title": "Patient Testimonials",
+    "description": "Exceptional patient satisfaction and positive feedback from those who have undergone treatment with Dr. Ulhas.",
+    "image": "gallery/gallery_1.webp",
+    "category": "About",
+    "span": "col-span-2 row-span-2",
+    "order": 1,
+    "created_at": "2026-06-07T17:19:12.271Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 2,
+  "fields": {
+    "title": "Excellence Recognition",
+    "description": "Dr. Ulhas Sonar receiving recognition for outstanding clinical contributions and surgical excellence.",
+    "image": "gallery/gallery_2.webp",
+    "category": "Awards",
+    "span": "col-span-1 row-span-1",
+    "order": 2,
+    "created_at": "2026-06-07T17:19:12.273Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 3,
+  "fields": {
+    "title": "Clinical Excellence Award",
+    "description": "Honouring the dedication to patient care and surgical innovation in the field of orthopedics.",
+    "image": "gallery/gallery_3.webp",
+    "category": "Awards",
+    "span": "col-span-1 row-span-1",
+    "order": 3,
+    "created_at": "2026-06-07T17:19:12.275Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 4,
+  "fields": {
+    "title": "Our Dedicated Team",
+    "description": "A cohesive team of healthcare professionals committed to delivering world-class orthopedic care.",
+    "image": "gallery/gallery_4.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-2",
+    "order": 4,
+    "created_at": "2026-06-07T17:19:12.276Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 5,
+  "fields": {
+    "title": "Advanced Surgical Precision",
+    "description": "Intra-operative perspective showcasing the meticulous approach to joint preservation and replacement.",
+    "image": "gallery/gallery_5.webp",
+    "category": "Surgery",
+    "span": "col-span-1 row-span-1",
+    "order": 5,
+    "created_at": "2026-06-07T17:19:12.277Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 6,
+  "fields": {
+    "title": "Team Collaboration",
+    "description": "Regular clinical meetings and team celebrations to ensure excellence in patient care pathways.",
+    "image": "gallery/gallery_6.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 6,
+    "created_at": "2026-06-07T17:19:12.277Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 7,
+  "fields": {
+    "title": "Team Social Engagement",
+    "description": "Fostering strong professional relationships through social events and team-building activities.",
+    "image": "gallery/gallery_7.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 7,
+    "created_at": "2026-06-07T17:19:12.278Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 8,
+  "fields": {
+    "title": "Professional Growth",
+    "description": "Celebrating milestones and collective achievements in our journey of clinical excellence.",
+    "image": "gallery/gallery_8.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 8,
+    "created_at": "2026-06-07T17:19:12.280Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 9,
+  "fields": {
+    "title": "Global Orthopedic Networking",
+    "description": "Exchanging knowledge and surgical concepts with international colleagues at global conferences.",
+    "image": "gallery/gallery_9.webp",
+    "category": "Conference",
+    "span": "col-span-1 row-span-1",
+    "order": 9,
+    "created_at": "2026-06-07T17:19:12.281Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 10,
+  "fields": {
+    "title": "Comprehensive Knee Assessment",
+    "description": "Detailed examination focusing on biomechanics and joint health for personalized recovery.",
+    "image": "gallery/kneeassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 10,
+    "created_at": "2026-06-07T17:19:12.282Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 11,
+  "fields": {
+    "title": "Shoulder Mobility Care",
+    "description": "Expert assessment and management of rotator cuff injuries and shoulder instability.",
+    "image": "gallery/shoulderassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 11,
+    "created_at": "2026-06-07T17:19:12.283Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 12,
+  "fields": {
+    "title": "Hip Preservation Strategies",
+    "description": "Specialized interventions designed to preserve the joint and delay degenerative changes.",
+    "image": "gallery/hipassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 12,
+    "created_at": "2026-06-07T17:19:12.283Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 13,
+  "fields": {
+    "title": "Spine & Back Health",
+    "description": "Multidisciplinary approach to managing chronic back pain and spinal conditions.",
+    "image": "gallery/spineassessment.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 13,
+    "created_at": "2026-06-07T17:19:12.284Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 14,
+  "fields": {
+    "title": "Elite Sports Recovery",
+    "description": "Advanced surgical and biological treatments to return athletes to their peak performance.",
+    "image": "gallery/sportsrecovery.webp",
+    "category": "Surgery",
+    "span": "col-span-1 row-span-1",
+    "order": 14,
+    "created_at": "2026-06-07T17:19:12.285Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 15,
+  "fields": {
+    "title": "Hand & Wrist Precision",
+    "description": "Delicate care for carpal tunnel, tendon injuries, and arthritic hand conditions.",
+    "image": "gallery/handwristcare.webp",
+    "category": "Clinic",
+    "span": "col-span-1 row-span-1",
+    "order": 15,
+    "created_at": "2026-06-07T17:19:12.286Z"
+  }
+},
+{
+  "model": "api.galleryitem",
+  "pk": 16,
+  "fields": {
+    "title": "Combined Limb Procedures",
+    "description": "Holistic surgical management of complex lower limb injuries and deformities.",
+    "image": "gallery/combinedjoint.webp",
+    "category": "Surgery",
+    "span": "col-span-1 row-span-1",
+    "order": 16,
+    "created_at": "2026-06-07T17:19:12.288Z"
+  }
+}
+]
