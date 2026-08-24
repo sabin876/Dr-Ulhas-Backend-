@@ -14,15 +14,16 @@ try:
 except admin.sites.NotRegistered:
     pass
 
+from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget
+
 class ArticleAdminForm(forms.ModelForm):
     class Meta:
         model = Article
         fields = "__all__"
         widgets = {
             "content": CKEditorWidget(),
+            "faqs": FaqWidget(),
         }
-
-from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget
 
 class ServiceAdminForm(forms.ModelForm):
     class Meta:
@@ -120,6 +121,10 @@ class ArticleAdmin(ModelAdmin):
     fieldsets = (
         ('Content', {
             'fields': ('title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color')
+        }),
+        ('Frequently Asked Questions (FAQs)', {
+            'fields': ('faqs',),
+            'description': 'Add FAQ question and answer pairs for this article.'
         }),
         ('SEO & Metadata', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'index_page', 'follow_links'),

@@ -685,3 +685,101 @@ class JourneyStepsWidget(forms.Widget):
         </div>
         '''
         return mark_safe(html)
+
+
+class FaqWidget(forms.Widget):
+    def render(self, name, value, attrs=None, renderer=None):
+        attrs = attrs or {}
+        id_str = attrs.get('id', name)
+        
+        if isinstance(value, str):
+            try:
+                items = json.loads(value)
+            except Exception:
+                items = []
+        elif isinstance(value, list):
+            items = value
+        else:
+            items = []
+            
+        items_json = json.dumps(items)
+        items_json_escaped = escape(items_json)
+        
+        html = f'''
+        <style>
+        #cms-faq-{id_str} {{ font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+        .cms-widget-container {{ background-color: #f8fafc !important; border-color: #e2e8f0 !important; }}
+        .cms-card {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; color: #1e293b !important; }}
+        .cms-card-title {{ color: #0f172a !important; }}
+        .cms-input-field {{ background-color: #ffffff !important; border-color: #cbd5e1 !important; color: #0f172a !important; }}
+        .cms-input-field::placeholder {{ color: #94a3b8 !important; }}
+        .cms-form-box {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; }}
+        html.dark #cms-faq-{id_str} .cms-widget-container, body.dark #cms-faq-{id_str} .cms-widget-container, .dark #cms-faq-{id_str} .cms-widget-container {{ background-color: #0f172a !important; border-color: #1e293b !important; }}
+        html.dark #cms-faq-{id_str} .cms-card, body.dark #cms-faq-{id_str} .cms-card, .dark #cms-faq-{id_str} .cms-card {{ background-color: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }}
+        html.dark #cms-faq-{id_str} .cms-card-title, body.dark #cms-faq-{id_str} .cms-card-title, .dark #cms-faq-{id_str} .cms-card-title {{ color: #f8fafc !important; }}
+        html.dark #cms-faq-{id_str} .cms-input-field, body.dark #cms-faq-{id_str} .cms-input-field, .dark #cms-faq-{id_str} .cms-input-field {{ background-color: #0f172a !important; border-color: #334155 !important; color: #f8fafc !important; }}
+        html.dark #cms-faq-{id_str} .cms-input-field::placeholder, body.dark #cms-faq-{id_str} .cms-input-field::placeholder, .dark #cms-faq-{id_str} .cms-input-field::placeholder {{ color: #475569 !important; }}
+        html.dark #cms-faq-{id_str} .cms-form-box, body.dark #cms-faq-{id_str} .cms-form-box, .dark #cms-faq-{id_str} .cms-form-box {{ background-color: #1e293b !important; border-color: #334155 !important; }}
+        </style>
+        
+        <div id="cms-faq-{id_str}" 
+             x-data="{{ 
+                 items: {items_json_escaped},
+                 newQuestion: '',
+                 newAnswer: '',
+                 addItem() {{
+                     if (this.newQuestion.trim() && this.newAnswer.trim()) {{
+                         this.items.push({{
+                             question: this.newQuestion.trim(),
+                             answer: this.newAnswer.trim()
+                         }});
+                         this.newQuestion = '';
+                         this.newAnswer = '';
+                     }} else {{
+                         alert('Question and Answer are required.');
+                     }}
+                 }},
+                 removeItem(idx) {{
+                     if (confirm('Remove this FAQ item?')) {{
+                         this.items.splice(idx, 1);
+                     }}
+                 }}
+             }}"
+             class="cms-widget-container space-y-4 font-sans p-5 border rounded-2xl max-w-2xl mt-1"
+        >
+            <textarea name="{name}" id="{id_str}" style="display:none;" :value="JSON.stringify(items)">{items_json_escaped}</textarea>
+            
+            <div class="space-y-3 max-h-[400px] overflow-y-auto pr-1">
+                <template x-for="(item, idx) in items" :key="idx">
+                    <div class="cms-card p-4 border rounded-xl shadow-sm relative space-y-2 hover:border-slate-350 transition-colors">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                            <div class="flex gap-2 items-center w-full">
+                                <span class="text-[10px] text-slate-400">Q:</span>
+                                <input type="text" x-model="item.question" class="cms-input-field text-xs font-bold px-2 py-1 border rounded-lg focus:outline-none focus:border-sky-500 flex-1" />
+                            </div>
+                            <button type="button" class="text-red-500 hover:bg-red-50 p-1.5 rounded-lg border-0 bg-transparent cursor-pointer ml-2" @click="removeItem(idx)">
+                                <span class="material-symbols-outlined align-middle" style="font-size: 16px;">delete</span>
+                            </button>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-[10px] text-slate-400">A:</span>
+                            <textarea x-model="item.answer" class="cms-input-field w-full text-xs px-2 py-1 border rounded-lg focus:outline-none focus:border-sky-500" rows="2"></textarea>
+                        </div>
+                    </div>
+                </template>
+                <div x-show="items.length === 0">
+                    <p class="text-[11px] text-slate-400 italic py-2">No FAQs added yet.</p>
+                </div>
+            </div>
+            
+            <div class="cms-form-box space-y-3 p-4 border rounded-xl shadow-sm">
+                <h4 class="text-[11px] font-bold text-slate-700 uppercase tracking-wide border-b border-slate-50 pb-1">Add New FAQ</h4>
+                <input type="text" x-model="newQuestion" placeholder="Question..." class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
+                <textarea x-model="newAnswer" rows="2" placeholder="Answer..." class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg"></textarea>
+                <button type="button" @click="addItem()" class="w-full py-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-[10px] rounded-lg border-0 cursor-pointer uppercase tracking-wider">
+                    Add FAQ
+                </button>
+            </div>
+        </div>
+        '''
+        return mark_safe(html)
