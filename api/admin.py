@@ -145,7 +145,7 @@ class SubServiceInline(TabularInline):
     model = SubService
     extra = 1
     prepopulated_fields = {'slug': ('title',)}
-    fields = ('title', 'slug', 'description')
+    fields = ('title', 'slug', 'description', 'index_page', 'follow_links')
 
 class SecondOpinionInline(StackedInline):
     model = SecondOpinion
@@ -222,10 +222,21 @@ class ServiceAdmin(ModelAdmin):
 
 @admin.register(SubService)
 class SubServiceAdmin(ModelAdmin):
-    list_display = ('title', 'service', 'slug', 'created_at')
-    list_filter = ('service',)
+    list_display = ('title', 'service', 'slug', 'index_page', 'follow_links', 'created_at')
+    list_editable = ('index_page', 'follow_links')
+    list_filter = ('service', 'index_page', 'follow_links')
     search_fields = ('title', 'service__title')
     prepopulated_fields = {'slug': ('title',)}
+
+    fieldsets = (
+        ('Sub Service Information', {
+            'fields': ('service', 'title', 'slug', 'description')
+        }),
+        ('Search Engine Indexing & Robots Directives', {
+            'fields': ('index_page', 'follow_links'),
+            'description': 'Control search engine bot crawling (index/noindex, follow/nofollow) for this sub-service.'
+        }),
+    )
 
 @admin.register(Translation)
 class TranslationAdmin(ModelAdmin):
@@ -240,8 +251,9 @@ class SiteSettingAdmin(ModelAdmin):
         return not SiteSetting.objects.exists()
 
     fieldsets = (
-        ('Technical SEO', {
-            'fields': ('robots_txt',)
+        ('Robots.txt & Crawling Rules', {
+            'fields': ('robots_txt',),
+            'description': 'Configure search engine bot crawling rules and Sitemap URL directives for the website.'
         }),
         ('Global Scripts', {
             'fields': ('header_scripts', 'footer_scripts'),
