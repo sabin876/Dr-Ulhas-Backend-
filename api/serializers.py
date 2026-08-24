@@ -27,7 +27,7 @@ import json
 class SubServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = SubService
-        fields = ['id', 'title', 'slug', 'description']
+        fields = ['id', 'title', 'slug', 'description', 'index_page', 'follow_links']
 
 class SecondOpinionSerializer(serializers.ModelSerializer):
     class Meta:

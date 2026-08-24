@@ -126,6 +126,8 @@ class SubService(models.Model):
     slug = models.SlugField(max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     description = models.TextField(blank=True, null=True)
+    index_page = models.BooleanField(default=True, help_text="Allow search engines to index this sub service page")
+    follow_links = models.BooleanField(default=True, help_text="Allow search engines to follow links on this sub service page")
 
     def save(self, *args, **kwargs):
         if not self.slug:
