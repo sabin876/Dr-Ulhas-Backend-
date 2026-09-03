@@ -14,11 +14,15 @@ class ArticleSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        if 'faqs' in data and isinstance(data['faqs'], str):
-            try:
-                data['faqs'] = json.loads(data['faqs'])
-            except (ValueError, TypeError):
-                pass
+        for json_field in ['faqs', 'schema_markup']:
+            if json_field in data and isinstance(data[json_field], str):
+                if data[json_field].strip() == '':
+                    data[json_field] = None
+                else:
+                    try:
+                        data[json_field] = json.loads(data[json_field])
+                    except (ValueError, TypeError):
+                        pass
 
         return super().to_internal_value(data)
 
