@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion
+from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage
 
 import json
 
@@ -138,5 +138,29 @@ class SecondOpinionSerializer(serializers.ModelSerializer):
     class Meta:
         model = SecondOpinion
         fields = '__all__'
+
+
+class HomePageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HomePage
+        fields = '__all__'
+
+    def to_internal_value(self, data):
+        if hasattr(data, 'dict'):
+            data = data.dict()
+        elif hasattr(data, '_mutable'):
+            data._mutable = True
+
+        for json_field in ['faqs', 'schema_markup']:
+            if json_field in data and isinstance(data[json_field], str):
+                if data[json_field].strip() == '':
+                    data[json_field] = None
+                else:
+                    try:
+                        data[json_field] = json.loads(data[json_field])
+                    except (ValueError, TypeError):
+                        pass
+
+        return super().to_internal_value(data)
 
 

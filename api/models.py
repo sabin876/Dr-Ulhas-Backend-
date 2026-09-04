@@ -256,3 +256,19 @@ class SecondOpinion(models.Model):
         return f"{self.title} ({self.category})"
 
 
+class HomePage(SEOBaseModel):
+    title = models.CharField(max_length=255, default="Home Page")
+    faq_badge = models.CharField(max_length=255, default="Help Center", blank=True, null=True)
+    faq_title = models.CharField(max_length=255, default="Asked Frequently Questions", blank=True, null=True)
+    faq_description = models.TextField(default="Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.", blank=True, null=True)
+    faqs = models.JSONField(default=list, blank=True, help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]')
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Home Page"
+        verbose_name_plural = "Home Page"
+
+    def __str__(self):
+        return "Home Page SEO & FAQs"
+
+

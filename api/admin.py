@@ -5,7 +5,7 @@ from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
-from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo, SecondOpinion
+from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo, SecondOpinion, HomePage
 from django.contrib.auth.models import Group, User
 
 try:
@@ -128,6 +128,7 @@ class ArticleAdmin(ModelAdmin):
         }),
         ('SEO & Metadata', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'index_page', 'follow_links'),
+            'classes': ('collapse',),
             'description': 'Control how search engines see this page.'
         }),
         ('Social Media (Open Graph)', {
@@ -332,6 +333,49 @@ class SecondOpinionAdmin(ModelAdmin):
         }),
         ('Ordering & Status', {
             'fields': ('order', 'is_active')
+        }),
+    )
+
+
+class HomePageAdminForm(forms.ModelForm):
+    class Meta:
+        model = HomePage
+        fields = "__all__"
+        widgets = {
+            "faqs": FaqWidget(),
+        }
+
+
+@admin.register(HomePage)
+class HomePageAdmin(ModelAdmin):
+    form = HomePageAdminForm
+    list_display = ('title', 'meta_title', 'updated_at')
+
+    def has_add_permission(self, request):
+        return not HomePage.objects.exists()
+
+    fieldsets = (
+        ('General', {
+            'fields': ('title',)
+        }),
+        ('FAQ Section', {
+            'fields': ('faq_badge', 'faq_title', 'faq_description', 'faqs'),
+            'description': 'Configure the Home Page FAQ section and questions/answers.'
+        }),
+        ('SEO & Metadata', {
+            'fields': ('meta_title', 'meta_description', 'canonical_url', 'index_page', 'follow_links', 'h1_title'),
+            'classes': ('collapse',),
+            'description': 'Control how search engines index and rank the Home Page.'
+        }),
+        ('Social Media (Open Graph)', {
+            'fields': ('og_title', 'og_description', 'og_image'),
+            'classes': ('collapse',),
+            'description': 'Control preview cards on Facebook, WhatsApp, LinkedIn, etc.'
+        }),
+        ('Schema Markup', {
+            'fields': ('schema_type', 'schema_markup'),
+            'classes': ('collapse',),
+            'description': 'Structured JSON-LD schema markup for rich Google search results.'
         }),
     )
 

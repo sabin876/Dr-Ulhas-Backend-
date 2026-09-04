@@ -5,8 +5,8 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login as auth_login
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion
-from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer, SecondOpinionSerializer
+from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage
+from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer, SecondOpinionSerializer, HomePageSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -40,6 +40,63 @@ class GalleryItemViewSet(viewsets.ModelViewSet):
 class SecondOpinionViewSet(viewsets.ModelViewSet):
     queryset = SecondOpinion.objects.filter(is_active=True).order_by('order', 'created_at')
     serializer_class = SecondOpinionSerializer
+
+
+@api_view(['GET', 'PUT', 'PATCH'])
+def home_page_view(request):
+    hp = HomePage.objects.first()
+    if not hp:
+        hp = HomePage.objects.create(
+            title="Home Page",
+            meta_title="Dr. Ulhas | Expert Orthopedic Surgeon Dubai",
+            meta_description="Expert orthopedic care specializing in robotic joint replacement, sports injuries, and comprehensive rehabilitation with Dr. Ulhas Sonar.",
+            canonical_url="https://drulhasorthopedic.com/",
+            faq_badge="Help Center",
+            faq_title="Frequently Asked Questions",
+            faq_description="Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.",
+            faqs=[
+                {
+                    "question": "What is robotic-assisted surgery?",
+                    "answer": "It is a precision-guided technique that allows the surgeon to perform joint replacements with higher accuracy, leading to better outcomes."
+                },
+                {
+                    "question": "How long is the recovery period?",
+                    "answer": "Recovery varies by procedure, but most patients return to normal activities within 6 to 12 weeks with proper physical therapy."
+                },
+                {
+                    "question": "Do you treat sports injuries?",
+                    "answer": "Yes, we specialize in ACL repairs, meniscus treatments, and all types of athletic musculoskeletal injuries."
+                },
+                {
+                    "question": "Where is the clinic located?",
+                    "answer": "Our main consultation rooms are located in Dubai, within premium medical facilities."
+                },
+                {
+                    "question": "Is second opinion available?",
+                    "answer": "Yes, we encourage patients to seek second opinions for complex orthopedic cases to ensure confidence in their treatment."
+                }
+            ]
+        )
+    if request.method in ['PUT', 'PATCH']:
+        serializer = HomePageSerializer(hp, data=request.data, partial=True, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return response.Response(serializer.data)
+        return response.Response(serializer.errors, status=400)
+    serializer = HomePageSerializer(hp, context={'request': request})
+    return response.Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_home_faqs(request):
+    hp = HomePage.objects.first()
+    faqs = hp.faqs if hp and hp.faqs else []
+    if isinstance(faqs, str):
+        try:
+            faqs = json.loads(faqs)
+        except Exception:
+            faqs = []
+    return response.Response(faqs)
 
     
 

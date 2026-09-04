@@ -240,6 +240,11 @@ UNFOLD = {
                 "separator": True,
                 "items": [
                     {
+                        "title": "Home Page",
+                        "icon": "home",
+                        "link": "/admin/api/homepage/",
+                    },
+                    {
                         "title": "Articles",
                         "icon": "article",
                         "link": "/admin/api/article/",
@@ -268,6 +273,11 @@ UNFOLD = {
                         "title": "Sub Services",
                         "icon": "account_tree",
                         "link": "/admin/api/subservice/",
+                    },
+                    {
+                        "title": "Specialized Care / Second Opinions",
+                        "icon": "rate_review",
+                        "link": "/admin/api/secondopinion/",
                     },
                     {
                         "title": "Site Settings",
