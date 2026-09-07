@@ -10,10 +10,28 @@ from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerial
 from django.core.mail import send_mail
 from django.conf import settings
 
+from django.utils import timezone
+from django.db.models import Q
+
 class ArticleViewSet(viewsets.ModelViewSet):
-    queryset = Article.objects.all().order_by('-date')
+    queryset = Article.objects.all()
     serializer_class = ArticleSerializer
     lookup_field = 'slug'
+
+    def get_queryset(self):
+        show_all = (
+            self.request.query_params.get('all') in ['true', '1', 'yes'] or
+            self.request.query_params.get('admin') in ['true', '1', 'yes'] or
+            (self.request.user and self.request.user.is_authenticated and self.request.user.is_staff)
+        )
+        if show_all:
+            return Article.objects.all().order_by('-published_at', '-date')
+
+        # Public visitors only see published articles whose scheduled time has arrived
+        now = timezone.now()
+        return Article.objects.filter(
+            published_at__lte=now
+        ).exclude(status='draft').order_by('-published_at', '-date')
 
 class ServiceViewSet(viewsets.ModelViewSet):
     queryset = Service.objects.all()
@@ -199,7 +217,8 @@ def sitemap_xml(request):
         return HttpResponse(settings.sitemap_xml.strip(), content_type="application/xml")
 
     # Dynamic fallback XML sitemap generation
-    articles = Article.objects.filter(index_page=True)
+    now = timezone.now()
+    articles = Article.objects.filter(index_page=True, published_at__lte=now).exclude(status='draft')
     services = Service.objects.filter(index_page=True)
     
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -219,7 +238,8 @@ def sitemap_xml(request):
 
 @api_view(['GET'])
 def html_sitemap(request):
-    articles = Article.objects.filter(index_page=True)
+    now = timezone.now()
+    articles = Article.objects.filter(index_page=True, published_at__lte=now).exclude(status='draft')
     services = Service.objects.filter(index_page=True)
     
     data = {

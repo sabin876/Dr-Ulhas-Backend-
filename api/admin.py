@@ -104,8 +104,19 @@ class ServiceAdminForm(forms.ModelForm):
 class ArticleAdmin(ModelAdmin):
     form = ArticleAdminForm
     change_list_template = "admin/api/article/change_list.html"
-    list_display = ('title', 'edit_button', 'delete_button', 'date', 'category', 'index_page')
+    list_display = ('title', 'status_badge', 'published_at', 'category', 'edit_button', 'delete_button', 'index_page')
     
+    @display(description="Status")
+    def status_badge(self, obj):
+        from django.utils import timezone
+        if obj.status == 'draft':
+            return format_html('<span style="background-color: #f1f5f9; color: #475569; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">Draft</span>')
+        elif obj.is_published:
+            return format_html('<span style="background-color: #ecfdf5; color: #059669; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">Published</span>')
+        else:
+            time_str = obj.published_at.strftime('%Y-%m-%d %H:%M') if obj.published_at else ''
+            return format_html('<span style="background-color: #eff6ff; color: #2563eb; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;" title="Scheduled for {}">Scheduled ({})</span>', time_str, time_str)
+
     @display(description="Edit")
     def edit_button(self, obj):
         url = reverse('admin:api_article_change', args=[obj.id])
@@ -115,10 +126,15 @@ class ArticleAdmin(ModelAdmin):
     def delete_button(self, obj):
         url = reverse('admin:api_article_delete', args=[obj.id])
         return format_html('<a href="{}" class="text-red-600 hover:text-red-800" title="Delete"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">delete</span></a>', url)
+    
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title', 'content')
-    list_filter = ('category', 'date', 'index_page')
+    list_filter = ('status', 'category', 'published_at', 'index_page')
     fieldsets = (
+        ('Publication & Schedule', {
+            'fields': ('status', 'published_at'),
+            'description': 'Schedule when this article will be visible on the website. Articles with a future date/time or Draft status will stay hidden from public visitors until the scheduled time.'
+        }),
         ('Content', {
             'fields': ('title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color')
         }),

@@ -4,6 +4,8 @@ from .models import Article, Service, SubService, Translation, SiteSetting, Gall
 import json
 
 class ArticleSerializer(serializers.ModelSerializer):
+    is_published = serializers.BooleanField(read_only=True)
+
     class Meta:
         model = Article
         fields = '__all__'

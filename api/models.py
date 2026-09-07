@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.utils import timezone
 
 class SEOBaseModel(models.Model):
     meta_title = models.CharField(max_length=255, blank=True, null=True)
@@ -35,6 +36,12 @@ class SEOBaseModel(models.Model):
         return None
 
 class Article(SEOBaseModel):
+    STATUS_CHOICES = [
+        ('published', 'Published'),
+        ('scheduled', 'Scheduled'),
+        ('draft', 'Draft'),
+    ]
+
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, blank=True)
     excerpt = models.TextField()
@@ -44,16 +51,41 @@ class Article(SEOBaseModel):
     category = models.CharField(max_length=100)
     category_color = models.CharField(max_length=50, default="bg-blue-100 text-blue-600")
     faqs = models.JSONField(default=list, blank=True, help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='published', db_index=True, help_text="Status of the article")
+    published_at = models.DateTimeField(default=timezone.now, db_index=True, help_text="Date and time when the article is published / scheduled to appear on the website")
     date = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-published_at', '-date']
+
+    @property
+    def is_published(self):
+        if self.status == 'draft':
+            return False
+        if self.published_at and self.published_at > timezone.now():
+            return False
+        return True
 
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
+        
+        # Ensure published_at is set
+        if not self.published_at:
+            self.published_at = timezone.now()
+
+        # Update status based on published_at if not explicitly draft
+        if self.status != 'draft':
+            if self.published_at > timezone.now():
+                self.status = 'scheduled'
+            else:
+                self.status = 'published'
+
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.title
+        return f"{self.title} ({self.get_status_display()})"
 
 class Service(SEOBaseModel):
     title = models.CharField(max_length=255)
