@@ -107,9 +107,10 @@ class ReportAccessOTPAdmin(ModelAdmin):
     
     def is_expired_display(self, obj):
         """Display expiry status with color"""
+        from django.utils.safestring import mark_safe
         if obj.is_expired:
-            return format_html('<span style="color: red;">✗ Expired</span>')
-        return format_html('<span style="color: green;">✓ Active</span>')
+            return mark_safe('<span style="color: red;">✗ Expired</span>')
+        return mark_safe('<span style="color: green;">✓ Active</span>')
     is_expired_display.short_description = "Expiry Status"
     
     def has_add_permission(self, request):

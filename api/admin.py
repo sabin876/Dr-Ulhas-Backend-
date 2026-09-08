@@ -100,6 +100,8 @@ class ServiceAdminForm(forms.ModelForm):
             return []
         return val
 
+from django.utils.safestring import mark_safe
+
 @admin.register(Article)
 class ArticleAdmin(ModelAdmin):
     form = ArticleAdminForm
@@ -110,9 +112,9 @@ class ArticleAdmin(ModelAdmin):
     def status_badge(self, obj):
         from django.utils import timezone
         if obj.status == 'draft':
-            return format_html('<span style="background-color: #f1f5f9; color: #475569; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">Draft</span>')
+            return mark_safe('<span style="background-color: #f1f5f9; color: #475569; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">Draft</span>')
         elif obj.is_published:
-            return format_html('<span style="background-color: #ecfdf5; color: #059669; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">Published</span>')
+            return mark_safe('<span style="background-color: #ecfdf5; color: #059669; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;">Published</span>')
         else:
             time_str = obj.published_at.strftime('%Y-%m-%d %H:%M') if obj.published_at else ''
             return format_html('<span style="background-color: #eff6ff; color: #2563eb; padding: 3px 8px; border-radius: 6px; font-weight: bold; font-size: 11px;" title="Scheduled for {}">Scheduled ({})</span>', time_str, time_str)
