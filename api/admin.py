@@ -14,7 +14,7 @@ try:
 except admin.sites.NotRegistered:
     pass
 
-from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget, SportsInjuryItemsWidget
+from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget, SportsInjuryItemsWidget, TrustCardsWidget
 
 class ArticleAdminForm(forms.ModelForm):
     class Meta:
@@ -362,13 +362,14 @@ class HomePageAdminForm(forms.ModelForm):
         widgets = {
             "faqs": FaqWidget(),
             "sports_items": SportsInjuryItemsWidget(),
+            "trust_cards": TrustCardsWidget(),
         }
 
 
 @admin.register(HomePage)
 class HomePageAdmin(ModelAdmin):
     form = HomePageAdminForm
-    list_display = ('title', 'sports_badge', 'meta_title', 'updated_at')
+    list_display = ('title', 'trust_badge', 'sports_badge', 'meta_title', 'updated_at')
 
     def has_add_permission(self, request):
         return not HomePage.objects.exists()
@@ -376,6 +377,18 @@ class HomePageAdmin(ModelAdmin):
     fieldsets = (
         ('General', {
             'fields': ('title',)
+        }),
+        ('Why Patients Trust Section (Patient-Focused Excellence)', {
+            'fields': (
+                'trust_is_active',
+                'trust_badge',
+                'trust_title',
+                'trust_title_highlight',
+                'trust_description',
+                'trust_cards',
+            ),
+            'classes': ('collapse',),
+            'description': 'Configure the Patient-Focused Excellence section (heading, subtext, and feature cards).'
         }),
         ('Sports Injury Clinic Section', {
             'fields': (

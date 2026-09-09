@@ -1099,3 +1099,269 @@ class SportsInjuryItemsWidget(forms.Widget):
         '''
         return mark_safe(html)
 
+
+class TrustCardsWidget(forms.Widget):
+    def render(self, name, value, attrs=None, renderer=None):
+        attrs = attrs or {}
+        id_str = attrs.get('id', name)
+        
+        if isinstance(value, str):
+            try:
+                items = json.loads(value)
+            except Exception:
+                items = []
+        elif isinstance(value, list):
+            items = value
+        else:
+            items = []
+            
+        items_json = json.dumps(items)
+        items_json_escaped = escape(items_json)
+        
+        html = f'''
+        <style>
+        #cms-trust-{id_str} {{ font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+        .cms-widget-container {{ background-color: #f8fafc !important; border-color: #e2e8f0 !important; }}
+        .cms-card {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; color: #1e293b !important; }}
+        .cms-card-title {{ color: #0f172a !important; }}
+        .cms-input-field {{ background-color: #ffffff !important; border-color: #cbd5e1 !important; color: #0f172a !important; }}
+        .cms-input-field::placeholder {{ color: #94a3b8 !important; }}
+        .cms-form-box {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; }}
+        .cms-btn-secondary {{ background-color: #f1f5f9 !important; border-color: #cbd5e1 !important; color: #334155 !important; }}
+        .cms-btn-secondary:hover {{ background-color: #e2e8f0 !important; color: #0f172a !important; }}
+        html.dark #cms-trust-{id_str} .cms-widget-container, body.dark #cms-trust-{id_str} .cms-widget-container, .dark #cms-trust-{id_str} .cms-widget-container {{ background-color: #0f172a !important; border-color: #1e293b !important; }}
+        html.dark #cms-trust-{id_str} .cms-card, body.dark #cms-trust-{id_str} .cms-card, .dark #cms-trust-{id_str} .cms-card {{ background-color: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }}
+        html.dark #cms-trust-{id_str} .cms-card-title, body.dark #cms-trust-{id_str} .cms-card-title, .dark #cms-trust-{id_str} .cms-card-title {{ color: #f8fafc !important; }}
+        html.dark #cms-trust-{id_str} .cms-input-field, body.dark #cms-trust-{id_str} .cms-input-field, .dark #cms-trust-{id_str} .cms-input-field {{ background-color: #0f172a !important; border-color: #334155 !important; color: #f8fafc !important; }}
+        html.dark #cms-trust-{id_str} .cms-input-field::placeholder, body.dark #cms-trust-{id_str} .cms-input-field::placeholder, .dark #cms-trust-{id_str} .cms-input-field::placeholder {{ color: #475569 !important; }}
+        html.dark #cms-trust-{id_str} .cms-form-box, body.dark #cms-trust-{id_str} .cms-form-box, .dark #cms-trust-{id_str} .cms-form-box {{ background-color: #1e293b !important; border-color: #334155 !important; }}
+        html.dark #cms-trust-{id_str} .cms-btn-secondary, body.dark #cms-trust-{id_str} .cms-btn-secondary, .dark #cms-trust-{id_str} .cms-btn-secondary {{ background-color: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }}
+        html.dark #cms-trust-{id_str} .cms-btn-secondary:hover, body.dark #cms-trust-{id_str} .cms-btn-secondary:hover, .dark #cms-trust-{id_str} .cms-btn-secondary:hover {{ background-color: #334155 !important; color: #f8fafc !important; }}
+        </style>
+        
+        <div id="cms-trust-{id_str}" 
+             x-data="{{ 
+                 items: {items_json_escaped},
+                 minimized: {{}},
+                 allMinimized: false,
+                 newId: '',
+                 newIcon: 'Award',
+                 newTitle: '',
+                 newDesc: '',
+                 newBadge: '',
+                 isItemMinimized(idx) {{
+                     return this.minimized[idx] === true;
+                 }},
+                 toggleItem(idx) {{
+                     this.minimized[idx] = !this.isItemMinimized(idx);
+                 }},
+                 toggleAll() {{
+                     this.allMinimized = !this.allMinimized;
+                     this.items.forEach((_, idx) => {{
+                         this.minimized[idx] = this.allMinimized;
+                     }});
+                 }},
+                 moveUp(idx) {{
+                     if (idx > 0) {{
+                         const temp = this.items[idx];
+                         this.items[idx] = this.items[idx - 1];
+                         this.items[idx - 1] = temp;
+                         const tempMin = this.minimized[idx];
+                         this.minimized[idx] = this.minimized[idx - 1];
+                         this.minimized[idx - 1] = tempMin;
+                     }}
+                 }},
+                 moveDown(idx) {{
+                     if (idx < this.items.length - 1) {{
+                         const temp = this.items[idx];
+                         this.items[idx] = this.items[idx + 1];
+                         this.items[idx + 1] = temp;
+                         const tempMin = this.minimized[idx];
+                         this.minimized[idx] = this.minimized[idx + 1];
+                         this.minimized[idx + 1] = tempMin;
+                     }}
+                 }},
+                 addItem() {{
+                     if (this.newTitle.trim() && this.newDesc.trim()) {{
+                         this.items.push({{
+                             id: this.newId.trim() || String(this.items.length + 1).padStart(2, '0'),
+                             icon: this.newIcon || 'Award',
+                             title: this.newTitle.trim(),
+                             description: this.newDesc.trim(),
+                             badge: this.newBadge.trim()
+                         }});
+                         this.minimized[this.items.length - 1] = false;
+                         this.newId = '';
+                         this.newIcon = 'Award';
+                         this.newTitle = '';
+                         this.newDesc = '';
+                         this.newBadge = '';
+                     }} else {{
+                         alert('Card Title and Description are required.');
+                     }}
+                 }},
+                 removeItem(idx) {{
+                     if (confirm('Remove this trust card?')) {{
+                         this.items.splice(idx, 1);
+                         delete this.minimized[idx];
+                     }}
+                 }}
+             }}"
+             class="cms-widget-container space-y-4 font-sans p-5 border rounded-2xl max-w-3xl mt-1"
+        >
+            <textarea name="{name}" id="{id_str}" style="display:none;" :value="JSON.stringify(items)">{items_json_escaped}</textarea>
+            
+            <!-- Header Toolbar -->
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-xs text-slate-700 dark:text-slate-200 uppercase tracking-wide">Trust Feature Cards</span>
+                    <span class="text-[11px] bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 font-semibold px-2 py-0.5 rounded-full" x-text="items.length + ' Cards'"></span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <!-- Minimize / Expand All Button -->
+                    <button type="button" 
+                            @click="toggleAll()" 
+                            class="cms-btn-secondary flex items-center gap-1.5 px-3 py-1.5 border rounded-lg text-xs font-semibold cursor-pointer transition-all shadow-sm">
+                        <span class="material-symbols-outlined text-sm" x-text="allMinimized ? 'unfold_more' : 'unfold_less'" style="font-size: 16px;"></span>
+                        <span x-text="allMinimized ? 'Expand All' : 'Minimize All'"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Items List -->
+            <div class="space-y-3 max-h-[500px] overflow-y-auto pr-1">
+                <template x-for="(item, idx) in items" :key="idx">
+                    <div class="cms-card p-3.5 border rounded-xl shadow-sm relative space-y-3 hover:border-slate-350 transition-all">
+                        <!-- Card Header -->
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="flex items-center gap-2 flex-1 min-w-0 cursor-pointer select-none" @click="toggleItem(idx)">
+                                <span class="shrink-0 w-8 h-6 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-[10px] flex items-center justify-center font-mono" x-text="item.id || '#' + (idx + 1)"></span>
+                                <span class="text-xs font-bold truncate flex-1 text-slate-800 dark:text-slate-100" x-text="item.title || '(Empty title...)'"></span>
+                                <span class="text-[10px] bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-300 px-2 py-0.5 rounded font-semibold shrink-0" x-text="item.badge || item.icon"></span>
+                            </div>
+                            
+                            <div class="flex items-center gap-1 shrink-0">
+                                <!-- Move Up/Down -->
+                                <button type="button" 
+                                        class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 border-0 bg-transparent cursor-pointer disabled:opacity-30" 
+                                        :disabled="idx === 0" 
+                                        @click="moveUp(idx)"
+                                        title="Move Up">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 16px;">arrow_upward</span>
+                                </button>
+                                <button type="button" 
+                                        class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 border-0 bg-transparent cursor-pointer disabled:opacity-30" 
+                                        :disabled="idx === items.length - 1" 
+                                        @click="moveDown(idx)"
+                                        title="Move Down">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 16px;">arrow_downward</span>
+                                </button>
+                                
+                                <!-- Minimize / Expand Single Item Button -->
+                                <button type="button" 
+                                        class="flex items-center gap-1 text-[11px] font-medium px-2 py-1 rounded-md text-sky-600 dark:text-sky-400 hover:bg-sky-50 dark:hover:bg-sky-950 border border-sky-200 dark:border-sky-800 bg-transparent cursor-pointer"
+                                        @click="toggleItem(idx)"
+                                        :title="isItemMinimized(idx) ? 'Expand' : 'Minimize'">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 15px;" x-text="isItemMinimized(idx) ? 'expand_more' : 'expand_less'"></span>
+                                    <span x-text="isItemMinimized(idx) ? 'Expand' : 'Minimize'"></span>
+                                </button>
+
+                                <!-- Delete Button -->
+                                <button type="button" 
+                                        class="text-red-500 hover:bg-red-50 dark:hover:bg-red-950 p-1 rounded-md border-0 bg-transparent cursor-pointer" 
+                                        @click="removeItem(idx)"
+                                        title="Delete Card">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 16px;">delete</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Content Body -->
+                        <div x-show="!isItemMinimized(idx)" class="space-y-3 pt-2 border-t border-slate-100 dark:border-slate-800">
+                            <div class="grid sm:grid-cols-3 gap-2.5">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Card ID / Number:</label>
+                                    <input type="text" 
+                                           x-model="item.id" 
+                                           placeholder="e.g. 01" 
+                                           class="cms-input-field text-xs font-mono font-semibold px-3 py-1.5 border rounded-lg focus:outline-none focus:border-sky-500 w-full" />
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Icon:</label>
+                                    <select x-model="item.icon" 
+                                            class="cms-input-field text-xs px-2.5 py-1.5 border rounded-lg focus:outline-none focus:border-sky-500 w-full">
+                                        <option value="Award">Award (Experience / Quality)</option>
+                                        <option value="Cpu">Cpu (Technology / Robotic)</option>
+                                        <option value="Zap">Zap (Fast Recovery / Energy)</option>
+                                        <option value="HeartHandshake">HeartHandshake (Personalized Care)</option>
+                                        <option value="ShieldCheck">ShieldCheck (Safety / Trust)</option>
+                                        <option value="CheckCircle2">CheckCircle2</option>
+                                        <option value="Activity">Activity</option>
+                                        <option value="HeartPulse">HeartPulse</option>
+                                        <option value="Sparkles">Sparkles</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Badge Tag:</label>
+                                    <input type="text" 
+                                           x-model="item.badge" 
+                                           placeholder="e.g. 14+ Yrs Experience" 
+                                           class="cms-input-field text-xs font-semibold px-3 py-1.5 border rounded-lg focus:outline-none focus:border-sky-500 w-full" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Card Title:</label>
+                                <input type="text" 
+                                       x-model="item.title" 
+                                       placeholder="e.g. Expert Care" 
+                                       class="cms-input-field text-xs font-bold px-3 py-1.5 border rounded-lg focus:outline-none focus:border-sky-500 w-full" />
+                            </div>
+
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Card Description:</label>
+                                <textarea x-model="item.description" 
+                                          placeholder="Enter description..." 
+                                          class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg focus:outline-none focus:border-sky-500" 
+                                          rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <div x-show="items.length === 0">
+                    <p class="text-xs text-slate-400 italic py-3 text-center">No trust cards added yet.</p>
+                </div>
+            </div>
+            
+            <!-- Add New Trust Card Form -->
+            <div class="cms-form-box space-y-3 p-4 border rounded-xl shadow-sm">
+                <div class="flex items-center gap-1.5 border-b border-slate-100 dark:border-slate-800 pb-2">
+                    <span class="material-symbols-outlined text-sky-500" style="font-size: 16px;">add_circle</span>
+                    <h4 class="text-[11px] font-bold text-slate-700 dark:text-slate-200 uppercase tracking-wide m-0">Add New Trust Card</h4>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-2.5">
+                    <input type="text" x-model="newId" placeholder="ID (e.g. 05)" class="cms-input-field text-xs font-mono px-3 py-2 border rounded-lg w-full" />
+                    <select x-model="newIcon" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full">
+                        <option value="Award">Award (Experience)</option>
+                        <option value="Cpu">Cpu (Technology)</option>
+                        <option value="Zap">Zap (Recovery)</option>
+                        <option value="HeartHandshake">HeartHandshake (Care)</option>
+                        <option value="ShieldCheck">ShieldCheck</option>
+                        <option value="CheckCircle2">CheckCircle2</option>
+                        <option value="Activity">Activity</option>
+                        <option value="HeartPulse">HeartPulse</option>
+                        <option value="Sparkles">Sparkles</option>
+                    </select>
+                    <input type="text" x-model="newBadge" placeholder="Badge (e.g. Tailored Plans)" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
+                </div>
+                <input type="text" x-model="newTitle" placeholder="Card Title (e.g. Holistic Recovery)" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
+                <textarea x-model="newDesc" rows="2" placeholder="Card Description..." class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg"></textarea>
+                <button type="button" @click="addItem()" class="w-full py-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs rounded-lg border-0 cursor-pointer uppercase tracking-wider transition-colors shadow-sm">
+                    + Add Trust Card
+                </button>
+            </div>
+        </div>
+        '''
+        return mark_safe(html)
+
+

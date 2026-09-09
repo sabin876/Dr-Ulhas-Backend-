@@ -101,6 +101,41 @@ def home_page_view(request):
             ],
             sports_cta_text="Book Sports Consultation",
             sports_cta_link="/contact",
+            trust_is_active=True,
+            trust_badge="PATIENT-FOCUSED EXCELLENCE",
+            trust_title="Why Patients Trust",
+            trust_title_highlight="Dr. Ulhas Sonar",
+            trust_description="Combining global surgical experience with cutting-edge technology and a compassionate, individualized recovery approach.",
+            trust_cards=[
+                {
+                    "id": "01",
+                    "icon": "Award",
+                    "title": "Expert Care",
+                    "description": "14+ years of complex orthopaedic care experience and surgical precision.",
+                    "badge": "14+ Yrs Experience"
+                },
+                {
+                    "id": "02",
+                    "icon": "Cpu",
+                    "title": "Advanced Technology",
+                    "description": "Using the latest medical technologies and techniques for optimal surgical outcomes.",
+                    "badge": "Robotic & Tech Led"
+                },
+                {
+                    "id": "03",
+                    "icon": "Zap",
+                    "title": "Quick Recovery",
+                    "description": "Specialized minimally invasive techniques for faster healing and reduced hospital stays.",
+                    "badge": "Minimally Invasive"
+                },
+                {
+                    "id": "04",
+                    "icon": "HeartHandshake",
+                    "title": "Personalized Care",
+                    "description": "Each treatment plan is carefully tailored to address your specific needs and conditions.",
+                    "badge": "Tailored Plans"
+                }
+            ],
             faqs=[
                 {
                     "question": "What is robotic-assisted surgery?",

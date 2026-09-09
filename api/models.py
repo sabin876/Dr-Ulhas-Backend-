@@ -337,6 +337,22 @@ class HomePage(SEOBaseModel):
     faq_description = models.TextField(default="Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.", blank=True, null=True)
     faqs = models.JSONField(default=list, blank=True, help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]')
     
+    # Why Patients Trust Section (Patient-Focused Excellence)
+    trust_is_active = models.BooleanField(default=True, verbose_name="Enable Why Patients Trust Section")
+    trust_badge = models.CharField(max_length=255, default="PATIENT-FOCUSED EXCELLENCE", blank=True, null=True, help_text="Badge text above heading")
+    trust_title = models.CharField(max_length=255, default="Why Patients Trust", blank=True, null=True, help_text="First part of heading")
+    trust_title_highlight = models.CharField(max_length=255, default="Dr. Ulhas Sonar", blank=True, null=True, help_text="Highlighted gradient part of heading")
+    trust_description = models.TextField(
+        default="Combining global surgical experience with cutting-edge technology and a compassionate, individualized recovery approach.",
+        blank=True, null=True,
+        help_text="Subtext under the heading"
+    )
+    trust_cards = models.JSONField(
+        default=list,
+        blank=True,
+        help_text='List of trust cards, e.g. [{"id": "01", "icon": "Award", "title": "Expert Care", "description": "...", "badge": "14+ Yrs Experience"}]'
+    )
+
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:

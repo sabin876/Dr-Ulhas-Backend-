@@ -153,10 +153,10 @@ class HomePageSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        for json_field in ['faqs', 'schema_markup', 'sports_items']:
+        for json_field in ['faqs', 'schema_markup', 'sports_items', 'trust_cards']:
             if json_field in data and isinstance(data[json_field], str):
                 if data[json_field].strip() == '':
-                    data[json_field] = [] if json_field in ['faqs', 'sports_items'] else None
+                    data[json_field] = [] if json_field in ['faqs', 'sports_items', 'trust_cards'] else None
                 else:
                     try:
                         data[json_field] = json.loads(data[json_field])
@@ -165,6 +165,9 @@ class HomePageSerializer(serializers.ModelSerializer):
 
         if 'sports_is_active' in data and isinstance(data['sports_is_active'], str):
             data['sports_is_active'] = data['sports_is_active'].lower() in ['true', '1', 'yes']
+
+        if 'trust_is_active' in data and isinstance(data['trust_is_active'], str):
+            data['trust_is_active'] = data['trust_is_active'].lower() in ['true', '1', 'yes']
 
         return super().to_internal_value(data)
 
