@@ -1182,23 +1182,29 @@ class TrustCardsWidget(forms.Widget):
                      }}
                  }},
                  addItem() {{
-                     if (this.newTitle.trim() && this.newDesc.trim()) {{
-                         this.items.push({{
-                             id: this.newId.trim() || String(this.items.length + 1).padStart(2, '0'),
-                             icon: this.newIcon || 'Award',
-                             title: this.newTitle.trim(),
-                             description: this.newDesc.trim(),
-                             badge: this.newBadge.trim()
-                         }});
-                         this.minimized[this.items.length - 1] = false;
-                         this.newId = '';
-                         this.newIcon = 'Award';
-                         this.newTitle = '';
-                         this.newDesc = '';
-                         this.newBadge = '';
-                     }} else {{
-                         alert('Card Title and Description are required.');
+                     const titleVal = (this.newTitle || '').trim();
+                     if (!titleVal) {{
+                         alert('Please enter a Title for the trust card.');
+                         return;
                      }}
+                     const idVal = (this.newId || '').trim() || String(this.items.length + 1).padStart(2, '0');
+                     const iconVal = this.newIcon || 'Award';
+                     const descVal = (this.newDesc || '').trim();
+                     const badgeVal = (this.newBadge || '').trim();
+                     
+                     this.items.push({{
+                         id: idVal,
+                         icon: iconVal,
+                         title: titleVal,
+                         description: descVal,
+                         badge: badgeVal
+                     }});
+                     this.minimized[this.items.length - 1] = false;
+                     this.newId = '';
+                     this.newIcon = 'Award';
+                     this.newTitle = '';
+                     this.newDesc = '';
+                     this.newBadge = '';
                  }},
                  removeItem(idx) {{
                      if (confirm('Remove this trust card?')) {{
@@ -1339,24 +1345,53 @@ class TrustCardsWidget(forms.Widget):
                     <span class="material-symbols-outlined text-sky-500" style="font-size: 16px;">add_circle</span>
                     <h4 class="text-[11px] font-bold text-slate-700 dark:text-slate-200 uppercase tracking-wide m-0">Add New Trust Card</h4>
                 </div>
+                
                 <div class="grid sm:grid-cols-3 gap-2.5">
-                    <input type="text" x-model="newId" placeholder="ID (e.g. 05)" class="cms-input-field text-xs font-mono px-3 py-2 border rounded-lg w-full" />
-                    <select x-model="newIcon" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full">
-                        <option value="Award">Award (Experience)</option>
-                        <option value="Cpu">Cpu (Technology)</option>
-                        <option value="Zap">Zap (Recovery)</option>
-                        <option value="HeartHandshake">HeartHandshake (Care)</option>
-                        <option value="ShieldCheck">ShieldCheck</option>
-                        <option value="CheckCircle2">CheckCircle2</option>
-                        <option value="Activity">Activity</option>
-                        <option value="HeartPulse">HeartPulse</option>
-                        <option value="Sparkles">Sparkles</option>
-                    </select>
-                    <input type="text" x-model="newBadge" placeholder="Badge (e.g. Tailored Plans)" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">ID / Number (Optional):</label>
+                        <input type="text" x-model="newId" placeholder="e.g. 05" class="cms-input-field text-xs font-mono px-3 py-2 border rounded-lg w-full" />
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Icon:</label>
+                        <select x-model="newIcon" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full">
+                            <option value="Award">Award (Experience)</option>
+                            <option value="Cpu">Cpu (Technology)</option>
+                            <option value="Zap">Zap (Recovery)</option>
+                            <option value="HeartHandshake">HeartHandshake (Care)</option>
+                            <option value="ShieldCheck">ShieldCheck</option>
+                            <option value="CheckCircle2">CheckCircle2</option>
+                            <option value="Activity">Activity</option>
+                            <option value="HeartPulse">HeartPulse</option>
+                            <option value="Sparkles">Sparkles</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Badge Tag (Optional):</label>
+                        <input type="text" x-model="newBadge" placeholder="e.g. Tailored Plans" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
+                    </div>
                 </div>
-                <input type="text" x-model="newTitle" placeholder="Card Title (e.g. Holistic Recovery)" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
-                <textarea x-model="newDesc" rows="2" placeholder="Card Description..." class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg"></textarea>
-                <button type="button" @click="addItem()" class="w-full py-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs rounded-lg border-0 cursor-pointer uppercase tracking-wider transition-colors shadow-sm">
+                
+                <div>
+                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Card Title <span class="text-red-500">*</span>:</label>
+                    <input type="text" 
+                           x-model="newTitle" 
+                           @keydown.enter.prevent="addItem()" 
+                           placeholder="Card Title (e.g. Holistic Patient Recovery)" 
+                           class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
+                </div>
+                
+                <div>
+                    <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Card Description (Optional):</label>
+                    <textarea x-model="newDesc" 
+                              @keydown.ctrl.enter.prevent="addItem()" 
+                              rows="2" 
+                              placeholder="Card Description..." 
+                              class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg"></textarea>
+                </div>
+                
+                <button type="button" 
+                        @click="addItem()" 
+                        class="w-full py-2.5 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs rounded-lg border-0 cursor-pointer uppercase tracking-wider transition-colors shadow-sm">
                     + Add Trust Card
                 </button>
             </div>
