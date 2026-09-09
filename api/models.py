@@ -290,10 +290,53 @@ class SecondOpinion(models.Model):
 
 class HomePage(SEOBaseModel):
     title = models.CharField(max_length=255, default="Home Page")
+    
+    # Sports Injury Clinic Section
+    sports_is_active = models.BooleanField(default=True, verbose_name="Enable Sports Injury Section")
+    sports_badge = models.CharField(max_length=255, default="EXPERT SPORTS ORTHOPEDIC CARE", blank=True, null=True, help_text="Badge text above heading")
+    sports_title = models.CharField(max_length=255, default="Sports Injury", blank=True, null=True, help_text="First part of heading")
+    sports_title_highlight = models.CharField(max_length=255, default="Clinic", blank=True, null=True, help_text="Highlighted gradient part")
+    sports_title_end = models.CharField(max_length=255, default=" Dubai", blank=True, null=True, help_text="Trailing part of heading")
+    sports_description = models.TextField(
+        default="Specialized, minimally invasive treatments and accelerated recovery programs designed for athletes and active individuals of all performance levels.",
+        blank=True, null=True
+    )
+    sports_video_embed_url = models.CharField(
+        max_length=500,
+        default="https://www.instagram.com/reel/DTijxQ3krcw/embed/?autoplay=1",
+        blank=True, null=True,
+        help_text="Instagram Reel / YouTube / Embed URL"
+    )
+    sports_video_file = models.FileField(
+        upload_to='sports_injury/',
+        blank=True, null=True,
+        help_text="Optional: Upload an MP4 video file instead of embed URL"
+    )
+    sports_dashboard_label = models.CharField(
+        max_length=255,
+        default="DR. ULHAS CLINICAL REEL",
+        blank=True, null=True,
+        help_text="Header badge text above video card"
+    )
+    sports_learn_more_heading = models.CharField(
+        max_length=255,
+        default="COMPREHENSIVE ATHLETIC CARE & RETURN-TO-PLAY",
+        blank=True, null=True
+    )
+    sports_items = models.JSONField(
+        default=list,
+        blank=True,
+        help_text='List of items with title and desc, e.g. [{"title": "High-Performance Athlete Recovery", "desc": "..."}, ...]'
+    )
+    sports_cta_text = models.CharField(max_length=255, default="Book Sports Consultation", blank=True, null=True)
+    sports_cta_link = models.CharField(max_length=255, default="/contact", blank=True, null=True)
+
+    # FAQ Section
     faq_badge = models.CharField(max_length=255, default="Help Center", blank=True, null=True)
     faq_title = models.CharField(max_length=255, default="Asked Frequently Questions", blank=True, null=True)
     faq_description = models.TextField(default="Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.", blank=True, null=True)
     faqs = models.JSONField(default=list, blank=True, help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]')
+    
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -301,6 +344,64 @@ class HomePage(SEOBaseModel):
         verbose_name_plural = "Home Page"
 
     def __str__(self):
-        return "Home Page SEO & FAQs"
+        return "Home Page"
+
+
+
+class SportingInjurySection(models.Model):
+    badge = models.CharField(max_length=255, default="EXPERT SPORTS ORTHOPEDIC CARE", help_text="Badge text above the main heading")
+    title = models.CharField(max_length=255, default="Sports Injury", help_text="First part of heading")
+    title_highlight = models.CharField(max_length=255, default="Clinic", help_text="Highlighted gradient part of heading")
+    title_end = models.CharField(max_length=255, default=" Dubai", blank=True, help_text="Trailing part of heading")
+    description = models.TextField(
+        default="Specialized, minimally invasive treatments and accelerated recovery programs designed for athletes and active individuals of all performance levels.",
+        help_text="Introductory text describing the sports injury clinic"
+    )
+    
+    # Video Media
+    video_embed_url = models.CharField(
+        max_length=500,
+        default="https://www.instagram.com/reel/DTijxQ3krcw/embed/?autoplay=1",
+        blank=True,
+        help_text="Instagram Reel / YouTube / Embed iframe URL"
+    )
+    video_file = models.FileField(
+        upload_to='sports_injury/',
+        blank=True,
+        null=True,
+        help_text="Optional: Upload an MP4 video file instead of embed URL"
+    )
+    dashboard_label = models.CharField(
+        max_length=255,
+        default="DR. ULHAS CLINICAL REEL",
+        help_text="Header badge text above the video card"
+    )
+    
+    # Bullet points / Features list
+    learn_more_heading = models.CharField(
+        max_length=255,
+        default="COMPREHENSIVE ATHLETIC CARE & RETURN-TO-PLAY",
+        help_text="Heading for the treatment features list"
+    )
+    items = models.JSONField(
+        default=list,
+        blank=True,
+        help_text='List of items with title and desc, e.g. [{"title": "High-Performance Athlete Recovery", "desc": "..."}, ...]'
+    )
+    
+    # Call To Action (Optional)
+    cta_text = models.CharField(max_length=255, default="Book Sports Consultation", blank=True, null=True)
+    cta_link = models.CharField(max_length=255, default="/contact", blank=True, null=True)
+    
+    is_active = models.BooleanField(default=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Sports Injury Clinic Section"
+        verbose_name_plural = "Sports Injury Clinic Section"
+
+    def __str__(self):
+        return f"Sports Injury Clinic ({self.title} {self.title_highlight})"
+
 
 

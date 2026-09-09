@@ -891,3 +891,211 @@ class FaqWidget(forms.Widget):
         </div>
         '''
         return mark_safe(html)
+
+
+class SportsInjuryItemsWidget(forms.Widget):
+    def render(self, name, value, attrs=None, renderer=None):
+        attrs = attrs or {}
+        id_str = attrs.get('id', name)
+        
+        if isinstance(value, str):
+            try:
+                items = json.loads(value)
+            except Exception:
+                items = []
+        elif isinstance(value, list):
+            items = value
+        else:
+            items = []
+            
+        items_json = json.dumps(items)
+        items_json_escaped = escape(items_json)
+        
+        html = f'''
+        <style>
+        #cms-sports-{id_str} {{ font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+        .cms-widget-container {{ background-color: #f8fafc !important; border-color: #e2e8f0 !important; }}
+        .cms-card {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; color: #1e293b !important; }}
+        .cms-card-title {{ color: #0f172a !important; }}
+        .cms-input-field {{ background-color: #ffffff !important; border-color: #cbd5e1 !important; color: #0f172a !important; }}
+        .cms-input-field::placeholder {{ color: #94a3b8 !important; }}
+        .cms-form-box {{ background-color: #ffffff !important; border-color: #e2e8f0 !important; }}
+        .cms-btn-secondary {{ background-color: #f1f5f9 !important; border-color: #cbd5e1 !important; color: #334155 !important; }}
+        .cms-btn-secondary:hover {{ background-color: #e2e8f0 !important; color: #0f172a !important; }}
+        html.dark #cms-sports-{id_str} .cms-widget-container, body.dark #cms-sports-{id_str} .cms-widget-container, .dark #cms-sports-{id_str} .cms-widget-container {{ background-color: #0f172a !important; border-color: #1e293b !important; }}
+        html.dark #cms-sports-{id_str} .cms-card, body.dark #cms-sports-{id_str} .cms-card, .dark #cms-sports-{id_str} .cms-card {{ background-color: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }}
+        html.dark #cms-sports-{id_str} .cms-card-title, body.dark #cms-sports-{id_str} .cms-card-title, .dark #cms-sports-{id_str} .cms-card-title {{ color: #f8fafc !important; }}
+        html.dark #cms-sports-{id_str} .cms-input-field, body.dark #cms-sports-{id_str} .cms-input-field, .dark #cms-sports-{id_str} .cms-input-field {{ background-color: #0f172a !important; border-color: #334155 !important; color: #f8fafc !important; }}
+        html.dark #cms-sports-{id_str} .cms-input-field::placeholder, body.dark #cms-sports-{id_str} .cms-input-field::placeholder, .dark #cms-sports-{id_str} .cms-input-field::placeholder {{ color: #475569 !important; }}
+        html.dark #cms-sports-{id_str} .cms-form-box, body.dark #cms-sports-{id_str} .cms-form-box, .dark #cms-sports-{id_str} .cms-form-box {{ background-color: #1e293b !important; border-color: #334155 !important; }}
+        html.dark #cms-sports-{id_str} .cms-btn-secondary, body.dark #cms-sports-{id_str} .cms-btn-secondary, .dark #cms-sports-{id_str} .cms-btn-secondary {{ background-color: #1e293b !important; border-color: #334155 !important; color: #cbd5e1 !important; }}
+        html.dark #cms-sports-{id_str} .cms-btn-secondary:hover, body.dark #cms-sports-{id_str} .cms-btn-secondary:hover, .dark #cms-sports-{id_str} .cms-btn-secondary:hover {{ background-color: #334155 !important; color: #f8fafc !important; }}
+        </style>
+        
+        <div id="cms-sports-{id_str}" 
+             x-data="{{ 
+                 items: {items_json_escaped},
+                 minimized: {{}},
+                 allMinimized: false,
+                 newTitle: '',
+                 newDesc: '',
+                 isItemMinimized(idx) {{
+                     return this.minimized[idx] === true;
+                 }},
+                 toggleItem(idx) {{
+                     this.minimized[idx] = !this.isItemMinimized(idx);
+                 }},
+                 toggleAll() {{
+                     this.allMinimized = !this.allMinimized;
+                     this.items.forEach((_, idx) => {{
+                         this.minimized[idx] = this.allMinimized;
+                     }});
+                 }},
+                 moveUp(idx) {{
+                     if (idx > 0) {{
+                         const temp = this.items[idx];
+                         this.items[idx] = this.items[idx - 1];
+                         this.items[idx - 1] = temp;
+                         const tempMin = this.minimized[idx];
+                         this.minimized[idx] = this.minimized[idx - 1];
+                         this.minimized[idx - 1] = tempMin;
+                     }}
+                 }},
+                 moveDown(idx) {{
+                     if (idx < this.items.length - 1) {{
+                         const temp = this.items[idx];
+                         this.items[idx] = this.items[idx + 1];
+                         this.items[idx + 1] = temp;
+                         const tempMin = this.minimized[idx];
+                         this.minimized[idx] = this.minimized[idx + 1];
+                         this.minimized[idx + 1] = tempMin;
+                     }}
+                 }},
+                 addItem() {{
+                     if (this.newTitle.trim() && this.newDesc.trim()) {{
+                         this.items.push({{
+                             title: this.newTitle.trim(),
+                             desc: this.newDesc.trim()
+                         }});
+                         this.minimized[this.items.length - 1] = false;
+                         this.newTitle = '';
+                         this.newDesc = '';
+                     }} else {{
+                         alert('Point Title and Description are required.');
+                     }}
+                 }},
+                 removeItem(idx) {{
+                     if (confirm('Remove this feature point?')) {{
+                         this.items.splice(idx, 1);
+                         delete this.minimized[idx];
+                     }}
+                 }}
+             }}"
+             class="cms-widget-container space-y-4 font-sans p-5 border rounded-2xl max-w-3xl mt-1"
+        >
+            <textarea name="{name}" id="{id_str}" style="display:none;" :value="JSON.stringify(items)">{items_json_escaped}</textarea>
+            
+            <!-- Header Toolbar -->
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-xs text-slate-700 dark:text-slate-200 uppercase tracking-wide">Treatment & Recovery Points</span>
+                    <span class="text-[11px] bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 font-semibold px-2 py-0.5 rounded-full" x-text="items.length + ' Points'"></span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <!-- Minimize / Expand All Button -->
+                    <button type="button" 
+                            @click="toggleAll()" 
+                            class="cms-btn-secondary flex items-center gap-1.5 px-3 py-1.5 border rounded-lg text-xs font-semibold cursor-pointer transition-all shadow-sm">
+                        <span class="material-symbols-outlined text-sm" x-text="allMinimized ? 'unfold_more' : 'unfold_less'" style="font-size: 16px;"></span>
+                        <span x-text="allMinimized ? 'Expand All' : 'Minimize All'"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Items List -->
+            <div class="space-y-3 max-h-[500px] overflow-y-auto pr-1">
+                <template x-for="(item, idx) in items" :key="idx">
+                    <div class="cms-card p-3.5 border rounded-xl shadow-sm relative space-y-3 hover:border-slate-350 transition-all">
+                        <!-- Card Header -->
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="flex items-center gap-2 flex-1 min-w-0 cursor-pointer select-none" @click="toggleItem(idx)">
+                                <span class="shrink-0 w-6 h-6 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold text-[10px] flex items-center justify-center" x-text="'#' + (idx + 1)"></span>
+                                <span class="text-xs font-bold truncate flex-1 text-slate-800 dark:text-slate-100" x-text="item.title || '(Empty title...)'"></span>
+                            </div>
+                            
+                            <div class="flex items-center gap-1 shrink-0">
+                                <!-- Move Up/Down -->
+                                <button type="button" 
+                                        class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 border-0 bg-transparent cursor-pointer disabled:opacity-30" 
+                                        :disabled="idx === 0" 
+                                        @click="moveUp(idx)"
+                                        title="Move Up">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 16px;">arrow_upward</span>
+                                </button>
+                                <button type="button" 
+                                        class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 border-0 bg-transparent cursor-pointer disabled:opacity-30" 
+                                        :disabled="idx === items.length - 1" 
+                                        @click="moveDown(idx)"
+                                        title="Move Down">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 16px;">arrow_downward</span>
+                                </button>
+                                
+                                <!-- Minimize / Expand Single Item Button -->
+                                <button type="button" 
+                                        class="flex items-center gap-1 text-[11px] font-medium px-2 py-1 rounded-md text-sky-600 dark:text-sky-400 hover:bg-sky-50 dark:hover:bg-sky-950 border border-sky-200 dark:border-sky-800 bg-transparent cursor-pointer"
+                                        @click="toggleItem(idx)"
+                                        :title="isItemMinimized(idx) ? 'Expand' : 'Minimize'">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 15px;" x-text="isItemMinimized(idx) ? 'expand_more' : 'expand_less'"></span>
+                                    <span x-text="isItemMinimized(idx) ? 'Expand' : 'Minimize'"></span>
+                                </button>
+
+                                <!-- Delete Button -->
+                                <button type="button" 
+                                        class="text-red-500 hover:bg-red-50 dark:hover:bg-red-950 p-1 rounded-md border-0 bg-transparent cursor-pointer" 
+                                        @click="removeItem(idx)"
+                                        title="Delete Item">
+                                    <span class="material-symbols-outlined align-middle" style="font-size: 16px;">delete</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Content Body -->
+                        <div x-show="!isItemMinimized(idx)" class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Point Title:</label>
+                                <input type="text" 
+                                       x-model="item.title" 
+                                       placeholder="Enter point title..." 
+                                       class="cms-input-field text-xs font-semibold px-3 py-1.5 border rounded-lg focus:outline-none focus:border-sky-500 w-full" />
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase text-slate-400 mb-1">Point Description:</label>
+                                <textarea x-model="item.desc" 
+                                          placeholder="Enter description..." 
+                                          class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg focus:outline-none focus:border-sky-500" 
+                                          rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <div x-show="items.length === 0">
+                    <p class="text-xs text-slate-400 italic py-3 text-center">No points added yet.</p>
+                </div>
+            </div>
+            
+            <!-- Add New Point Form -->
+            <div class="cms-form-box space-y-3 p-4 border rounded-xl shadow-sm">
+                <div class="flex items-center gap-1.5 border-b border-slate-100 dark:border-slate-800 pb-2">
+                    <span class="material-symbols-outlined text-sky-500" style="font-size: 16px;">add_circle</span>
+                    <h4 class="text-[11px] font-bold text-slate-700 dark:text-slate-200 uppercase tracking-wide m-0">Add New Treatment Point</h4>
+                </div>
+                <input type="text" x-model="newTitle" placeholder="Point Title (e.g. Comprehensive Clinical Assessment)" class="cms-input-field text-xs px-3 py-2 border rounded-lg w-full" />
+                <textarea x-model="newDesc" rows="2" placeholder="Point Description..." class="cms-input-field w-full text-xs px-3 py-2 border rounded-lg"></textarea>
+                <button type="button" @click="addItem()" class="w-full py-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs rounded-lg border-0 cursor-pointer uppercase tracking-wider transition-colors shadow-sm">
+                    + Add Treatment Point
+                </button>
+            </div>
+        </div>
+        '''
+        return mark_safe(html)
+

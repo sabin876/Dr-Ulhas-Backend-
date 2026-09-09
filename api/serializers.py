@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage
+from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection
 
 import json
 
@@ -153,16 +153,46 @@ class HomePageSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        for json_field in ['faqs', 'schema_markup']:
+        for json_field in ['faqs', 'schema_markup', 'sports_items']:
             if json_field in data and isinstance(data[json_field], str):
                 if data[json_field].strip() == '':
-                    data[json_field] = None
+                    data[json_field] = [] if json_field in ['faqs', 'sports_items'] else None
                 else:
                     try:
                         data[json_field] = json.loads(data[json_field])
                     except (ValueError, TypeError):
                         pass
 
+        if 'sports_is_active' in data and isinstance(data['sports_is_active'], str):
+            data['sports_is_active'] = data['sports_is_active'].lower() in ['true', '1', 'yes']
+
         return super().to_internal_value(data)
+
+
+class SportingInjurySectionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SportingInjurySection
+        fields = '__all__'
+
+    def to_internal_value(self, data):
+        if hasattr(data, 'dict'):
+            data = data.dict()
+        elif hasattr(data, '_mutable'):
+            data._mutable = True
+
+        if 'items' in data and isinstance(data['items'], str):
+            if data['items'].strip() == '':
+                data['items'] = []
+            else:
+                try:
+                    data['items'] = json.loads(data['items'])
+                except (ValueError, TypeError):
+                    pass
+
+        if 'is_active' in data and isinstance(data['is_active'], str):
+            data['is_active'] = data['is_active'].lower() in ['true', '1', 'yes']
+
+        return super().to_internal_value(data)
+
 
 

@@ -5,7 +5,7 @@ from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
-from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo, SecondOpinion, HomePage
+from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection
 from django.contrib.auth.models import Group, User
 
 try:
@@ -14,7 +14,7 @@ try:
 except admin.sites.NotRegistered:
     pass
 
-from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget
+from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget, SportsInjuryItemsWidget
 
 class ArticleAdminForm(forms.ModelForm):
     class Meta:
@@ -361,13 +361,14 @@ class HomePageAdminForm(forms.ModelForm):
         fields = "__all__"
         widgets = {
             "faqs": FaqWidget(),
+            "sports_items": SportsInjuryItemsWidget(),
         }
 
 
 @admin.register(HomePage)
 class HomePageAdmin(ModelAdmin):
     form = HomePageAdminForm
-    list_display = ('title', 'meta_title', 'updated_at')
+    list_display = ('title', 'sports_badge', 'meta_title', 'updated_at')
 
     def has_add_permission(self, request):
         return not HomePage.objects.exists()
@@ -376,8 +377,28 @@ class HomePageAdmin(ModelAdmin):
         ('General', {
             'fields': ('title',)
         }),
+        ('Sports Injury Clinic Section', {
+            'fields': (
+                'sports_is_active',
+                'sports_badge',
+                'sports_title',
+                'sports_title_highlight',
+                'sports_title_end',
+                'sports_description',
+                'sports_video_embed_url',
+                'sports_video_file',
+                'sports_dashboard_label',
+                'sports_learn_more_heading',
+                'sports_items',
+                'sports_cta_text',
+                'sports_cta_link',
+            ),
+            'classes': ('collapse',),
+            'description': 'Configure the Sports Injury Clinic Section shown on the Home page (video reel/upload and dynamic treatment points).'
+        }),
         ('FAQ Section', {
             'fields': ('faq_badge', 'faq_title', 'faq_description', 'faqs'),
+            'classes': ('collapse',),
             'description': 'Configure the Home Page FAQ section and questions/answers.'
         }),
         ('SEO & Metadata', {
@@ -396,6 +417,44 @@ class HomePageAdmin(ModelAdmin):
             'description': 'Structured JSON-LD schema markup for rich Google search results.'
         }),
     )
+
+
+class SportingInjurySectionAdminForm(forms.ModelForm):
+    class Meta:
+        model = SportingInjurySection
+        fields = "__all__"
+        widgets = {
+            "items": SportsInjuryItemsWidget(),
+        }
+
+
+@admin.register(SportingInjurySection)
+class SportingInjurySectionAdmin(ModelAdmin):
+    form = SportingInjurySectionAdminForm
+    list_display = ('title', 'title_highlight', 'dashboard_label', 'is_active', 'updated_at')
+
+    def has_add_permission(self, request):
+        return not SportingInjurySection.objects.exists()
+
+    fieldsets = (
+        ('Section Headings & Description', {
+            'fields': ('badge', 'title', 'title_highlight', 'title_end', 'description'),
+            'description': 'Customize the main headings and introduction for the Sports Injury Clinic section.'
+        }),
+        ('Video & Media Reel', {
+            'fields': ('video_embed_url', 'video_file', 'dashboard_label'),
+            'description': 'Configure the Instagram Reel / YouTube embed URL or upload a direct video file, along with the card label.'
+        }),
+        ('Features & Treatments (List)', {
+            'fields': ('learn_more_heading', 'items'),
+            'description': 'Interactive management of treatment and recovery bullet points.'
+        }),
+        ('Call To Action & Status', {
+            'fields': ('cta_text', 'cta_link', 'is_active'),
+        }),
+    )
+
+
 
 
 

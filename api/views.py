@@ -5,8 +5,8 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login as auth_login
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage
-from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer, SecondOpinionSerializer, HomePageSerializer
+from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection
+from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer, SecondOpinionSerializer, HomePageSerializer, SportingInjurySectionSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -72,6 +72,35 @@ def home_page_view(request):
             faq_badge="Help Center",
             faq_title="Frequently Asked Questions",
             faq_description="Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.",
+            sports_is_active=True,
+            sports_badge="EXPERT SPORTS ORTHOPEDIC CARE",
+            sports_title="Sports Injury",
+            sports_title_highlight="Clinic",
+            sports_title_end=" Dubai",
+            sports_description="Specialized, minimally invasive treatments and accelerated recovery programs designed for athletes and active individuals of all performance levels.",
+            sports_video_embed_url="https://www.instagram.com/reel/DTijxQ3krcw/embed/?autoplay=1",
+            sports_dashboard_label="DR. ULHAS CLINICAL REEL",
+            sports_learn_more_heading="COMPREHENSIVE ATHLETIC CARE & RETURN-TO-PLAY",
+            sports_items=[
+                {
+                    "title": "Comprehensive Clinical Assessment",
+                    "desc": "Thorough joint, ligament, and kinetic chain evaluation to pinpoint exact pathology."
+                },
+                {
+                    "title": "Precision Imaging Diagnostics",
+                    "desc": "High-resolution MRI, dynamic ultrasound, and digital radiography for accurate diagnosis."
+                },
+                {
+                    "title": "Customized Return-to-Play Plans",
+                    "desc": "Tailored recovery trajectories aligned with your sport, goals, and training schedule."
+                },
+                {
+                    "title": "High-Performance Rehabilitation",
+                    "desc": "Integrated physiotherapy, biomechanical reconditioning, and future injury prevention."
+                }
+            ],
+            sports_cta_text="Book Sports Consultation",
+            sports_cta_link="/contact",
             faqs=[
                 {
                     "question": "What is robotic-assisted surgery?",
@@ -293,3 +322,51 @@ def get_hero_video(request):
         serializer = HeroVideoSerializer(video, context={'request': request})
         return Response(serializer.data)
     return Response({"video": None})
+
+
+@api_view(['GET', 'PUT', 'PATCH'])
+def sports_injury_view(request):
+    section = SportingInjurySection.objects.first()
+    if not section:
+        section = SportingInjurySection.objects.create(
+            badge="EXPERT SPORTS ORTHOPEDIC CARE",
+            title="Sports Injury",
+            title_highlight="Clinic",
+            title_end=" Dubai",
+            description="Specialized, minimally invasive treatments and accelerated recovery programs designed for athletes and active individuals of all performance levels.",
+            video_embed_url="https://www.instagram.com/reel/DTijxQ3krcw/embed/?autoplay=1",
+            dashboard_label="DR. ULHAS CLINICAL REEL",
+            learn_more_heading="COMPREHENSIVE ATHLETIC CARE & RETURN-TO-PLAY",
+            items=[
+                {
+                    "title": "Comprehensive Clinical Assessment",
+                    "desc": "Thorough joint, ligament, and kinetic chain evaluation to pinpoint exact pathology."
+                },
+                {
+                    "title": "Precision Imaging Diagnostics",
+                    "desc": "High-resolution MRI, dynamic ultrasound, and digital radiography for accurate diagnosis."
+                },
+                {
+                    "title": "Customized Return-to-Play Plans",
+                    "desc": "Tailored recovery trajectories aligned with your sport, goals, and training schedule."
+                },
+                {
+                    "title": "High-Performance Rehabilitation",
+                    "desc": "Integrated physiotherapy, biomechanical reconditioning, and future injury prevention."
+                }
+            ],
+            cta_text="Book Sports Consultation",
+            cta_link="/contact",
+            is_active=True
+        )
+
+    if request.method in ['PUT', 'PATCH']:
+        serializer = SportingInjurySectionSerializer(section, data=request.data, partial=True, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return response.Response(serializer.data)
+        return response.Response(serializer.errors, status=400)
+
+    serializer = SportingInjurySectionSerializer(section, context={'request': request})
+    return response.Response(serializer.data)
+

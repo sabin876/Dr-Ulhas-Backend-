@@ -280,6 +280,11 @@ UNFOLD = {
                         "link": "/admin/api/secondopinion/",
                     },
                     {
+                        "title": "Sports Injury Clinic",
+                        "icon": "fitness_center",
+                        "link": "/admin/api/sportinginjurysection/",
+                    },
+                    {
                         "title": "Site Settings",
                         "icon": "settings",
                         "link": "/admin/api/sitesetting/",
