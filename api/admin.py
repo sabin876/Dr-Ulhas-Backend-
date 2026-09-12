@@ -195,7 +195,9 @@ class ServiceAdmin(ModelAdmin):
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text')
+            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text'),
+            'classes': ('collapse',),
+            'description': 'Configure core service details including title, URL slug, overview description, icon and featured image.'
         }),
         ('FAQ Section (Title, Subtitle & Q&A)', {
             'fields': ('faq_title', 'faq_description', 'faqs'),
@@ -204,6 +206,7 @@ class ServiceAdmin(ModelAdmin):
         }),
         ('Treatment & Value Sections', {
             'fields': ('conditions_title', 'conditions', 'checklist_title', 'checklist_image', 'checklist_items', 'tag_badges'),
+            'classes': ('collapse',),
             'description': 'Optional: Customize section headings, upload illustrations, or override conditions, checklist items, and tag badges.'
         }),
         ('Custom Detailed Sections (About, Indications & Commonly Treated)', {
@@ -212,6 +215,7 @@ class ServiceAdmin(ModelAdmin):
                 'who_needs_title', 'who_needs_description', 'who_needs_items',
                 'commonly_treated_title', 'commonly_treated_description', 'commonly_treated'
             ),
+            'classes': ('collapse',),
             'description': 'Optional: Customize detailed section content.'
         }),
         ('Highlight Section (Doctor Profile / Why Choose Us Extra)', {
@@ -221,27 +225,32 @@ class ServiceAdmin(ModelAdmin):
                 'highlight_doctor_image', 'highlight_doctor_name', 'highlight_doctor_role',
                 'highlight_doctor_badges', 'highlight_doctor_description'
             ),
+            'classes': ('collapse',),
             'description': 'Optional: Add a specialized highlight section (e.g. Why Choose Dr Ulhas) with a doctor profile card.'
         }),
         ('Journey Section (Step-by-step)', {
             'fields': (
                 'journey_is_active', 'journey_title', 'journey_description', 'journey_steps'
             ),
+            'classes': ('collapse',),
             'description': 'Optional: Add a step-by-step journey section (e.g. Your Robotic Knee Replacement Journey).'
         }),
         ('Second Opinion Section (Specialized Orthopedic Care)', {
             'fields': (
                 'second_opinion_is_active', 'second_opinion_badge', 'second_opinion_title', 'second_opinion_description'
             ),
+            'classes': ('collapse',),
             'description': 'Customize the Second Opinion / Specialized Orthopedic Care section heading and intro.'
         }),
         ('SEO & Social', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'og_title', 'og_description', 'og_image', 'index_page', 'follow_links'),
             'classes': ('collapse',),
+            'description': 'Control search engine indexing, metadata, and social preview cards.'
         }),
         ('Schema Markup', {
             'fields': ('schema_type', 'schema_markup'),
             'classes': ('collapse',),
+            'description': 'Structured JSON-LD schema markup for rich Google search results.'
         }),
     )
 
