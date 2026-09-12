@@ -14,7 +14,7 @@ try:
 except admin.sites.NotRegistered:
     pass
 
-from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget, SportsInjuryItemsWidget, TrustCardsWidget, SchemaJSONFormField, SchemaMarkupWidget
+from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget, SportsInjuryItemsWidget, TrustCardsWidget, HeroStatsWidget, SchemaJSONFormField, SchemaMarkupWidget
 
 class SEOBaseAdminForm(forms.ModelForm):
     schema_markup = SchemaJSONFormField(
@@ -390,6 +390,8 @@ class HomePageAdminForm(SEOBaseAdminForm):
         model = HomePage
         fields = "__all__"
         widgets = {
+            "hero_description": forms.Textarea(attrs={'rows': 3}),
+            "hero_stats": HeroStatsWidget(),
             "faqs": FaqWidget(),
             "sports_items": SportsInjuryItemsWidget(),
             "trust_cards": TrustCardsWidget(),
@@ -399,7 +401,7 @@ class HomePageAdminForm(SEOBaseAdminForm):
 @admin.register(HomePage)
 class HomePageAdmin(ModelAdmin):
     form = HomePageAdminForm
-    list_display = ('title', 'trust_badge', 'sports_badge', 'meta_title', 'updated_at')
+    list_display = ('title', 'hero_headline_1', 'trust_badge', 'sports_badge', 'meta_title', 'updated_at')
 
     def has_add_permission(self, request):
         return not HomePage.objects.exists()
@@ -407,6 +409,28 @@ class HomePageAdmin(ModelAdmin):
     fieldsets = (
         ('General', {
             'fields': ('title',)
+        }),
+        ('Hero Section (Main Banner, Headlines, Buttons & Doctor Card)', {
+            'fields': (
+                'hero_is_active',
+                'hero_badge',
+                'hero_headline_1',
+                'hero_headline_2',
+                'hero_headline_3',
+                'hero_description',
+                'hero_book_btn_text',
+                'hero_book_btn_link',
+                'hero_report_btn_text',
+                'hero_report_btn_link',
+                'hero_services_btn_text',
+                'hero_services_btn_link',
+                'hero_doctor_name',
+                'hero_doctor_role',
+                'hero_video_file',
+                'hero_video_url',
+                'hero_stats',
+            ),
+            'description': 'Configure the main hero banner headlines, CTA buttons, Doctor card details, video, and live animated stats row.'
         }),
         ('Why Patients Trust Section (Patient-Focused Excellence)', {
             'fields': (

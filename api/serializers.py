@@ -161,15 +161,18 @@ class HomePageSerializer(serializers.ModelSerializer):
         if 'schema_markup' in data:
             data['schema_markup'] = clean_schema_markup_data(data['schema_markup'])
 
-        for json_field in ['faqs', 'sports_items', 'trust_cards']:
+        for json_field in ['faqs', 'sports_items', 'trust_cards', 'hero_stats']:
             if json_field in data and isinstance(data[json_field], str):
                 if data[json_field].strip() == '':
-                    data[json_field] = [] if json_field in ['faqs', 'sports_items', 'trust_cards'] else None
+                    data[json_field] = [] if json_field in ['faqs', 'sports_items', 'trust_cards', 'hero_stats'] else None
                 else:
                     try:
                         data[json_field] = json.loads(data[json_field])
                     except (ValueError, TypeError):
                         pass
+
+        if 'hero_is_active' in data and isinstance(data['hero_is_active'], str):
+            data['hero_is_active'] = data['hero_is_active'].lower() in ['true', '1', 'yes']
 
         if 'sports_is_active' in data and isinstance(data['sports_is_active'], str):
             data['sports_is_active'] = data['sports_is_active'].lower() in ['true', '1', 'yes']

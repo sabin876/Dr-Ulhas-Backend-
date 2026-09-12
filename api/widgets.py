@@ -1538,4 +1538,154 @@ class SchemaJSONFormField(forms.CharField):
         return str(value)
 
 
+class HeroStatsWidget(forms.Widget):
+    def render(self, name, value, attrs=None, renderer=None):
+        attrs = attrs or {}
+        id_str = attrs.get('id', name)
+        
+        initial_items = []
+        if isinstance(value, str) and value.strip():
+            try:
+                initial_items = json.loads(value)
+            except (ValueError, TypeError):
+                initial_items = []
+        elif isinstance(value, list):
+            initial_items = value
+            
+        json_str = json.dumps(initial_items)
+        escaped_json = escape(json_str)
+
+        html = f'''
+        <div id="hero-stats-widget-{id_str}" class="cms-widget-container p-4 border rounded-xl my-2" 
+             x-data="{{
+                items: JSON.parse('{escaped_json}' || '[]'),
+                newValue: '',
+                newSuffix: '+',
+                newLabel: '',
+                newIsGoogle: false,
+                syncHidden() {{
+                    const el = document.getElementById('{id_str}');
+                    if (el) {{
+                        el.value = JSON.stringify(this.items);
+                        el.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                    }}
+                }},
+                addItem() {{
+                    if (!this.newLabel && !this.newValue) return;
+                    this.items.push({{
+                        value: this.newValue.trim(),
+                        suffix: this.newSuffix.trim(),
+                        label: this.newLabel.trim(),
+                        isGoogle: !!this.newIsGoogle,
+                        isStar: !!this.newIsGoogle
+                    }});
+                    this.newValue = '';
+                    this.newSuffix = '+';
+                    this.newLabel = '';
+                    this.newIsGoogle = false;
+                    this.syncHidden();
+                }},
+                removeItem(idx) {{
+                    this.items.splice(idx, 1);
+                    this.syncHidden();
+                }},
+                moveItem(idx, direction) {{
+                    const targetIdx = idx + direction;
+                    if (targetIdx < 0 || targetIdx >= this.items.length) return;
+                    const temp = this.items[idx];
+                    this.items[idx] = this.items[targetIdx];
+                    this.items[targetIdx] = temp;
+                    this.syncHidden();
+                }}
+             }}"
+             x-init="$watch('items', () => syncHidden())">
+             
+            <textarea name="{name}" id="{id_str}" style="display:none;" x-text="JSON.stringify(items)">{escaped_json}</textarea>
+            
+            <div class="flex items-center justify-between border-b pb-3 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-300">
+                        Hero Stats Counter Items
+                    </span>
+                    <span class="text-xs text-slate-500">Live animated numbers displayed in the bottom stats row of the Hero section</span>
+                </div>
+                <span class="text-xs text-slate-400 font-mono" x-text="items.length + ' item(s)'"></span>
+            </div>
+            
+            <!-- Items List -->
+            <div class="space-y-3 mb-5">
+                <template x-if="items.length === 0">
+                    <div class="text-center py-6 border-2 border-dashed border-slate-200 rounded-xl bg-white text-slate-400 text-xs">
+                        No custom hero stats configured yet. Default counters (15+ Exp, 6 Qualifications, 10+ Research, 6+ Audits, 10+ Presentations, 5.0 Google) will be used.
+                    </div>
+                </template>
+                
+                <template x-for="(item, index) in items" :key="index">
+                    <div class="flex items-center gap-3 p-3 bg-white border border-slate-200 rounded-xl shadow-sm hover:border-sky-300 transition-all">
+                        <div class="flex flex-col items-center gap-1 shrink-0 text-slate-400">
+                            <button type="button" @click="moveItem(index, -1)" class="p-1 hover:text-sky-600 cursor-pointer disabled:opacity-30" :disabled="index === 0">▲</button>
+                            <span class="text-[10px] font-mono font-bold text-slate-500" x-text="'#' + (index + 1)"></span>
+                            <button type="button" @click="moveItem(index, 1)" class="p-1 hover:text-sky-600 cursor-pointer disabled:opacity-30" :disabled="index === items.length - 1">▼</button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-2.5 flex-1">
+                            <div>
+                                <label class="block text-[9px] font-bold uppercase text-slate-400 mb-0.5">Value (Number):</label>
+                                <input type="text" x-model="item.value" @input="syncHidden()" class="text-xs font-bold text-slate-800 px-2 py-1.5 border border-slate-300 rounded w-full" placeholder="e.g. 15 or 5.0" />
+                            </div>
+                            <div>
+                                <label class="block text-[9px] font-bold uppercase text-slate-400 mb-0.5">Suffix (e.g. +):</label>
+                                <input type="text" x-model="item.suffix" @input="syncHidden()" class="text-xs font-bold text-slate-800 px-2 py-1.5 border border-slate-300 rounded w-full" placeholder="+" />
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="block text-[9px] font-bold uppercase text-slate-400 mb-0.5">Label / Subtitle:</label>
+                                <input type="text" x-model="item.label" @input="syncHidden()" class="text-xs text-slate-800 px-2 py-1.5 border border-slate-300 rounded w-full" placeholder="Years Clinical Experience" />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center shrink-0 pl-2 border-l border-slate-100">
+                            <label class="flex items-center gap-1 text-[10px] font-medium text-slate-600 mb-1 cursor-pointer">
+                                <input type="checkbox" x-model="item.isGoogle" @change="item.isStar = item.isGoogle; syncHidden()" class="rounded text-sky-600" />
+                                <span>Google ★</span>
+                            </label>
+                            <button type="button" @click="removeItem(index)" class="px-2 py-1 text-xs text-red-600 hover:text-red-800 hover:bg-red-50 rounded transition-colors" title="Delete">
+                                ✕
+                            </button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            
+            <!-- Add New Stat Box -->
+            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-3">
+                <div class="text-[11px] font-bold text-slate-700 uppercase tracking-wide">
+                    + Add New Hero Stat Counter
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2.5">
+                    <div>
+                        <input type="text" x-model="newValue" placeholder="Value (e.g. 20)" class="text-xs px-2.5 py-1.5 bg-white border border-slate-300 rounded-lg w-full" />
+                    </div>
+                    <div>
+                        <input type="text" x-model="newSuffix" placeholder="Suffix (e.g. +)" class="text-xs px-2.5 py-1.5 bg-white border border-slate-300 rounded-lg w-full" />
+                    </div>
+                    <div>
+                        <input type="text" x-model="newLabel" @keydown.enter.prevent="addItem()" placeholder="Label (e.g. Surgeries Done)" class="text-xs px-2.5 py-1.5 bg-white border border-slate-300 rounded-lg w-full" />
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <label class="flex items-center gap-1 text-xs text-slate-600 cursor-pointer">
+                            <input type="checkbox" x-model="newIsGoogle" class="rounded text-sky-600" />
+                            <span>Star/Rating</span>
+                        </label>
+                        <button type="button" @click="addItem()" class="flex-1 py-1.5 bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs rounded-lg uppercase tracking-wider transition-colors shadow-sm">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        '''
+        return mark_safe(html)
+
+
+
 

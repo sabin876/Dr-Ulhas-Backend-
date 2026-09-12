@@ -300,6 +300,60 @@ class SecondOpinion(models.Model):
 class HomePage(SEOBaseModel):
     title = models.CharField(max_length=255, default="Home Page")
     
+    # Hero Section
+    hero_is_active = models.BooleanField(default=True, verbose_name="Enable Hero Section")
+    hero_badge = models.CharField(
+        max_length=255, 
+        default="UK-TRAINED | FRCS (ENG) | EBOT | ROBOTIC FELLOWSHIP", 
+        blank=True, null=True, 
+        verbose_name="Hero Qualifications Badge", 
+        help_text="Top pill badge text above the main headline"
+    )
+    hero_headline_1 = models.CharField(
+        max_length=255, 
+        default="Patient Centric, Evidence", 
+        blank=True, null=True, 
+        verbose_name="Headline Line 1",
+        help_text="First line of main heading"
+    )
+    hero_headline_2 = models.CharField(
+        max_length=255, 
+        default="Based & Individualised", 
+        blank=True, null=True, 
+        verbose_name="Headline Line 2",
+        help_text="Second line of main heading"
+    )
+    hero_headline_3 = models.CharField(
+        max_length=255, 
+        default="Orthopedic Care", 
+        blank=True, null=True, 
+        verbose_name="Headline Line 3 (Gradient Highlight)",
+        help_text="Third line with gradient accent"
+    )
+    hero_description = models.TextField(
+        default="UK & Europe trained Consultant Orthopedic Surgeon with 15+ years of clinical excellence in robotic joint replacement, advanced arthroscopy, sports injury rehabilitation, and deformity correction.", 
+        blank=True, null=True, 
+        verbose_name="Hero Description / Subtitle",
+        help_text="Introductory description paragraph"
+    )
+    hero_book_btn_text = models.CharField(max_length=255, default="Book Consultation", blank=True, null=True, verbose_name="Primary Button Text")
+    hero_book_btn_link = models.CharField(max_length=255, default="/contact", blank=True, null=True, verbose_name="Primary Button Link")
+    hero_report_btn_text = models.CharField(max_length=255, default="Report Access", blank=True, null=True, verbose_name="Report Access Button Text")
+    hero_report_btn_link = models.CharField(max_length=255, default="/report-access", blank=True, null=True, verbose_name="Report Access Button Link")
+    hero_services_btn_text = models.CharField(max_length=255, default="Explore Services", blank=True, null=True, verbose_name="Explore Services Button Text")
+    hero_services_btn_link = models.CharField(max_length=255, default="/services", blank=True, null=True, verbose_name="Explore Services Button Link")
+    
+    hero_doctor_name = models.CharField(max_length=255, default="Dr. Ulhas Sonar", blank=True, null=True, verbose_name="Doctor Card Name")
+    hero_doctor_role = models.CharField(max_length=255, default="Consultant Orthopedic Surgeon", blank=True, null=True, verbose_name="Doctor Card Role / Subtitle")
+    hero_video_file = models.FileField(upload_to='videos/', blank=True, null=True, verbose_name="Hero Video File", help_text="Upload MP4 video file for the hero 3D card")
+    hero_video_url = models.CharField(max_length=500, blank=True, null=True, verbose_name="Hero Video URL", help_text="Optional external/direct video link")
+    hero_stats = models.JSONField(
+        default=list, 
+        blank=True, 
+        verbose_name="Hero Stats Counter Items", 
+        help_text='List of stats, e.g. [{"value": "15", "suffix": "+", "label": "Years Clinical Experience"}, ...]'
+    )
+    
     # Sports Injury Clinic Section
     sports_is_active = models.BooleanField(default=True, verbose_name="Enable Sports Injury Section")
     sports_badge = models.CharField(max_length=255, default="EXPERT SPORTS ORTHOPEDIC CARE", blank=True, null=True, help_text="Badge text above heading")
