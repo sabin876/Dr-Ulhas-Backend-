@@ -28,6 +28,12 @@ class SEOBaseModel(models.Model):
     class Meta:
         abstract = True
 
+    def clean(self):
+        super().clean()
+        if self.schema_markup and isinstance(self.schema_markup, str):
+            from .widgets import clean_schema_markup_data
+            self.schema_markup = clean_schema_markup_data(self.schema_markup)
+
     def get_canonical_url(self, request=None):
         if self.canonical_url:
             return self.canonical_url
@@ -94,6 +100,7 @@ class Service(SEOBaseModel):
     icon = models.CharField(max_length=100, default="activity", blank=True, help_text="Lucide icon name")
     image = models.ImageField(upload_to='services/', blank=True, null=True)
     items = models.JSONField(default=list, blank=True, help_text='Enter a JSON list, e.g., ["Feature 1", "Feature 2"]')
+    faq_badge = models.CharField(max_length=255, default="Frequently asked questions", blank=True, null=True, verbose_name="FAQ Badge", help_text="Small badge text above the FAQ title")
     faq_title = models.CharField(max_length=255, default="Frequently Asked Questions", blank=True, null=True, verbose_name="FAQ Title", help_text="Heading for the FAQ section of this service")
     faq_description = models.TextField(blank=True, null=True, verbose_name="FAQ Subtitle / Description", help_text="Subtitle or description text displayed below the FAQ title for this service")
     faqs = models.JSONField(default=list, blank=True, verbose_name="FAQ Items (Q&A)", help_text='Enter a list of FAQs, e.g. [{"question": "...", "answer": "..."}]')

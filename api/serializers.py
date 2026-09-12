@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Article, Service, SubService, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection, ServicesPage
+from .widgets import clean_schema_markup_data
 
 import json
 
@@ -16,7 +17,10 @@ class ArticleSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        for json_field in ['faqs', 'schema_markup']:
+        if 'schema_markup' in data:
+            data['schema_markup'] = clean_schema_markup_data(data['schema_markup'])
+
+        for json_field in ['faqs']:
             if json_field in data and isinstance(data[json_field], str):
                 if data[json_field].strip() == '':
                     data[json_field] = None
@@ -98,7 +102,7 @@ class ServiceSerializer(serializers.ModelSerializer):
             if isinstance(sub_services_data, str):
                 try:
                     sub_services_data = json.loads(sub_services_data)
-                except ValueError:
+                except (ValueError, TypeError):
                     sub_services_data = []
             
             instance.sub_services.all().delete()
@@ -111,6 +115,7 @@ class ServiceSerializer(serializers.ModelSerializer):
                         title=title,
                         description=desc
                     )
+                
         return instance
 
 class TranslationSerializer(serializers.ModelSerializer):
@@ -153,7 +158,10 @@ class HomePageSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        for json_field in ['faqs', 'schema_markup', 'sports_items', 'trust_cards']:
+        if 'schema_markup' in data:
+            data['schema_markup'] = clean_schema_markup_data(data['schema_markup'])
+
+        for json_field in ['faqs', 'sports_items', 'trust_cards']:
             if json_field in data and isinstance(data[json_field], str):
                 if data[json_field].strip() == '':
                     data[json_field] = [] if json_field in ['faqs', 'sports_items', 'trust_cards'] else None
@@ -209,10 +217,13 @@ class ServicesPageSerializer(serializers.ModelSerializer):
         elif hasattr(data, '_mutable'):
             data._mutable = True
 
-        for json_field in ['faqs', 'schema_markup']:
+        if 'schema_markup' in data:
+            data['schema_markup'] = clean_schema_markup_data(data['schema_markup'])
+
+        for json_field in ['faqs']:
             if json_field in data and isinstance(data[json_field], str):
                 if data[json_field].strip() == '':
-                    data[json_field] = [] if json_field == 'faqs' else None
+                    data[json_field] = []
                 else:
                     try:
                         data[json_field] = json.loads(data[json_field])

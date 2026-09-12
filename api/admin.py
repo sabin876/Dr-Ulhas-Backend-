@@ -14,9 +14,16 @@ try:
 except admin.sites.NotRegistered:
     pass
 
-from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget, SportsInjuryItemsWidget, TrustCardsWidget
+from .widgets import ListStringWidget, ConditionsWidget, CommonlyTreatedWidget, JourneyStepsWidget, FaqWidget, SportsInjuryItemsWidget, TrustCardsWidget, SchemaJSONFormField, SchemaMarkupWidget
 
-class ArticleAdminForm(forms.ModelForm):
+class SEOBaseAdminForm(forms.ModelForm):
+    schema_markup = SchemaJSONFormField(
+        required=False,
+        label="Schema Markup (JSON-LD)",
+        help_text="Structured JSON-LD schema markup. You can paste raw JSON or the full &lt;script type=\"application/ld+json\"&gt;...&lt;/script&gt; snippet."
+    )
+
+class ArticleAdminForm(SEOBaseAdminForm):
     class Meta:
         model = Article
         fields = "__all__"
@@ -25,7 +32,7 @@ class ArticleAdminForm(forms.ModelForm):
             "faqs": FaqWidget(),
         }
 
-class ServiceAdminForm(forms.ModelForm):
+class ServiceAdminForm(SEOBaseAdminForm):
     class Meta:
         model = Service
         fields = "__all__"
@@ -204,10 +211,10 @@ class ServiceAdmin(ModelAdmin):
             'classes': ('collapse',),
             'description': 'Configure core service details including title, URL slug, overview description, icon and featured image.'
         }),
-        ('FAQ Section (Title, Subtitle & Q&A)', {
-            'fields': ('faq_title', 'faq_description', 'faqs'),
+        ('FAQ Section (Badge, Title, Subtitle & Q&A)', {
+            'fields': ('faq_badge', 'faq_title', 'faq_description', 'faqs'),
             'classes': ('collapse',),
-            'description': 'Configure FAQ title, subtitle/description, and question/answer pairs for this specific service.'
+            'description': 'Configure FAQ badge, title, subtitle/description, and question/answer pairs for this specific service.'
         }),
         ('Treatment & Value Sections', {
             'fields': ('conditions_title', 'conditions', 'checklist_title', 'checklist_image', 'checklist_items', 'tag_badges'),
@@ -378,7 +385,7 @@ class SecondOpinionAdmin(ModelAdmin):
     )
 
 
-class HomePageAdminForm(forms.ModelForm):
+class HomePageAdminForm(SEOBaseAdminForm):
     class Meta:
         model = HomePage
         fields = "__all__"
@@ -490,7 +497,7 @@ class SportingInjurySectionAdmin(ModelAdmin):
     )
 
 
-class ServicesPageAdminForm(forms.ModelForm):
+class ServicesPageAdminForm(SEOBaseAdminForm):
     class Meta:
         model = ServicesPage
         fields = "__all__"

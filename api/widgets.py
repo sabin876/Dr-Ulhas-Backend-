@@ -1400,3 +1400,142 @@ class TrustCardsWidget(forms.Widget):
         return mark_safe(html)
 
 
+import re
+
+def clean_schema_markup_data(val):
+    """
+    Accepts:
+    1. Python dict / list
+    2. JSON string: '{"@context": "https://schema.org", ...}'
+    3. Full HTML script tag string:
+       '<script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          ...
+        }
+        </script>'
+    
+    Returns:
+    Parsed Python dict / list (or None if empty)
+    """
+    if val is None:
+        return None
+    if isinstance(val, (dict, list)):
+        return val
+    if isinstance(val, str):
+        val = val.strip()
+        if not val:
+            return None
+        
+        # Check if wrapped in <script ...> ... </script>
+        script_match = re.search(r'<script[^>]*>([\s\S]*?)<\/script>', val, re.IGNORECASE)
+        if script_match:
+            val = script_match.group(1).strip()
+        
+        try:
+            return json.loads(val)
+        except (ValueError, TypeError, json.JSONDecodeError):
+            # Attempt to extract outer JSON object or array
+            first_brace = val.find('{')
+            first_bracket = val.find('[')
+            starts = [p for p in [first_brace, first_bracket] if p != -1]
+            if starts:
+                start = min(starts)
+                last_brace = val.rfind('}')
+                last_bracket = val.rfind(']')
+                ends = [p for p in [last_brace, last_bracket] if p != -1]
+                if ends:
+                    end = max(ends)
+                    if end > start:
+                        try:
+                            return json.loads(val[start:end+1])
+                        except Exception:
+                            pass
+            return val
+    return val
+
+
+class SchemaMarkupWidget(forms.Widget):
+    def render(self, name, value, attrs=None, renderer=None):
+        attrs = attrs or {}
+        id_str = attrs.get('id', name)
+        
+        if isinstance(value, (dict, list)):
+            display_val = json.dumps(value, indent=2, ensure_ascii=False)
+        elif isinstance(value, str):
+            display_val = value
+        else:
+            display_val = ""
+            
+        escaped_val = escape(display_val)
+        
+        html = f"""
+        <div id="schema-widget-{id_str}" class="cms-widget-container p-4 border rounded-xl my-2" style="background-color: #f8fafc; border-color: #e2e8f0;">
+            <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                        JSON-LD Schema Markup
+                    </span>
+                    <span class="text-xs text-slate-500">Supports raw JSON or full &lt;script type="application/ld+json"&gt; tags</span>
+                </div>
+                <button type="button" 
+                        onclick="(function(){{
+                            const el = document.getElementById('{id_str}');
+                            if(!el) return;
+                            let v = el.value.trim();
+                            const match = v.match(/<script[^>]*>([\\s\\S]*?)<\\/script>/i);
+                            if(match) v = match[1].trim();
+                            try {{
+                                const parsed = JSON.parse(v);
+                                el.value = JSON.stringify(parsed, null, 2);
+                            }} catch(err) {{
+                                alert('JSON formatting error: ' + err.message);
+                            }}
+                        }})()"
+                        class="px-2.5 py-1 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 rounded shadow-sm cursor-pointer transition-colors">
+                    ✨ Format JSON
+                </button>
+            </div>
+            <textarea name="{name}" 
+                      id="{id_str}" 
+                      rows="14" 
+                      class="w-full font-mono text-xs p-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                      style="background-color: #ffffff; color: #0f172a; border-color: #cbd5e1; white-space: pre; tab-size: 2; line-height: 1.5;"
+                      placeholder='&lt;script type="application/ld+json"&gt;&#10;{{&#10;  "@context": "https://schema.org",&#10;  "@graph": [&#10;    {{&#10;      "@type": "Physician",&#10;      "name": "Dr. Ulhas Sonar"&#10;    }}&#10;  ]&#10;}}&#10;&lt;/script&gt;'>{escaped_val}</textarea>
+            <div class="mt-2 text-[11px] text-slate-500 flex items-center justify-between">
+                <span>💡 You can paste either pure JSON or the full <code>&lt;script type="application/ld+json"&gt;...&lt;/script&gt;</code> block here. It will automatically be cleaned and parsed on save.</span>
+            </div>
+        </div>
+        """
+        return mark_safe(html)
+
+
+class SchemaJSONFormField(forms.CharField):
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('required', False)
+        kwargs.setdefault('widget', SchemaMarkupWidget())
+        super().__init__(*args, **kwargs)
+
+    def to_python(self, value):
+        if not value or (isinstance(value, str) and not value.strip()):
+            return None
+        
+        cleaned = clean_schema_markup_data(value)
+        if isinstance(cleaned, (dict, list)):
+            return cleaned
+        if isinstance(cleaned, str):
+            try:
+                return json.loads(cleaned)
+            except json.JSONDecodeError as e:
+                raise forms.ValidationError(f"Invalid JSON in schema markup: {e}")
+        return cleaned
+
+    def prepare_value(self, value):
+        if value is None:
+            return ""
+        if isinstance(value, (dict, list)):
+            return json.dumps(value, indent=2, ensure_ascii=False)
+        return str(value)
+
+
+
