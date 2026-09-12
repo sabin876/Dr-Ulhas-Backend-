@@ -43,6 +43,7 @@ class ServiceAdminForm(forms.ModelForm):
             "highlight_checklist_items": ListStringWidget(),
             "highlight_doctor_badges": ListStringWidget(),
             "journey_steps": JourneyStepsWidget(),
+            "faqs": FaqWidget(),
         }
 
 
@@ -194,7 +195,12 @@ class ServiceAdmin(ModelAdmin):
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text', 'faqs')
+            'fields': ('title', 'slug', 'description', 'icon', 'image', 'image_alt_text')
+        }),
+        ('FAQ Section (Title, Subtitle & Q&A)', {
+            'fields': ('faq_title', 'faq_description', 'faqs'),
+            'classes': ('collapse',),
+            'description': 'Configure FAQ title, subtitle/description, and question/answer pairs for this specific service.'
         }),
         ('Treatment & Value Sections', {
             'fields': ('conditions_title', 'conditions', 'checklist_title', 'checklist_image', 'checklist_items', 'tag_badges'),
