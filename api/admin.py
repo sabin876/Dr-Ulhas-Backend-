@@ -136,13 +136,16 @@ class ArticleAdmin(ModelAdmin):
     fieldsets = (
         ('Publication & Schedule', {
             'fields': ('status', 'published_at'),
+            'classes': ('collapse',),
             'description': 'Schedule when this article will be visible on the website. Articles with a future date/time or Draft status will stay hidden from public visitors until the scheduled time.'
         }),
         ('Content', {
-            'fields': ('title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color')
+            'fields': ('title', 'slug', 'excerpt', 'content', 'image', 'image_alt_text', 'author', 'category', 'category_color'),
+            'classes': ('collapse',),
         }),
         ('Frequently Asked Questions (FAQs)', {
             'fields': ('faqs',),
+            'classes': ('collapse',),
             'description': 'Add FAQ question and answer pairs for this article.'
         }),
         ('SEO & Metadata', {
@@ -166,6 +169,7 @@ class SubServiceInline(TabularInline):
     extra = 1
     prepopulated_fields = {'slug': ('title',)}
     fields = ('title', 'slug', 'description', 'index_page', 'follow_links')
+    classes = ['collapse']
 
 class SecondOpinionInline(StackedInline):
     model = SecondOpinion
@@ -173,6 +177,7 @@ class SecondOpinionInline(StackedInline):
     fields = ('title', 'paragraph_1', 'paragraph_2', 'order', 'is_active')
     verbose_name = "Specialized Orthopedic Care (Second Opinion)"
     verbose_name_plural = "Specialized Orthopedic Care (Second Opinions)"
+    classes = ['collapse']
 
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
@@ -264,10 +269,13 @@ class SubServiceAdmin(ModelAdmin):
 
     fieldsets = (
         ('Sub Service Information', {
-            'fields': ('service', 'title', 'slug', 'description')
+            'fields': ('service', 'title', 'slug', 'description'),
+            'classes': ('collapse',),
+            'description': 'Configure parent service, title, URL slug and sub-service details.'
         }),
         ('Search Engine Indexing & Robots Directives', {
             'fields': ('index_page', 'follow_links'),
+            'classes': ('collapse',),
             'description': 'Control search engine bot crawling (index/noindex, follow/nofollow) for this sub-service.'
         }),
     )
