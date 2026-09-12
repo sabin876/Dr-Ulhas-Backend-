@@ -409,10 +409,9 @@ class HomePageAdmin(ModelAdmin):
             'classes': ('collapse',),
             'description': 'Configure the Sports Injury Clinic Section shown on the Home page (video reel/upload and dynamic treatment points).'
         }),
-        ('FAQ Section', {
+        ('FAQ Section (Badge, Title, Subtitle & Q&A)', {
             'fields': ('faq_badge', 'faq_title', 'faq_description', 'faqs'),
-            'classes': ('collapse',),
-            'description': 'Configure the Home Page FAQ section and questions/answers.'
+            'description': 'Configure the FAQ section shown on the Home page (Badge, Heading, Subtitle/Description, and interactive Questions/Answers).'
         }),
         ('SEO & Metadata', {
             'fields': ('meta_title', 'meta_description', 'canonical_url', 'index_page', 'follow_links', 'h1_title'),

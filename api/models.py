@@ -332,10 +332,16 @@ class HomePage(SEOBaseModel):
     sports_cta_link = models.CharField(max_length=255, default="/contact", blank=True, null=True)
 
     # FAQ Section
-    faq_badge = models.CharField(max_length=255, default="Help Center", blank=True, null=True)
-    faq_title = models.CharField(max_length=255, default="Asked Frequently Questions", blank=True, null=True)
-    faq_description = models.TextField(default="Common questions about our care, robotic surgery, and orthopedic treatments in Dubai.", blank=True, null=True)
-    faqs = models.JSONField(default=list, blank=True, help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]')
+    faq_badge = models.CharField(max_length=255, default="Help Center", blank=True, null=True, verbose_name="FAQ Badge", help_text="Small badge text above the FAQ title")
+    faq_title = models.CharField(max_length=255, default="Frequently Asked Questions", blank=True, null=True, verbose_name="FAQ Title", help_text="Main heading for the FAQ section")
+    faq_description = models.TextField(
+        default="Common questions about our care, robotic surgery, and orthopedic treatments in Pune, India.",
+        blank=True,
+        null=True,
+        verbose_name="FAQ Subtitle / Description",
+        help_text="Subtitle or description text displayed directly below the FAQ title"
+    )
+    faqs = models.JSONField(default=list, blank=True, verbose_name="FAQ Items (Q&A)", help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]')
     
     # Why Patients Trust Section (Patient-Focused Excellence)
     trust_is_active = models.BooleanField(default=True, verbose_name="Enable Why Patients Trust Section")
