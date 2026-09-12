@@ -5,8 +5,8 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login as auth_login
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection
-from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer, SecondOpinionSerializer, HomePageSerializer, SportingInjurySectionSerializer
+from .models import Article, Service, Translation, SiteSetting, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection, ServicesPage
+from .serializers import ArticleSerializer, ServiceSerializer, TranslationSerializer, SiteSettingSerializer, GalleryItemSerializer, HeroVideoSerializer, SecondOpinionSerializer, HomePageSerializer, SportingInjurySectionSerializer, ServicesPageSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -404,4 +404,43 @@ def sports_injury_view(request):
 
     serializer = SportingInjurySectionSerializer(section, context={'request': request})
     return response.Response(serializer.data)
+
+
+@api_view(['GET', 'PUT', 'PATCH'])
+def services_page_view(request):
+    sp = ServicesPage.objects.first()
+    if not sp:
+        sp = ServicesPage.objects.create(
+            title="Services Page",
+            meta_title="Orthopedic Services & Treatments | Dr. Ulhas",
+            meta_description="Explore our specialized orthopedic services including joint replacement, sports injury management, and arthroscopy.",
+            faq_badge="Help Center",
+            faq_title="Services FAQ",
+            faq_description="Common questions about our orthopedic procedures and specialized care plans in Pune, India.",
+            faqs=[
+                {
+                    "question": "Do you offer robotic joint replacement?",
+                    "answer": "Yes, we specialize in advanced robotic-assisted total and partial knee replacements for superior precision."
+                },
+                {
+                    "question": "What is the typical recovery for arthroscopy?",
+                    "answer": "Most patients return to light activities within a few days, though full athletic recovery may take 6-12 weeks."
+                },
+                {
+                    "question": "Are physiotherapy services available?",
+                    "answer": "We provide integrated rehabilitation plans through our partner facilities to ensure complete recovery."
+                }
+            ]
+        )
+
+    if request.method in ['PUT', 'PATCH']:
+        serializer = ServicesPageSerializer(sp, data=request.data, partial=True, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return response.Response(serializer.data)
+        return response.Response(serializer.errors, status=400)
+
+    serializer = ServicesPageSerializer(sp, context={'request': request})
+    return response.Response(serializer.data)
+
 

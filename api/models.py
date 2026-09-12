@@ -426,4 +426,32 @@ class SportingInjurySection(models.Model):
         return f"Sports Injury Clinic ({self.title} {self.title_highlight})"
 
 
+class ServicesPage(SEOBaseModel):
+    title = models.CharField(max_length=255, default="Services Page", blank=True)
+    faq_badge = models.CharField(max_length=255, default="Help Center", blank=True, null=True, verbose_name="FAQ Badge", help_text="Small badge text above the FAQ title")
+    faq_title = models.CharField(max_length=255, default="Services FAQ", blank=True, null=True, verbose_name="FAQ Title", help_text="Main heading for the Services page FAQ section")
+    faq_description = models.TextField(
+        default="Common questions about our orthopedic procedures and specialized care plans in Pune, India.",
+        blank=True,
+        null=True,
+        verbose_name="FAQ Subtitle / Description",
+        help_text="Subtitle or description text displayed directly below the FAQ title"
+    )
+    faqs = models.JSONField(
+        default=list,
+        blank=True,
+        verbose_name="FAQ Items (Q&A)",
+        help_text='List of FAQs, e.g. [{"question": "...", "answer": "..."}]'
+    )
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Services Page"
+        verbose_name_plural = "Services Page"
+
+    def __str__(self):
+        return "Services Page Configuration"
+
+
+
 

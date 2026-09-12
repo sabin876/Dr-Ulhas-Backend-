@@ -5,7 +5,7 @@ from django import forms
 from django.utils.html import format_html
 from django.urls import reverse
 from ckeditor.widgets import CKEditorWidget
-from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection
+from .models import Article, Service, SubService, Translation, SiteSetting, CustomRedirect, GalleryItem, HeroVideo, SecondOpinion, HomePage, SportingInjurySection, ServicesPage
 from django.contrib.auth.models import Group, User
 
 try:
@@ -465,6 +465,50 @@ class SportingInjurySectionAdmin(ModelAdmin):
             'fields': ('cta_text', 'cta_link', 'is_active'),
         }),
     )
+
+
+class ServicesPageAdminForm(forms.ModelForm):
+    class Meta:
+        model = ServicesPage
+        fields = "__all__"
+        widgets = {
+            "faqs": FaqWidget(),
+        }
+
+
+@admin.register(ServicesPage)
+class ServicesPageAdmin(ModelAdmin):
+    form = ServicesPageAdminForm
+    list_display = ('title', 'faq_title', 'meta_title', 'updated_at')
+
+    def has_add_permission(self, request):
+        return not ServicesPage.objects.exists()
+
+    fieldsets = (
+        ('General', {
+            'fields': ('title',)
+        }),
+        ('FAQ Section (Badge, Title, Subtitle & Q&A)', {
+            'fields': ('faq_badge', 'faq_title', 'faq_description', 'faqs'),
+            'description': 'Configure the FAQ section shown on the Services page (Badge, Heading, Subtitle/Description, and interactive Questions/Answers).'
+        }),
+        ('SEO & Metadata', {
+            'fields': ('meta_title', 'meta_description', 'canonical_url', 'index_page', 'follow_links', 'h1_title'),
+            'classes': ('collapse',),
+            'description': 'Control how search engines index and rank the Services Page.'
+        }),
+        ('Social Media (Open Graph)', {
+            'fields': ('og_title', 'og_description', 'og_image'),
+            'classes': ('collapse',),
+            'description': 'Control preview cards on Facebook, WhatsApp, LinkedIn, etc.'
+        }),
+        ('Schema Markup', {
+            'fields': ('schema_type', 'schema_markup'),
+            'classes': ('collapse',),
+            'description': 'Structured JSON-LD schema markup for rich Google search results.'
+        }),
+    )
+
 
 
 
