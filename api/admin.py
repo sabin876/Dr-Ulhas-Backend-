@@ -401,7 +401,17 @@ class HomePageAdminForm(SEOBaseAdminForm):
 @admin.register(HomePage)
 class HomePageAdmin(ModelAdmin):
     form = HomePageAdminForm
-    list_display = ('title', 'hero_headline_1', 'trust_badge', 'sports_badge', 'meta_title', 'updated_at')
+    list_display = ('title', 'hero_headline_1', 'meta_title', 'edit_button', 'delete_button', 'updated_at')
+
+    @display(description="Edit")
+    def edit_button(self, obj):
+        url = reverse('admin:api_homepage_change', args=[obj.id])
+        return format_html('<a href="{}" class="text-primary-600 hover:text-primary-800" title="Edit"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">edit</span></a>', url)
+
+    @display(description="Delete")
+    def delete_button(self, obj):
+        url = reverse('admin:api_homepage_delete', args=[obj.id])
+        return format_html('<a href="{}" class="text-red-600 hover:text-red-800" title="Delete"><span class="material-symbols-outlined align-middle" style="font-size: 20px;">delete</span></a>', url)
 
     def has_add_permission(self, request):
         return not HomePage.objects.exists()
@@ -430,6 +440,7 @@ class HomePageAdmin(ModelAdmin):
                 'hero_video_url',
                 'hero_stats',
             ),
+            'classes': ('collapse',),
             'description': 'Configure the main hero banner headlines, CTA buttons, Doctor card details, video, and live animated stats row.'
         }),
         ('Why Patients Trust Section (Patient-Focused Excellence)', {
@@ -465,6 +476,7 @@ class HomePageAdmin(ModelAdmin):
         }),
         ('FAQ Section (Badge, Title, Subtitle & Q&A)', {
             'fields': ('faq_badge', 'faq_title', 'faq_description', 'faqs'),
+            'classes': ('collapse',),
             'description': 'Configure the FAQ section shown on the Home page (Badge, Heading, Subtitle/Description, and interactive Questions/Answers).'
         }),
         ('SEO & Metadata', {
